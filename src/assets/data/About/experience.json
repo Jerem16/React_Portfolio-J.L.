@@ -1,0 +1,186 @@
+[
+    {
+        "sectionTitle": "Experience",
+        "id": "Exp1",
+        "year": "2021 - 2022",
+        "title": "<Web Developer>",
+        "entries": [
+            {
+                "index": "random-index-4",
+                "jobTitle": "Micro-Service.online",
+                "techTitle": "Technologies : ",
+                "technologies": "HTML, CSS, jQuery, JS",
+                "description": {
+                    "paragraph": "Creation of a personal website offering computer hardware design and maintenance services.",
+                    "itemLi": ["Creation of a Mobile-First Site."]
+                }
+            },
+            {
+                "index": "random-index-5",
+                "jobTitle": "Curriculum Vitae",
+                "techTitle": "Technologies : ",
+                "technologies": "HTML, CSS, JS",
+                "description": {
+                    "paragraph": "Design and development of an interactive Curriculum Vitae.",
+                    "itemLi": []
+                }
+            }
+        ]
+    },
+    {
+        "id": "Exp2",
+        "year": "2022 - 2023",
+        "title": "<Web Developer/Web Integrator>",
+        "entries": [
+            {
+                "index": "random-index-6",
+                "jobTitle": "Riding Cities",
+                "techTitle": "Technologies : ",
+                "technologies": "React, Sass, JS",
+                "description": {
+                    "paragraph": "Landing page for Riding Cities (Webonzaï agency).",
+                    "itemLi": []
+                }
+            },
+            {
+                "index": "random-index-7",
+                "jobTitle": "Booki",
+                "techTitle": "Technologies : ",
+                "technologies": "HTML, CSS",
+                "description": {
+                    "paragraph": "Web Interface Integration for Booki.",
+                    "itemLi": [
+                        "Transformation of models into HTML/CSS code.",
+                        "Creation of a responsive web interface.",
+                        "Optimization for performance and browser compatibility."
+                    ]
+                }
+            },
+            {
+                "index": "random-index-8",
+                "jobTitle": "OhMyFood",
+                "techTitle": "Technologies : ",
+                "technologies": "HTML, SCSS",
+                "description": {
+                    "paragraph": "Junior Developer at OhMyFood - Creation of a Mobile-First Site",
+                    "itemLi": [
+                        "Creation of a Mobile-First Site.",
+                        "Integration of mobile and desktop models.",
+                        "Development of a responsive website with animations.",
+                        "Close collaboration with the UX designer and compliance with the creative brief.",
+                        "Creation of a platform listing gourmet restaurant menus with a reservation system and personalized menu composition."
+                    ]
+                }
+            },
+            {
+                "index": "random-index-9",
+                "jobTitle": "Print-It",
+                "techTitle": "Technologies : ",
+                "technologies": "HTML, CSS, JS",
+                "description": {
+                    "paragraph": "Freelance Front-End Developer at Print It - Carrousel Project",
+                    "itemLi": [
+                        "Dynamize their static website.",
+                        "Implementation of a carousel.",
+                        "Contribution to improving the user experience of the website."
+                    ]
+                }
+            },
+            {
+                "index": "random-index-10",
+                "jobTitle": "Portfolio - Sophie Bluel",
+                "techTitle": "Technologies : ",
+                "technologies": "HTML, CSS, JS",
+                "description": {
+                    "paragraph": "Front-End Developer at ArchiWebos - Interior Architect Portfolio Site Project",
+                    "itemLi": [
+                        "Design the portfolio site of an interior designer, based on a model.",
+                        "Development of the presentation page, integrating a filter gallery.",
+                        "Creating the admin login page.",
+                        "Modal design for uploading media."
+                    ]
+                }
+            },
+            {
+                "index": "random-index-11",
+                "jobTitle": "Menu Maker by Qwenta",
+                "techTitle": "Technologies : ",
+                "technologies": "Agile, Scrum, Notion, Trello, wakelet",
+                "description": {
+                    "paragraph": "Web Development Project Manager at Webgencia - “Menu Maker by Qwenta” project",
+                    "itemLi": [
+                        "Planning and project management mission for the development of a “Menu Maker” for Qwenta.",
+                        "Collaboration with the Product Owner, and preparation of a project validation meeting with Qwenta.",
+                        "Main tasks: monitoring, technical specifications, planning."
+                    ]
+                }
+            },
+            {
+                "index": "random-index-12",
+                "jobTitle": "Kasa",
+                "techTitle": "Technologies : ",
+                "technologies": "React, Sass, JS",
+                "description": {
+                    "paragraph": "Freelance Front-End Developer for Kasa - Redesign Project",
+                    "itemLi": [
+                        "Transition from ASP.NET to a JavaScript stack (NodeJS/React).",
+                        "Development of the React application based on models.",
+                        "Compliance with technical and functional constraints.",
+                        "Using data (JSON file).",
+                        "Setting up React components.",
+                        "Creating routes with React Router.",
+                        "Compliance with Kasa coding guidelines."
+                    ]
+                }
+            },
+            {
+                "index": "random-index-13",
+                "jobTitle": "Nina Carducci",
+                "techTitle": "Technologies : ",
+                "technologies": "SEO, HTML, CSS, JS, jQuery",
+                "description": {
+                    "paragraph": "SEO optimization for Nina Carducci – Photographer",
+                    "itemLi": [
+                        "Identification of performance and SEO issues.",
+                        "Global optimization, images and code, performance and accessibility.",
+                        "Meta description (audited keywords).",
+                        "Social media metas.",
+                        "Local referencing (Schema.org), addition of information (address, telephone number, contact hours, etc.).",
+                        "Google Rich Snippet audit optimization report, Wave extension.",
+                        "Optimization and debugging, finalization of the 724events Site."
+                    ]
+                }
+            },
+            {
+                "index": "random-index-14",
+                "jobTitle": "77events",
+                "techTitle": "Technologies : ",
+                "technologies": "React, CSS, JS, Jest, Eslint-config-airbnb",
+                "description": {
+                    "paragraph": "Optimization and debugging, finalization of the 77events Site",
+                    "itemLi": [
+                        "Design and execution of unit and integration tests.",
+                        "Bug fixes.",
+                        "Validation of tests, and verification of component behavior.",
+                        "Writing the recipe book (adding test scenarios)."
+                    ]
+                }
+            },
+            {
+                "index": "random-index-15",
+                "jobTitle": "ArgentBank",
+                "techTitle": "Technologies : ",
+                "technologies": "React, Redux, SCSS, JS, MongoDB",
+                "description": {
+                    "paragraph": "Development of an ArgentBank Banking Application",
+                    "itemLi": [
+                        "Creation of a complete and responsive web application with React.",
+                        "Using Redux to manage application states.",
+                        "Creation of API for the implementation of authentication, connection, disconnection, and user profile visualization functionalities.",
+                        "Application of Green Code best practices, image optimization, creation of reusable components."
+                    ]
+                }
+            }
+        ]
+    }
+]

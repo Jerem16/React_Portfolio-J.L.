@@ -1,0 +1,45 @@
+[
+    {
+        "sectionTitle": "Education",
+        "id": "Ed1",
+        "year": "1993 - 1995",
+        "title": "Surveyor Topographer",
+        "entries": [
+            {
+                "index": "random-index-1",
+                "description": {
+                    "describe": "B.E.P. CO.TO Topographic Surveyor (Construction & Topography).",
+                    "place": ["Auguste Perret High School, Le Havre"]
+                }
+            }
+        ]
+    },
+    {
+        "id": "Ed2",
+        "year": "2021 - 2022",
+        "title": "Self-Taught",
+        "entries": [
+            {
+                "index": "random-index-2",
+                "description": {
+                    "describe": "Adobe Photoshop, Illustrator, Dreamweaver ...",
+                    "place": ["HTML & CSS (On Mozilla Developer Network - MDN)"]
+                }
+            }
+        ]
+    },
+    {
+        "id": "Ed3",
+        "year": "2022 - 2023",
+        "title": "<Web Developer/Web Integrator>",
+        "entries": [
+            {
+                "index": "random-index-3",
+                "description": {
+                    "describe": "Web Integrator",
+                    "place": ["E-learning: OpenClassrooms"]
+                }
+            }
+        ]
+    }
+]
