@@ -4,7 +4,7 @@ import "./about.scss";
 
 function Home() {
     return (
-        <main class="main-content">
+        <main className="main-content">
             <section className="about section" id="about">
                 <div className="container">
                     <Profile />

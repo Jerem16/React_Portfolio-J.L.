@@ -1,0 +1,38 @@
+{
+    "section": "À propos",
+    "presentation": "Je m'appelle Jérémy, je suis ",
+    "jobTitle": "Développeur Web",
+    "description": "Développeur et intégrateur Web front-end, passionné par la conception de sites et le web design. Mon expertise s'étend de la conception graphique à la programmation front-end. Je crée des sites Web interactifs, optimisés pour la performance et le référencement SEO. Toujours à l'affût des dernières tendances technologiques, mon objectif est de fournir des solutions web de qualité supérieure.",
+    "personalInfo": {
+        "birthday": "27 juin 1977",
+        "age": 45,
+        "website": "www.domain.com",
+        "email": "info@gmail.com",
+        "degree": "Intégrateur Web",
+        "phone": "+33 6 35 02 06 41",
+        "city": "Le Havre",
+        "freelance": "Disponible"
+    },
+    "buttons": {
+        "btnName1": "Télécharger mon CV",
+        "btnName2": "Engagez-moi"
+    },
+    "skills": [
+        {
+            "name": "HTML",
+            "percent": 94
+        },
+        {
+            "name": "CSS",
+            "percent": 92
+        },
+        {
+            "name": "JS",
+            "percent": 84
+        },
+        {
+            "name": "React",
+            "percent": 76
+        }
+    ]
+}

@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
-import usersReducer from "./authSlice";
-
+import languageSlice from "./languageSlice";
 
 const rootReducer = combineReducers({
-    users: usersReducer,
+    language: languageSlice,
 });
 
 export default rootReducer;

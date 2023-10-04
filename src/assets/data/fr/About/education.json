@@ -1,0 +1,45 @@
+[
+    {
+        "sectionTitle": "Éducation",
+        "id": "Ed1",
+        "year": "1993 - 1995",
+        "title": "Géomètre-Topographe",
+        "entries": [
+            {
+                "index": "index-aléatoire-1",
+                "description": {
+                    "description": "B.E.P. CO.TO Géomètre - Topographe(Construction & Topographie).",
+                    "lieu": ["Lycée Auguste Perret, Le Havre"]
+                }
+            }
+        ]
+    },
+    {
+        "id": "Ed2",
+        "year": "2021 - 2022",
+        "title": "Autodidact",
+        "entries": [
+            {
+                "index": "index-aléatoire-2",
+                "description": {
+                    "description": "Adobe Photoshop, Illustrator, Dreamweaver ...",
+                    "lieu": ["HTML & CSS (Sur Mozilla Developer Network - MDN)"]
+                }
+            }
+        ]
+    },
+    {
+        "id": "Ed3",
+        "year": "2022 - 2023",
+        "title": "<Web Developer/Web Integrator>",
+        "entries": [
+            {
+                "index": "index-aléatoire-3",
+                "description": {
+                    "description": "Intégrateur Web",
+                    "lieu": ["E-learning: OpenClassrooms"]
+                }
+            }
+        ]
+    }
+]

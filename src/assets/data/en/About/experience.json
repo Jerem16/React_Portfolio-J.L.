@@ -64,7 +64,6 @@
                 "description": {
                     "paragraph": "Junior Developer at OhMyFood - Creation of a Mobile-First Site",
                     "itemLi": [
-                        "Creation of a Mobile-First Site.",
                         "Integration of mobile and desktop models.",
                         "Development of a responsive website with animations.",
                         "Close collaboration with the UX designer and compliance with the creative brief.",
@@ -145,9 +144,8 @@
                         "Global optimization, images and code, performance and accessibility.",
                         "Meta description (audited keywords).",
                         "Social media metas.",
-                        "Local referencing (Schema.org), addition of information (address, telephone number, contact hours, etc.).",
-                        "Google Rich Snippet audit optimization report, Wave extension.",
-                        "Optimization and debugging, finalization of the 724events Site."
+                        "Local referencing (Schema.org), addition of information (address, telephone number, contact, hours, etc.).",
+                        "Google Rich Snippet audit optimization report, Wave extension."
                     ]
                 }
             },

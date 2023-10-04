@@ -11,20 +11,27 @@ function Experience({ experiences }) {
                     </h3>
                     <h4 className="timeline-title">{experience.title}</h4>
                     {experience.entries.map((entry) => (
-                        <article key={entry.index} className="timeline-text">
-                            <h4 className="exp_h4">{entry.jobTitle}</h4>
+                        <article
+                            key={entry.index}
+                            className="timeline-text"
+                            style={{ marginBottom: `${entry.size}px` }}
+                        >
+                            <h4 className="">{entry.jobTitle}</h4>
                             <p className="Technologies">
                                 <strong>{entry.techTitle}</strong>
                                 {entry.technologies}
                             </p>
-                            <p>
+                            <div className="timeline-text">
                                 <ul>
                                     <li>{entry.description.describe}</li>
                                     <li>{entry.description.place}</li>
                                 </ul>
+                            </div>
+
+                            <p className="timeline-text">
+                                {entry.description.paragraph}
                             </p>
-                            <div className="hidden">
-                                <p>{entry.description.paragraph}</p>
+                            <div className="hidden timeline-text">
                                 {entry.description.itemLi &&
                                     entry.description.itemLi.length > 0 && (
                                         <ul>

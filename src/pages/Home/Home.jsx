@@ -1,9 +1,9 @@
-
+import LanguageSelector from "../../components/Header/LanguageSelector";
 
 function Home() {
     return (
-        <main>
-            
+        <main className="main-content">
+            <i className="flag-icon-fr"></i>
         </main>
     );
 }
