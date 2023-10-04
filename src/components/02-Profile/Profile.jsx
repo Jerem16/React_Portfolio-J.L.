@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // import about from "../../assets/data/en/about.json";
 
-import Timeline from "../../components/Experience/TimeLine";
+import Timeline from "../../components/02-Experience/TimeLine";
 import { useSelector } from "react-redux";
 import { loadLanguageData } from "../../utils/loadLanguageData";
 

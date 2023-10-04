@@ -2,12 +2,13 @@
     "education": [
         {
             "sectionTitle": "Éducation",
-            "id": "Ed1",
+            "sectionId": "Ed1",
             "year": "1993 - 1995",
             "title": "Géomètre-Topographe",
             "entries": [
                 {
                     "index": "index-aléatoire-1",
+                    "display": "none",
                     "description": {
                         "describe": "B.E.P. Construction & Topographie.",
                         "place": ["Lycée Auguste Perret, Le Havre"]
@@ -16,12 +17,13 @@
             ]
         },
         {
-            "id": "Ed2",
+            "sectionId": "Ed2",
             "year": "2021 - 2022",
             "title": "Autodidact",
             "entries": [
                 {
                     "index": "index-aléatoire-2",
+                    "display": "none",
                     "description": {
                         "describe": "Adobe Photoshop, Illustrator, Dreamweaver ...",
                         "place": [
@@ -32,12 +34,13 @@
             ]
         },
         {
-            "id": "Ed3",
+            "sectionId": "Ed3",
             "year": "2022 - 2023",
             "title": "<Web Developer/Web Integrator>",
             "entries": [
                 {
                     "index": "index-aléatoire-3",
+                    "display": "none",
                     "description": {
                         "describe": "Intégrateur Web",
                         "place": ["E-learning: OpenClassrooms"]
@@ -49,11 +52,13 @@
     "experience": [
         {
             "sectionTitle": "Expérience",
-            "id": "Exp1",
+            "sectionId": "Exp1",
             "year": "2021 - 2022",
             "title": "Développeur Web",
             "entries": [
                 {
+                    "id": "aEd3",
+                    "size": 25,
                     "index": "random-index-4",
                     "jobTitle": "Micro-Service.online",
                     "technologies": "HTML, CSS, jQuery, JS",
@@ -63,6 +68,7 @@
                     }
                 },
                 {
+                    "id": "aEd4",
                     "index": "random-index-5",
                     "jobTitle": "Curriculum Vitae",
                     "technologies": "HTML, CSS, JS",
@@ -74,11 +80,13 @@
             ]
         },
         {
-            "id": "Exp2",
+            "sectionId": "Exp2",
             "year": "2022 - 2023",
             "title": "Développeur Web / Intégrateur Web",
             "entries": [
                 {
+                    "size": 25,
+                    "id": "aEd5",
                     "index": "random-index-6",
                     "jobTitle": "Riding Cities",
                     "technologies": "React, Sass, JS",
@@ -88,6 +96,8 @@
                     }
                 },
                 {
+                    "size": 25,
+                    "id": "aEd6",
                     "index": "random-index-7",
                     "jobTitle": "Booki",
                     "technologies": "HTML, CSS",
@@ -101,6 +111,8 @@
                     }
                 },
                 {
+                    "size": 25,
+                    "id": "aEd7",
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
                     "technologies": "HTML, SCSS",
@@ -115,6 +127,8 @@
                     }
                 },
                 {
+                    "size": 25,
+                    "id": "aEd8",
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
                     "technologies": "HTML, CSS, JS",
@@ -128,6 +142,8 @@
                     }
                 },
                 {
+                    "size": 25,
+                    "id": "aEd9",
                     "index": "random-index-10",
                     "jobTitle": "Portfolio - Sophie Bluel",
                     "technologies": "HTML, CSS, JS",
@@ -142,6 +158,8 @@
                     }
                 },
                 {
+                    "size": 25,
+                    "id": "bEd1",
                     "index": "random-index-11",
                     "jobTitle": "Menu Maker by Qwenta",
                     "technologies": "Agile, Scrum, Notion, Trello, wakelet",
@@ -155,6 +173,8 @@
                     }
                 },
                 {
+                    "size": 25,
+                    "id": "bEd2",
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
                     "technologies": "React, Sass, JS",
@@ -172,6 +192,8 @@
                     }
                 },
                 {
+                    "id": "bEd3",
+                    "size": 25,
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
                     "technologies": "SEO, HTML, CSS, JS, jQuery",
@@ -188,6 +210,8 @@
                     }
                 },
                 {
+                    "id": "bEd5",
+                    "size": 25,
                     "index": "random-index-14",
                     "jobTitle": "77events",
                     "technologies": "React, CSS, JS, Jest, Eslint-config-airbnb",
@@ -202,6 +226,7 @@
                     }
                 },
                 {
+                    "id": "bEd7",
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
                     "technologies": "React, Redux, SCSS, JS, MongoDB",

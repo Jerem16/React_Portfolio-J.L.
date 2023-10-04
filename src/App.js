@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Header from "./components/Header/Header";
+import Header from "./components/00-Header/Header";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Error404 from "./pages/Error404/Error404";

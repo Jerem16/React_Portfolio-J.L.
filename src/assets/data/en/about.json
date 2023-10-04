@@ -2,12 +2,13 @@
     "education": [
         {
             "sectionTitle": "Education",
-            "id": "Ed1",
+            "sectionId": "Ed1",
             "year": "1993 - 1995",
             "title": "Surveyor Topographer",
             "entries": [
                 {
                     "index": "random-index-1",
+                    "display": "none",
                     "description": {
                         "describe": "B.E.P. Construction & Topography.",
                         "place": ["Auguste Perret High School, Le Havre"]
@@ -16,12 +17,13 @@
             ]
         },
         {
-            "id": "Ed2",
+            "sectionId": "Ed2",
             "year": "2021 - 2022",
             "title": "Self-Taught",
             "entries": [
                 {
                     "index": "random-index-2",
+                    "display": "none",
                     "description": {
                         "describe": "Adobe Photoshop, Illustrator, Dreamweaver ...",
                         "place": [
@@ -32,12 +34,13 @@
             ]
         },
         {
-            "id": "Ed3",
+            "sectionId": "Ed3",
             "year": "2022 - 2023",
             "title": "<Web Developer/Web Integrator>",
             "entries": [
                 {
                     "index": "random-index-3",
+                    "display": "none",
                     "description": {
                         "describe": "Web Integrator",
                         "place": ["E-learning: OpenClassrooms"]
@@ -49,11 +52,12 @@
     "experience": [
         {
             "sectionTitle": "Experience",
-            "id": "Exp1",
+            "sectionId": "Exp1",
             "year": "2021 - 2022",
             "title": "<Web Developer>",
             "entries": [
                 {
+                    "id": "aEd3",
                     "size": 25,
                     "index": "random-index-4",
                     "jobTitle": "Micro-Service.online",
@@ -66,6 +70,7 @@
                 },
                 {
                     "index": "random-index-5",
+                    "id": "aEd4",
                     "jobTitle": "Curriculum Vitae",
                     "techTitle": "Technologies : ",
                     "technologies": "HTML, CSS, JS",
@@ -77,12 +82,13 @@
             ]
         },
         {
-            "id": "Exp2",
+            "sectionId": "Exp2",
             "year": "2022 - 2023",
             "title": "<Web Developer/Web Integrator>",
             "entries": [
                 {
                     "size": 25,
+                    "id": "aEd5",
                     "index": "random-index-6",
                     "jobTitle": "Riding Cities",
                     "techTitle": "Technologies : ",
@@ -94,6 +100,7 @@
                 },
                 {
                     "size": 25,
+                    "id": "aEd6",
                     "index": "random-index-7",
                     "jobTitle": "Booki",
                     "techTitle": "Technologies : ",
@@ -109,6 +116,7 @@
                 },
                 {
                     "size": 25,
+                    "id": "aEd7",
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
                     "techTitle": "Technologies : ",
@@ -125,6 +133,7 @@
                 },
                 {
                     "size": 25,
+                    "id": "aEd68",
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
                     "techTitle": "Technologies : ",
@@ -140,6 +149,7 @@
                 },
                 {
                     "size": 25,
+                    "id": "aEd12",
                     "index": "random-index-10",
                     "jobTitle": "Portfolio - Sophie Bluel",
                     "techTitle": "Technologies : ",
@@ -155,6 +165,7 @@
                     }
                 },
                 {
+                    "id": "aEd12g",
                     "size": 25,
                     "index": "random-index-11",
                     "jobTitle": "Menu Maker by Qwenta",
@@ -170,6 +181,7 @@
                     }
                 },
                 {
+                    "id": "aEd12s",
                     "size": 25,
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
@@ -188,6 +200,7 @@
                     }
                 },
                 {
+                    "id": "aEd1x",
                     "size": 25,
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
@@ -206,6 +219,7 @@
                     }
                 },
                 {
+                    "id": "aEd1x0",
                     "size": 25,
                     "index": "random-index-14",
                     "jobTitle": "77events",
@@ -222,6 +236,7 @@
                     }
                 },
                 {
+                    "id": "aEd1x9",
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
                     "techTitle": "Technologies : ",

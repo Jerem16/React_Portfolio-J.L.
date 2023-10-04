@@ -1,0 +1,23 @@
+{
+    "home": {
+        "welcome": "Hello, my name is ",
+        "name": "Jérémy Lemaignent",
+        "presentation": "I am a ",
+        "profession": "",
+        "description": "I am a web developer, passionate about web design, programming, and graphics. With over 2 years of experience, my expertise extends from graphic design to front-end programming, and beyond...",
+        "imageSrc": "profilePortfolio.jpg",
+        "hireButtonText": "Hire Me",
+        "typedStrings": [
+            "",
+            "Web Designer",
+            "Web Developer",
+            "Graphic Designer",
+            "Web Integrator"
+        ]
+    },
+    "contact": {
+        "email": "info@gmail.com",
+        "phone": "+33 6 35 02 06 41",
+        "city": "Le Havre"
+    }
+}
