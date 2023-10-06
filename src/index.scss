@@ -33,66 +33,70 @@ ul {
 }
 .section {
     display: flex;
+    // display: block;
     min-height: 100vh;
-    padding: 0 30px;
+    // padding: 0 30px;
     background: var(--bg-black-900);
-
     opacity: 1;
+    .section-title {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 60px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--text-black-900);
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                width: 50px;
+                height: 4px;
+                background-color: var(--skin-color);
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+
+            &::after {
+                margin-top: 8px;
+                width: 25px;
+            }
+        }
+    }
+    .container {
+        // max-width: calc(100vw - 540px);
+        width: 100%;
+        margin: auto;
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
 }
+
 .hidden {
     display: none !important;
 }
+
 .main-content {
     padding-left: 270px;
 }
+
 .padd-15px {
-    padding: 0 15px;
+    // padding: 0 15px;
 }
+
 .container {
-    /* Si width > 2000px */
-    max-width: calc(100vw - 540px);
-
-    width: 100%;
-    margin: auto;
-}
-.section .container {
-    padding-top: 60px;
-    padding-bottom: 70px;
-}
-.section-title {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-bottom: 60px;
-}
-.section-title h2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--text-black-900);
-    position: relative;
-}
-.section-title h2::before,
-.section-title h2::after {
-    content: "";
-
-    width: 50px;
-    height: 4px;
-
-    background-color: var(--skin-color);
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-.section-title h2::after {
-    margin-top: 8px;
-    width: 25px;
 }
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    padding: 0 6.264348966874385%;
     position: relative;
+    // border: 1px solid #000;
 }
+
 .btn {
     font-size: 1em;
     font-weight: 500;
@@ -104,10 +108,12 @@ ul {
     border-radius: 40px;
     transition: all 0.3s ease;
     border: none;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
-.btn:hover {
-    transform: scale(1.05);
-}
+
 .shadow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }

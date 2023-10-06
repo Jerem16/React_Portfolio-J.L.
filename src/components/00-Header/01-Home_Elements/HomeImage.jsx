@@ -2,11 +2,17 @@ import React from "react";
 
 function HomeImage({ imageSrc }) {
     return (
-        <div className="home-img padd-15px">
-            <img
-                src={require(`../../../assets/img/${imageSrc}`)}
-                alt="profile_image"
-            />
+        <div className="blockImg">
+            <div className="home-img padd-15px">
+                <div className="leftNB"></div>
+                <div className="centerNB">
+                    <img
+                        src={require(`../../../assets/img/${imageSrc}`)}
+                        alt="profile_image"
+                    />
+                </div>
+                <div className="rightNB"></div>
+            </div>
         </div>
     );
 }
