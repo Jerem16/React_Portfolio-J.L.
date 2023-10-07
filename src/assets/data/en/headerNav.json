@@ -13,7 +13,7 @@
         "icon": "fa fa-user"
       },
       {
-        "to": "/service",
+        "to": "/services",
         "text": "Services",
         "icon": "fa fa-list"
       },

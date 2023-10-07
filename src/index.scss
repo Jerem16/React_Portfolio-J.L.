@@ -97,25 +97,11 @@ ul {
     // border: 1px solid #000;
 }
 
-.btn {
-    font-size: 1em;
-    font-weight: 500;
-    padding: 12px 35px;
-    color: white;
-    display: inline-block;
-    white-space: nowrap;
-    background-color: var(--skin-color);
-    border-radius: 40px;
-    transition: all 0.3s ease;
-    border: none;
 
-    &:hover {
-        transform: scale(1.05);
-    }
-}
 
 .shadow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    
 }
 
 .fas {

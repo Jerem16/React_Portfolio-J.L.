@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Typed from "typed.js"; // Importez Typed.js
 
-import HomeInfo from "../../components/00-Header/01-Home_Elements/HomeInfo";
-import HomeImage from "../../components/00-Header/01-Home_Elements/HomeImage";
+import HomeInfo from "../../components/01-Home_Elements/HomeInfo";
+import HomeImage from "../../components/01-Home_Elements/HomeImage";
 import data from "../../assets/data/en/home.json";
 
 // import about from "../../assets/data/en/about.json";

@@ -5,42 +5,28 @@
     min-height: 100vh;
     color: var(--text-black-900);
     .row {
-        display: flex;
-        // flex-wrap: wrap;
         flex-flow: row nowrap;
-        // margin: auto;
         justify-content: center;
-        position: relative;
-        // left: 0;
         gap: 1.607084289931125%;
-        // width: 100%;
-        // border: 1px solid #000;
+
         .blockInfo {
             display: flex;
             justify-content: center;
-            // margin: auto;
-            // width: 32.79763857002296%;
-            // background: #000;
             width: 53.06657920629715%;
             .home-info {
-                // flex: 0 0 53.06657920629715%;
-                // width: 53.06657920629715%;
-                max-width: 709.5px;
                 width: 100%;
-                // border: 1px solid #000;
+                // max-width: 709.5px;
+                // background: blue;
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: flex-start;
-                // justify-items: flex-end;
                 justify-content: space-between;
                 height: 400px;
                 max-height: 400px;
 
                 h3.hello {
                     font-size: 28px;
-                    // border: 1px solid #000;
                     margin: 10px 0 0 0;
-
 
                     span {
                         font-family: "Clicker Script", cursive;
@@ -52,7 +38,6 @@
 
                 h3.my-profession {
                     font-size: 30px;
-                    // margin: 15px 0;
                 }
 
                 .typing {
@@ -60,7 +45,6 @@
                 }
 
                 p {
-                    // margin-bottom: 70px;
                     font-size: 20px;
                     color: var(--text-black-700);
                 }
@@ -70,20 +54,39 @@
         .blockImg {
             display: flex;
             justify-content: center;
-            // margin: auto;
             width: 32.79763857002296%;
-            // background: #000;
-            .home-img {
-                // flex: 0 0 32.79763857002296%;
+            position: relative;
+            .bgDraw {
+                position: absolute;
                 width: 100%;
-
-                max-width: 473px;
-                max-height: 400px;
-
-                // text-align: center;
-                // position: relative;
-                // background: blue;
+                height: 360px;
+                // max-width: calc(100% - 225.39px);
+                // left: 139.26px;
+                top: 20px;
+                // max-width: calc(100% - 40px);
+                left: 20px;
+                // height: 100%;
+                // background: #000;
                 // border: 1px solid #000;
+                z-index: 0;
+                .tsparticles  {
+                    // max-width: 400px !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    position: absolute !important; /* Changez "fixed" en "static" pour annuler la position fixe */
+                    z-index: auto !important; /* Annulez la valeur du z-index */
+                    top: auto !important; /* Annulez la valeur de top */
+                    left: 0 !important; /* Annulez la valeur de left */
+                    pointer-events: auto !important; /* Annulez la valeur de pointer-events */
+                    // background-color: gray !important; /* Annulez la couleur de fond */
+                }
+            }
+            .home-img {
+                width: 100%;
+                max-width: 473px;
+                // min-width: 473px;
+                max-height: 400px;
+                z-index: 1;
                 display: flex;
                 flex-flow: row;
                 justify-content: space-between;
@@ -107,7 +110,8 @@
                     height: 400px;
                     // margin: 10px;
                     box-sizing: content-box;
-                    // position: absolute;
+                    position: relative;
+                    z-index: 1;
                     // background: #000;
                     display: flex;
                     // top: 0px;
@@ -129,12 +133,18 @@
                 img {
                     align-self: center;
                     // height: 0px;
-                    max-width: 247.49px;
-                    // max-height: 380px;
+                    // max-width: 247.49px;
+                    max-height: 360px;
                     // margin: auto;
                     border-radius: 5px;
                     // position: absolute;
                     // right: 87px;
+                }
+                #tsparticles {
+                }
+                #tsparticles {
+                    width: 400px !important;
+                    height: 250px !important;
                 }
             }
         }

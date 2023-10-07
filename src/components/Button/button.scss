@@ -1,0 +1,19 @@
+.btn {
+    font-size: 1em;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    background-color: var(--skin-color);
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    border: none;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.hire-me {
+    margin-bottom: 10px;
+}

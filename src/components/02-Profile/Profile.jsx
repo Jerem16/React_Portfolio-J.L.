@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import Button from "../Button/Button";
 // import about from "../../assets/data/en/about.json";
 
 import Timeline from "../../components/02-Experience/TimeLine";
@@ -35,6 +35,15 @@ function Profile() {
         skills,
     } = data.profile;
 
+    const button1 = {
+        href: "../../assets/data/experience.json",
+        btnClass: "",
+    };
+    const button2 = {
+        href: "../../assets/data/experience.json",
+        btnClass: "",
+    };
+
     return (
         <>
             <div className="row">
@@ -68,18 +77,16 @@ function Profile() {
                             </div>
                             <div className="row padd-15px">
                                 <div className="buttons">
-                                    <a
-                                        href="../../assets/data/experience.json"
-                                        className="btn"
-                                    >
-                                        {buttons.btnName1}
-                                    </a>{" "}
-                                    <a
-                                        href="../../assets/data/experience.json"
-                                        className="btn hire-me"
-                                    >
-                                        {buttons.btnName2}
-                                    </a>
+                                    <Button
+                                        btnName={buttons.btnName2}
+                                        href={button2.href}
+                                        className={button2.btnClass}
+                                    />{" "}
+                                    <Button
+                                        btnName={buttons.btnName1}
+                                        href={button1.href}
+                                        className={button1.btnClass}
+                                    />
                                 </div>
                             </div>
                         </div>

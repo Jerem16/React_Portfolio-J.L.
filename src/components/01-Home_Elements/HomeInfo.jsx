@@ -1,3 +1,5 @@
+import Button from "../Button/Button";
+
 function HomeInfo({
     welcome,
     name,
@@ -8,6 +10,11 @@ function HomeInfo({
     answer,
     hireButtonText,
 }) {
+    const buttons = {
+        href: "../../assets/data/experience.json",
+        class: "hire-me",
+    };
+
     return (
         <div className="blockInfo">
             <div className="home-info">
@@ -15,14 +22,17 @@ function HomeInfo({
                     {welcome}
                     <span className="name">{name}</span>
                 </h3>
+
                 <h3 className="my-profession">
                     {presentation}
                     <span className="typing"></span>
                 </h3>
                 <p>{description}</p>
-                <a href="#contact" className="btn hire-me">
-                    {hireButtonText}
-                </a>
+                <Button
+                    btnName={hireButtonText}
+                    href={buttons.href}
+                    btnClass={buttons.class}
+                />
             </div>
         </div>
     );
