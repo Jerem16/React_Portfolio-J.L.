@@ -1,7 +1,7 @@
 import React from "react";
 import Experience from "./Experience";
 
-function Timeline({ experiences }) {
+function Timeline({ experiences, technologySymbols, technologyImages }) {
     const myTitle = experiences.length > 0 ? experiences[0].sectionTitle : "";
     return (
         <div className="experience padd-15px">
@@ -9,7 +9,11 @@ function Timeline({ experiences }) {
             <div className="row padd-15px">
                 <div className="timeline-box">
                     <div className="timeline shadow-dark">
-                        <Experience experiences={experiences} />
+                        <Experience
+                            experiences={experiences}
+                            technologySymbols={technologySymbols}
+                            technologyImages={technologyImages}
+                        />
                     </div>
                 </div>
             </div>

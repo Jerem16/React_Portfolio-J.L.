@@ -2,7 +2,7 @@ import Profile from "../../components/02-Profile/Profile";
 
 import "./about.scss";
 
-function Home() {
+function About() {
     return (
         <main className="main-content">
             <section className="about section" id="about">
@@ -14,4 +14,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default About;

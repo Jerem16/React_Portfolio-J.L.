@@ -1,8 +1,14 @@
 /* About */
 .about {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    color: var(--text-black-900);
+    position: relative;
+
     &-content {
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 87.47130206625124%;
+        max-width: 87.47130206625124%;
 
         & .about-text {
             flex: 0 0 100%;
@@ -25,45 +31,57 @@
                 color: var(--text-black-700);
             }
         }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+            // padding: 0 4.6875vw;
+            position: relative;
 
-        & .personal-info {
-            flex: 0 0 60%;
-            max-width: 60%;
-            margin-top: 2.5em; /* 40px / 16px = 2.5em */
+            justify-content: center;
+            gap: 3.607084289931125%;
+            & .personal-info {
+                display: flex;
+                flex-wrap: wrap;
+                flex: 0 0 60.69645785503444%;
+                max-width: 60.69645785503444%;
+                margin: 2.5em 0 0 0; /* 40px / 16px = 2.5em */
 
-            & .info-item {
-                flex: 0 0 50%;
-                max-width: 50%;
+                & .info-item {
+                    flex: 0 0 50%;
+                    max-width: 50%;
 
-                & p {
-                    font-weight: 600;
-                    font-size: 1em;
-                    color: var(--text-black-900);
-                    border-bottom: 1px solid var(--bg-black-50);
-                    padding: 0.625em 0; /* 10px / 16px = 0.625em */
+                    & p {
+                        font-weight: 600;
+                        font-size: 1em;
+                        color: var(--text-black-900);
+                        border-bottom: 1px solid var(--bg-black-50);
+                        padding: 0.625em 0; /* 10px / 16px = 0.625em */
 
-                    & span {
-                        font-weight: 400;
-                        color: var(--text-black-700);
-                        display: inline-block;
-                        margin-left: 0.25em; /* 4px / 16px = 0.25em */
+                        & span {
+                            font-weight: 400;
+                            color: var(--text-black-700);
+                            display: inline-block;
+                            margin-left: 0.25em; /* 4px / 16px = 0.25em */
+                        }
                     }
                 }
-            }
 
-            & .buttons {
-                margin-top: 1.875em; /* 30px / 16px = 1.875em */
+                & .buttons {
+                    margin-top: 1.875em; /* 30px / 16px = 1.875em */
 
-                & .btn {
-                    margin: 0.625em 0.937em 0 0; /* 10px / 16px = 0.625em, 15px / 16px = 0.9375em */
+                    & .btn {
+                        margin: 0.625em 0.937em 0 0; /* 10px / 16px = 0.625em, 15px / 16px = 0.9375em */
+                    }
                 }
             }
         }
 
         & .skills {
-            flex: 0 0 40%;
-            max-width: 40%;
+            flex: 0 0 35.69645785503444%;
+            max-width: 35.69645785503444%;
             margin-top: 1.5625em; /* 25px / 16px = 1.5625em */
+            // margin: 2.5em 0 0 0;
 
             & .skill-item {
                 flex: 0 0 100%;
@@ -106,18 +124,26 @@
             }
         }
 
-        & .education,
-        & .experience {
-            flex: 0 0 50%;
-            max-width: 50%;
-            margin-top: 1.875em; /* 30px / 16px = 1.875em */
-        }
-
-        & h3.title {
-            font-size: 1.5em; /* 24px / 16px = 1.5em */
-            font-weight: 700;
-            color: var(--text-black-900);
-            margin-bottom: 1.875em; /* 30px / 16px = 1.875em */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+            // padding: 0 4.6875vw;
+            position: relative;
+            // border: 1px solid #000;
+            justify-content: center;
+            gap: 3.607084289931125%;
+            & .experience {
+                flex: 0 0 48.19645785503444%;
+                max-width: 48.19645785503444%;
+                margin-top: 1.875em; /* 30px / 16px = 1.875em */
+                & h3.title {
+                    font-size: 1.5em; /* 24px / 16px = 1.5em */
+                    font-weight: 700;
+                    color: var(--text-black-900);
+                    margin-bottom: 1.875em; /* 30px / 16px = 1.875em */
+                }
+            }
         }
 
         & .timeline-box {
@@ -135,7 +161,7 @@
             border-radius: 0.937em;
             & .timeline-item {
                 position: relative;
-                padding: 0 0 3.125em 2.3125em; /* 50px / 16px = 3.125em, 37px / 16px = 2.3125em */
+                padding: 0 1.1562em 3.125em 2.3125em; /* 50px / 16px = 3.125em, 37px / 16px = 2.3125em */
 
                 &:last-child {
                     padding-bottom: 0;
@@ -187,6 +213,11 @@
                     line-height: 1.5625em; /* 25px / 16px = 1.5625em */
                     color: var(--text-black-700);
                     transition: transform 1.3s ease-in-out;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    // border: 1px solid #000;
+                    width: 100%;
                     // .close {
                     //     display: none;
                     // }
@@ -200,6 +231,45 @@
                     //     -webkit-animation: openColse 0.45s ease-in-out;
                     //     border: 1px solid #000;
                     // }
+                    h4 {
+                        display: block;
+                        flex: 1;
+                        // border: 1px solid #000;
+                        width: 100%;
+                        min-width: 200px;
+                    }
+                    .technologies {
+                        // flex: 1;
+                        display: flex;
+                        align-items: center;
+                        // justify-content: center;
+                        // max-height: 20px;
+                        margin-left: 1em;
+                        width: auto;
+                        // float: right;
+                        // text-align: center;
+                        // border: 1px solid #000;
+                        // background: var(--skin-color);
+                        // padding: 0 0.19em;
+                        width: 100%;
+                        img {
+                            display: block;
+                            //width: auto;
+                            height: 1.2em;
+                            //max-height: 2em;
+                            //min-height: 2em;
+                            object-fit: contain;
+                            padding: 0 0.19em;
+                            -webkit-filter: drop-shadow(
+                                2px 3px rgba(0, 0, 0, 0.25)
+                            );
+                            filter: drop-shadow(2px 3px rgba(0, 0, 0, 0.25));
+                            &:hover {
+                                -webkit-filter: grayscale(0%);
+                                filter: grayscale(0%);
+                            }
+                        }
+                    }
                 }
             }
 

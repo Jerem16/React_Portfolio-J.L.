@@ -119,11 +119,12 @@
     .flag {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         position: absolute;
         // left: 0px;
         top: -35px;
         // border: 1px solid #000;
+        width: 100%;
 
         .flagLogo {
             display: flex;
@@ -132,16 +133,24 @@
             width: 30px;
             height: 30px;
             padding: 5px;
-            // margin: 0 10px;
-            // border-radius: 50%;
-            // border: 1px solid var(--bg-black-50);
-            // font-size: 1em;
-            // line-height: 20px;
-            // font-weight: 600;
-            // // text-align: center;
-            // color: var(--text-black-700);
-            // padding: 5px 15px;
-            // // border-bottom: ;
+            //margin: 0 10px;
+            //border-radius: 50%;
+            //border: 1px solid var(--bg-black-50);
+            //font-size: 1em;
+            //line-height: 20px;
+            //font-weight: 600;
+            ////text-align: center;
+            //color: var(--text-black-700);
+            //padding: 5px 15px;
+            ////border-bottom: ;
+            cursor: pointer;
+
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            &:hover {
+                -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
         }
     }
     .nav {

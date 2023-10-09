@@ -4,6 +4,8 @@
     flex-flow: column nowrap;
     min-height: 100vh;
     color: var(--text-black-900);
+    position: relative;
+
     .row {
         flex-flow: row nowrap;
         justify-content: center;
@@ -13,10 +15,10 @@
             display: flex;
             justify-content: center;
             width: 53.06657920629715%;
+            background-color: var(--bg-black-900);
             .home-info {
                 width: 100%;
                 // max-width: 709.5px;
-                // background: blue;
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: flex-start;
@@ -30,7 +32,7 @@
 
                     span {
                         font-family: "Clicker Script", cursive;
-                        font-size: 30px;
+                        font-size: 32px;
                         font-weight: 700;
                         color: var(--skin-color);
                     }
@@ -47,6 +49,7 @@
                 p {
                     font-size: 20px;
                     color: var(--text-black-700);
+                    overflow-wrap: break-word;
                 }
             }
         }
@@ -56,31 +59,11 @@
             justify-content: center;
             width: 32.79763857002296%;
             position: relative;
-            .bgDraw {
-                position: absolute;
-                width: 100%;
-                height: 360px;
-                // max-width: calc(100% - 225.39px);
-                // left: 139.26px;
-                top: 20px;
-                // max-width: calc(100% - 40px);
-                left: 20px;
-                // height: 100%;
-                // background: #000;
-                // border: 1px solid #000;
-                z-index: 0;
-                .tsparticles  {
-                    // max-width: 400px !important;
-                    width: 100% !important;
-                    height: 100% !important;
-                    position: absolute !important; /* Changez "fixed" en "static" pour annuler la position fixe */
-                    z-index: auto !important; /* Annulez la valeur du z-index */
-                    top: auto !important; /* Annulez la valeur de top */
-                    left: 0 !important; /* Annulez la valeur de left */
-                    pointer-events: auto !important; /* Annulez la valeur de pointer-events */
-                    // background-color: gray !important; /* Annulez la couleur de fond */
-                }
-            }
+            // background-image: url("../../assets/img/Le-havre-fond.webp");
+            // background-size: auto;
+            // background-position: top center;
+            // background-repeat: no-repeat;
+
             .home-img {
                 width: 100%;
                 max-width: 473px;
@@ -94,16 +77,49 @@
                 margin: 0;
                 padding: 0;
 
-                .leftNB {
-                    // content: "";
-                    align-self: flex-start;
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.3) 0%,
+                    rgba(0, 0, 0, 0.3) 12.5%,
+                    var(--bg-black-900) 12.5%,
+                    var(--bg-black-900) 87.5%,
+                    rgba(0, 0, 0, 0.3) 87.5%,
+                    rgba(0, 0, 0, 0.3) 100%
+                );
+                background: content-box
+                    linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0) 0%,
+                        var(--bg-black-900) 22.5%,
+                        var(--bg-black-900) 77.5%,
+                        rgba(0, 0, 0, 0)
+                    );
+                // border: 1px solid #000;
+                // background: var(--skin-color);
+
+                &::after {
+                    content: "";
+                    // align-self: flex-start;
                     width: 139.26px;
                     height: 86.13px;
                     border-top: 10px solid var(--skin-color);
                     border-left: 10px solid var(--skin-color);
-                    position: relative;
-                    // top: 0px;
-                    // left: 0px;
+                    position: absolute;
+                    top: -5px;
+
+                    left: 0px;
+                }
+                &::before {
+                    content: "";
+                    // align-self: flex-end;
+                    // float: right;
+                    width: 86.13px;
+                    height: 139.26px;
+                    border-bottom: 10px solid var(--skin-color);
+                    border-right: 10px solid var(--skin-color);
+                    position: absolute;
+                    bottom: -10px;
+                    right: 0px;
                 }
                 .centerNB {
                     min-width: 247.49px;
@@ -117,18 +133,29 @@
                     // top: 0px;
                     // left: 139.26px;
                 }
-                .rightNB {
-                    // content: "";
-                    align-self: flex-end;
-                    float: right;
-                    width: 86.13px;
-                    height: 139.26px;
-                    border-bottom: 10px solid var(--skin-color);
-                    border-right: 10px solid var(--skin-color);
-                    // position: absolute;
-                    // bottom: 0px;
-                    // right: 0px;
-                }
+                // .leftNB {
+                //     // content: "";
+                //     align-self: flex-start;
+                //     width: 139.26px;
+                //     height: 86.13px;
+                //     // border-top: 10px solid var(--skin-color);
+                //     // border-left: 10px solid var(--skin-color);
+                //     // position: relative;
+                //     // top: 0px;
+                //     // left: 0px;
+                // }
+                // .rightNB {
+                //     // content: "";
+                //     align-self: flex-end;
+                //     float: right;
+                //     width: 86.13px;
+                //     height: 139.26px;
+                //     // border-bottom: 10px solid var(--skin-color);
+                //     // border-right: 10px solid var(--skin-color);
+                //     // position: absolute;
+                //     // bottom: 0px;
+                //     // right: 0px;
+                // }
 
                 img {
                     align-self: center;
@@ -139,12 +166,6 @@
                     border-radius: 5px;
                     // position: absolute;
                     // right: 87px;
-                }
-                #tsparticles {
-                }
-                #tsparticles {
-                    width: 400px !important;
-                    height: 250px !important;
                 }
             }
         }

@@ -1,31 +1,26 @@
 import React, { useEffect, useRef } from "react";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
+import { loadFull } from "tsparticles";
 
-function CanvasBackground() {
+function CanvasBackground2() {
     const computedStyle = getComputedStyle(document.documentElement);
     const skinColor = computedStyle.getPropertyValue("--skin-color").trim();
 
     const particlesInit = useCallback(async (engine) => {
-        await loadSlim(engine);
+        await loadFull(engine);
     }, []);
 
     const particlesLoaded = useCallback(async (container) => {
-        await console.log(container);
+        await console.log("2", container);
     }, []);
 
     return (
         <Particles
-            canvasClassName="tsparticles"
+            canvasClassName="tsparticles2"
+            id="tsparticles2"
             init={particlesInit}
             loaded={particlesLoaded}
-            style={{
-                maxWidth: "100%",
-                // clipPath: "polygon(50% 0, 100% 0, 100% 100%)",
-                // transform: "rotate(45deg)",
-                
-            }}
             options={{
                 fullScreen: false,
 
@@ -44,7 +39,7 @@ function CanvasBackground() {
                     },
                     modes: {
                         push: {
-                            quantity: 3,
+                            quantity: 4,
                         },
                         repulse: {
                             distance: 200,
@@ -96,4 +91,4 @@ function CanvasBackground() {
     );
 }
 
-export default CanvasBackground;
+export default CanvasBackground2;

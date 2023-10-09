@@ -16,6 +16,7 @@ body {
     line-height: 1.5;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden !important;
 }
 * {
     margin: 0;
@@ -23,6 +24,7 @@ body {
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
+    
 }
 ::before,
 ::after {
@@ -39,9 +41,9 @@ ul {
     background: var(--bg-black-900);
     opacity: 1;
     .section-title {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 60px;
+        flex: 0 0 87.47130206625124%;
+        max-width: 87.47130206625124%;
+        margin: 0 0 60px 0;
 
         h2 {
             font-size: 40px;
@@ -92,18 +94,73 @@ ul {
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 6.264348966874385%;
+    // flex-flow: row wrap;
+    // padding: 0 4.6875vw;
     position: relative;
     // border: 1px solid #000;
+    justify-content: center;
+    // gap: 1.607084289931125%;
 }
-
-
 
 .shadow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-    
 }
 
 .fas {
     color: var(--text-black-900);
+}
+.bgDraw {
+    position: absolute;
+    width: calc(100%);
+    height: 360px;
+    // max-width: calc(100% - 225.39px);
+    // left: 139.26px;
+    top: 0px;
+    // max-width: calc(100% - 40px);
+    left: 0px;
+    // height: 100%;
+    // background: #000;
+    // border: 1px solid #000;
+    z-index: 0;
+    #tsparticles {
+    }
+    .tsparticles {
+        //max-width: 400px !important;
+        width: 600px !important;
+        height: 300px !important;
+        position: absolute !important;
+        z-index: auto !important;
+        top: -145px !important;
+        right: -195px !important;
+        pointer-events: auto !important;
+        // background-color: gray !important;
+        clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+    }
+}
+.bgDraw2 {
+    position: absolute;
+    width: calc(100% - 10px);
+    height: 16.1vh;
+    bottom: 6.14%;
+
+    left: 0px;
+
+    z-index: 0;
+
+    .tsparticles2 {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important; /* Changez "fixed" en "static" pour annuler la position fixe */
+        z-index: auto !important; /* Annulez la valeur du z-index */
+        bottom: 0 !important; /* Annulez la valeur de top */
+        left: 0 !important; /* Annulez la valeur de left */
+        pointer-events: auto !important; /* Annulez la valeur de pointer-events */
+        // background-color: gray !important; /* Annulez la couleur de fond */
+        // border: 1px solid #000;
+    }
 }

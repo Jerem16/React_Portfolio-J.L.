@@ -49,6 +49,7 @@
             ]
         }
     ],
+
     "experience": [
         {
             "sectionTitle": "Experience",
@@ -62,18 +63,28 @@
                     "index": "random-index-4",
                     "jobTitle": "Micro-Service.online",
                     "techTitle": "Technologies : ",
-                    "technologies": "HTML, CSS, jQuery, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "jQuery": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Creation of a personal website offering computer hardware design and maintenance services.",
                         "itemLi": ["Creation of a Mobile-First Site."]
                     }
                 },
+
                 {
                     "index": "random-index-5",
                     "id": "aEd4",
                     "jobTitle": "Curriculum Vitae",
                     "techTitle": "Technologies : ",
-                    "technologies": "HTML, CSS, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Design and development of an interactive Curriculum Vitae.",
                         "itemLi": []
@@ -92,7 +103,10 @@
                     "index": "random-index-6",
                     "jobTitle": "Riding Cities",
                     "techTitle": "Technologies : ",
-                    "technologies": "React, Sass, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true
+                    },
                     "description": {
                         "paragraph": "Landing page for Riding Cities (Webonzaï agency).",
                         "itemLi": []
@@ -104,7 +118,10 @@
                     "index": "random-index-7",
                     "jobTitle": "Booki",
                     "techTitle": "Technologies : ",
-                    "technologies": "HTML, CSS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true
+                    },
                     "description": {
                         "paragraph": "Web Interface Integration for Booki.",
                         "itemLi": [
@@ -120,7 +137,11 @@
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
                     "techTitle": "Technologies : ",
-                    "technologies": "HTML, SCSS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "Sass": true
+                    },
                     "description": {
                         "paragraph": "Junior Developer at OhMyFood - Creation of a Mobile-First Site",
                         "itemLi": [
@@ -137,7 +158,11 @@
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
                     "techTitle": "Technologies : ",
-                    "technologies": "HTML, CSS, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Freelance Front-End Developer at Print It - Carrousel Project",
                         "itemLi": [
@@ -153,7 +178,11 @@
                     "index": "random-index-10",
                     "jobTitle": "Portfolio - Sophie Bluel",
                     "techTitle": "Technologies : ",
-                    "technologies": "HTML, CSS, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Front-End Developer at ArchiWebos - Interior Architect Portfolio Site Project",
                         "itemLi": [
@@ -170,7 +199,13 @@
                     "index": "random-index-11",
                     "jobTitle": "Menu Maker by Qwenta",
                     "techTitle": "Technologies : ",
-                    "technologies": "Agile, Scrum, Notion, Trello, wakelet",
+                    "technologies": {
+                        "Agile": true,
+                        "Scrum": true,
+                        "Notion": true,
+                        "Trello": true,
+                        "wakelet": true
+                    },
                     "description": {
                         "paragraph": "Web Development Project Manager at Webgencia - “Menu Maker by Qwenta” project",
                         "itemLi": [
@@ -186,7 +221,13 @@
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
                     "techTitle": "Technologies : ",
-                    "technologies": "React, Sass, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "React": true,
+                        "Sass": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Freelance Front-End Developer for Kasa - Redesign Project",
                         "itemLi": [
@@ -205,7 +246,13 @@
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
                     "techTitle": "Technologies : ",
-                    "technologies": "SEO, HTML, CSS, JS, jQuery",
+                    "technologies": {
+                        "SEO": true,
+                        "HTML": true,
+                        "CSS": true,
+                        "JS": true,
+                        "jQuery": true
+                    },
                     "description": {
                         "paragraph": "SEO optimization for Nina Carducci – Photographer",
                         "itemLi": [
@@ -224,7 +271,13 @@
                     "index": "random-index-14",
                     "jobTitle": "77events",
                     "techTitle": "Technologies : ",
-                    "technologies": "React, CSS, JS, Jest, Eslint-config-airbnb",
+                    "technologies": {
+                        "React": true,
+                        "CSS": true,
+                        "JS": true,
+                        "Jest": true,
+                        "Eslint": true
+                    },
                     "description": {
                         "paragraph": "Optimization and debugging, finalization of the 77events Site",
                         "itemLi": [
@@ -240,7 +293,13 @@
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
                     "techTitle": "Technologies : ",
-                    "technologies": "React, Redux, SCSS, JS, MongoDB",
+                    "technologies": {
+                        "React": true,
+                        "Redux": true,
+                        "SCSS": true,
+                        "JS": true,
+                        "MongoDB": true
+                    },
                     "description": {
                         "paragraph": "Development of an ArgentBank Banking Application",
                         "itemLi": [
@@ -254,6 +313,7 @@
             ]
         }
     ],
+
     "profile": {
         "section": "About Me",
         "presentation": "My name is Jérémy, and I work as ",

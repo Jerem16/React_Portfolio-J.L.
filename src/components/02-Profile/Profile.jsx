@@ -47,14 +47,14 @@ function Profile() {
     return (
         <>
             <div className="row">
-                <div className="section-title padd-15px">
+                <div className="section-title">
                     <h2>{section}</h2>
                 </div>
             </div>
             <div className="row">
-                <div className="about-content padd-15px">
+                <div className="about-content ">
                     <div className="row">
-                        <div className="about-text padd-15px">
+                        <div className="about-text">
                             <h3>
                                 {presentation}
                                 <span>{jobTitle}</span>
@@ -63,60 +63,56 @@ function Profile() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="personal-info padd-15px">
-                            <div className="row padd-15px">
-                                {Object.entries(personalInfo).map(
-                                    ([key, value]) => (
-                                        <div className="info-item" key={key}>
-                                            <p>
-                                                {key} : <span>{value}</span>
-                                            </p>
-                                        </div>
-                                    )
-                                )}
-                            </div>
-                            <div className="row padd-15px">
-                                <div className="buttons">
-                                    <Button
-                                        btnName={buttons.btnName2}
-                                        href={button2.href}
-                                        className={button2.btnClass}
-                                    />{" "}
-                                    <Button
-                                        btnName={buttons.btnName1}
-                                        href={button1.href}
-                                        className={button1.btnClass}
-                                    />
-                                </div>
+                        <div className="personal-info">
+                            {Object.entries(personalInfo).map(
+                                ([key, value]) => (
+                                    <div className="info-item" key={key}>
+                                        <p>
+                                            {key} : <span>{value}</span>
+                                        </p>
+                                    </div>
+                                )
+                            )}
+
+                            <div className="buttons">
+                                <Button
+                                    btnName={buttons.btnName2}
+                                    href={button2.href}
+                                    className={button2.btnClass}
+                                />{" "}
+                                <Button
+                                    btnName={buttons.btnName1}
+                                    href={button1.href}
+                                    className={button1.btnClass}
+                                />
                             </div>
                         </div>
-                        <div className="skills padd-15px">
-                            <div className="row padd-15px">
-                                {skills.map((skill) => (
-                                    <div
-                                        className="skill-item"
-                                        key={skill.name}
-                                    >
-                                        <h5>{skill.name}</h5>
-                                        <div className="progress">
-                                            <div
-                                                className="progress-in"
-                                                style={{
-                                                    width: `${skill.percent}%`,
-                                                }}
-                                            ></div>
-                                            <div className="skill-percent">
-                                                {skill.percent}%
-                                            </div>
+                        <div className="skills">
+                            {skills.map((skill) => (
+                                <div className="skill-item" key={skill.name}>
+                                    <h5>{skill.name}</h5>
+                                    <div className="progress">
+                                        <div
+                                            className="progress-in"
+                                            style={{
+                                                width: `${skill.percent}%`,
+                                            }}
+                                        ></div>
+                                        <div className="skill-percent">
+                                            {skill.percent}%
                                         </div>
                                     </div>
-                                ))}
-                            </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className="row">
                         <Timeline experiences={data.education} />
-                        <Timeline experiences={data.experience} />
+                        <Timeline
+                            experiences={data.experience}
+                            technologySymbols={data.technologySymbols}
+                            technologyImages={data.technologyImages}
+                        />
                     </div>
                 </div>
             </div>

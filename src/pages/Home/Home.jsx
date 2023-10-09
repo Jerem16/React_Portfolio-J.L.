@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Typed from "typed.js"; // Importez Typed.js
-
+import CanvasBackground from "../../components/CanvasBackground/CanvasBackground";
+import CanvasBackground2 from "../../components/CanvasBackground2/CanvasBackground2";
+import Triangle from "../../components/Triangle/Triangle";
 import HomeInfo from "../../components/01-Home_Elements/HomeInfo";
 import HomeImage from "../../components/01-Home_Elements/HomeImage";
 import data from "../../assets/data/en/home.json";
@@ -73,6 +75,10 @@ function Home() {
         <main className="main-content">
             <section className="home section" id="home">
                 <div className="container">
+                    
+                    <div className="bgDraw"><div className="Tefg"></div>
+                        <CanvasBackground />
+                    </div>
                     <div className="row padd-15px">
                         <HomeInfo
                             welcome={welcome}
@@ -85,6 +91,9 @@ function Home() {
                             hireButtonText={hireButtonText}
                         />
                         <HomeImage imageSrc={imageSrc} />
+                    </div>
+                    <div className="bgDraw2">
+                        <CanvasBackground2 />
                     </div>
                 </div>
             </section>
