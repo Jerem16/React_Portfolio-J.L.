@@ -1,10 +1,10 @@
 {
     "technologyImages": {
+        "React": "react.svg",
         "HTML": "html5.svg",
         "CSS": "css3.svg",
         "jQuery": "jquery.svg",
 
-        "React": "react.svg",
         "Sass": "sass.svg",
         "Agile": "agile.svg",
         "Scrum": "scrum.svg",

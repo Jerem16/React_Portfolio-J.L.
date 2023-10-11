@@ -22,8 +22,9 @@ function Experience({ experiences }) {
                     <h4 className="timeline-title">{experience.title}</h4>
                     {experience.entries.map((entry) => (
                         <article
+                            className={`timeline-text ${experience.addClass}`}
                             key={entry.index}
-                            className="timeline-text"
+                            // onClick={() => toggleArticle(entry.id)}
                             style={{ marginBottom: `${entry.size}px` }}
                         >
                             <div>
@@ -33,58 +34,31 @@ function Experience({ experiences }) {
                                 </ul>
                             </div>
                             <h4 className="">
-                                <i
-                                    className={`fa fa-chevron-up`}
-                                    onClick={() => toggleArticle(entry.id)}
-                                    style={{
-                                        display: `${entry.display}`,
-                                        transformOrigin: "center",
-                                        transform: `rotate(${
-                                            openArticleStates[entry.id]
-                                                ? "180deg"
-                                                : "90deg"
-                                        })`,
-                                        transition:
-                                            "transform 0.3s ease-in-out",
-                                    }}
-                                ></i>{" "}
                                 {entry.jobTitle}
-                            </h4>
-                            <div className="technologies">
-                                {/* <strong>Technologies :</strong> */}
 
-                                {Object.keys(tech.technologyImages).map(
-                                    (technology, index) =>
-                                        entry.technologies &&
-                                        entry.technologies[technology] ===
-                                            true && (
-                                            <div key={index}>
-                                                <abbr
-                                                    title={
-                                                        tech.technologySymbols[
-                                                            technology
-                                                        ]
-                                                            ? tech
-                                                                  .technologySymbols[
-                                                                  technology
-                                                              ]
-                                                            : ""
-                                                    }
-                                                >
-                                                    {technology &&
-                                                        tech.technologyImages[
-                                                            technology
-                                                        ] && (
-                                                            <img
-                                                                src={require(`../../assets/img/skillsIcons/${tech.technologyImages[technology]}`)}
-                                                                alt={technology}
-                                                            />
-                                                        )}
-                                                </abbr>
-                                            </div>
-                                        )
-                                )}
-                            </div>
+                                <div className="bd_Bottom">
+                                    <div className="fa-Circle">
+                                        <i
+                                            className={`fa fa-chevron-up `}
+                                            onClick={() =>
+                                                toggleArticle(entry.id)
+                                            }
+                                            style={{
+                                                display: `${entry.display}`,
+                                                transformOrigin: "center",
+                                                transform: `rotate(${
+                                                    openArticleStates[entry.id]
+                                                        ? "180deg"
+                                                        : "270deg"
+                                                })`,
+                                                transition:
+                                                    "transform 0.3s ease-in-out",
+                                            }}
+                                        ></i>
+                                    </div>
+                                </div>
+                            </h4>
+
                             <div
                                 className={`div-anime ${
                                     openArticleStates[entry.id]
@@ -94,6 +68,7 @@ function Experience({ experiences }) {
                                 style={{
                                     display: `${entry.display}`,
                                 }}
+                                id="x"
                             >
                                 <p
                                     className={`timeline-anime ${
@@ -136,6 +111,47 @@ function Experience({ experiences }) {
                                             )}
                                         </ul>
                                     )}
+                                <a className="technologies">
+                                    {/* <strong></strong> */}
+                                    {/* {experience.techTitle} */}
+
+                                    {Object.keys(tech.technologyImages).map(
+                                        (technology, index) =>
+                                            entry.technologies &&
+                                            entry.technologies[technology] ===
+                                                true && (
+                                                <div key={index}>
+                                                    <abbr
+                                                        title={
+                                                            tech
+                                                                .technologySymbols[
+                                                                technology
+                                                            ]
+                                                                ? tech
+                                                                      .technologySymbols[
+                                                                      technology
+                                                                  ]
+                                                                : ""
+                                                        }
+                                                    >
+                                                        {technology &&
+                                                            tech
+                                                                .technologyImages[
+                                                                technology
+                                                            ] && (
+                                                                <img
+                                                                    src={require(`../../assets/img/skillsIcons/${tech.technologyImages[technology]}`)}
+                                                                    alt={
+                                                                        technology
+                                                                    }
+                                                                />
+                                                            )}
+                                                    </abbr>
+                                                </div>
+                                            )
+                                    )}
+                                </a>
+                                <div className="bd_Bottom"></div>
                             </div>
                         </article>
                     ))}

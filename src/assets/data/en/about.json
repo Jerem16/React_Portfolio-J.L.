@@ -56,13 +56,14 @@
             "sectionId": "Exp1",
             "year": "2021 - 2022",
             "title": "<Web Developer>",
+            "addClass": "timeline-text_add ",
+            "techTitle": "Technologies  ",
             "entries": [
                 {
                     "id": "aEd3",
                     "size": 25,
                     "index": "random-index-4",
                     "jobTitle": "Micro-Service.online",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -74,12 +75,10 @@
                         "itemLi": ["Creation of a Mobile-First Site."]
                     }
                 },
-
                 {
                     "index": "random-index-5",
                     "id": "aEd4",
                     "jobTitle": "Curriculum Vitae",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -96,13 +95,14 @@
             "sectionId": "Exp2",
             "year": "2022 - 2023",
             "title": "<Web Developer/Web Integrator>",
+            "techTitle": "Technologies ",
+            "addClass": "timeline-text_add ",
             "entries": [
                 {
                     "size": 25,
                     "id": "aEd5",
                     "index": "random-index-6",
                     "jobTitle": "Riding Cities",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
@@ -117,7 +117,6 @@
                     "id": "aEd6",
                     "index": "random-index-7",
                     "jobTitle": "Booki",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
@@ -136,7 +135,6 @@
                     "id": "aEd7",
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -157,7 +155,6 @@
                     "id": "aEd68",
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -177,7 +174,6 @@
                     "id": "aEd12",
                     "index": "random-index-10",
                     "jobTitle": "Portfolio - Sophie Bluel",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -198,7 +194,6 @@
                     "size": 25,
                     "index": "random-index-11",
                     "jobTitle": "Menu Maker by Qwenta",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "Agile": true,
                         "Scrum": true,
@@ -220,7 +215,6 @@
                     "size": 25,
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -245,7 +239,6 @@
                     "size": 25,
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "SEO": true,
                         "HTML": true,
@@ -270,7 +263,6 @@
                     "size": 25,
                     "index": "random-index-14",
                     "jobTitle": "77events",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "React": true,
                         "CSS": true,
@@ -292,7 +284,6 @@
                     "id": "aEd1x9",
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
-                    "techTitle": "Technologies : ",
                     "technologies": {
                         "React": true,
                         "Redux": true,
