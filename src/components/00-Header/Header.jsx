@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import { loadLanguageData } from "../../utils/loadLanguageData";
 import "./header.scss";
 import LanguageSelector from "./LanguageSelector";
+import ThemeSelector from "../ThemeSelector/ThemeSelector";
+
 function Header() {
     const selectedLanguage = useSelector((state) => state.language.language);
     const [languageData, setLanguageData] = useState(null);
@@ -31,6 +33,7 @@ function Header() {
             <div className="aside">
                 <div className="logo">
                     <LanguageSelector />
+                    {/* <ThemeSelector /> */}
                     <Link to={navLinks[0].to}>
                         <span>{logoTitle}</span>
                         {logoSpanTitle}

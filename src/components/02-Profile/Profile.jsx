@@ -106,7 +106,7 @@ function Profile() {
                             ))}
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row_timeLine">
                         <Timeline experiences={data.education} />
                         <Timeline
                             experiences={data.experience}

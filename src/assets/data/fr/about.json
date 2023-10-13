@@ -55,13 +55,20 @@
             "sectionId": "Exp1",
             "year": "2021 - 2022",
             "title": "Développeur Web",
+            "addClass": "timeline-text_add ",
+            "techTitle": "Technologies  ",
             "entries": [
                 {
                     "id": "aEd3",
                     "size": 25,
                     "index": "random-index-4",
                     "jobTitle": "Micro-Service.online",
-                    "technologies": "HTML, CSS, jQuery, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "jQuery": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Création d'un site web personnel, proposant des services de conception et de maintenance, de matériel informatique.",
                         "itemLi": []
@@ -71,7 +78,11 @@
                     "id": "aEd4",
                     "index": "random-index-5",
                     "jobTitle": "Curriculum Vitae",
-                    "technologies": "HTML, CSS, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Création d'un Curriculum Vitae interactif.",
                         "itemLi": []
@@ -83,13 +94,18 @@
             "sectionId": "Exp2",
             "year": "2022 - 2023",
             "title": "Développeur Web / Intégrateur Web",
+            "techTitle": "Technologies ",
+            "addClass": "timeline-text_add ",
             "entries": [
                 {
                     "size": 25,
                     "id": "aEd5",
                     "index": "random-index-6",
                     "jobTitle": "Riding Cities",
-                    "technologies": "React, Sass, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true
+                    },
                     "description": {
                         "paragraph": "Complétion de la landing page du site Riding Cities  (agence Webonzaï).",
                         "itemLi": []
@@ -100,7 +116,10 @@
                     "id": "aEd6",
                     "index": "random-index-7",
                     "jobTitle": "Booki",
-                    "technologies": "HTML, CSS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true
+                    },
                     "description": {
                         "paragraph": "Intégration de l'interface Web pour Booki.",
                         "itemLi": [
@@ -115,7 +134,11 @@
                     "id": "aEd7",
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
-                    "technologies": "HTML, SCSS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "Sass": true
+                    },
                     "description": {
                         "paragraph": "Développeur Junior chez OhMyFood - Création d'un site en Mobile-First",
                         "itemLi": [
@@ -131,7 +154,11 @@
                     "id": "aEd8",
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
-                    "technologies": "HTML, CSS, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Développeur Front-End Freelance chez Print-It - Projet Carrousel",
                         "itemLi": [
@@ -146,7 +173,11 @@
                     "id": "aEd9",
                     "index": "random-index-10",
                     "jobTitle": "Portfolio - Sophie Bluel",
-                    "technologies": "HTML, CSS, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Développeur Front-End chez ArchiWebos - integration d'un Site portfolio pour un architecte d'intérieur",
                         "itemLi": [
@@ -162,7 +193,13 @@
                     "id": "bEd1",
                     "index": "random-index-11",
                     "jobTitle": "Menu Maker by Qwenta",
-                    "technologies": "Agile, Scrum, Notion, Trello, wakelet",
+                    "technologies": {
+                        "Agile": true,
+                        "Scrum": true,
+                        "Notion": true,
+                        "Trello": true,
+                        "wakelet": true
+                    },
                     "description": {
                         "paragraph": "Chef de Projet en Développement Web chez Webgencia - Projet “Menu Maker by Qwenta”",
                         "itemLi": [
@@ -177,7 +214,13 @@
                     "id": "bEd2",
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
-                    "technologies": "React, Sass, JS",
+                    "technologies": {
+                        "HTML": true,
+                        "CSS": true,
+                        "React": true,
+                        "Sass": true,
+                        "JS": true
+                    },
                     "description": {
                         "paragraph": "Développeur Front-End Freelance pour Kasa - Refonte de site",
                         "itemLi": [
@@ -185,7 +228,7 @@
                             "Développement de l'application React d’après maquettes.",
                             "Respect des contraintes techniques et fonctionnelles.",
                             "Utilisation de données (fichier JSON).",
-                            "Mise en place de composants React.",
+                            "Devellopement de composants React.",
                             "Création de routes avec React Router.",
                             "Respect des guidelines de codage de Kasa"
                         ]
@@ -196,7 +239,13 @@
                     "size": 25,
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
-                    "technologies": "SEO, HTML, CSS, JS, jQuery",
+                    "technologies": {
+                        "SEO": true,
+                        "HTML": true,
+                        "CSS": true,
+                        "JS": true,
+                        "jQuery": true
+                    },
                     "description": {
                         "paragraph": "Optimisation SEO pour Nina Carducci - Photographe",
                         "itemLi": [
@@ -214,7 +263,13 @@
                     "size": 25,
                     "index": "random-index-14",
                     "jobTitle": "77events",
-                    "technologies": "React, CSS, JS, Jest, Eslint-config-airbnb",
+                    "technologies": {
+                        "React": true,
+                        "CSS": true,
+                        "JS": true,
+                        "Jest": true,
+                        "Eslint": true
+                    },
                     "description": {
                         "paragraph": "Optimisation et débogage, finalisation du site 77events",
                         "itemLi": [
@@ -229,7 +284,13 @@
                     "id": "bEd7",
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
-                    "technologies": "React, Redux, SCSS, JS, MongoDB",
+                    "technologies": {
+                        "React": true,
+                        "Redux": true,
+                        "SCSS": true,
+                        "JS": true,
+                        "MongoDB": true
+                    },
                     "description": {
                         "paragraph": "Développement de l’Application Bancaire : ArgentBank",
                         "itemLi": [

@@ -1,18 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Header from "./components/00-Header/Header";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
 import Error404 from "./pages/Error404/Error404";
-
 import Footer from "./components/Footer/Footer";
+import ThemeSelector from "./components/ThemeSelector/ThemeSelector";
+import GlobalStyle from "./utils/style/GlobalStyle";
+import "./assets/styles/main.scss";
 
 function App() {
     return (
         <BrowserRouter>
+            <GlobalStyle />
             <Header />
+            <ThemeSelector />
             <Routes>
                 <>
                     <Route path="/" element={<Home />} />
@@ -21,17 +24,8 @@ function App() {
                     <Route path="/portfolio" element={<Home />} />
                     <Route path="/contact" element={<Home />} />
                 </>
-                {/* 
-                {authenticated ? (
-                    <></>
-                ) : (
-                    <Route path="*" element={<Error404 />} />
-                )} 
-                */}
-
                 <Route path="*" element={<Error404 />} />
             </Routes>
-            {/* <Footer /> */}
         </BrowserRouter>
     );
 }

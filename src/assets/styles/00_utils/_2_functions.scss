@@ -1,0 +1,48 @@
+/* 
+!! Gestion => COULEURS 
+ */
+@function lightness-shift($colour) {
+    @if (lightness($colour) < 25%) {
+        @return lighten($colour, 10%);
+    } @else {
+        @return lighten($colour, 10%);
+    }
+}
+@function darken-shift($colour) {
+    @if (lightness($colour) < 25%) {
+        @return darken($colour, 10%);
+    } @else {
+        @return darken($colour, 10%);
+    }
+}
+
+/*Gère parfaitement le mélange ALPHA SI RVB EST FOURNIS => VOIR  rvb-calculator
+Utilisation : 
+background-color: blend-colors($color-primary, black, 50%);
+*/
+@function blend-colors($color1, $color2, $weight) {
+    @return mix($color1, $color2, $weight);
+}
+
+/*Gère très mal le mélange ALPHA
+Utilisation : 
+background-color: interpolate-colors($color-primary, yellow, 30);
+*/
+@function rvb-calculator($color1, $color2, $weight) {
+    $weight: $weight / 100;
+    $red1: red($color1);
+    $green1: green($color1);
+    $blue1: blue($color1);
+    $alpha1: alpha($color1);
+    $red2: red($color2);
+    $green2: green($color2);
+    $blue2: blue($color2);
+    $alpha2: alpha($color2);
+
+    $red: $red1 + ($red2 - $red1) * $weight;
+    $green: $green1 + ($green2 - $green1) * $weight;
+    $blue: $blue1 + ($blue2 - $blue1) * $weight;
+    $alpha: $alpha1 + ($alpha2 - $alpha1) * $weight;
+
+    @return rgba($red, $green, $blue, $alpha);
+}

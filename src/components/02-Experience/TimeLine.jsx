@@ -4,9 +4,9 @@ import Experience from "./Experience";
 function Timeline({ experiences, technologySymbols, technologyImages }) {
     const myTitle = experiences.length > 0 ? experiences[0].sectionTitle : "";
     return (
-        <div className="experience padd-15px">
+        <div className="experience">
             <h3 className="title">{myTitle}</h3>
-            <div className="row padd-15px">
+            <div className="row ">
                 <div className="timeline-box">
                     <div className="timeline shadow-dark">
                         <Experience

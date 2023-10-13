@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { useCallback, useMemo } from "react";
 import Particles from "react-tsparticles";
+// import { loadFull } from "tsparticles";
 import { loadSlim } from "tsparticles-slim";
+import { useSelector } from "react-redux";
 
 function CanvasBackground() {
-    const computedStyle = getComputedStyle(document.documentElement);
-    const skinColor = computedStyle.getPropertyValue("--skin-color").trim();
+    const skinColor = useSelector((state) => state.theme.currentTheme);
 
     const option = useMemo(() => {
         return {

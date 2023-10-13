@@ -24,7 +24,7 @@ function Experience({ experiences }) {
                         <article
                             className={`timeline-text ${experience.addClass}`}
                             key={entry.index}
-                            // onClick={() => toggleArticle(entry.id)}
+                            onClick={() => toggleArticle(entry.id)}
                             style={{ marginBottom: `${entry.size}px` }}
                         >
                             <div>
@@ -33,16 +33,12 @@ function Experience({ experiences }) {
                                     <li>{entry.description.place}</li>
                                 </ul>
                             </div>
-                            <h4 className="">
+                            <h4 className="jobTitle">
                                 {entry.jobTitle}
-
                                 <div className="bd_Bottom">
                                     <div className="fa-Circle">
                                         <i
                                             className={`fa fa-chevron-up `}
-                                            onClick={() =>
-                                                toggleArticle(entry.id)
-                                            }
                                             style={{
                                                 display: `${entry.display}`,
                                                 transformOrigin: "center",
@@ -58,7 +54,6 @@ function Experience({ experiences }) {
                                     </div>
                                 </div>
                             </h4>
-
                             <div
                                 className={`div-anime ${
                                     openArticleStates[entry.id]
@@ -68,7 +63,6 @@ function Experience({ experiences }) {
                                 style={{
                                     display: `${entry.display}`,
                                 }}
-                                id="x"
                             >
                                 <p
                                     className={`timeline-anime ${
@@ -105,13 +99,16 @@ function Experience({ experiences }) {
                                                             }s`,
                                                         }}
                                                     >
+                                                        <i className="fas fa-check"></i>
                                                         {item}
                                                     </li>
                                                 )
                                             )}
                                         </ul>
                                     )}
-                                <a className="technologies">
+                                <div
+                                    className={`technologies `}
+                                >
                                     {/* <strong></strong> */}
                                     {/* {experience.techTitle} */}
 
@@ -150,8 +147,12 @@ function Experience({ experiences }) {
                                                 </div>
                                             )
                                     )}
-                                </a>
-                                <div className="bd_Bottom"></div>
+                                </div>
+                                <div
+                                    className={`bd_Last ${
+                                        openArticleStates ? "open" : "close"
+                                    }`}
+                                ></div>
                             </div>
                         </article>
                     ))}

@@ -1,49 +1,173 @@
 /****** [General] ******/
+// @import "./colors";
 
-* {
-    font-style: normal;
-    font-weight: 500;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+// Utilisez les couleurs pour définir les variables CSS
+
+:root {
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+    --text-black-500: #706e93;
 }
 
-html {
-    width: 100%;
-    max-width: 100%;
-    font-size: 16px;
-    background: #fff;
+body.dark {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #fff;
+    --text-black-700: #e9e9e9e9;
+    --text-black-500: #d3d3d3;
 }
-
 body {
-    margin: 0 auto;
-    padding: 0 150px;
-    overflow-x: hidden;
-    overflow-y: visible;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    color: $color-primary;
-    @include width_size;
-    // height: auto;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden !important;
 }
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+::before,
+::after {
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+.section {
+    display: flex;
+    // display: block;
+    min-height: 100vh;
+    // padding: 0 30px;
+    background: var(--bg-black-900);
+    opacity: 1;
+    .section-title {
+        flex: 0 0 87.47130206625124%;
+        max-width: 87.47130206625124%;
+        margin: 0 0 60px 0;
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--text-black-900);
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                width: 50px;
+                height: 4px;
+                background-color: var(--skin-color);
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+
+            &::after {
+                margin-top: 8px;
+                width: 25px;
+            }
+        }
+    }
+    .container {
+        // max-width: calc(100vw - 540px);
+        width: 100%;
+        margin: auto;
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
-a {
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
+.main-content {
+    padding-left: 270px;
+}
+
+.padd-15px {
+    // padding: 0 15px;
+}
+
+.container {
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-flow: row wrap;
+    // padding: 0 4.6875vw;
+    position: relative;
+    // border: 1px solid #000;
+    justify-content: center;
+    // gap: 1.607084289931125%;
+}
+
+.shadow-dark {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.fas {
+    color: var(--text-black-900);
+}
+.bgDraw {
+    position: absolute;
+    width: calc(100%);
+    height: 360px;
+    // max-width: calc(100% - 225.39px);
+    // left: 139.26px;
+    top: 0px;
+    // max-width: calc(100% - 40px);
+    left: 0px;
+    // height: 100%;
+    // background: #000;
+    // border: 1px solid #000;
+    z-index: 0;
+    #tsparticles {
+    }
+    .tsparticles {
+        //max-width: 400px !important;
+        width: 600px !important;
+        height: 300px !important;
+        position: absolute !important;
+        z-index: auto !important;
+        top: -145px !important;
+        right: -195px !important;
+        pointer-events: auto !important;
+        // background-color: gray !important;
+        clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
     }
 }
-a:active,
-a:visited {
-    color: $color-primary;
-    text-decoration: none;
-}
+.bgDraw2 {
+    position: absolute;
+    width: calc(100% - 10px);
+    height: 16.1vh;
+    bottom: 6.14%;
 
+    left: 0px;
+
+    z-index: 0;
+
+    .tsparticles2 {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important; /* Changez "fixed" en "static" pour annuler la position fixe */
+        z-index: auto !important; /* Annulez la valeur du z-index */
+        bottom: 0 !important; /* Annulez la valeur de top */
+        left: 0 !important; /* Annulez la valeur de left */
+        pointer-events: auto !important; /* Annulez la valeur de pointer-events */
+        // background-color: gray !important; /* Annulez la couleur de fond */
+        // border: 1px solid #000;
+    }
+}

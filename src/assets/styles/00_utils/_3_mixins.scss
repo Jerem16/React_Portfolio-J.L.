@@ -1,9 +1,16 @@
-@mixin drop-shadow($colour) {
-    filter: drop-shadow(0px 4px rgba(0, 0, 0, 0.1));
-    -webkit-filter: drop-shadow(0px, 4px rgba(0, 0, 0, 0.1));
+@mixin drop-shadow($rgba) {
+    -webkit-filter: drop-shadow($rgba);
+    filter: drop-shadow($rgba);
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
 }
 /*** Animation::after ***/
-@mixin pseudo-pos {
+@mixin after_Before {
     content: "";
     position: absolute;
     top: 0;
@@ -30,11 +37,29 @@
 @mixin collapseTags {
     border-radius: 10px;
     background-color: $color-primary;
+    background-color: lightness-shift($color-primary);
     color: white;
 }
 
-@mixin flexRowSB {
+@mixin row_R {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    position: relative;
+    gap: 3.607084289931125%;
 }
+@mixin flex_100 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@mixin transform($transform) {
+    transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+}
+// @include transform(scale(1.2));
+@mixin transition($properties, $duration, $timing-function) {
+    transition: $properties $duration $timing-function;
+}
+// @include transition(all, 0.3s, ease);
