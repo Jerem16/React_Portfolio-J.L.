@@ -1,5 +1,7 @@
 /* About */
-@import "../../assets/styles/main.scss";
+@import "../../assets/styles/00_utils/3_mixins";
+@import "../../assets/styles/00_utils/4_fonts";
+
 .about {
     display: flex;
     flex-flow: column nowrap;
@@ -12,18 +14,14 @@
         & .about-text {
             @include flex_100;
             & h3 {
-                font-size: 1.5em;
-                margin-bottom: 0.937em;
-                font-weight: 700;
-                color: var(--text-black-900);
+                margin-bottom: 1.25em;
+                @include h3;
                 & span {
                     color: var(--skin-color);
                 }
             }
             & p {
-                font-size: 1em;
-                line-height: 1.5625em;
-                color: var(--text-black-700);
+                @include p;
             }
         }
         .row {
@@ -40,23 +38,21 @@
                     flex: 0 0 50%;
                     max-width: 50%;
                     & p {
-                        font-weight: 600;
-                        font-size: 1em;
-                        color: var(--text-black-900);
                         border-bottom: 1px solid var(--bg-black-50);
                         padding: 0.625em 0;
+                        padding: 0.7em 0;
+                        @include h5;
+                        // line-height: 2em;
                         & span {
-                            font-weight: 400;
-                            color: var(--text-black-700);
-                            display: inline-block;
+                            @include p;
                             margin-left: 0.25em;
                         }
                     }
                 }
                 & .buttons {
-                    margin-top: 1.875em;
+                    margin-top: 0.795em;
                     & .btn {
-                        margin: 0.625em 0.937em 0 0;
+                        margin: 3em 0.937em 0 0;
                     }
                 }
             }
@@ -64,36 +60,30 @@
         & .skills {
             flex: 0 0 35.69645785503444%;
             max-width: 35.69645785503444%;
-            margin-top: 1.5625em;
+            margin-top: 2.5em;
             & .skill-item {
                 @include flex_100;
-                margin-bottom: 1.875em;
+                margin-bottom: 1.5625em;
                 & h5 {
-                    font-size: 1em;
-                    font-weight: 600;
-                    line-height: 2.5em;
-                    color: var(--text-black-900);
-                    text-transform: capitalize;
+                    @include h5;
+                    line-height: 2.75em;
                 }
                 & .progress {
                     position: relative;
                     width: 100%;
                     height: 0.4375em;
                     background-color: var(--bg-black-50);
-                    border-radius: 0.25em;
+
                     & .progress-in {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
+                        @include after_Before;
                         height: 100%;
-                        background-color: var(--skin-color);
                         @include border-radius(0.25em);
+                        background-color: var(--skin-color);
                     }
                     & .skill-percent {
                         position: absolute;
                         right: 0;
                         top: -2.5em;
-                        font-weight: 400;
                         line-height: 2.5em;
                         color: var(--text-black-900);
                     }
@@ -107,12 +97,11 @@
             & .experience {
                 flex: 0 0 48.19645785503444%;
                 max-width: 48.19645785503444%;
-                margin-top: 1.875em;
+                margin-top: 3.7185em;
                 & h3.title {
-                    font-size: 1.5em;
-                    font-weight: 700;
-                    color: var(--text-black-900);
-                    margin-bottom: 1.875em;
+                    @include h3;
+                    margin-bottom: 1.1875em;
+                    // margin-bottom: 1.7815em;
                 }
             }
         }
@@ -138,7 +127,7 @@
 
                 &::before {
                     @include after_Before;
-                    width: 0.0625em; // 1px
+                    width: 1px;
                     height: 100%;
                     background-color: var(--skin-color);
                     left: 0.4375em; // 7px
@@ -153,21 +142,12 @@
                 }
 
                 & .timeline-date {
-                    font-size: 0.875em; /* 14px / 16px = 0.875em */
-                    font-weight: 400;
-                    color: var(--text-black-700);
+                    @include p_min;
                     margin-bottom: 0.75em;
-                    & .fa {
-                        margin-right: 0.3125em; // 5px
-                    }
                 }
 
-                & .timeline-title {
-                    font-size: 1.125em; /* 18px / 16px = 1.125em */
-                    font-weight: 700;
-                    text-transform: capitalize;
-                    color: var(--skin-color);
-                    color: var(--text-black-900);
+                & h4.timeline-title {
+                    @include h4;
                     margin-bottom: 0.937em; /* 15px / 16px = 0.9375em */
                 }
 
@@ -175,17 +155,12 @@
                     display: flex;
                     flex-flow: column wrap;
                     width: 100%;
-
-                    font-size: 1em;
-                    line-height: 1.5625em;
-                    color: var(--text-black-700);
+                    @include p;
                     transition: transform 1.3s ease-in-out;
 
                     cursor: pointer;
 
                     .jobTitle {
-                        font-size: 1em;
-                        font-weight: 400;
                     }
                     &_add {
                         .bd_Bottom {
@@ -226,37 +201,42 @@
                         padding: 0;
                         margin: 0;
                         transform-origin: top;
-                        -webkit-animation: openColse 0.45s ease-in-out;
-                        animation: openColse 0.45s ease-in-out;
+                        -webkit-animation: openClose 0.45s ease-in-out;
+                        animation: openClose 0.45s ease-in-out;
                     }
                     h4.jobTitle {
                         @include flex_100;
                         position: relative;
-                    }
-                    .technologies {
-                        float: right;
-                        display: flex;
-                        align-items: center;
-                        margin-right: 2em;
-                        padding: 0.625em 0 0 0;
-
                         font-size: 1em;
                         font-weight: 400;
-                        img {
-                            display: block;
-                            height: 1.2em;
-                            object-fit: contain;
-                            padding: 0 0.19em;
-                            @include drop-shadow(2px 3px rgba(0, 0, 0, 0.25));
-                            @include transition(all, 0.3s, ease);
-                            &:hover {
-                                @include transform(scale(1.2));
+                    }
+
+                    div.div-anime {
+                        @include transition(all, 0.5s, ease);
+
+                        .technologies {
+                            float: right;
+                            display: flex;
+                            align-items: center;
+                            margin-right: 2em;
+                            padding: 0.625em 0 0 0;
+
+                            font-size: 1em;
+                            font-weight: 400;
+                            img {
+                                display: block;
+                                height: 1.2em;
+                                object-fit: contain;
+                                padding: 0 0.19em;
+                                @include drop-shadow(
+                                    2px 3px rgba(0, 0, 0, 0.25)
+                                );
+                                @include transition(all, 0.3s, ease);
+                                &:hover {
+                                    @include transform(scale(1.2));
+                                }
                             }
                         }
-                    }
-                    div.div-anime {
-                        @include transition(all, 0.3s, ease);
-
                         .close {
                             display: none;
                             transform: scale(0);
@@ -265,39 +245,36 @@
                             min-width: 100%;
                             padding: 0;
                             margin: 0;
-                            animation: openColse2 0.15s ease-in-out;
+
                             display: block;
-                            // border: 1px solid #000;
-                            -webkit-animation: openColse2 0.15s ease-in-out;
+
+                            -webkit-animation: openClose2 0.15s ease-in-out;
+                            animation: openClose2 0.15s ease-in-out;
                         }
                         p.timeline-anime {
                             @include transition(all, 0.3s, ease);
-                            height: 0;
-                            opacity: 0;
-                            color: transparent;
+
                             font-weight: 600;
                             line-height: 1.5625em;
-                            // padding: 1em 0;
+                            color: var(--bg-black-700);
                             margin: 1.5625em 0 0.625em 0;
-                            // margin: 0.312em 0 0.625em 0;
                             .close {
                                 display: none;
                             }
                             &.open {
                                 height: auto;
                                 opacity: 1;
-                                color: var(--bg-black-700);
-
                             }
                         }
                         ul {
                             li.ul-anime {
-                                // transition: transform 0.2s ease-in-out;
+                                transition: transform 0.2s ease-in-out;
                                 margin: 0 0 0.3906em 0;
                                 font-family: "Poppins", sans-serif;
                                 font-size: 1em;
                                 line-height: 1.5625em;
                                 color: var(--text-black-700);
+                                width: 100%;
                                 i {
                                     color: var(--text-black-500);
                                     color: var(--skin-color);
@@ -307,9 +284,9 @@
                                     display: none;
                                 }
                                 &.open {
-                                    -webkit-animation: openColse2 0.2s
+                                    -webkit-animation: openClose2 0.2s
                                         ease-in-out;
-                                    animation: openColse2 0.2s ease-in-out;
+                                    animation: openClose2 0.2s ease-in-out;
                                     &::before {
                                         // Code Unicode de l'icône (par exemple, Font Awesome)
                                         font-family: "Font Awesome";
@@ -320,11 +297,25 @@
                         }
                     }
                 }
+                .close {
+                    -webkit-animation: closeOpen 0.45s ease-in-out;
+                    animation: closeOpen 0.45s ease-in-out;
+                    opacity: 0;
+                }
+                .open {
+                    opacity: 1;
+                    min-width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    transform-origin: top;
+                    -webkit-animation: openClose 0.45s ease-in-out;
+                    animation: openClose 0.45s ease-in-out;
+                }
             }
         }
     }
 }
-@keyframes openColse {
+@keyframes openClose {
     0% {
         transform-origin: top;
         transform: scaleY(0);
@@ -343,10 +334,9 @@
         // color: var(--text-black-700);
     }
 }
-@keyframes openColse2 {
+@keyframes closeOpen {
     0% {
-        transform-origin: top;
-        transform: scaleY(0);
+        transform: scaleY(1);
 
         // color: var(--bg-black-50);
     }
@@ -354,6 +344,7 @@
         transform: scaleY(0.5);
     }
     100% {
-        transform: scaleY(1);
+        transform-origin: top;
+        transform: scaleY(0);
     }
 }

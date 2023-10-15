@@ -1,5 +1,5 @@
 /* aside */
-
+@import "../../assets/styles/00_utils/3_mixins";
 // .aside {
 //     position: absolute;
 //     top: 50px;
@@ -19,32 +19,34 @@
 .aside {
     width: 270px;
     height: 100%;
-    padding: 30px;
+    padding: 45px 22.5px 22.5px 22.5px;
     border-right: 1px solid var(--bg-black-50);
     background: var(--bg-black-100);
-
+    max-height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 10;
 
     display: flex;
+    flex-flow: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     .logo {
-        position: absolute;
-        top: 50px;
-        text-align: center;
+        position: relative;
+        @include row_R;
+        justify-content: center;
+        align-items: center;
         text-transform: capitalize;
+        width: 225px;
+        height: 67.5px;
 
         a {
             color: var(--text-black-900);
             font-weight: 700;
-            padding: 15px 20px;
             font-size: 30px;
             letter-spacing: 5px;
-
             span {
                 font-family: "Clicker Script", cursive;
                 font-size: 40px;
@@ -52,34 +54,37 @@
 
             &::before {
                 content: "";
-                width: 20px;
-                height: 20px;
-                border-bottom: 5px solid var(--skin-color);
-                border-left: 5px solid var(--skin-color);
                 position: absolute;
                 bottom: 0;
                 left: 0;
+
+                width: 22.5px;
+                height: 22.5px;
+                border-bottom: 5px solid var(--skin-color);
+                border-left: 5px solid var(--skin-color);
             }
 
             &::after {
                 content: "";
-                width: 20px;
-                height: 20px;
-                border-top: 5px solid var(--skin-color);
-                border-right: 5px solid var(--skin-color);
                 position: absolute;
                 top: 0;
                 right: 0;
+
+                width: 22.5px;
+                height: 22.5px;
+                border-top: 5px solid var(--skin-color);
+                border-right: 5px solid var(--skin-color);
             }
         }
     }
 
     .nav-toggler {
         position: fixed;
-        top: 20px;
-        left: 300px;
+        top: 22.5px;
+        right: 22.5px;
         cursor: pointer;
-        display: none;
+        display: flex;
+        // display: none;
         align-items: center;
         justify-content: center;
         width: 45px;
@@ -121,9 +126,7 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        // left: 0px;
         top: -35px;
-        // border: 1px solid #000;
         width: 100%;
 
         .flagLogo {
@@ -133,47 +136,180 @@
             width: 30px;
             height: 30px;
             padding: 5px;
-            //margin: 0 10px;
-            //border-radius: 50%;
-            //border: 1px solid var(--bg-black-50);
-            //font-size: 1em;
-            //line-height: 20px;
-            //font-weight: 600;
-            ////text-align: center;
-            //color: var(--text-black-700);
-            //padding: 5px 15px;
-            ////border-bottom: ;
             cursor: pointer;
-
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
             &:hover {
                 -webkit-filter: grayscale(0%);
                 filter: grayscale(0%);
             }
+            &.active {
+                -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
+        }
+        .lang-icon {
+            // fill: var(--skin-color);
+            // padding: 4.5px;
+            // width: 45px;
+            // height: 45px;
+            position: relative;
+            top: -1px;
+            cursor: pointer;
+            // border: 1px solid #000;
         }
     }
+
     .nav {
-        margin-top: 50px;
+        // margin: 45px;
+        width: 157.5px;
+        height: 281.25px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        // display: block;
 
         li {
-            margin-bottom: 20px;
-            display: block;
+            @include row_R;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+
+            height: 56.25px;
+            width: 100%;
+
+            border-bottom: 1px solid var(--bg-black-50);
 
             a {
-                display: block;
-                font-size: 1em;
+                flex: 1;
+                min-width: 90px;
+                font-size: 16px;
                 font-weight: 600;
                 color: var(--text-black-900);
-                padding: 5px 15px;
-                border-bottom: 1px solid var(--bg-black-50);
-
+                padding: 16.625px 0px;
                 &.active-link {
                     color: var(--skin-color);
                 }
+            }
+            i {
+                flex: 1;
+                max-width: 59.0625px;
+                margin-right: 15px;
+                color: var(--text-black-900);
+                padding: 16.625px;
+            }
+        }
+    }
 
-                i {
-                    margin-right: 15px;
+    .switcher-container {
+        position: relative;
+        top: 25px;
+        @include row_R;
+        flex-flow: row nowrap;
+        height: 100px;
+        width: calc(100% + 0px);
+
+        #blck {
+            @include row_R;
+            flex-flow: column;
+            justify-content: space-around;
+            position: relative;
+            padding-right: 12.5px;
+            width: 58.5px;
+            width: 100%;
+            height: 100px;
+            .s-icon {
+                width: 33.75px;
+                height: 33.75px;
+                font-size: 16.875px;
+                line-height: 32.75px;
+                border: 1px solid var(--bg-black-50);
+                border-radius: 50%;
+                background-color: var(--bg-black-100);
+
+                text-align: center;
+                position: relative;
+                left: -5.675px;
+
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &.style-switcher-toggler {
+                    top: -2.5px;
+                }
+
+                &.day-night {
+                    top: -9.125px;
+                }
+            }
+        }
+
+        .style-switcher {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            align-items: stretch;
+
+            min-width: calc(100% - 44.25px);
+            height: 100px;
+            top: 3px;
+            padding: 11.25px;
+            padding-right: 22.5px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            border-bottom-left-radius: 0px;
+            background-color: var(--bg-black-900);
+            position: relative;
+            left: -9px;
+            bottom: 0px;
+            z-index: 101;
+            transition: all 0.3s ease;
+            @include transform(translateY(200px));
+            &.open {
+                @include transform(translateY(-5px));
+                border: 1px solid var(--bg-black-50);
+            }
+
+            h4 {
+                align-self: center;
+                color: var(--text-black-700);
+                font-size: 1em;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            .colors {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                span {
+                    width: 27.5px;
+                    height: 27.55px;
+                    border: 1px solid var(--bg-black-50);
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                .color-1 {
+                    background-color: #ec1839;
+                }
+
+                .color-2 {
+                    background-color: #fa5b0f;
+                }
+
+                .color-3 {
+                    background-color: #37b182;
+                }
+
+                .color-4 {
+                    background-color: #1854b4;
+                }
+
+                .color-5 {
+                    background-color: #f021b2;
                 }
             }
         }

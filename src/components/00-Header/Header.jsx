@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { loadLanguageData } from "../../utils/loadLanguageData";
-import "./header.scss";
-import LanguageSelector from "./LanguageSelector";
+
 import ThemeSelector from "../ThemeSelector/ThemeSelector";
+import LanguageSelector from "./LanguageSelector";
+
+import { loadLanguageData } from "../../utils/loadLanguageData";
+
+import "./header.scss";
 
 function Header() {
+    const location = useLocation();
     const selectedLanguage = useSelector((state) => state.language.language);
     const [languageData, setLanguageData] = useState(null);
 
@@ -46,16 +50,21 @@ function Header() {
                 <ul className="nav">
                     {navLinks.map((link, index) => (
                         <li key={index}>
+                            <i className={link.icon}></i>
                             <Link
                                 to={link.to}
-                                className={index === 0 ? "active-link" : ""}
+                                className={
+                                    location.pathname === link.to
+                                        ? "active-link"
+                                        : ""
+                                }
                             >
-                                <i className={link.icon}></i>
                                 {link.text}
                             </Link>
                         </li>
                     ))}
                 </ul>
+                <ThemeSelector />
             </div>
         </header>
     );

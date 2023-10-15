@@ -8,9 +8,9 @@
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
-        border-left-color: #00bb78;
-        border-top-color: #00bb78;
-        border-right-color: #00bb78;
+        border-left-color: $color-primary;
+        border-top-color: $color-primary;
+        border-right-color: $color-primary;
         border-bottom-color: transparent;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);

@@ -1,15 +1,85 @@
-import React, { useState } from "react";
-import tech from "../../assets/data/technologie.json"; // Utilisez "tech" au lieu de "technologie"
+import React, { useState, useEffect } from "react";
+import tech from "../../assets/data/technologie.json";
 
 function Experience({ experiences }) {
     const [openArticleStates, setOpenArticleStates] = useState({});
+    const [refreshCloseElements, setRefreshCloseElements] = useState(false);
 
     const toggleArticle = (id) => {
         setOpenArticleStates((prevState) => ({
             ...prevState,
             [id]: !prevState[id],
         }));
+
+        // Définissez le drapeau pour indiquer que des éléments ont été modifiés
+        setRefreshCloseElements(true);
     };
+
+    useEffect(() => {
+        const elementsWithOpacityZero = document.querySelectorAll(
+            ".about-content .timeline .timeline-item .close"
+        );
+        const elementsOpen = document.querySelectorAll(
+            ".about-content .timeline .timeline-item .open"
+        );
+
+        if (elementsWithOpacityZero) {
+            elementsWithOpacityZero.forEach((element) => {
+                if (
+                    window
+                        .getComputedStyle(element)
+                        .getPropertyValue("opacity") === "0"
+                ) {
+                    element.classList.add("hidden");
+                }
+            });
+        }
+
+        if (elementsOpen) {
+            elementsOpen.forEach((element) => {
+                if (element.classList.contains("open")) {
+                    element.classList.add("visible");
+                    element.classList.remove("hidden");
+                } else {
+                    element.classList.remove("visible");
+                }
+            });
+        }
+
+        // Si un élément ouvert est refermé, attendez 0.5 seconde, puis réactualisez elementsWithOpacityZero
+        if (refreshCloseElements) {
+            setTimeout(() => {
+                const updatedElementsWithOpacityZero =
+                    document.querySelectorAll(
+                        ".about-content .timeline .timeline-item .close"
+                    );
+                updatedElementsWithOpacityZero.forEach((element) => {
+                    if (
+                        window
+                            .getComputedStyle(element)
+                            .getPropertyValue("opacity") === "0"
+                    ) {
+                        element.classList.add("hidden");
+                    }
+                });
+                setRefreshCloseElements(false); // Réinitialisez le drapeau après la mise à jour
+            }, 500); // Attendre 500 ms (0.5s) avant de rafraîchir
+        }
+    }, [refreshCloseElements]);
+
+    // Ajoutez un écouteur de clic à la fenêtre pour déclencher le rafraîchissement
+    useEffect(() => {
+        window.addEventListener("click", () => {
+            setRefreshCloseElements(true);
+        });
+
+        // Retirez l'écouteur de clic lorsque le composant est démonté
+        return () => {
+            window.removeEventListener("click", () => {
+                setRefreshCloseElements(true);
+            });
+        };
+    }, []);
 
     return (
         <>
@@ -106,12 +176,7 @@ function Experience({ experiences }) {
                                             )}
                                         </ul>
                                     )}
-                                <div
-                                    className={`technologies `}
-                                >
-                                    {/* <strong></strong> */}
-                                    {/* {experience.techTitle} */}
-
+                                <a className="technologies">
                                     {Object.keys(tech.technologyImages).map(
                                         (technology, index) =>
                                             entry.technologies &&
@@ -147,12 +212,8 @@ function Experience({ experiences }) {
                                                 </div>
                                             )
                                     )}
-                                </div>
-                                <div
-                                    className={`bd_Last ${
-                                        openArticleStates ? "open" : "close"
-                                    }`}
-                                ></div>
+                                </a>
+                                <div className="bd_Last"></div>
                             </div>
                         </article>
                     ))}

@@ -1,0 +1,14 @@
+@import "../../assets/styles/00_utils/3_mixins";
+
+.form_lang-icon {
+    @include row_R;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 5em;
+}
+
+.color-icon {
+    fill: var(--skin-color);
+}

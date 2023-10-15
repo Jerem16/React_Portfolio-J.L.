@@ -8,18 +8,20 @@ import Error404 from "./pages/Error404/Error404";
 import Footer from "./components/Footer/Footer";
 import ThemeSelector from "./components/ThemeSelector/ThemeSelector";
 import GlobalStyle from "./utils/style/GlobalStyle";
-import "./assets/styles/main.scss";
+// import "./assets/styles/main.scss";
+// import "./main.scss";
+
 
 function App() {
     return (
         <BrowserRouter>
             <GlobalStyle />
             <Header />
-            <ThemeSelector />
+            {/* <ThemeSelector /> */}
             <Routes>
                 <>
                     <Route path="/" element={<Home />} />
-                    <Route path="/About" element={<About />} />{" "}
+                    <Route path="/about" element={<About />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/portfolio" element={<Home />} />
                     <Route path="/contact" element={<Home />} />

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Typed from "typed.js"; // Importez Typed.js
 import CanvasBackground from "../../components/CanvasBackground/CanvasBackground";
-import CanvasBackground2 from "../../components/CanvasBackground2/CanvasBackground2";
+import CanvasBackground2 from "../../components/CanvasBackground/CanvasBackground2";
 import Triangle from "../../components/Triangle/Triangle";
-import HomeInfo from "../../components/01-Home_Elements/HomeInfo";
-import HomeImage from "../../components/01-Home_Elements/HomeImage";
+import HomeInfo from "../../components/01-Home/HomeInfo";
+import HomeImage from "../../components/01-Home/HomeImage";
 import data from "../../assets/data/en/home.json";
 
 // import about from "../../assets/data/en/about.json";

@@ -1,3 +1,5 @@
+/*
+
 :root {
     --bg-black-900: #f2f2fc;
     --bg-black-100: #fdf9ff;
@@ -71,7 +73,7 @@ ul {
         }
     }
     .container {
-        // max-width: calc(100vw - 540px);
+        max-width: calc(100vw - 540px);
         width: 100%;
         margin: auto;
         padding-top: 60px;
@@ -87,9 +89,6 @@ ul {
     padding-left: 270px;
 }
 
-.padd-15px {
-    // padding: 0 15px;
-}
 
 .container {
 }
@@ -157,12 +156,14 @@ ul {
     .tsparticles2 {
         width: 100% !important;
         height: 100% !important;
-        position: absolute !important; /* Changez "fixed" en "static" pour annuler la position fixe */
-        z-index: auto !important; /* Annulez la valeur du z-index */
-        bottom: 0 !important; /* Annulez la valeur de top */
-        left: 0 !important; /* Annulez la valeur de left */
-        pointer-events: auto !important; /* Annulez la valeur de pointer-events */
-        // background-color: gray !important; /* Annulez la couleur de fond */
+        position: absolute !important; 
+        z-index: auto !important; 
+        bottom: 0 !important; 
+        left: 0 !important; 
+        pointer-events: auto !important;
+        // background-color: gray !important; 
         // border: 1px solid #000;
     }
 }
+
+*/
