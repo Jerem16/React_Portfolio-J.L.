@@ -1,23 +1,71 @@
-#canvas {
-    width: 1000px;
-    height: 1000px;
-    background: red;
-    // color: #000;
-}
-// .main-content {
-// }
-// html,
-// body {
-//     height: 100%;
-//     width: 100%;
-//     margin: 0;
-//     padding: 0;
-//     overflow: hidden;
-//     background: wheat;
-// }
+/* Services */
+@import "../../assets/styles/00_utils/3_mixins";
 
-// #particle-canvas {
-//     width: 100%;
-//     height: 500px;
-//     border: 1px solid #000;
-// }
+.service {
+    .container {
+        padding-bottom: 40px;
+    }
+    .service_container {
+        @include row_R;
+        flex: 0 0 87.4713020663%;
+        max-width: 87.4713020663%;
+        flex-flow: wrap;
+        gap: 3.607084289931125%;
+        height: 100%;
+        .service-item {
+            flex: 1;
+            flex: 0 0 30.59527714004592%;
+            max-width: 30.59527714004592%;
+            margin: 0 0 3.607084289931125% 0;
+
+            .service-item-inner {
+                height: 100%;
+                padding: 30px 15px;
+                text-align: center;
+                background-color: var(--bg-black-100);
+                border: 1px solid var(--bg-black-50);
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                cursor: default;
+
+                &:hover {
+                    /* transform: scale(1.05); */
+                    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+                }
+
+                .icon {
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto 30px;
+                    border-radius: 50%;
+                    font-size: 40px;
+                    line-height: 60px;
+                    text-align: center;
+                    color: var(--skin-color);
+                    transition: all 0.45s ease;
+
+                    &:hover {
+                        font-size: 25px;
+                        color: var(--bg-black-100);
+                        background-color: var(--skin-color);
+                    }
+                }
+
+                h4 {
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    color: var(--text-black-900);
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    font-size: 1em;
+                    line-height: 25px;
+                    color: var(--text-black-700);
+                }
+            }
+        }
+    }
+}

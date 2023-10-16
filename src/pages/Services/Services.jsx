@@ -1,14 +1,12 @@
-import CanvasBackground from "../../components/CanvasBackground/CanvasBackground";
-// import "./services.scss";
-// import ParticleNetwork from "../../components/02-Profile/Profile";
-// import particule from "../../components/CanvasBackground/particule";
-import Globe from "../../components/Globe/Globe";
+import React from "react";
+import ServicesComponent from "../../components/03-Services/ServicesComponent";
+import "./services.scss";
 
 function Services() {
-    return (<Globe />
-        // <main className="main-content">
-            
-        // </main>
+    return (
+        <main className="main-content">
+            <ServicesComponent />
+        </main>
     );
 }
 

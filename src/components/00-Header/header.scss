@@ -121,49 +121,11 @@
             }
         }
     }
-    .flag {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: -35px;
-        width: 100%;
-
-        .flagLogo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            padding: 5px;
-            cursor: pointer;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-            &:hover {
-                -webkit-filter: grayscale(0%);
-                filter: grayscale(0%);
-            }
-            &.active {
-                -webkit-filter: grayscale(0%);
-                filter: grayscale(0%);
-            }
-        }
-        .lang-icon {
-            // fill: var(--skin-color);
-            // padding: 4.5px;
-            // width: 45px;
-            // height: 45px;
-            position: relative;
-            top: -1px;
-            cursor: pointer;
-            // border: 1px solid #000;
-        }
-    }
 
     .nav {
         // margin: 45px;
         width: 157.5px;
-        height: 281.25px;
+        height: 337.5px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -182,7 +144,7 @@
             border-bottom: 1px solid var(--bg-black-50);
 
             a {
-                flex: 1;
+                flex: 2;
                 min-width: 90px;
                 font-size: 16px;
                 font-weight: 600;
@@ -199,9 +161,43 @@
                 color: var(--text-black-900);
                 padding: 16.625px;
             }
+            
         }
     }
+    .switcher-block {
+        @include row_R;
+        flex-flow: column;
+        justify-content: space-around;
+        position: relative;
+        padding-right: 12.5px;
+        width: 58.5px;
+        width: 100%;
+        height: 100px;
+        .s-icon {
+            width: 33.75px;
+            height: 33.75px;
+            font-size: 16.875px;
+            line-height: 32.75px;
+            border: 1px solid var(--bg-black-50);
+            border-radius: 50%;
+            background-color: var(--bg-black-100);
 
+            text-align: center;
+            position: relative;
+            left: -5.675px;
+
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &.style-switcher-toggler {
+                top: -2.5px;
+            }
+
+            &.day-night {
+                top: -9.125px;
+            }
+        }
+    }
     .switcher-container {
         position: relative;
         top: 25px;
@@ -209,41 +205,6 @@
         flex-flow: row nowrap;
         height: 100px;
         width: calc(100% + 0px);
-
-        #blck {
-            @include row_R;
-            flex-flow: column;
-            justify-content: space-around;
-            position: relative;
-            padding-right: 12.5px;
-            width: 58.5px;
-            width: 100%;
-            height: 100px;
-            .s-icon {
-                width: 33.75px;
-                height: 33.75px;
-                font-size: 16.875px;
-                line-height: 32.75px;
-                border: 1px solid var(--bg-black-50);
-                border-radius: 50%;
-                background-color: var(--bg-black-100);
-
-                text-align: center;
-                position: relative;
-                left: -5.675px;
-
-                cursor: pointer;
-                transition: all 0.3s ease;
-
-                &.style-switcher-toggler {
-                    top: -2.5px;
-                }
-
-                &.day-night {
-                    top: -9.125px;
-                }
-            }
-        }
 
         .style-switcher {
             display: flex;

@@ -1,0 +1,12 @@
+.about,
+.service {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    color: var(--text-black-900);
+    position: relative;
+    &-content {
+        flex: 0 0 87.47130206625124%;
+        max-width: 87.47130206625124%;
+    }
+}

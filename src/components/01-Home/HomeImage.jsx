@@ -1,5 +1,5 @@
 import React from "react";
-import CanvasBackground from "../CanvasBackground/CanvasBackground";
+
 
 function HomeImage({ imageSrc }) {
     return (
@@ -15,7 +15,7 @@ function HomeImage({ imageSrc }) {
                     </div>
                     <div className="rightNB"></div>{" "}
                 </div>
-            </div>{" "}
+            </div>
 
         </>
     );

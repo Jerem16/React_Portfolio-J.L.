@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Typed from "typed.js"; // Importez Typed.js
 import CanvasBackground from "../../components/CanvasBackground/CanvasBackground";
 import CanvasBackground2 from "../../components/CanvasBackground/CanvasBackground2";
-import Triangle from "../../components/Triangle/Triangle";
+// import Triangle from "../../components/Triangle/Triangle";
 import HomeInfo from "../../components/01-Home/HomeInfo";
 import HomeImage from "../../components/01-Home/HomeImage";
 import data from "../../assets/data/en/home.json";
@@ -36,11 +36,11 @@ function Home() {
         }
 
         const {
-            typedStrings, // Accédez aux chaînes depuis les données
+            typedStrings, 
         } = data.home;
 
         const options = {
-            strings: typedStrings, // Utilisez les chaînes de Typed.js depuis les données
+            strings: typedStrings, 
             typeSpeed: 120,
             backSpeed: 60,
             loop: true,
@@ -63,7 +63,6 @@ function Home() {
         welcome,
         name,
         presentation,
-        // profession,
         description,
         question,
         answer,
@@ -84,7 +83,6 @@ function Home() {
                             welcome={welcome}
                             name={name}
                             presentation={presentation}
-                            // profession={profession}
                             description={description}
                             question={question}
                             answer={answer}

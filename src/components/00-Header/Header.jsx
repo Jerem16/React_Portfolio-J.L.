@@ -6,6 +6,8 @@ import ThemeSelector from "../ThemeSelector/ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
 
 import { loadLanguageData } from "../../utils/loadLanguageData";
+import SwitcherMenu from "../ThemeSelector/SwitcherMenu";
+import SwitcherThemeContainer from "../ThemeSelector/SwitcherThemeContainer";
 
 import "./header.scss";
 
@@ -13,6 +15,7 @@ function Header() {
     const location = useLocation();
     const selectedLanguage = useSelector((state) => state.language.language);
     const [languageData, setLanguageData] = useState(null);
+    const [isThemeSelectorOpen, setIsThemeSelectorOpen] = useState(false); // Ajoutez un état pour gérer l'ouverture de ThemeSelector
 
     useEffect(() => {
         const fetchData = async () => {
@@ -30,14 +33,12 @@ function Header() {
         return <div>Loading...</div>;
     }
 
-    const { logoTitle, logoSpanTitle, navLinks } = languageData;
+    const { logoTitle, logoSpanTitle, navLinks, language } = languageData;
 
     return (
         <header>
             <div className="aside">
                 <div className="logo">
-                    <LanguageSelector />
-                    {/* <ThemeSelector /> */}
                     <Link to={navLinks[0].to}>
                         <span>{logoTitle}</span>
                         {logoSpanTitle}
@@ -63,6 +64,8 @@ function Header() {
                             </Link>
                         </li>
                     ))}
+
+                    <LanguageSelector text={language} />
                 </ul>
                 <ThemeSelector />
             </div>

@@ -4,11 +4,17 @@
     @include row_R;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    // width: 30px;
+    // height: 30px;
     font-size: 5em;
+    &:hover {
+        fill: var(--skin-color);
+    }
 }
 
 .color-icon {
-    fill: var(--skin-color);
+    fill: var(--text-black-900);
+    &:hover {
+        fill: var(--skin-color);
+    }
 }
