@@ -5,7 +5,11 @@ import "./services.scss";
 function Services() {
     return (
         <main className="main-content">
-            <ServicesComponent />
+            <section className="service section" id="service">
+                <div className="container">
+                    <ServicesComponent />
+                </div>
+            </section>
         </main>
     );
 }

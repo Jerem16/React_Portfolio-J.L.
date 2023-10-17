@@ -5,8 +5,50 @@
     min-height: 100vh;
     color: var(--text-black-900);
     position: relative;
-    &-content {
+
+    .container {
         flex: 0 0 87.47130206625124%;
         max-width: 87.47130206625124%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        min-height: 100vh;
+        .row_top {
+            align-self: flex-start;
+            .section-title {
+                display: block;
+                align-self: flex-start;
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin: 0 0 60px 0;
+
+                h2 {
+                    @include h2;
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        width: 50px;
+                        height: 4px;
+                        background-color: $color-primary;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                    }
+
+                    &::after {
+                        margin-top: 8px;
+                        width: 25px;
+                    }
+                }
+            }
+        }
+        .row_center {
+            align-self: center;
+        }
+        .col_end {
+            height: 60px;
+        }
     }
 }

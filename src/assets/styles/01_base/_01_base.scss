@@ -32,15 +32,22 @@ h6 {
     text-transform: capitalize;
 }
 .section {
-    // display: flex;
-    display: block;
+    display: flex;
+    // display: block;
     min-height: 100vh;
     // padding: 0 30px;
     background: var(--bg-black-900);
     opacity: 1;
+    position: relative;
+    top: 0;
     .section-title {
+        display: block;
+        align-self: flex-start;
         flex: 0 0 87.47130206625124%;
         max-width: 87.47130206625124%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        // align-self: flex-start;
         margin: 0 0 60px 0;
 
         h2 {
@@ -68,11 +75,11 @@ h6 {
         // max-width: calc(100vw - 540px);
         // position: relative;
         // top: -15px;
-        width: 100%;
+        // width: 100%;
         margin: auto;
         padding-top: 45px;
         // padding-top: 4.6875vw;
-        padding-bottom: 70px;
+        // padding-bottom: 70px;
     }
 }
 
@@ -90,7 +97,9 @@ h6 {
 
 .container {
 }
-.row {
+.row,
+.row_top,
+.row_center {
     display: flex;
     flex-wrap: wrap;
     // flex-flow: row wrap;

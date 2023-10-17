@@ -1,14 +1,13 @@
 /* Services */
 @import "../../assets/styles/00_utils/3_mixins";
+@import "../../assets/styles/00_utils/4_fonts";
 
 .service {
     .container {
-        padding-bottom: 40px;
     }
     .service_container {
+        align-self: center;
         @include row_R;
-        flex: 0 0 87.4713020663%;
-        max-width: 87.4713020663%;
         flex-flow: wrap;
         gap: 3.607084289931125%;
         height: 100%;
@@ -27,12 +26,6 @@
                 border-radius: 10px;
                 transition: all 0.3s ease;
                 cursor: default;
-
-                &:hover {
-                    /* transform: scale(1.05); */
-                    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-                }
-
                 .icon {
                     display: block;
                     width: 60px;
@@ -43,9 +36,15 @@
                     line-height: 60px;
                     text-align: center;
                     color: var(--skin-color);
-                    transition: all 0.45s ease;
-
-                    &:hover {
+                    transition: all 0.3s ease;
+}
+                &:hover {
+                    &::after {
+                        @include after_Before;
+                    }
+                    transform: scale(1.05);
+                    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+                    .icon {
                         font-size: 25px;
                         color: var(--bg-black-100);
                         background-color: var(--skin-color);
@@ -53,17 +52,12 @@
                 }
 
                 h4 {
-                    font-size: 18px;
-                    font-weight: 700;
-                    text-transform: capitalize;
-                    color: var(--text-black-900);
+                    @include h4;
                     margin-bottom: 15px;
                 }
 
                 p {
-                    font-size: 1em;
-                    line-height: 25px;
-                    color: var(--text-black-700);
+                    @include p;
                 }
             }
         }

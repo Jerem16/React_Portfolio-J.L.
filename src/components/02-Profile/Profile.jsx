@@ -46,12 +46,12 @@ function Profile() {
 
     return (
         <>
-            <div className="row">
+            <div className="row_top">
                 <div className="section-title">
                     <h2>{section}</h2>
                 </div>
             </div>
-            <div className="row">
+            <div className="row_center">
                 <div className="about-content ">
                     <div className="row">
                         <div className="about-text">
@@ -116,6 +116,7 @@ function Profile() {
                     </div>
                 </div>
             </div>
+            <div className="col_end"></div>
         </>
     );
 }
