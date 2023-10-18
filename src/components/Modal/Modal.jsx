@@ -1,9 +1,8 @@
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { useState } from "react";
-import Icon from "../99-Icon";
-import "./style.scss";
+import "./modal.scss";
 
-const Modal = ({ opened, Content, children }) => {
+const Modal = ({ opened, Content, children, closeIcon }) => {
     const [isOpened, setIsOpened] = useState(opened);
     return (
         <>
@@ -17,7 +16,7 @@ const Modal = ({ opened, Content, children }) => {
                             data-testid="close-modal"
                             onClick={() => setIsOpened(false)}
                         >
-                            <Icon name="close" />
+                            {closeIcon}
                         </button>
                     </div>
                 </div>
@@ -34,6 +33,7 @@ Modal.propTypes = {
     opened: PropTypes.bool,
     Content: PropTypes.node.isRequired,
     children: PropTypes.func.isRequired,
+    closeIcon: PropTypes.node, // Ajoutez cette prop
 };
 
 export default Modal;

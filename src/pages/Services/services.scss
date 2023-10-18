@@ -15,9 +15,11 @@
             flex: 1;
             flex: 0 0 30.59527714004592%;
             max-width: 30.59527714004592%;
+            // min-width: 30.59527714004592%;
             margin: 0 0 3.607084289931125% 0;
 
             .service-item-inner {
+                // min-width: 450px;
                 height: 100%;
                 padding: 30px 15px;
                 text-align: center;
@@ -25,7 +27,7 @@
                 border: 1px solid var(--bg-black-50);
                 border-radius: 10px;
                 transition: all 0.3s ease;
-                cursor: default;
+                cursor: pointer;
                 .icon {
                     display: block;
                     width: 60px;
@@ -37,7 +39,7 @@
                     text-align: center;
                     color: var(--skin-color);
                     transition: all 0.3s ease;
-}
+                }
                 &:hover {
                     &::after {
                         @include after_Before;
@@ -63,3 +65,4 @@
         }
     }
 }
+

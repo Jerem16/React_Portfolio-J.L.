@@ -26,7 +26,7 @@ background-color: blend-colors($color-primary, black, 50%);
 
 /*Gère très mal le mélange ALPHA
 Utilisation : 
-background-color: interpolate-colors($color-primary, yellow, 30);
+background-color: rvb-calculator($color-primary, yellow, 30);
 */
 @function rvb-calculator($color1, $color2, $weight) {
     $weight: $weight / 100;
@@ -46,3 +46,29 @@ background-color: interpolate-colors($color-primary, yellow, 30);
 
     @return rgba($red, $green, $blue, $alpha);
 }
+
+@function rgba-color($color, $alpha) {
+    // Assurez-vous que $alpha est dans la plage de 0 à 1
+    @if $alpha < 0 {
+        $alpha: 0;
+    } @else if $alpha > 1 {
+        $alpha: 1;
+    }
+
+    // Convertir la couleur en RVB
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
+
+    // Retourner la couleur RVB avec l'alpha
+    @return rgba($red, $green, $blue, $alpha);
+}
+
+@function invert-rgba($color) {
+    $r: 255 - red($color);
+    $g: 255 - green($color);
+    $b: 255 - blue($color);
+    $a: alpha($color);
+  
+    @return rgba($r, $g, $b, $a);
+  }
