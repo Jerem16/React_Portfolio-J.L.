@@ -1,0 +1,77 @@
+@import "../../../assets/styles/00_utils/3_mixins";
+@import "../../../assets/styles/00_utils/4_fonts";
+@import "../../../assets/styles/00_utils/1_variables";
+@import "../../../assets/styles/00_utils/2_functions";
+#modalPortfolio {
+    overflow: hidden;
+    width: 62.5%;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 30px 15px;
+    text-align: center;
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    background-color: rgba-color($bg-black-900-light, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    // background: transparent;
+    .portfolio-item-inner {
+        box-shadow: 0 0 20px rgba(48, 46, 77, 0);
+        border: 6px solid transparent;
+        &:hover {
+            transform: scale(1);
+        }
+    }
+
+    .icon {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 30px;
+        border-radius: 50%;
+        line-height: 60px;
+        text-align: center;
+        transition: all 0.3s ease;
+        font-size: 25px;
+        color: var(--bg-black-100);
+        background-color: var(--skin-color);
+        // @include drop-shadow( $shadow-rgba 3px 1.5px 1.5px);
+    }
+
+    h4 {
+        @include h4;
+        margin-bottom: 15px;
+    }
+
+    p {
+        @include p;
+        margin-bottom: 15px;
+    }
+    ul {
+        li {
+            transition: transform 0.2s ease-in-out;
+            margin: 0 0 0.3906em 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 1em;
+            line-height: 1.5625em;
+            color: var(--text-black-700);
+            // width: 80%;
+            margin: 0 30px;
+            text-align: left;
+            i {
+                color: var(--text-black-500);
+                color: var(--skin-color);
+                margin-right: 0.5em;
+            }
+            &::before {
+                font-family: "Font Awesome";
+            }
+        }
+    }
+    a {
+    }
+}

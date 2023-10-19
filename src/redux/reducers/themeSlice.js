@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     // currentTheme: "#fa5b0f",
-    currentTheme: "#3bc4fd",
-    // currentTheme: "#1FBF44",
+    // currentTheme: "#3bc4fd",
+    currentTheme: "#FF4500",
 
 };
 

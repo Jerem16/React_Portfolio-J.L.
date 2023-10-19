@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./modalService.scss";
 
 const ModalService = ({ service, iconClass }) => (
-    <div className="service-item " id="modalEvent">
+    <div className="service-item " id="modalService">
         <div className="service-item-inner">
             <div className="icon">
                 <i className={iconClass}></i>

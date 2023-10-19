@@ -8,7 +8,6 @@ import LanguageSelector from "./LanguageSelector";
 import { loadLanguageData } from "../../utils/loadLanguageData";
 import SwitcherMenu from "../ThemeSelector/SwitcherMenu";
 
-
 import "./header.scss";
 
 function Header() {
@@ -51,7 +50,13 @@ function Header() {
                 <ul className="nav">
                     {navLinks.map((link, index) => (
                         <li key={index}>
-                            <i className={link.icon}></i>
+                            <i
+                                className={`${
+                                    location.pathname === link.to
+                                        ? "active-link "
+                                        : ""
+                                }${link.icon}`}
+                            ></i>
                             <Link
                                 to={link.to}
                                 className={

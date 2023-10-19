@@ -160,8 +160,10 @@
                 margin-right: 15px;
                 color: var(--text-black-900);
                 padding: 16.625px;
+                &.active-link {
+                    color: var(--skin-color);
+                }
             }
-            
         }
     }
     .switcher-block {

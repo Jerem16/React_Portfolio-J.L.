@@ -41,8 +41,9 @@
 .language-menu {
     display: flex;
     position: absolute;
-    top: 70px;
-    @include transform(translateX(-200px));
+    top: 57px;
+    @include transform(translateX(-200px) scaleY(0));
+
     opacity: 0;
     //right: 0;
     //background: #fff;
@@ -51,11 +52,12 @@
     padding: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    transition: all 0.3s ease-in-out;
+
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .flagLogo {
@@ -78,5 +80,11 @@
 
 .flag.open .language-menu {
     opacity: 1;
-    @include transform(translateX(0px));
+    transition: all 0.3s ease-in-out;
+    @include transform(translateX(0px) scaleY(1));
+}
+.flag.close .language-menu {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    @include transform(translateX(-200px) scaleY(0));
 }

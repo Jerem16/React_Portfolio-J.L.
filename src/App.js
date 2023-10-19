@@ -8,9 +8,9 @@ import Error404 from "./pages/Error404/Error404";
 // import Footer from "./components/Footer/Footer";
 // import ThemeSelector from "./components/ThemeSelector/ThemeSelector";
 import GlobalStyle from "./utils/style/GlobalStyle";
+import Portfolio from "./pages/Portfolio/Portfolio";
 // import "./assets/styles/main.scss";
 // import "./main.scss";
-
 
 function App() {
     return (
@@ -23,7 +23,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/services" element={<Services />} />
-                    <Route path="/portfolio" element={<Home />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
                     <Route path="/contact" element={<Home />} />
                 </>
                 <Route path="*" element={<Error404 />} />

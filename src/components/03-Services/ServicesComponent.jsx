@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ServiceItem from "./ServiceItem";
-import dataServices from "../../assets/data/fr/dataServices.json";
 import ModalService from "../Modal/ModalService/ModalService";
 import Modal from "../Modal/Modal"; // Assurez-vous d'importer Icon depuis le bon emplacement
 
@@ -9,7 +8,6 @@ import { loadLanguageData } from "../../utils/loadLanguageData";
 
 import CloseIcon from "../99-Svg_Icon/CloseIcon";
 const ServicesComponent = () => {
-    // const services = dataServices.services;
     const [selectedService, setSelectedService] = useState(null);
 
     const openModal = (service) => {
@@ -77,8 +75,7 @@ const ServicesComponent = () => {
                                 iconClass={selectedService.icon}
                             />
                             <button type="button" onClick={closeModal}>
-                                <CloseIcon name="close" />{" "}
-                                {/* Ajoutez l'icône "close" cliquable ici */}
+                                <CloseIcon name="close" />
                             </button>
                         </div>
                     }
@@ -88,9 +85,7 @@ const ServicesComponent = () => {
                             type="button"
                             onClick={closeModal}
                             className="hidden"
-                        >
-                            Fermer le modal
-                        </button>
+                        ></button>
                     )}
                 </Modal>
             )}
