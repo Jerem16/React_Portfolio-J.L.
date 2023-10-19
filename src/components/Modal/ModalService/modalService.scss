@@ -1,6 +1,6 @@
 @import "../../../assets/styles/00_utils/3_mixins";
 @import "../../../assets/styles/00_utils/4_fonts";
-
+@import "../../../assets/styles/00_utils/1_variables";
 #modalEvent {
     // font-family: "Manrope", sans-serif;
     overflow: hidden;
@@ -28,6 +28,7 @@
         font-size: 25px;
         color: var(--bg-black-100);
         background-color: var(--skin-color);
+        // @include drop-shadow( $shadow-rgba 3px 1.5px 1.5px);
     }
 
     h4 {

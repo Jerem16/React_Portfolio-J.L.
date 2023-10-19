@@ -6,7 +6,7 @@ function ThemeSelector() {
     const dispatch = useDispatch();
 
     const [isSelectorOpen, setIsSelectorOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false); // État pour gérer le mode sombre
+    const [isDarkMode, setIsDarkMode] = useState(true); // Par défaut, le mode sombre est activé
 
     const toggleSelector = () => {
         setIsSelectorOpen(!isSelectorOpen);
@@ -22,8 +22,9 @@ function ThemeSelector() {
     };
 
     useEffect(() => {
-        if (document.body.classList.contains("dark")) {
-            setIsDarkMode(true);
+        if (!document.body.classList.contains("dark")) {
+            // Si le mode sombre n'est pas activé, l'activer par défaut
+            toggleDarkMode();
         }
     }, []);
 
@@ -38,7 +39,7 @@ function ThemeSelector() {
                 </div>
                 <div className="s-icon day-night" onClick={toggleDarkMode}>
                     <i
-                        className={`fas ${isDarkMode ? "fa-sun" : "fa-moon"}`}
+                        className={`fas ${isDarkMode ? "fa-moon" : "fa-sun"}`}
                     ></i>
                 </div>
             </div>

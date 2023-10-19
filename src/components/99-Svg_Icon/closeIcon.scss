@@ -1,3 +1,21 @@
-.close-icon {
+@import "../../assets/styles/00_utils/3_mixins";
+@import "../../assets/styles/00_utils/4_fonts";
+@import "../../assets/styles/00_utils/1_variables";
+
+.closed {
+    width: 1.125em;
+    height: 1.125em;
     fill: var(--skin-color);
+    transform-origin: center;
+    transition: all 0.15s ease;
+    @include transform(scale(1));
+    @include drop-shadow(0 0 0 var(--bg-black-900));
+    box-sizing: border-box;
+
+    &:hover {
+        @include transform(scale(1.12));
+        @include drop-shadow(0 0 3px var(--bg-black-900));
+    }
+    .close-icon {
+    }
 }

@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    currentTheme: "#fa5b0f", // Utilisez le chemin relatif correct ici
+    // currentTheme: "#fa5b0f",
+    currentTheme: "#3bc4fd",
+    // currentTheme: "#1FBF44",
+
 };
 
 const themeSlice = createSlice({

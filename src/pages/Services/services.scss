@@ -24,7 +24,10 @@
                 padding: 30px 15px;
                 text-align: center;
                 background-color: var(--bg-black-100);
-                border: 1px solid var(--bg-black-50);
+                border: 1px solid var(--bg-black-75);
+                border-right-color: var(--bg-black-50);
+                border-bottom-color: var(--bg-black-50);
+
                 border-radius: 10px;
                 transition: all 0.3s ease;
                 cursor: pointer;
@@ -65,4 +68,3 @@
         }
     }
 }
-

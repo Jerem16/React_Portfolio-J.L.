@@ -69,6 +69,32 @@ background-color: rvb-calculator($color-primary, yellow, 30);
     $g: 255 - green($color);
     $b: 255 - blue($color);
     $a: alpha($color);
-  
+
     @return rgba($r, $g, $b, $a);
-  }
+}
+
+$backgroundColor: #f2f2fc;
+$textColor: #ec1839; // Utilisation de la variable CSS --my-colorText avec une valeur de secours #000 en cas d'absence
+
+// Fonction pour calculer la luminosité
+@function calculateBrightness($color) {
+    @return ((red($color) * 299) + (green($color) * 587) + (blue($color) * 114)) /
+        1000;
+}
+
+$backgroundBrightness: calculateBrightness($backgroundColor);
+
+// Définissez une luminosité de seuil pour basculer le contraste
+$thresholdBrightness: 128;
+
+// Ajustez le contraste en fonction de la luminosité de l'arrière-plan
+$adjustedContrast: if(
+    $backgroundBrightness < $thresholdBrightness,
+    lighten($textColor, 20%),
+    darken($textColor, 20%)
+);
+
+// Utilisez la couleur ajustée pour le texte
+.text {
+    color: $adjustedContrast;
+}

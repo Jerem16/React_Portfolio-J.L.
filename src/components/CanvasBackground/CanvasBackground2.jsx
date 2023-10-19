@@ -81,7 +81,6 @@ function CanvasBackground2() {
     }, []);
 
     const particlesLoaded = useCallback(async (container) => {
-        await console.log("2", container);
     }, []);
 
     return (

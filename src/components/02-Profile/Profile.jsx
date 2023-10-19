@@ -90,7 +90,7 @@ function Profile() {
                         <div className="skills">
                             {skills.map((skill) => (
                                 <div className="skill-item" key={skill.name}>
-                                    <h5>{skill.name}</h5>
+                                    <h4>{skill.name}</h4>
                                     <div className="progress">
                                         <div
                                             className="progress-in"

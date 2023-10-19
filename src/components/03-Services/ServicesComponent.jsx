@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ServiceItem from "./ServiceItem";
 import dataServices from "../../assets/data/fr/dataServices.json";
 import ModalService from "../Modal/ModalService/ModalService";
 import Modal from "../Modal/Modal"; // Assurez-vous d'importer Icon depuis le bon emplacement
+
+import { useSelector } from "react-redux";
+import { loadLanguageData } from "../../utils/loadLanguageData";
+
 import CloseIcon from "../99-Svg_Icon/CloseIcon";
 const ServicesComponent = () => {
-    const services = dataServices.services;
+    // const services = dataServices.services;
     const [selectedService, setSelectedService] = useState(null);
 
     const openModal = (service) => {
@@ -15,6 +19,27 @@ const ServicesComponent = () => {
     const closeModal = () => {
         setSelectedService(null);
     };
+
+    const selectedLanguage = useSelector((state) => state.language.language);
+    const [languageData, setLanguageData] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await loadLanguageData(
+                selectedLanguage,
+                "dataServices.json"
+            );
+            setLanguageData(data);
+        };
+
+        fetchData();
+    }, [selectedLanguage]);
+
+    const data = languageData;
+
+    if (!data || !data.services || !languageData) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <>
@@ -26,7 +51,7 @@ const ServicesComponent = () => {
 
             <div className="row-center">
                 <div className="service_container">
-                    {services.map((service, index) => (
+                    {data.services.map((service, index) => (
                         <div
                             key={service.id}
                             className="service-item"
@@ -42,8 +67,6 @@ const ServicesComponent = () => {
                 </div>
             </div>
             <div className="col_end"></div>
-
-            {/* Le composant Modal avec le composant ModalService (si un service est sélectionné) */}
             {selectedService && (
                 <Modal
                     opened={true}

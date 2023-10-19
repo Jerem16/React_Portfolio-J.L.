@@ -7,7 +7,7 @@ import LanguageSelector from "./LanguageSelector";
 
 import { loadLanguageData } from "../../utils/loadLanguageData";
 import SwitcherMenu from "../ThemeSelector/SwitcherMenu";
-import SwitcherThemeContainer from "../ThemeSelector/SwitcherThemeContainer";
+
 
 import "./header.scss";
 

@@ -1,7 +1,13 @@
+@import "../../assets/styles/00_utils/4_fonts";
+@import "../../assets/styles/00_utils/1_variables";
+@import "../../assets/styles/00_utils/2_functions";
+
 .btn {
-    font-size: 1em;
-    font-weight: 500;
+    // font-size: 1em;
+    // font-weight: 700;
+    @include h5;
     padding: 12px 35px;
+    color: var(--bg-black-100);
     color: white;
     display: inline-block;
     white-space: nowrap;

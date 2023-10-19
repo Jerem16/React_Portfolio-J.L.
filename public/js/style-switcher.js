@@ -38,10 +38,8 @@ window.addEventListener("load", () => {
     if (document.body.classList.contains("dark")) {
         const icon = dayNight.querySelector("i");
         icon.classList.add("fa-sun");
-        console.log("dark");
     } else {
         const icon = dayNight.querySelector("i");
         icon.classList.add("fa-moon");
-        console.log("light");
     }
 });

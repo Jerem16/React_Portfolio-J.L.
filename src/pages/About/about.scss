@@ -6,7 +6,7 @@
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    color: var(--text-black-900);
+    // color: var(--text-black-900);
     position: relative;
     &-content {
         // flex: 0 0 87.47130206625124%;
@@ -64,7 +64,7 @@
             & .skill-item {
                 @include flex_100;
                 margin-bottom: 1.5625em;
-                & h5 {
+                & h4 {
                     @include h5;
                     line-height: 2.75em;
                 }
@@ -116,7 +116,10 @@
             padding: 1.875em 0.937em;
             background-color: var(--bg-black-100);
             border: 0.0625em solid var(--bg-black-50);
+            // border: 0.0625em solid #292929;
+
             @include border-radius(0.937em);
+            box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
             & .timeline-item {
                 position: relative;
                 padding: 0 1.1562em 3.125em 2.3125em; // 50px
@@ -229,7 +232,7 @@
                                 object-fit: contain;
                                 padding: 0 0.19em;
                                 @include drop-shadow(
-                                    2px 3px rgba(0, 0, 0, 0.25)
+                                     rgba(0, 0, 0, 0.25) 3px 1.5px 1.5px
                                 );
                                 @include transition(all, 0.3s, ease);
                                 &:hover {
