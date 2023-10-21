@@ -4,16 +4,14 @@ import { useSelector } from "react-redux"; // Importez useSelector ici
 
 const StyledGlobalStyle = createGlobalStyle`
   :root {
-    --skin-color: ${props => props.theme.currentTheme}; // Utilisez useSelector ici
+    --skin-color: ${(props) => props.theme.currentTheme}; 
   }
 `;
 
 function GlobalStyle() {
-  const currentTheme = useSelector(state => state.theme.currentTheme);
+    const currentTheme = useSelector((state) => state.theme.currentTheme);
 
-  return (
-    <StyledGlobalStyle theme={{ currentTheme }} /> 
-  );
+    return <StyledGlobalStyle theme={{ currentTheme }} />;
 }
 
 export default GlobalStyle;

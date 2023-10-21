@@ -1,6 +1,16 @@
 /****** [General] ******/
 // @import "./02_fonts";
+
 :root {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-75: #292929;
+    --bg-black-50: #393939;
+    --text-black-900: #fff;
+    --text-black-700: #e9e9e9e9;
+    --text-black-500: #d3d3d3;
+}
+body.light {
     --bg-black-900: #f2f2fc;
     --bg-black-100: #fdf9ff;
     --bg-black-75: #f2edf5;
@@ -9,7 +19,6 @@
     --text-black-700: #504e70;
     --text-black-500: #706e93;
 }
-
 body.dark {
     --bg-black-900: #151515;
     --bg-black-100: #222222;
@@ -38,7 +47,11 @@ body.dark {
         }
     }
     .about-content .timeline {
-        box-shadow: 0 0 20px invert-rgba($shadow-rgba);
+        border: 0.0625em solid #292929;
+        box-shadow: 0 0 0px invert-rgba($shadow-rgba);
+        &:hover {
+            box-shadow: 0 0 20px invert-rgba($shadow-rgba);
+        }
     }
     .about-content
         .timeline
@@ -46,13 +59,14 @@ body.dark {
         .timeline-text
         div.div-anime
         .technologies {
-        @include drop-shadow(rgba(255, 255, 255, 0.25) 3px 1px 1.5px);
+        @include drop-shadow(rgba(black, 0.2) 1px 2px 3px);
     }
-    .btn {
+    .btn,
+    .btn_a {
         // color: #181818;
-        // box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.25);
+        box-shadow: 2.5px 5px 15px rgba-color(black, 0.25);
         &::after {
-            // box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.35);
+            box-shadow: 0px 0px 15px var(--skin-color);
         }
     }
     & .timeline-date {
@@ -61,7 +75,6 @@ body.dark {
         }
     }
     #modalPortfolio {
-
         background-color: var(--bg-black-100);
         border: 1px solid var(--bg-black-50);
         border-radius: 10px;
@@ -118,37 +131,6 @@ h6 {
     opacity: 1;
     position: relative;
     top: 0;
-    .section-title {
-        display: block;
-        align-self: flex-start;
-        flex: 0 0 87.47130206625124%;
-        max-width: 87.47130206625124%;
-        flex: 0 0 100%;
-        max-width: 100%;
-        // align-self: flex-start;
-        margin: 0 0 60px 0;
-
-        h2 {
-            @include h2;
-            position: relative;
-
-            &::before,
-            &::after {
-                content: "";
-                width: 50px;
-                height: 4px;
-                background-color: $color-primary;
-                position: absolute;
-                top: 100%;
-                left: 0;
-            }
-
-            &::after {
-                margin-top: 8px;
-                width: 25px;
-            }
-        }
-    }
     .container {
         // max-width: calc(100vw - 540px);
         // position: relative;
@@ -195,60 +177,46 @@ h6 {
 .fas {
     color: var(--text-black-900);
 }
-.bgDraw {
+.bgDraw,
+.bgDraw2 {
     position: absolute;
-    width: calc(100%);
-    height: 360px;
-    // max-width: calc(100% - 225.39px);
-    // left: 139.26px;
-    top: 0px;
-    // max-width: calc(100% - 40px);
     left: 0px;
-    // height: 100%;
-    // background: #000;
-    // border: 1px solid #000;
     z-index: 0;
     overflow: hidden;
-    #tsparticles {
-    }
-    .tsparticles {
-        //max-width: 400px !important;
-        width: 600px !important;
-        height: 300px !important;
+    .tsparticles,
+    .tsparticles2 {
         position: absolute !important;
         z-index: auto !important;
+        pointer-events: auto !important;
+    }
+}
+.bgDraw {
+    width: calc(100%);
+    height: 360px;
+    top: 0px;
+    .tsparticles {
+        width: 600px !important;
+        height: 300px !important;
         top: -140px !important;
         right: -195px !important;
-        pointer-events: auto !important;
-        // background-color: gray !important;
         clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
-        transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
 }
 .bgDraw2 {
-    position: absolute;
     width: calc(100% - 10px);
     height: 16.1vh;
     bottom: 6.14%;
     @include drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.15));
-
-    left: 0px;
-
-    z-index: 0;
-
-    .tsparticles2 {
+    .tsparticles2,
+    #tsparticles2 {
         width: 100% !important;
         height: 100% !important;
-        position: absolute !important; /* Changez "fixed" en "static" pour annuler la position fixe */
-        z-index: auto !important; /* Annulez la valeur du z-index */
         bottom: 0 !important; /* Annulez la valeur de top */
         left: 0 !important; /* Annulez la valeur de left */
-        pointer-events: auto !important; /* Annulez la valeur de pointer-events */
-        // background-color: gray !important; /* Annulez la couleur de fond */
-        // border: 1px solid #000;
     }
 }

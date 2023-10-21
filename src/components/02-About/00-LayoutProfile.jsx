@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Button from "../Button/Button";
+import Button, { BUTTON_TYPES } from "../Button/Button";
 // import about from "../../assets/data/en/about.json";
 
-import Timeline from "../../components/02-Experience/TimeLine";
+import Timeline from "./02-TimeLine";
 import { useSelector } from "react-redux";
 import { loadLanguageData } from "../../utils/loadLanguageData";
+import CV from "../../assets/cv/cv2022.pdf";
+
+
 
 function Profile() {
     const selectedLanguage = useSelector((state) => state.language.language);
@@ -36,12 +39,13 @@ function Profile() {
     } = data.profile;
 
     const button1 = {
-        href: "../../assets/data/experience.json",
-        btnClass: "",
+        to: "/contact",
+        class: "hire-me",
     };
     const button2 = {
-        href: "../../assets/data/experience.json",
-        btnClass: "",
+        href: "/assets/cv/CV-2022.pdf",
+        // src: `process.env.PUBLIC_URL + "/assets/cv/CV-2022.pdf"`,
+        class: "hire-me",
     };
 
     return (
@@ -76,14 +80,19 @@ function Profile() {
 
                             <div className="buttons">
                                 <Button
-                                    btnName={buttons.btnName2}
-                                    href={button2.href}
-                                    className={button2.btnClass}
+                                    // btnName={buttons.btnName1}
+                                    children={buttons.btnName1}
+                                    to={button1.to}
+                                    className={button1.buttonClass}
                                 />{" "}
                                 <Button
-                                    btnName={buttons.btnName1}
-                                    href={button1.href}
-                                    className={button1.btnClass}
+                                    // btnName={buttons.btnName2}
+                                    children={buttons.btnName2}
+                                    href={CV}
+                                    target="_blank"
+                                    type={BUTTON_TYPES.DOWNLOAD}
+                                    // src={button2.src}
+                                    className={button2.class}
                                 />
                             </div>
                         </div>

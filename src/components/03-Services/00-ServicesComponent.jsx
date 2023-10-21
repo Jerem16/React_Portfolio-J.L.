@@ -79,15 +79,7 @@ const ServicesComponent = () => {
                             </button>
                         </div>
                     }
-                >
-                    {({ isOpened, setIsOpened }) => (
-                        <button
-                            type="button"
-                            onClick={closeModal}
-                            className="hidden"
-                        ></button>
-                    )}
-                </Modal>
+                ></Modal>
             )}
         </>
     );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { changeTheme } from "../../redux/reducers/themeSlice";
 
@@ -6,7 +6,7 @@ function ThemeSelector() {
     const dispatch = useDispatch();
 
     const [isSelectorOpen, setIsSelectorOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(true); // Par défaut, le mode sombre est activé
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     const toggleSelector = () => {
         setIsSelectorOpen(!isSelectorOpen);
@@ -16,14 +16,26 @@ function ThemeSelector() {
         dispatch(changeTheme(themeColor));
     };
 
-    const toggleDarkMode = () => {
+    const toggleDarkMode = useCallback(() => {
         setIsDarkMode(!isDarkMode);
-        document.body.classList.toggle("dark");
-    };
+
+        if (isDarkMode) {
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+        } else {
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
+        }
+
+        const dayNightIcon = document.querySelector(".day-night i");
+        if (dayNightIcon) {
+            dayNightIcon.classList.remove("fa-sun", "fa-moon");
+            dayNightIcon.classList.add(isDarkMode ? "fa-sun" : "fa-moon");
+        }
+    }, [isDarkMode]);
 
     useEffect(() => {
         if (!document.body.classList.contains("dark")) {
-            // Si le mode sombre n'est pas activé, l'activer par défaut
             toggleDarkMode();
         }
     }, []);
@@ -39,7 +51,7 @@ function ThemeSelector() {
                 </div>
                 <div className="s-icon day-night" onClick={toggleDarkMode}>
                     <i
-                        className={`fas ${isDarkMode ? "fa-moon" : "fa-sun"}`}
+                        className={`fas ${isDarkMode ? "fa-sun" : "fa-moon"}`}
                     ></i>
                 </div>
             </div>
@@ -72,4 +84,5 @@ function ThemeSelector() {
     );
 }
 
-export default ThemeSelector;
+// export default ThemeSelector;
+export default React.memo(ThemeSelector);

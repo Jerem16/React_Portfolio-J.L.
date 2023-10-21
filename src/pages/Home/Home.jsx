@@ -35,12 +35,10 @@ function Home() {
             return;
         }
 
-        const {
-            typedStrings, 
-        } = data.home;
+        const { typedStrings } = data.home;
 
         const options = {
-            strings: typedStrings, 
+            strings: typedStrings,
             typeSpeed: 120,
             backSpeed: 60,
             loop: true,
@@ -71,14 +69,14 @@ function Home() {
     } = data.home;
 
     return (
-        <main className="main-content">
-            <section className="home section" id="home">
-                <div className="container">
-                    
-                    <div className="bgDraw"><div className="Tefg"></div>
-                        <CanvasBackground />
-                    </div>
-                    <div className="row padd-15px">
+        <section className="home section" id="home">
+            <div className="container">
+                <div className="row_top"></div>
+                <div className="bgDraw">
+                    <CanvasBackground />
+                </div>
+                <div className="row_center">
+                    <div className="row">
                         <HomeInfo
                             welcome={welcome}
                             name={name}
@@ -90,12 +88,13 @@ function Home() {
                         />
                         <HomeImage imageSrc={imageSrc} />
                     </div>
-                    <div className="bgDraw2">
-                        <CanvasBackground2 />
-                    </div>
                 </div>
-            </section>
-        </main>
+                <div className="bgDraw2">
+                    <CanvasBackground2 />
+                </div>
+                <div className="col_end"></div>
+            </div>
+        </section>
     );
 }
 

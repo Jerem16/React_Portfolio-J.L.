@@ -1,5 +1,5 @@
 import React from "react";
-import Experience from "./Experience";
+import Experience from "./03-Experience";
 
 function Timeline({ experiences, technologySymbols, technologyImages }) {
     const myTitle = experiences.length > 0 ? experiences[0].sectionTitle : "";

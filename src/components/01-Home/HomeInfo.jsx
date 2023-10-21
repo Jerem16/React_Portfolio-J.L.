@@ -11,7 +11,7 @@ function HomeInfo({
     hireButtonText,
 }) {
     const buttons = {
-        href: "../../assets/data/experience.json",
+        href: "/contact",
         class: "hire-me",
     };
 
@@ -30,8 +30,9 @@ function HomeInfo({
                 <p>{description}</p>
                 <Button
                     btnName={hireButtonText}
+                    children={hireButtonText}
                     href={buttons.href}
-                    btnClass={buttons.class}
+                    className={buttons.class}
                 />
             </div>
         </div>

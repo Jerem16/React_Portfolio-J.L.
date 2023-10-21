@@ -13,7 +13,7 @@ function HomeImage({ imageSrc }) {
                             alt="profile_image"
                         />
                     </div>
-                    <div className="rightNB"></div>{" "}
+                    <div className="rightNB"></div>
                 </div>
             </div>
 

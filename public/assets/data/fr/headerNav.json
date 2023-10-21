@@ -1,0 +1,32 @@
+{
+    "logoTitle": "P",
+    "logoSpanTitle": "ortfolio",
+    "language": "Langue",
+    "navLinks": [
+        {
+            "to": "/",
+            "text": "Accueil",
+            "icon": "fa fa-home"
+        },
+        {
+            "to": "/about",
+            "text": "À propos",
+            "icon": "fa fa-user"
+        },
+        {
+            "to": "/service",
+            "text": "Services",
+            "icon": "fa fa-list"
+        },
+        {
+            "to": "/portfolio",
+            "text": "Portfolio",
+            "icon": "fa fa-briefcase"
+        },
+        {
+            "to": "/contact",
+            "text": "Contact",
+            "icon": "fa fa-comments"
+        }
+    ]
+}

@@ -6,7 +6,6 @@ import ThemeSelector from "../ThemeSelector/ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
 
 import { loadLanguageData } from "../../utils/loadLanguageData";
-import SwitcherMenu from "../ThemeSelector/SwitcherMenu";
 
 import "./header.scss";
 
@@ -14,7 +13,7 @@ function Header() {
     const location = useLocation();
     const selectedLanguage = useSelector((state) => state.language.language);
     const [languageData, setLanguageData] = useState(null);
-    const [isThemeSelectorOpen, setIsThemeSelectorOpen] = useState(false); // Ajoutez un état pour gérer l'ouverture de ThemeSelector
+    // const [isThemeSelectorOpen, setIsThemeSelectorOpen] = useState(false); // Ajoutez un état pour gérer l'ouverture de ThemeSelector
 
     useEffect(() => {
         const fetchData = async () => {
@@ -73,9 +72,10 @@ function Header() {
                     <LanguageSelector text={language} />
                 </ul>
                 <ThemeSelector />
+                {/* <div></div> */}
             </div>
         </header>
     );
 }
 
-export default Header;
+export default React.memo(Header);

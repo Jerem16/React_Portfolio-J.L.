@@ -6,11 +6,8 @@
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    // color: var(--text-black-900);
     position: relative;
     &-content {
-        // flex: 0 0 87.47130206625124%;
-        // max-width: 87.47130206625124%;
         & .about-text {
             @include flex_100;
             & h3 {
@@ -101,7 +98,6 @@
                 & h3.title {
                     @include h3;
                     margin-bottom: 1.1875em;
-                    // margin-bottom: 1.7815em;
                 }
             }
         }
@@ -116,10 +112,10 @@
             padding: 1.875em 0.937em;
             background-color: var(--bg-black-100);
             border: 0.0625em solid var(--bg-black-50);
-            // border: 0.0625em solid #292929;
 
             @include border-radius(0.937em);
             box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
             & .timeline-item {
                 position: relative;
                 padding: 0 1.1562em 3.125em 2.3125em; // 50px
@@ -144,7 +140,6 @@
                     border-radius: 50%;
                     background-color: var(--skin-color);
                     top: 3px;
-                    
                 }
 
                 & .timeline-date {
@@ -152,7 +147,6 @@
                     margin-bottom: 0.75em;
                     i {
                         color: burlywood;
-                       
                     }
                 }
 
@@ -296,7 +290,7 @@
                                         ease-in-out;
                                     animation: openClose2 0.2s ease-in-out;
                                     &::before {
-                                        font-family: "Font Awesome";
+                                        font-family: "Font Awesome", sans-serif;
                                     }
                                 }
                             }
@@ -326,7 +320,6 @@
         transform-origin: top;
         transform: scaleY(0);
         opacity: 0;
-        // color: var(--bg-black-50);
     }
     33% {
         transform: scaleY(0.5);
@@ -337,14 +330,11 @@
     }
     100% {
         opacity: 1;
-        // color: var(--text-black-700);
     }
 }
 @keyframes closeOpen {
     0% {
         transform: scaleY(1);
-
-        // color: var(--bg-black-50);
     }
     33% {
         transform: scaleY(0.5);

@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-// import "../../../"
 import "./modalPortfolio.scss";
 
 const ModalPortfolio = ({ title, imagePath }) => (
@@ -18,9 +16,5 @@ const ModalPortfolio = ({ title, imagePath }) => (
         </h4> */}
     </div>
 );
-
-// ModalService.propTypes = {
-//     service: PropTypes.object.isRequired,
-// };
 
 export default ModalPortfolio;

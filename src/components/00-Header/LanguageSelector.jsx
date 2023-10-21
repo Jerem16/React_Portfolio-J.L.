@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../redux/reducers/languageSlice";
 
@@ -106,4 +106,4 @@ const LanguageSelector = ({ text }) => {
     );
 };
 
-export default LanguageSelector;
+export default React.memo(LanguageSelector);

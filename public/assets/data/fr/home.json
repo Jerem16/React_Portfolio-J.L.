@@ -1,0 +1,24 @@
+{
+    "home": {
+        "welcome": "Bonjour, je m'appelle ",
+        "name": "‘‘Jérémy Lemaignent’’",
+        "presentation": "Je suis ",
+        "description": "’’Développeur passionné’’ depuis plus de 2 ans, je me suis spécialisé dans la conception de sites web. Alliant performance et designe graphique, « mon expertise s’étend de la conception de sites, à la programmation orientée Front-End ».",
+        "question": "",
+        "answer": "Rejoignez-moi.",
+        "imageSrc": "profilePortfolio.jpg",
+        "hireButtonText": "Engagez-moi",
+        "typedStrings": [
+            "",
+            "Web Designer",
+            "Intégrateur Web",
+            "Web Développeur",
+            "Designer Graphique"
+        ]
+    },
+    "contact": {
+        "email": "info@gmail.com",
+        "phone": "+33 6 35 02 06 41",
+        "city": "Le Havre"
+    }
+}

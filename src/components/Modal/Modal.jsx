@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./modal.scss";
 
-const Modal = ({ opened, Content, children, closeIcon }) => {
+const Modal = ({ opened, Content, closeIcon }) => {
     const [isOpened, setIsOpened] = useState(opened);
     return (
         <>
-            {children({ isOpened, setIsOpened })}
+            {/* {children({ isOpened, setIsOpened })} */}
             {isOpened && (
                 <div className="modal">
                     <div className="content">
@@ -32,8 +32,8 @@ Modal.defaultProps = {
 Modal.propTypes = {
     opened: PropTypes.bool,
     Content: PropTypes.node.isRequired,
-    children: PropTypes.func.isRequired,
-    closeIcon: PropTypes.node, // Ajoutez cette prop
+    // children: PropTypes.func.isRequired,
+    // closeIcon: PropTypes.node, // Ajoutez cette prop
 };
 
 export default Modal;
