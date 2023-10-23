@@ -130,7 +130,12 @@
         flex-flow: column nowrap;
         justify-content: center;
         // display: block;
-
+        &:hover {
+            a.active-link,
+            i.active-link {
+                color: var(--text-black-900);
+            }
+        }
         li {
             @include row_R;
             flex-flow: row nowrap;
@@ -142,7 +147,6 @@
             width: 100%;
 
             border-bottom: 1px solid var(--bg-black-50);
-
             a {
                 flex: 2;
                 min-width: 90px;
@@ -150,9 +154,10 @@
                 font-weight: 600;
                 color: var(--text-black-900);
                 padding: 16.625px 0px;
-                &.active-link {
-                    color: var(--skin-color);
-                }
+            }
+            a.active-link,
+            i.active-link {
+                color: var(--skin-color);
             }
             i {
                 flex: 1;
@@ -160,7 +165,16 @@
                 margin-right: 15px;
                 color: var(--text-black-900);
                 padding: 16.625px;
-                &.active-link {
+            }
+            &:hover {
+                a {
+                    color: var(--skin-color);
+                }
+                i {
+                    color: var(--skin-color);
+                }
+                a.active-link,
+                i.active-link {
                     color: var(--skin-color);
                 }
             }

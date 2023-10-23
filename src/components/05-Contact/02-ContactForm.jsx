@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import Field, { FIELD_TYPES } from "./Field/Field";
+
 import Button, { BUTTON_TYPES } from "../../components/Button/Button";
 import "./form.scss";
 import { useForm, ValidationError } from "@formspree/react";
@@ -12,9 +13,9 @@ import contactFormContent from "../../assets/data/en/contactFormContent.json";
 const ContactForm = ({ onSuccess, onError }) => {
     const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
-    // const openModal = () => {
-    //     setIsSuccessModalOpen(true);
-    // };
+    const openModal = () => {
+        setIsSuccessModalOpen(true);
+    };
 
     const closeModal = () => {
         setIsSuccessModalOpen(false);
@@ -39,8 +40,6 @@ const ContactForm = ({ onSuccess, onError }) => {
     const resetForm = () => {
         setErrorFields({
             nom: "",
-            prenom: "",
-            phone: "",
             email: "",
             subject: "",
             message: "",
@@ -61,13 +60,7 @@ const ContactForm = ({ onSuccess, onError }) => {
             const formData = new FormData(form);
             let hasErrors = false;
 
-            const requiredFields = [
-                "nom",
-                "prenom",
-                "email",
-                "subject",
-                "message",
-            ];
+            const requiredFields = ["nom", "email", "subject", "message"];
             const errors = {};
             requiredFields.forEach((fieldName) => {
                 if (!formData.get(fieldName)) {
@@ -136,44 +129,6 @@ const ContactForm = ({ onSuccess, onError }) => {
                             <ValidationError
                                 prefix="Last Name"
                                 field="nom"
-                                errors={state.errors}
-                            />
-                        </div>
-                    </div>
-                    <div className="form-item col-6">
-                        <div className="form-group">
-                            <Field
-                                id="prenom"
-                                placeholder={
-                                    contactFormContent.formFields.firstName
-                                }
-                                name="prenom"
-                                error={errorFields.prenom}
-                                autoComplete="given-name"
-                            />
-                            <ValidationError
-                                prefix="First Name"
-                                field="prenom"
-                                errors={state.errors}
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="form-item col-6">
-                        <div className="form-group">
-                            <Field
-                                id="phone"
-                                placeholder={
-                                    contactFormContent.formFields.phone
-                                }
-                                name="phone"
-                                error={errorFields.phone}
-                                autoComplete="tel"
-                            />
-                            <ValidationError
-                                prefix="Téléphone"
-                                field="phone"
                                 errors={state.errors}
                             />
                         </div>

@@ -11,7 +11,6 @@ function Experience({ experiences }) {
             [id]: !prevState[id],
         }));
 
-        // Définissez le drapeau pour indiquer que des éléments ont été modifiés
         setRefreshCloseElements(true);
     };
 
@@ -108,7 +107,7 @@ function Experience({ experiences }) {
                                 <div className="bd_Bottom">
                                     <div className="fa-Circle">
                                         <i
-                                            className={`fa fa-chevron-up `}
+                                            className={`fa fa-chevron-up`}
                                             style={{
                                                 display: `${entry.display}`,
                                                 transformOrigin: "center",
@@ -120,6 +119,7 @@ function Experience({ experiences }) {
                                                 transition:
                                                     "transform 0.3s ease-in-out",
                                             }}
+                                            id="darkArrow"
                                         ></i>
                                     </div>
                                 </div>
@@ -136,6 +136,8 @@ function Experience({ experiences }) {
                             >
                                 <p
                                     className={`timeline-anime ${
+                                        entry.description.class
+                                    } ${
                                         openArticleStates[entry.id]
                                             ? "open"
                                             : "close"

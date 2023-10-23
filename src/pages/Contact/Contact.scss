@@ -1,0 +1,101 @@
+/* contact */
+
+.contact-title {
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 1.5625em;
+    margin-bottom: 20px;
+}
+
+.contact-sub-title {
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 0.9375em; /* Converti depuis 15px */
+    margin-bottom: 60px;
+}
+
+.contact {
+    &-info-item {
+        flex: 0 0 25%;
+        max-width: 25%;
+        text-align: center;
+        margin-bottom: 60px;
+
+        .icon {
+            display: inline-block;
+
+            .fa {
+                font-size: 1.5625em; /* Converti depuis 25px */
+                color: var(--skin-color);
+            }
+        }
+
+        h4 {
+            font-size: 1.125em; /* Converti depuis 18px */
+            font-weight: 700;
+            color: var(--text-black-900);
+            text-transform: capitalize;
+            margin: 15px 0 5px;
+        }
+
+        p {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 25px;
+            color: var(--text-black-700);
+        }
+    }
+
+    &-form,
+    &-form .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        .col-6 {
+            flex: 1;
+        }
+
+        .form-item {
+            margin-bottom: 30px;
+
+            .form-control {
+                width: 100%;
+                height: 50px;
+                border-radius: 25px;
+                background-color: var(--bg-black-100);
+                border: 1px solid var(--bg-black-50);
+                padding: 10px 25px;
+                font-size: 1em;
+                color: var(--text-black-700);
+                transition: all 0.3s ease;
+                text-transform: none;
+                &:focus {
+                    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+                }
+            }
+
+            textarea.form-control {
+                height: 140px;
+                padding: 10px 25px;
+                font-size: 1em; /* 16px / 16px */
+                font-family: "Poppins", sans-serif;
+                // background: #000;
+            }
+
+            .btn {
+                margin: 0;
+                padding: 13px 50px 12px 50px;
+            }
+        }
+    }
+}
+.error-message {
+    color: var(--skin-color);
+    position: relative;
+    top: 0.625em;
+
+    font-size: 0.875em;
+    font-weight: 400;
+
+    margin-left: 27px;
+}

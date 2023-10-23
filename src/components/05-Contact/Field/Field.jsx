@@ -14,12 +14,16 @@ const Field = ({
     placeholder,
     error,
     onChange,
+    autoComplete,
 }) => {
     let component;
     switch (type) {
         case FIELD_TYPES.INPUT_TEXT:
             component = (
                 <input
+                    label={label}
+                    autoComplete={autoComplete}
+                    className="form-control"
                     type="text"
                     name={name}
                     placeholder={placeholder}
@@ -31,8 +35,9 @@ const Field = ({
         case FIELD_TYPES.TEXTAREA:
             component = (
                 <textarea
+                    className="form-control"
                     name={name}
-                    placeholder="Entrez votre message"
+                    placeholder={placeholder}
                     data-testid={`field-testid-${name}`} // Ajout du data-testid pour les tests unitaires
                 />
             );
@@ -40,6 +45,7 @@ const Field = ({
         default:
             component = (
                 <input
+                    className="form-control"
                     type="text"
                     name={name}
                     placeholder={placeholder}
@@ -49,7 +55,7 @@ const Field = ({
     }
     return (
         <div className={`inputField ${error ? "error" : ""}`}>
-            <label htmlFor={name}>{label}</label>
+            {/* <label htmlFor={name}>{label}</label> */}
             {component}
             {error && <div className="error-message">{error}</div>}
         </div>

@@ -12,17 +12,10 @@
     @include h3;
     font-weight: 500;
     text-align: right;
-    // font-size: 1.5em; /* 24px / 16px */
-}
-.portfolio .portfolio-item {
-    // flex: 0 0 33.33%;
-    // max-width: 33.33%;
-    // margin: 0 0 30px 0;
 }
 .portfolio .portfolio-item-inner {
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
-    // transition: all 0.3s ease;
     cursor: pointer;
     overflow: hidden;
     -webkit-animation: startAndStop 0.3s ease-in-out;
@@ -52,7 +45,6 @@
 }
 .portfolio h4 img {
     max-height: 28px;
-    /* border: 1px solid #000; */
 }
 
 @keyframes startAndStop {
@@ -61,5 +53,27 @@
     }
     100% {
         border: 6px solid var(--bg-black-100);
+    }
+}
+
+#modalPortfolio {
+    overflow: hidden;
+    width: 62.5%;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 30px 15px;
+    text-align: center;
+    border: 1px solid var(--bg-black-50);
+    background-color: rgba-color($bg-black-900-light, 0.3);
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
+    .portfolio-item-inner {
+        box-shadow: 0 0 20px rgba(48, 46, 77, 0);
+        border: 6px solid transparent;
+        &:hover {
+            transform: scale(1);
+        }
     }
 }

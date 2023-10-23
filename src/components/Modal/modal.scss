@@ -28,7 +28,7 @@
         min-height: 100px;
         border-radius: 7px;
         width: 62.5%;
-        box-shadow: 0 0 40px $shadow-rgba;
+        @include drop-shadow(0 0 16px rgba(0, 0, 0, 0.15));
         button {
             position: absolute;
             top: 1.125em;
@@ -46,3 +46,4 @@
         }
     }
 }
+

@@ -2,71 +2,121 @@
 @import "../../assets/styles/00_utils/3_mixins";
 @import "../../assets/styles/00_utils/4_fonts";
 
-.service,
-.portfolio {
-    .container {
-        // background: #000;
-    }
-    .service_container {
-        align-self: center;
-        @include row_R;
-        flex-flow: wrap;
-        gap: 3.607084289931125%;
-        height: 100%;
-        .service-item {
-            flex: 1;
-            flex: 0 0 30.59527714004592%;
-            max-width: 30.59527714004592%;
-            // min-width: 30.59527714004592%;
-            margin: 0 0 3.607084289931125% 0;
+.service_container {
+    align-self: center;
+    @include row_R;
+    flex-flow: wrap;
+    gap: 3.607084289931125%;
+    height: 100%;
+    .service-item {
+        flex: 1;
+        flex: 0 0 30.59527714004592%;
+        max-width: 30.59527714004592%;
+        margin: 0 0 3.607084289931125% 0;
 
-            .service-item-inner {
-                // min-width: 450px;
-                height: 100%;
-                padding: 30px 15px;
+        .service-item-inner {
+            // min-width: 450px;
+            height: 100%;
+            padding: 30px 15px;
+            text-align: center;
+            background-color: var(--bg-black-100);
+            border: 1px solid var(--bg-black-75);
+            border-right-color: var(--bg-black-50);
+            border-bottom-color: var(--bg-black-50);
+
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            .icon {
+                display: block;
+                width: 60px;
+                height: 60px;
+                margin: 0 auto 30px;
+                border-radius: 50%;
+                font-size: 40px;
+                line-height: 60px;
                 text-align: center;
-                background-color: var(--bg-black-100);
-                border: 1px solid var(--bg-black-75);
-                border-right-color: var(--bg-black-50);
-                border-bottom-color: var(--bg-black-50);
-
-                border-radius: 10px;
+                color: var(--skin-color);
                 transition: all 0.3s ease;
-                cursor: pointer;
+            }
+            &:hover {
+                &::after {
+                    @include after_Before;
+                }
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
                 .icon {
-                    display: block;
-                    width: 60px;
-                    height: 60px;
-                    margin: 0 auto 30px;
-                    border-radius: 50%;
-                    font-size: 40px;
-                    line-height: 60px;
-                    text-align: center;
-                    color: var(--skin-color);
-                    transition: all 0.3s ease;
-                }
-                &:hover {
-                    &::after {
-                        @include after_Before;
-                    }
-                    transform: scale(1.05);
-                    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-                    .icon {
-                        font-size: 25px;
-                        color: var(--bg-black-100);
-                        background-color: var(--skin-color);
-                    }
-                }
-
-                h4 {
-                    @include h4;
-                    margin-bottom: 15px;
-                }
-
-                p {
-                    @include p;
+                    font-size: 25px;
+                    color: var(--bg-black-100);
+                    background-color: var(--skin-color);
                 }
             }
+
+            h4 {
+                @include h4;
+                margin-bottom: 15px;
+            }
+
+            p {
+                @include p;
+            }
         }
+    }
+}
+#modalService {
+    overflow: hidden;
+    width: 62.5%;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 30px 15px;
+    text-align: center;
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    .icon {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 30px;
+        border-radius: 50%;
+        line-height: 60px;
+        text-align: center;
+        transition: all 0.3s ease;
+        font-size: 25px;
+        color: var(--bg-black-100);
+        background-color: var(--skin-color);
+    }
+
+    h4 {
+        @include h4;
+        margin-bottom: 15px;
+    }
+
+    p {
+        @include p;
+        margin-bottom: 15px;
+    }
+    ul {
+        li {
+            transition: transform 0.2s ease-in-out;
+            font-family: "Poppins", sans-serif;
+            font-size: 1em;
+            line-height: 1.5625em;
+            color: var(--text-black-700);
+            margin: 0 30px;
+            text-align: left;
+            i {
+                color: var(--text-black-500);
+                color: var(--skin-color);
+                margin-right: 0.5em;
+            }
+            &::before {
+                font-family: "Font Awesome", sans-serif;
+            }
+        }
+    }
+    a {
     }
 }

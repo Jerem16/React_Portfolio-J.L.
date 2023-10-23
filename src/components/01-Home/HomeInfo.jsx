@@ -12,7 +12,7 @@ function HomeInfo({
 }) {
     const buttons = {
         href: "/contact",
-        class: "hire-me",
+        class: "btn hire-me",
     };
 
     return (

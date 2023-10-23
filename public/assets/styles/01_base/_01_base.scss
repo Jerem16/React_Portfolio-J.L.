@@ -57,6 +57,30 @@ body.dark {
         .technologies {
         @include drop-shadow(rgba(255, 255, 255, 0.25) 3px 1px 1.5px);
     }
+    .about .timeline .timeline-item .timeline-text {
+        #darkArrow {
+            color: var(--bg-black-100);
+        }
+    }
+    // #dark-fa-Circle {
+    //     background: #000;
+    // }
+
+    .about {
+        & .timeline {
+            & .timeline-item {
+                & .timeline-text {
+                    &_add {
+                        .bd_Bottom {
+                            .fa-Circle {
+                                background: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .btn {
         // color: #181818;
         box-shadow: 0px 4px 15px rgba-color(black, 0.25);

@@ -1,0 +1,12 @@
+{
+    "contactInfoItem": [
+        { "id": "CCI1", "icon": "fa fa-phone", "content": "+33 6 35 02 06 41" },
+        { "id": "CII2", "icon": "fa fa-map-marker-alt", "content": "Le Havre" },
+        { "id": "CII3", "icon": "fa fa-envelope", "content": "info@gmail.com" },
+        {
+            "id": "CII4",
+            "icon": "fa fa-globe-europe",
+            "content": "www.domain.com"
+        }
+    ]
+}

@@ -7,8 +7,6 @@ import { useSelector } from "react-redux";
 import { loadLanguageData } from "../../utils/loadLanguageData";
 import CV from "../../assets/cv/cv2022.pdf";
 
-
-
 function Profile() {
     const selectedLanguage = useSelector((state) => state.language.language);
     const [languageData, setLanguageData] = useState(null);
@@ -39,13 +37,14 @@ function Profile() {
     } = data.profile;
 
     const button1 = {
-        to: "/contact",
-        class: "hire-me",
+        // to: "/contact",
+        class: "btn_left",
     };
     const button2 = {
-        href: "/assets/cv/CV-2022.pdf",
+        to: "/contact",
+        // href: "/assets/cv/CV-2022.pdf",
         // src: `process.env.PUBLIC_URL + "/assets/cv/CV-2022.pdf"`,
-        class: "hire-me",
+        class: "btn_right ",
     };
 
     return (
@@ -82,15 +81,16 @@ function Profile() {
                                 <Button
                                     // btnName={buttons.btnName1}
                                     children={buttons.btnName1}
-                                    to={button1.to}
-                                    className={button1.buttonClass}
-                                />{" "}
-                                <Button
-                                    // btnName={buttons.btnName2}
-                                    children={buttons.btnName2}
                                     href={CV}
                                     target="_blank"
                                     type={BUTTON_TYPES.DOWNLOAD}
+                                    // className={button1.buttonClass}
+                                    className={button1.class}
+                                />
+                                <Button
+                                    // btnName={buttons.btnName2}
+                                    children={buttons.btnName2}
+                                    to={button1.to}
                                     // src={button2.src}
                                     className={button2.class}
                                 />
@@ -115,6 +115,7 @@ function Profile() {
                             ))}
                         </div>
                     </div>
+                    <div className="height_val"></div>
                     <div className="row_timeLine">
                         <Timeline experiences={data.education} />
                         <Timeline

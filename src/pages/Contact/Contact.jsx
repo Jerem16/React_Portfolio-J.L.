@@ -1,13 +1,13 @@
 import React from "react";
-import Form from "../../components/05-Contact/FormTest";
-import "../Services/services.scss";
-import "./Contact.scss";
+import LayoutContact from "../../components/05-Contact/00-LayoutContact";
+// import "../Services/services.scss";
+import "./contact.scss";
 
 function Contact() {
     return (
         <section className="contact section" id="contact">
             <div className="container">
-                <Form />
+                <LayoutContact />
             </div>
         </section>
     );

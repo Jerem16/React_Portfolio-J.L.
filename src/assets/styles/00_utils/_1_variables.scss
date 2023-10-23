@@ -1,7 +1,7 @@
 $bg-black-900-light: #f2f2fc;
 $bg-black-900-dark: #151515;
 
-// $customColor : ${(props) => props.theme.currentTheme}; 
+// $customColor : ${(props) => props.theme.currentTheme};
 
 $shadow-rgba: rgba(48, 46, 77, 0.15);
 
@@ -24,6 +24,9 @@ $color-logo-font: #101010;
 $color-location-font: #353535;
 $color-green-font: #008766;
 $color-nav-ico: #7e7e7e;
+
+// $color-secondary-dark: blend-colors($color-green-font, $color-nav-ico, 50%); color-mix(in srgb, var(--skin-color) 63%, var(--bg-black-900))
+
 
 $bg_linear-gradient: linear-gradient(
     -193.33deg,

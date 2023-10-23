@@ -1,0 +1,39 @@
+@import "../../../assets/styles/00_utils/3_mixins";
+@import "../../../assets/styles/00_utils/4_fonts";
+@import "../../../assets/styles/00_utils/1_variables";
+@import "../../../assets/styles/00_utils/2_functions";
+#modalContact {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 25px;
+    text-align: center;
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 16px;
+    .portfolio-item-inner {
+        border: 10px solid transparent;
+        .modalMessage {
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        &:hover {
+            transform: scale(1);
+        }
+    }
+
+    h4 {
+        @include h4;
+        margin-bottom: 1.5em;
+        color: var(--skin-color);
+    }
+
+    p {
+        @include p;
+        margin-bottom: 15px;
+    }
+}

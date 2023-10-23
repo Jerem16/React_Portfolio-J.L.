@@ -36,7 +36,7 @@ const Button = ({
             return (
                 <input
                     disabled={disabled}
-                    className="Button"
+                    className={`btn_a ${className}`}
                     type="submit"
                     value={children}
                     onClick={onClick}
