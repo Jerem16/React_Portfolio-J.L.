@@ -1,4 +1,4 @@
-import "./modalForm.scss";
+
 
 const ModalForm = ({ title, description, description2 }) => (
     <div className="service-item " id="modalContact">

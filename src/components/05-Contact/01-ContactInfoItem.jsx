@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactInfoItem = ({ iconClass, title, content }) => {
     return (
-        <div className="contact-info-item padd-15px">
+        <div className="contact-info-item">
             <div className="icon">
                 <i className={iconClass}></i>
             </div>

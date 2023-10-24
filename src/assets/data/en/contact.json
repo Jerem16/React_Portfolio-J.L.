@@ -19,20 +19,24 @@
         ],
         "send-email-title": "Send me an email",
         "send-email-sub-title": "I am very responsive to messages",
-        "contact-form": {
-            "name": {
-                "placeholder": "Name"
-            },
-            "email": {
-                "placeholder": "Email"
-            },
-            "subject": {
-                "placeholder": "Subject"
-            },
-            "message": {
-                "placeholder": "Message"
-            },
-            "submit-button": "Send Message"
+        "successMessage": {
+            "title": "Message sent !",
+            "description": "Thank you for your message.",
+            "description2": "We will endeavor to respond to you as soon as possible."
+        },
+        "formFields": {
+            "lastName": "Enter your name *",
+            "email": "Enter your email *",
+            "subject": "Subject *",
+            "message": "Message *"
+        },
+        "formErrors": {
+            "required": "This field is required *",
+            "invalidEmail": "Invalid email address *"
+        },
+        "buttonText": {
+            "isSending": "In progress",
+            "send": "Send Message"
         }
     }
 }

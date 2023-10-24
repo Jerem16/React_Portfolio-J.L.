@@ -1,18 +1,19 @@
 {
     "home": {
-        "welcome": "Hello, my name is ",
+        "welcome": "Hola, mi nombre es ",
         "name": "‘‘Jérémy Lemaignent’’",
-        "presentation": "I am a ",
-        "profession": "",
-        "description": "I am a web developer passionate about web design, programming, and graphics. With over 2 years of experience, my expertise extends from graphic design to front-end programming and beyond...",
-        "imageSrc": "profile0.png",
-        "hireButtonText": "Hire Me",
+        "presentation": "Soy un ",
+        "description": "‘’Apasionado desarrollador’’ con más de 2 años de experiencia, especializado en el diseño de sitios web. Combino rendimiento y diseño gráfico; mi experiencia abarca desde el diseño de sitios web hasta la programación Front-End.",
+        "question": "",
+        "answer": "Únete a mí.",
+        "imageSrc": "profilePortfolio.jpg",
+        "hireButtonText": "Contáctame",
         "typedStrings": [
             "",
-            "Web Designer",
-            "Web Developer",
-            "Graphic Designer",
-            "Web Integrator"
+            "Diseñador Web",
+            "Integrador Web",
+            "Desarrollador Web",
+            "Diseñador Gráfico"
         ]
     },
     "contact": {

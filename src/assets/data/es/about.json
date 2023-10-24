@@ -1,17 +1,17 @@
 {
     "education": [
         {
-            "sectionTitle": "Education",
+            "sectionTitle": "Educación",
             "sectionId": "Ed1",
             "year": "1993 - 1995",
-            "title": "Surveyor Topographer",
+            "title": "Topógrafo",
             "entries": [
                 {
-                    "index": "random-index-1",
+                    "index": "index-aléatoire-1",
                     "display": "none",
                     "description": {
-                        "describe": "B.E.P. Construction & Topography.",
-                        "place": ["Auguste Perret High School, Le Havre"]
+                        "describe": "B.E.P. Construcción y Topografía.",
+                        "place": ["Liceo Auguste Perret, Le Havre"]
                     }
                 }
             ]
@@ -19,15 +19,15 @@
         {
             "sectionId": "Ed2",
             "year": "2021 - 2022",
-            "title": "Self-Taught",
+            "title": "Autodidacta",
             "entries": [
                 {
-                    "index": "random-index-2",
+                    "index": "index-aléatoire-2",
                     "display": "none",
                     "description": {
-                        "describe": "Adobe Photoshop, Illustrator, Dreamweaver ...",
+                        "describe": "Adobe Photoshop, Illustrator, Dreamweaver...",
                         "place": [
-                            "HTML & CSS (On Mozilla Developer Network - MDN)"
+                            "HTML y CSS (en Mozilla Developer Network - MDN)"
                         ]
                     }
                 }
@@ -36,13 +36,13 @@
         {
             "sectionId": "Ed3",
             "year": "2022 - 2023",
-            "title": "<Web Developer/Web Integrator>",
+            "title": "<Desarrollador Web/Integrador Web>",
             "entries": [
                 {
-                    "index": "random-index-3",
+                    "index": "index-aléatoire-3",
                     "display": "none",
                     "description": {
-                        "describe": "Web Integrator",
+                        "describe": "Integrador Web",
                         "place": ["E-learning: OpenClassrooms"]
                     }
                 }
@@ -51,18 +51,18 @@
     ],
     "experience": [
         {
-            "sectionTitle": "Experience",
+            "sectionTitle": "Experiencia",
             "sectionId": "Exp1",
             "year": "2021 - 2022",
-            "title": "<Web Developer>",
-            "addClass": "timeline-text_add ",
-            "techTitle": "Technologies  ",
+            "title": "Desarrollador Web",
+            "techTitle": "Tecnologías  ",
             "entries": [
                 {
                     "id": "aEd3",
                     "size": 25,
                     "index": "random-index-4",
                     "jobTitle": "Micro-Service.online",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -70,21 +70,22 @@
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Creation of a personal website offering computer hardware design and maintenance services.",
+                        "paragraph": "Creación de un sitio web personal que ofrece servicios de diseño y mantenimiento de hardware informático.",
                         "itemLi": []
                     }
                 },
                 {
-                    "index": "random-index-5",
                     "id": "aEd4",
+                    "index": "random-index-5",
                     "jobTitle": "Curriculum Vitae",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Design and development of an interactive Curriculum Vitae.",
+                        "paragraph": "Creación de un Curriculum Vitae interactivo.",
                         "itemLi": []
                     }
                 }
@@ -93,21 +94,21 @@
         {
             "sectionId": "Exp2",
             "year": "2022 - 2023",
-            "title": "<Web Developer/Web Integrator>",
-            "techTitle": "Technologies ",
-            "addClass": "timeline-text_add ",
+            "title": "Desarrollador Web / Integrador Web",
+            "techTitle": "Tecnologías ",
             "entries": [
                 {
                     "size": 25,
                     "id": "aEd5",
                     "index": "random-index-6",
                     "jobTitle": "Riding Cities",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
                     },
                     "description": {
-                        "paragraph": "Landing page for Riding Cities (Webonzaï agency).",
+                        "paragraph": "Completado de la página de inicio del sitio Riding Cities (agencia Webonzaï).",
                         "itemLi": []
                     }
                 },
@@ -116,16 +117,17 @@
                     "id": "aEd6",
                     "index": "random-index-7",
                     "jobTitle": "Booki",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
                     },
                     "description": {
-                        "paragraph": "Web Interface Integration for Booki.",
+                        "paragraph": "Integración de la interfaz web para Booki.",
                         "itemLi": [
-                            "Transformation of models into HTML/CSS code.",
-                            "Creation of a responsive web interface.",
-                            "Optimization for performance and browser compatibility."
+                            "Transformación de maquetas en código HTML/CSS.",
+                            "Creación de una interfaz web receptiva",
+                            "Optimización del rendimiento y compatibilidad con navegadores modernos."
                         ]
                     }
                 },
@@ -134,65 +136,69 @@
                     "id": "aEd7",
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
                         "Sass": true
                     },
                     "description": {
-                        "paragraph": "Junior Developer at OhMyFood - Creation of a Mobile-First Site",
+                        "paragraph": "Desarrollador Junior en OhMyFood - Creación de un sitio web Mobile-First",
                         "itemLi": [
-                            "Integration of mobile and desktop models.",
-                            "Development of a responsive website with animations.",
-                            "Close collaboration with the UX designer and compliance with the creative brief.",
-                            "Creation of a platform listing gourmet restaurant menus with a reservation system and personalized menu composition."
+                            "Integración de maquetas en versión móvil y PC de escritorio.",
+                            "Desarrollo de un sitio web receptivo con animaciones.",
+                            "Colaboración estrecha con el diseñador de experiencia de usuario y cumplimiento del informe creativo.",
+                            "Creación de una plataforma que enumera los menús de restaurantes gourmet con un sistema de reserva y composición de menú personalizado."
                         ]
                     }
                 },
                 {
                     "size": 25,
-                    "id": "aEd68",
+                    "id": "aEd8",
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Freelance Front-End Developer at Print It - Carrousel Project",
+                        "paragraph": "Desarrollador Front-End Freelance en Print-It - Proyecto de Carrusel",
                         "itemLi": [
-                            "Dynamize their static website.",
-                            "Implementation of a carousel.",
-                            "Contribution to improving the user experience of the website."
+                            "Dinamización de un sitio web estático.",
+                            "Implementación de un carrusel.",
+                            "Contribución a la mejora de la experiencia del usuario."
                         ]
                     }
                 },
                 {
                     "size": 25,
-                    "id": "aEd12",
+                    "id": "aEd9",
                     "index": "random-index-10",
                     "jobTitle": "Portfolio - Sophie Bluel",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Front-End Developer at ArchiWebos - Interior Architect Portfolio Site Project",
+                        "paragraph": "Desarrollador Front-End en ArchiWebos - Integración de un sitio de portafolio para un arquitecto de interiores",
                         "itemLi": [
-                            "Design the portfolio site of an interior designer, based on a model.",
-                            "Development of the presentation page, integrating a filter gallery.",
-                            "Creating the admin login page.",
-                            "Modal design for uploading media."
+                            "Diseño del sitio de portafolio del arquitecto de interiores basado en una maqueta.",
+                            "Desarrollo de la página de presentación con integración de una galería de filtros.",
+                            "Creación de la página de inicio de sesión del administrador.",
+                            "Creación del modal para cargar medios."
                         ]
                     }
                 },
                 {
-                    "id": "aEd12g",
                     "size": 25,
+                    "id": "bEd1",
                     "index": "random-index-11",
                     "jobTitle": "Menu Maker by Qwenta",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "Agile": true,
                         "Scrum": true,
@@ -201,19 +207,20 @@
                         "wakelet": true
                     },
                     "description": {
-                        "paragraph": "Web Development Project Manager at Webgencia - “Menu Maker by Qwenta” project",
+                        "paragraph": "Jefe de Proyecto en Desarrollo Web en Webgencia - Proyecto 'Menu Maker by Qwenta'",
                         "itemLi": [
-                            "Planning and project management mission for the development of a “Menu Maker” for Qwenta.",
-                            "Collaboration with the Product Owner, and preparation of a project validation meeting with Qwenta.",
-                            "Main tasks: monitoring, technical specifications, planning."
+                            "Misión de planificación y gestión del proyecto para el desarrollo de un 'Menu Maker' para Qwenta.",
+                            "Colaboración con el Product Owner, preparación de una reunión de validación del proyecto con Qwenta.",
+                            "Tareas principales: vigilancia, especificaciones técnicas, planificación del proyecto."
                         ]
                     }
                 },
                 {
-                    "id": "aEd12s",
                     "size": 25,
+                    "id": "bEd2",
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -222,23 +229,24 @@
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Freelance Front-End Developer for Kasa - Redesign Project",
+                        "paragraph": "Desarrollador Front-End Freelance para Kasa - Reestructuración del sitio",
                         "itemLi": [
-                            "Transition from ASP.NET to a JavaScript stack (NodeJS/React).",
-                            "Development of the React application based on models.",
-                            "Compliance with technical and functional constraints.",
-                            "Using data (JSON file).",
-                            "Setting up React components.",
-                            "Creating routes with React Router.",
-                            "Compliance with Kasa coding guidelines."
+                            "Transición de ASP.NET a una pila JavaScript (NodeJS/React).",
+                            "Desarrollo de la aplicación React a partir de maquetas.",
+                            "Cumplimiento de las restricciones técnicas y funcionales.",
+                            "Uso de datos (archivo JSON).",
+                            "Desarrollo de componentes React.",
+                            "Creación de rutas con React Router.",
+                            "Cumplimiento de las directrices de codificación de Kasa."
                         ]
                     }
                 },
                 {
-                    "id": "aEd1x",
+                    "id": "bEd3",
                     "size": 25,
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "SEO": true,
                         "HTML": true,
@@ -247,22 +255,23 @@
                         "jQuery": true
                     },
                     "description": {
-                        "paragraph": "SEO optimization for Nina Carducci – Photographer",
+                        "paragraph": "Optimización SEO para Nina Carducci - Fotógrafa",
                         "itemLi": [
-                            "Identification of performance and SEO issues.",
-                            "Global optimization, images and code, performance and accessibility.",
-                            "Meta description (audited keywords).",
-                            "Social media metas.",
-                            "Local referencing (Schema.org), addition of information (address, telephone number, contact, hours, etc.).",
-                            "Google Rich Snippet audit optimization report, Wave extension."
+                            "Identificación de problemas de rendimiento y SEO.",
+                            "Optimización global, imágenes y código, rendimiento y accesibilidad.",
+                            "Meta descripción (palabras clave auditadas).",
+                            "Metaetiquetas, redes sociales.",
+                            "Optimización local (Schema.org), adición de información (dirección, número de teléfono, horarios, contacto, etc.).",
+                            "Informe de optimización de auditoría Google Rich Snippet, extensión Wave."
                         ]
                     }
                 },
                 {
-                    "id": "aEd1x0",
+                    "id": "bEd5",
                     "size": 25,
                     "index": "random-index-14",
                     "jobTitle": "77events",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "React": true,
                         "CSS": true,
@@ -271,19 +280,20 @@
                         "Eslint": true
                     },
                     "description": {
-                        "paragraph": "Optimization and debugging, finalization of the 77events Site",
+                        "paragraph": "Optimización y depuración, finalización del sitio 77events",
                         "itemLi": [
-                            "Design and execution of unit and integration tests.",
-                            "Bug fixes.",
-                            "Validation of tests, and verification of component behavior.",
-                            "Writing the recipe book (adding test scenarios)."
+                            "Diseño y realización de pruebas unitarias y pruebas de integración.",
+                            "Corrección de errores.",
+                            "Validación de pruebas, verificación del comportamiento de los componentes.",
+                            "Redacción del manual de recetas (adición de escenarios de prueba)."
                         ]
                     }
                 },
                 {
-                    "id": "aEd1x9",
+                    "id": "bEd7",
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "React": true,
                         "Redux": true,
@@ -292,12 +302,12 @@
                         "MongoDB": true
                     },
                     "description": {
-                        "paragraph": "Development of an ArgentBank Banking Application",
+                        "paragraph": "Desarrollo de la Aplicación Bancaria: ArgentBank",
                         "itemLi": [
-                            "Creation of a complete and responsive web application with React.",
-                            "Using Redux to manage application states.",
-                            "Creation of API for the implementation of authentication, connection, disconnection, and user profile visualization functionalities.",
-                            "Application of Green Code best practices, image optimization, creation of reusable components."
+                            "Creación de una aplicación web completa y receptiva con React.",
+                            "Uso de Redux para gestionar los estados de la aplicación.",
+                            "Creación de una API para implementar funciones de autenticación, inicio de sesión, cierre de sesión y visualización del perfil del usuario.",
+                            "Aplicación de las mejores prácticas de Green Code, optimización de imágenes, creación de componentes reutilizables."
                         ]
                     }
                 }
@@ -305,23 +315,23 @@
         }
     ],
     "profile": {
-        "section": "About Me",
-        "presentation": "My name is Jérémy, and I work as ",
-        "jobTitle": "Web Developer",
-        "description": "Front-end web developer and integrator, I am passionate about web design and development. My expertise ranges from graphic design to front-end programming. I create interactive websites optimized for performance and SEO. Always staying up-to-date with the latest technological trends, my goal is to provide high-quality web solutions.",
+        "section": "Acerca de mí",
+        "presentation": "Mi nombre es Jérémy, soy ",
+        "jobTitle": "Desarrollador Web",
+        "description": "Desarrollador e integrador web apasionado por el diseño web y la creación de sitios web. Mi experiencia abarca desde el diseño gráfico hasta la programación en el front-end. Creo sitios web interactivos, optimizados para el rendimiento y el SEO. Siempre al tanto de las últimas tendencias tecnológicas, mi objetivo es ofrecer soluciones web de alta calidad.",
         "personalInfo": {
-            "Birthday": "27 jun 1977",
-            "Age": 45,
-            "Website": "www.domain.com",
-            "Email": "info@gmail.com",
-            "degree": "Web Integrator",
-            "Phone": "+33 6 35 02 06 41",
-            "City": "Le Havre",
-            "Freelance": "Available"
+            "Cumpleaños": "27 junio 1977",
+            "Edad": 46,
+            "Sitio web": "www.dominio.com",
+            "Email": "web.my.dev@gmail.com",
+            "Título": "Integrador Web",
+            "Teléfono": "+33 6 35 02 06 41",
+            "Ciudad": "Le Havre",
+            "Freelance": "Disponible"
         },
         "buttons": {
-            "btnName1": "Download CV",
-            "btnName2": "Hire Me"
+            "btnName1": "Descargar mi CV",
+            "btnName2": "Contactarme"
         },
         "skills": [
             {

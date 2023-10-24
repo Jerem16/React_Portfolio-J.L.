@@ -2,6 +2,7 @@
     "services": [
         {
             "id": "S1",
+            "h2": "Services",
             "title": "Web/Developer",
             "icon": "fa fa-mobile-alt",
             "description": "Développement de sites web responsives.",
@@ -40,7 +41,7 @@
             "title": "Web/UX/Design",
             "icon": "fa fa-palette",
             "description": "Réalisez vos rêves ! Transformez-les en réalité !",
-            "modalDescription": "Réalisez vos rêves ! Transformez-les en réalité !",
+            "modalDescription": "Vous avez des rêves ? Faites-en une réalité !",
 
             "details": [
                 "Transformez vos créations graphiques en sites web interactifs.",
@@ -58,8 +59,7 @@
             "title": "Code/Crafters",
             "icon": "fa fa-code",
             "description": "Une gamme de services complète pour votre site.",
-            "modalDescription": "Vous voulez optimiser votre présence en ligne ? Nous vous proposont une gamme complète de services pour garantir la performance et la pertinence de votre site web.",
-
+            "modalDescription": "Nous vous proposont une gamme complète de services, pour garantir la performance et la pertinence de votre site web.",
             "details": [
                 "Maintenance : Nous veillons à ce que votre site reste stable et fonctionnel, en effectuant des vérifications régulières, des correctifs et des mises à jour essentielles.",
                 "Mises à Jour : Les technologies évoluent rapidement. Nous nous chargeons de mettre à jour votre site avec les dernières fonctionnalités et améliorations pour rester compétitif.",
@@ -108,5 +108,6 @@
                 "url": "lien_de_contact"
             }
         }
-    ]
+    ],
+    "title": "Services"
 }

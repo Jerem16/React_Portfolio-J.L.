@@ -1,23 +1,7 @@
 /* aside */
 @import "../../assets/styles/00_utils/3_mixins";
-// .aside {
-//     position: absolute;
-//     top: 50px;
-//     min-width: 210px;
-//     padding: 10px;
-//     border-radius: 15px;
-
-//     img {
-//         max-width: 200px;
-//         display: block;
-//         -webkit-filter: drop-shadow(3px 3px 1.5px rgba(0, 0, 0, 0.45));
-//         filter: drop-shadow(3px 3px 1.5px rgba(0, 0, 0, 0.45));
-//     }
-// }
-/* Logo Wii-Design.com End */
 
 .aside {
-    width: 270px;
     height: 100%;
     padding: 45px 22.5px 22.5px 22.5px;
     border-right: 1px solid var(--bg-black-50);
@@ -84,7 +68,6 @@
         right: 22.5px;
         cursor: pointer;
         display: flex;
-        // display: none;
         align-items: center;
         justify-content: center;
         width: 45px;
@@ -123,13 +106,11 @@
     }
 
     .nav {
-        // margin: 45px;
         width: 157.5px;
         height: 337.5px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        // display: block;
         &:hover {
             a.active-link,
             i.active-link {

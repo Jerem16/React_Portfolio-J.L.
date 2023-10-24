@@ -15,7 +15,6 @@
         margin: 0 0 3.607084289931125% 0;
 
         .service-item-inner {
-            // min-width: 450px;
             height: 100%;
             padding: 30px 15px;
             text-align: center;
@@ -52,7 +51,7 @@
                 }
             }
 
-            h4 {
+            h3 {
                 @include h4;
                 margin-bottom: 15px;
             }
@@ -91,13 +90,24 @@
 
     h4 {
         @include h4;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     p {
         @include p;
-        margin-bottom: 15px;
+        color: var(--text-black-900);
+        margin: 15px 30px;
+        // margin-bottom: 15px;
+        text-align: left;
     }
+    blockquote {
+        @include p;
+        color: var(--text-black-900);
+        margin: 0 30px 30px 30px;
+        // padding-left: 15px;
+        text-align: left;
+    }
+
     ul {
         li {
             transition: transform 0.2s ease-in-out;
@@ -105,12 +115,14 @@
             font-size: 1em;
             line-height: 1.5625em;
             color: var(--text-black-700);
-            margin: 0 30px;
             text-align: left;
+            margin: 0 30px 10px 30px;
+
             i {
                 color: var(--text-black-500);
                 color: var(--skin-color);
                 margin-right: 0.5em;
+                // margin-left: 30px;
             }
             &::before {
                 font-family: "Font Awesome", sans-serif;

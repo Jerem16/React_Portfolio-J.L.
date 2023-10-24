@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo } from "react";
+import React, { useState, useRef, useEffect } from "react"; 
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../redux/reducers/languageSlice";
 
@@ -27,10 +27,9 @@ const LanguageSelector = ({ text }) => {
     const changeLanguage = (language) => {
         dispatch(setLanguage(language));
         setActiveLanguage(language);
-        setIsSelectorOpen(false); // Ferme le menu après avoir sélectionné une langue
+        setIsSelectorOpen(false);
     };
 
-    // Gère la fermeture du menu lorsque vous cliquez en dehors de l'élément flag
     useEffect(() => {
         const handleOutsideClick = (event) => {
             if (flagRef.current && !flagRef.current.contains(event.target)) {
@@ -49,7 +48,6 @@ const LanguageSelector = ({ text }) => {
         <li
             className={`flag ${isSelectorOpen ? "open" : "close"}`}
             onClick={toggleSelector}
-            // onClick={toggleSelector}
             ref={flagRef}
         >
             <i>

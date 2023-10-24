@@ -12,32 +12,9 @@
         border-top-color: $color-primary;
         border-right-color: $color-primary;
         border-bottom-color: transparent;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
     }
-    // 11% {
-    //     border-left-color: #00906d;
-    //     border-top-color: #00906d;
-    //     border-right-color: #00906d;
-    // }
-    // 22% {
-    //     border-left-color: #007b55;
-    //     border-top-color: #007b55;
-    //     border-right-color: #007b55;
-    // }
-    // 33% {
-    //     border-left-color: #006c44;
-    //     border-top-color: #006c44;
-    //     border-right-color: #006c44;
-    // }
     43% {
         transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        -moz-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
-        -o-transform: rotate(270deg);
     }
     44% {
         transform: rotateY(0deg);
@@ -46,9 +23,7 @@
         border-right-color: #005733;
         border-bottom-color: #005733;
     }
-    55% {
-        /* Laissez-le vide ou ajoutez des styles si nécessaire */
-    }
+
     66% {
         transform: rotateY(180deg);
         border-left-color: #00bb78;
@@ -58,43 +33,24 @@
     }
     67% {
         transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-        -moz-transform: rotate(-270deg);
-        -ms-transform: rotate(-270deg);
-        -o-transform: rotate(-270deg);
     }
-    // 77% {
-    //     border-left-color: #006c44;
-    //     border-top-color: #006c44;
-    //     border-right-color: #006c44;
-    // }
-    // 88% {
-    //     border-left-color: #007b55;
-    //     border-top-color: #007b55;
-    //     border-right-color: #007b55;
-    // }
+
     100% {
         transform: rotate(0deg);
         border-left-color: #005733;
         border-top-color: #005733;
-        // border-bottom-color: transparent;
         border-right-color: #005733;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
     }
 }
 
 .loading {
     padding: 10px;
     border: 6px solid transparent;
-    // border-bottom-color: transparent;
     border-radius: 22px;
-    animation: rotate 2s infinite linear;
     height: 0;
     width: 0;
     -webkit-animation: rotate 2s infinite linear;
+    animation: rotate 2s infinite linear;
 }
 /*****************************************************/
 .t {
@@ -157,7 +113,7 @@ $size-7: $a3, $a4, $a5, $a4, $a3, $a2, $a1, $a1, $a1;
 $size-8: $a2, $a3, $a4, $a5, $a4, $a3, $a2, $a1, $a1;
 $size-9: $a1, $a2, $a3, $a4, $a5, $a4, $a3, $a2, $a1;
 $size-10: $a1, $a1, $a2, $a3, $a4, $a5, $a4, $a3, $a2;
-$size-11: $a1, $a1, $a1, $a2, $a3, $a4, $a5, $a4, $a3; // Retour à l'état initial
+$size-11: $a1, $a1, $a1, $a2, $a3, $a4, $a5, $a4, $a3;
 $size-12: $a1, $a1, $a1, $a1, $a2, $a3, $a4, $a5, $a4;
 $size-13: $a1, $a1, $a1, $a1, $a1, $a2, $a3, $a4, $a5;
 $size-14: $a1, $a1, $a1, $a1, $a1, $a1, $a2, $a3, $a4;

@@ -1,5 +1,5 @@
 import React from "react";
-import ServicesComponent from "../../components/03-Services/00-ServicesComponent";
+import ServicesComponent from "../../components/03-Services/00-LayoutServices";
 import "./services.scss";
 
 function Services() {

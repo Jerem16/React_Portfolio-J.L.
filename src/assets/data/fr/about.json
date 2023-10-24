@@ -55,7 +55,6 @@
             "sectionId": "Exp1",
             "year": "2021 - 2022",
             "title": "Développeur Web",
-            "addClass": "timeline-text_add ",
             "techTitle": "Technologies  ",
             "entries": [
                 {
@@ -63,6 +62,7 @@
                     "size": 25,
                     "index": "random-index-4",
                     "jobTitle": "Micro-Service.online",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -78,6 +78,7 @@
                     "id": "aEd4",
                     "index": "random-index-5",
                     "jobTitle": "Curriculum Vitae",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -95,13 +96,13 @@
             "year": "2022 - 2023",
             "title": "Développeur Web / Intégrateur Web",
             "techTitle": "Technologies ",
-            "addClass": "timeline-text_add ",
             "entries": [
                 {
                     "size": 25,
                     "id": "aEd5",
                     "index": "random-index-6",
                     "jobTitle": "Riding Cities",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
@@ -116,6 +117,7 @@
                     "id": "aEd6",
                     "index": "random-index-7",
                     "jobTitle": "Booki",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
@@ -134,6 +136,7 @@
                     "id": "aEd7",
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -154,6 +157,7 @@
                     "id": "aEd8",
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -173,6 +177,7 @@
                     "id": "aEd9",
                     "index": "random-index-10",
                     "jobTitle": "Portfolio - Sophie Bluel",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -193,6 +198,7 @@
                     "id": "bEd1",
                     "index": "random-index-11",
                     "jobTitle": "Menu Maker by Qwenta",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "Agile": true,
                         "Scrum": true,
@@ -214,6 +220,7 @@
                     "id": "bEd2",
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -239,6 +246,8 @@
                     "size": 25,
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
+                    "addClass": "timeline-text_add ",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "SEO": true,
                         "HTML": true,
@@ -263,6 +272,7 @@
                     "size": 25,
                     "index": "random-index-14",
                     "jobTitle": "77events",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "React": true,
                         "CSS": true,
@@ -284,6 +294,7 @@
                     "id": "bEd7",
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
+                    "addClass": "timeline-text_add ",
                     "technologies": {
                         "React": true,
                         "Redux": true,
@@ -307,13 +318,13 @@
     "profile": {
         "section": "À propos",
         "presentation": "Je m'appelle Jérémy, je suis ",
-        "jobTitle": "Développeur Web",
-        "description": "Développeur et intégrateur Web front-end, passionné par la conception de sites et le web design. Mon expertise s'étend de la conception graphique à la programmation front-end. Je crée des sites Web interactifs, optimisés pour la performance et le référencement SEO. Toujours à l'affût des dernières tendances technologiques, mon objectif est de fournir des solutions web de qualité supérieure.",
+        "jobTitle": "Web Développeur",
+        "description": "Développeur-intégrateur web, passionné par le web design et la conception de sites web, mon expertise s'étend de la conception graphique à la programmation coté front-end. Je crée des sites Web interactifs, optimisés pour la performance et le référencement SEO. Toujours à l'affût des dernières tendances technologiques, mon objectif est de fournir des solutions web de qualité supérieure.",
         "personalInfo": {
-            "Birthday": "27 juin 1977",
-            "Age": 45,
+            "Birthday": "27 Juin 1977",
+            "Age": 46,
             "Website": "www.domain.com",
-            "Email": "info@gmail.com",
+            "Email": "web.my.dev@gmail.com",
             "degree": "Intégrateur Web",
             "Phone": "+33 6 35 02 06 41",
             "City": "Le Havre",
@@ -321,7 +332,7 @@
         },
         "buttons": {
             "btnName1": "Télécharger mon CV",
-            "btnName2": "Engagez-moi"
+            "btnName2": "Me contacter"
         },
         "skills": [
             {

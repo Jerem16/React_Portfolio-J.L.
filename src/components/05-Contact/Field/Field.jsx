@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import "./form.scss";
 
 export const FIELD_TYPES = {
     INPUT_TEXT: 1,
@@ -27,8 +26,7 @@ const Field = ({
                     type="text"
                     name={name}
                     placeholder={placeholder}
-                    data-testid={`field-testid-${name}`} // Ajout du data-testid pour les tests unitaires
-                    onChange={onChange} // Ajout du changement de contenu
+                    onChange={onChange} 
                 />
             );
             break;
@@ -38,7 +36,6 @@ const Field = ({
                     className="form-control"
                     name={name}
                     placeholder={placeholder}
-                    data-testid={`field-testid-${name}`} // Ajout du data-testid pour les tests unitaires
                 />
             );
             break;
@@ -49,13 +46,11 @@ const Field = ({
                     type="text"
                     name={name}
                     placeholder={placeholder}
-                    data-testid={name}
                 />
             );
     }
     return (
         <div className={`inputField ${error ? "error" : ""}`}>
-            {/* <label htmlFor={name}>{label}</label> */}
             {component}
             {error && <div className="error-message">{error}</div>}
         </div>

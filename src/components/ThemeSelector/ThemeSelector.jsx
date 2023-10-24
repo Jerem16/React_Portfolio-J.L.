@@ -84,5 +84,4 @@ function ThemeSelector() {
     );
 }
 
-// export default ThemeSelector;
 export default React.memo(ThemeSelector);

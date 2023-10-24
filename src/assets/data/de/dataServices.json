@@ -2,111 +2,110 @@
     "services": [
         {
             "id": "S1",
-            "title": "Web/Developer",
+            "h2": "Dienstleistungen",
+            "title": "Web/Entwickler",
             "icon": "fa fa-mobile-alt",
-            "description": "Développement de sites web responsives.",
-            "modalDescription": "Conception et développement de sites web responsives.",
+            "description": "Entwicklung von responsiven Websites.",
+            "modalDescription": "Konzeption und Entwicklung von responsiven Websites.",
             "details": [
-                "Créez des sites web qui s'adaptent à tous les écrans, tout en offrant une expérience utilisateur fluide et cohérente.",
-                "Économisez sur le développement web ! Le Responsive Design vous permet d'adapter un seul site à tous les appareils.",
-                "Élargissez votre public tout en renforçant votre présence en ligne via une comptabilité sur différents supports.",
-                "SEO amélioré : Les moteurs de recherche favorisent les sites adaptatifs optimisés."
+                "Erstellen Sie Websites, die sich an alle Bildschirme anpassen und gleichzeitig eine reibungslose und konsistente Benutzererfahrung bieten.",
+                "Sparen Sie bei der Webentwicklung! Responsive Design ermöglicht es, eine Website an alle Geräte anzupassen.",
+                "Erweitern Sie Ihr Publikum und stärken Sie Ihre Online-Präsenz durch die Kompatibilität mit verschiedenen Geräten.",
+                "Verbessertes SEO: Suchmaschinen bevorzugen optimierte reaktionsfähige Websites."
             ],
             "link": {
-                "title": "En savoir plus",
-                "url": "lien_de_contact"
+                "title": "Erfahren Sie mehr",
+                "url": "Kontaktlink"
             }
         },
         {
             "id": "S2",
             "title": "Web/Integrator",
             "icon": "fa fa-laptop-code",
-            "description": "Des sites web, Dynamiques, Interactifs et Conviviaux.",
-            "modalDescription": "Création de sites web, dynamiques, interactifs et conviviaux.",
-
+            "description": "Dynamische, interaktive und benutzerfreundliche Websites.",
+            "modalDescription": "Erstellung von dynamischen, interaktiven und benutzerfreundlichen Websites.",
             "details": [
-                "Concevez des interfaces utilisateur élégantes et intuitives pour une expérience utilisateur optimale.",
-                "Intégrez des données en temps réel en utilisant des API de pointe.",
-                "Exploitez les dernières technologies front-end pour des sites à la pointe de l'innovation.",
-                "Prêt à explorer davantage ?"
+                "Entwerfen Sie elegante und benutzerfreundliche Benutzeroberflächen für ein optimales Benutzererlebnis.",
+                "Integrieren Sie Echtzeitdaten mithilfe fortschrittlicher APIs.",
+                "Nutzen Sie die neuesten Front-End-Technologien für innovative Websites.",
+                "Bereit, mehr zu erkunden?"
             ],
             "link": {
-                "title": "Discuter de vos projets",
-                "url": "lien_de_contact"
+                "title": "Über Ihre Projekte sprechen",
+                "url": "Kontaktlink"
             }
         },
         {
             "id": "S3",
             "title": "Web/UX/Design",
             "icon": "fa fa-palette",
-            "description": "Réalisez vos rêves ! Transformez-les en réalité !",
-            "modalDescription": "Réalisez vos rêves ! Transformez-les en réalité !",
-
+            "description": "Verwirklichen Sie Ihre Träume! Machen Sie sie zur Realität!",
+            "modalDescription": "Haben Sie Träume? Lassen Sie sie Wirklichkeit werden!",
             "details": [
-                "Transformez vos créations graphiques en sites web interactifs.",
-                "Notre service d'intégration de maquettes Figma et PSD en HTML/CSS est à votre disposition !",
-                "Nous donnons vie à vos conceptions graphiques en créant des sites web interactifs, entièrement responsifs.",
-                "Avez-vous des idées à concrétiser ?"
+                "Verwandeln Sie Ihre Grafikdesigns in interaktive Websites.",
+                "Unser Service zur Integration von Figma- und PSD-Entwürfen in HTML/CSS steht Ihnen zur Verfügung!",
+                "Wir hauchen Ihren grafischen Ideen Leben ein, indem wir vollständig responsive, interaktive Websites erstellen.",
+                "Haben Sie Ideen, die umgesetzt werden müssen?"
             ],
             "link": {
-                "title": "Contactez-nous",
-                "url": "lien_de_contact"
+                "title": "Kontaktieren Sie uns",
+                "url": "Kontaktlink"
             }
         },
         {
             "id": "S4",
             "title": "Code/Crafters",
             "icon": "fa fa-code",
-            "description": "Une gamme de services complète pour votre site.",
-            "modalDescription": "Vous voulez optimiser votre présence en ligne ? Nous vous proposont une gamme complète de services pour garantir la performance et la pertinence de votre site web.",
-
+            "description": "Ein umfassendes Dienstleistungsangebot für Ihre Website.",
+            "modalDescription": "Möchten Sie Ihre Online-Präsenz optimieren?",
+            "modalDescription2": "Wir bieten Ihnen ein umfassendes Dienstleistungsangebot, um die Leistung und Relevanz Ihrer Website zu gewährleisten.",
             "details": [
-                "Maintenance : Nous veillons à ce que votre site reste stable et fonctionnel, en effectuant des vérifications régulières, des correctifs et des mises à jour essentielles.",
-                "Mises à Jour : Les technologies évoluent rapidement. Nous nous chargeons de mettre à jour votre site avec les dernières fonctionnalités et améliorations pour rester compétitif.",
-                "Tests d'Intégration : Assurer la compatibilité de votre site web sur divers navigateurs et plates-formes est primordial. Nos tests garantissent une expérience utilisateur optimale.",
-                "Intégration de Données : Nous enrichissons votre site web en intégrant des données en temps réel, des API et des fonctionnalités interactives pour engager vos visiteurs."
+                "Wartung: Wir stellen sicher, dass Ihre Website stabil und funktionsfähig bleibt, indem wir regelmäßige Überprüfungen, Fehlerbehebungen und wichtige Aktualisierungen durchführen.",
+                "Aktualisierungen: Die Technologien entwickeln sich schnell. Wir kümmern uns um die Aktualisierung Ihrer Website mit den neuesten Funktionen und Verbesserungen, um wettbewerbsfähig zu bleiben.",
+                "Integrationstests: Die Gewährleistung der Kompatibilität Ihrer Website auf verschiedenen Browsern und Plattformen ist entscheidend. Unsere Tests garantieren ein optimales Benutzererlebnis.",
+                "Datenintegration: Wir erweitern Ihre Website durch die Integration von Echtzeitdaten, APIs und interaktiven Funktionen, um Ihre Besucher zu binden."
             ],
             "link": {
-                "title": "En savoir plus",
-                "url": "lien_de_contact"
+                "title": "Erfahren Sie mehr",
+                "url": "Kontaktlink"
             }
         },
         {
             "id": "S5",
             "title": "SEO",
             "icon": "fa fa-search",
-            "description": "La gamme de services, qui maximise la visibilité de votre site web.",
-            "modalDescription": "La gamme de services, qui maximise la visibilité de votre site web.",
-
+            "description": "Das Serviceangebot zur Maximierung der Sichtbarkeit Ihrer Website.",
+            "modalDescription": "Das Serviceangebot zur Maximierung der Sichtbarkeit Ihrer Website.",
             "details": [
-                "Parce que nous comprenons l'importance du SEO pour la croissance de votre entreprise en ligne.",
-                "Une gamme complète de services pour garantir la performance et la pertinence de votre site.",
-                "Optimisation SEO : l'optimisation des performances techniques du site, améliore son classement dans les moteurs de recherche.",
-                "Veille concurrentielle : Pour rester en tête, nous surveillons les derniers changements dans les algorithmes de recherche afin de mettre constamment votre site à jour.",
-                "Analyse de Mots-Clés : Notre équipe effectue une recherche approfondie de mots-clés pour cibler les termes les plus pertinents pour votre secteur.",
-                "Contenu de Qualité : Nous créons du contenu riche en mots-clés et de grande qualité afin d'attirer et retenir votre public cible."
+                "Weil wir die Bedeutung von SEO für das Wachstum Ihres Online-Geschäfts verstehen.",
+                "Ein umfassendes Dienstleistungsangebot, um die Leistung und Relevanz Ihrer Website zu gewährleisten.",
+                "SEO-Optimierung: Die Optimierung der technischen Leistung der Website verbessert ihr Ranking in Suchmaschinen.",
+                "Konkurrenzanalyse: Um an der Spitze zu bleiben, verfolgen wir die neuesten Änderungen in den Suchalgorithmus, um Ihre Website ständig zu aktualisieren.",
+                "Keyword-Analyse: Unser Team führt eine gründliche Keyword-Recherche durch, um die relevantesten Begriffe für Ihre Branche zu ermitteln.",
+                "Qualitätsinhalt: Wir erstellen hochwertigen, keywordreichen Inhalt, um Ihre Zielgruppe anzuziehen und zu binden."
             ],
             "link": {
-                "title": "Améliorer votre présence en ligne",
-                "url": "lien_de_contact"
+                "title": "Verbessern Sie Ihre Online-Präsenz",
+                "url": "Kontaktlink"
             }
         },
         {
             "id": "S6",
-            "title": "Freelance/Consulting",
+            "title": "Freelance/Beratung",
             "icon": "fa fa-bullhorn",
-            "description": "Partenaire pour une Consultation en Ligne Réussie",
-            "modalDescription": "Partenaire pour une Consultation en Ligne Réussie",
+            "description": "Ihr Partner für erfolgreiche Online-Beratung",
+            "modalDescription": "Ihr Partner für erfolgreiche Online-Beratung",
             "details": [
-                "La consultation en ligne est aujourd'hui plus importante que jamais, nous nous engageons à offrir des solutions de consultation en ligne de qualité.",
-                "Expertise Personnalisée : Résoudre vos problèmes, atteindre vos objectifs, le tout en ligne, pour plus de commodité.",
-                "Flexibilité : Votre temps est précieux. Une solution flexible qui s'adapte à votre emploi du temps.",
-                "Essai Gratuit : Essayez notre service de consultation en ligne gratuitement et découvrez comment nous pouvons vous aider à progresser."
+                "Online-Beratung ist heute wichtiger denn je, und wir verpflichten uns, qualitativ hochwertige Online-Beratungslösungen anzubieten.",
+                "Individuelle Expertise: Wir lösen Ihre Probleme, erreichen Ihre Ziele, alles online für maximale Bequemlichkeit.",
+                "Flexibilität: Ihre Zeit ist kostbar. Eine flexible Lösung, die sich Ihrem Zeitplan anpasst.",
+                "Kostenlose Testversion: Testen Sie unseren Online-Beratungsservice kostenlos und erfahren Sie, wie wir Ihnen bei Ihrem Fortschritt helfen können."
             ],
             "link": {
-                "title": "Nous guider vers le succès",
-                "url": "lien_de_contact"
+                "title": "Führen Sie uns zum Erfolg",
+                "url": "Kontaktlink"
             }
         }
-    ]
+    ],
+    "title": "Dienst"
 }

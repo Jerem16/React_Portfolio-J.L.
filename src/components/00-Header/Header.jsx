@@ -1,80 +1,59 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
-
+import shortid from "shortid";
 import ThemeSelector from "../ThemeSelector/ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
-
-import { loadLanguageData } from "../../utils/loadLanguageData";
+import HeaderDataLoader from "./HeaderDataLoader";
 
 import "./header.scss";
 
 function Header() {
     const location = useLocation();
-    const selectedLanguage = useSelector((state) => state.language.language);
-    const [languageData, setLanguageData] = useState(null);
-    // const [isThemeSelectorOpen, setIsThemeSelectorOpen] = useState(false); // Ajoutez un état pour gérer l'ouverture de ThemeSelector
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await loadLanguageData(
-                selectedLanguage,
-                "headerNav.json"
-            );
-            setLanguageData(data);
-        };
-
-        fetchData();
-    }, [selectedLanguage]);
-
-    if (!languageData) {
-        return <div>Loading...</div>;
-    }
-
-    const { logoTitle, logoSpanTitle, navLinks, language } = languageData;
-
     return (
-        <header>
-            <div className="aside">
-                <div className="logo">
-                    <Link to={navLinks[0].to}>
-                        <span>{logoTitle}</span>
-                        {logoSpanTitle}
-                    </Link>
-                </div>
-
-                <div className="nav-toggler">
-                    <span></span>
-                </div>
-                <ul className="nav">
-                    {navLinks.map((link, index) => (
-                        <li key={index}>
-                            <i
-                                className={`${
-                                    location.pathname === link.to
-                                        ? "active-link "
-                                        : ""
-                                }${link.icon}`}
-                            ></i>
-                            <Link
-                                to={link.to}
-                                className={
-                                    location.pathname === link.to
-                                        ? "active-link"
-                                        : ""
-                                }
-                            >
-                                {link.text}
+        <HeaderDataLoader>
+            {(headerData) => (
+                <header>
+                    <div className="aside">
+                        <div className="logo">
+                            <Link to={headerData.navLinks[0].to}>
+                                <span>{headerData.logoTitle}</span>
+                                {headerData.logoSpanTitle}
                             </Link>
-                        </li>
-                    ))}
+                        </div>
 
-                    <LanguageSelector text={language} />
-                </ul>
-                <ThemeSelector />
-                {/* <div></div> */}
-            </div>
-        </header>
+                        <div className="nav-toggler">
+                            <span></span>
+                        </div>
+                        <ul className="nav">
+                            {headerData.navLinks.map((link, index) => (
+                                <li key={shortid.generate()}>
+                                    <i
+                                        className={`${
+                                            location.pathname === link.to
+                                                ? "active-link "
+                                                : ""
+                                        }${link.icon}`}
+                                    ></i>
+                                    <Link
+                                        to={link.to}
+                                        className={
+                                            location.pathname === link.to
+                                                ? "active-link"
+                                                : ""
+                                        }
+                                    >
+                                        {link.text}
+                                    </Link>
+                                </li>
+                            ))}
+
+                            <LanguageSelector text={headerData.language} />
+                        </ul>
+                        <ThemeSelector />
+                    </div>
+                </header>
+            )}
+        </HeaderDataLoader>
     );
 }
 

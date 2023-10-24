@@ -1,21 +1,34 @@
-import React, { useCallback, useState, useRef, useEffect } from "react";
+import React, {
+    useCallback,
+    useState,
+    useRef,
+    useEffect,
+    useMemo,
+} from "react";
 import PropTypes from "prop-types";
 import Field, { FIELD_TYPES } from "./Field/Field";
 
 import Button, { BUTTON_TYPES } from "../../components/Button/Button";
-import "./form.scss";
 import { useForm, ValidationError } from "@formspree/react";
 import Modal from "../Modal/Modal";
 import ModalForm from "../Modal/ModalForm/ModalForm";
 import CloseIcon from "../99-Svg_Icon/CloseIcon";
-import contactFormContent from "../../assets/data/en/contactFormContent.json";
 
-const ContactForm = ({ onSuccess, onError }) => {
+const ContactForm = ({
+    onSuccess,
+    onError,
+    lastName,
+    email,
+    subject,
+    message,
+    send,
+    isSending,
+    title,
+    description,
+    description2,
+    formErrors,
+}) => {
     const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
-
-    const openModal = () => {
-        setIsSuccessModalOpen(true);
-    };
 
     const closeModal = () => {
         setIsSuccessModalOpen(false);
@@ -23,19 +36,18 @@ const ContactForm = ({ onSuccess, onError }) => {
 
     const [sending, setSending] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const [resetSelect, setResetSelect] = useState(false);
     const [errorFields, setErrorFields] = useState({
         nom: "",
-        prenom: "",
-        phone: "",
         email: "",
         subject: "",
         message: "",
     });
     const formRef = useRef(null);
-    const [state, handleSubmit] = useForm("xvojloaj");
+    const [state, handleSubmit] = useForm("xyyqowjk");
 
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = useMemo(() => {
+        return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    }, []);
 
     const resetForm = () => {
         setErrorFields({
@@ -50,7 +62,6 @@ const ContactForm = ({ onSuccess, onError }) => {
         }
 
         setFormSubmitted(false);
-        setResetSelect(true);
     };
 
     const sendContact = useCallback(
@@ -62,17 +73,16 @@ const ContactForm = ({ onSuccess, onError }) => {
 
             const requiredFields = ["nom", "email", "subject", "message"];
             const errors = {};
+            if (!emailRegex.test(formData.get("email"))) {
+                errors["email"] = formErrors.invalidEmail;
+                hasErrors = true;
+            }
             requiredFields.forEach((fieldName) => {
                 if (!formData.get(fieldName)) {
-                    errors[fieldName] = contactFormContent.formErrors.required;
+                    errors[fieldName] = formErrors.required;
                     hasErrors = true;
                 }
             });
-
-            if (!emailRegex.test(formData.get("email"))) {
-                errors["email"] = contactFormContent.formErrors.invalidEmail;
-                hasErrors = true;
-            }
 
             setErrorFields(errors);
 
@@ -92,7 +102,7 @@ const ContactForm = ({ onSuccess, onError }) => {
                 onError(err);
             }
         },
-        [onSuccess, onError, handleSubmit]
+        [onSuccess, onError, handleSubmit, emailRegex]
     );
 
     useEffect(() => {
@@ -119,9 +129,7 @@ const ContactForm = ({ onSuccess, onError }) => {
                         <div className="form-group">
                             <Field
                                 id="nom"
-                                placeholder={
-                                    contactFormContent.formFields.lastName
-                                }
+                                placeholder={lastName}
                                 name="nom"
                                 error={errorFields.nom}
                                 autoComplete="family-name"
@@ -137,9 +145,7 @@ const ContactForm = ({ onSuccess, onError }) => {
                         <div className="form-group">
                             <Field
                                 id="email"
-                                placeholder={
-                                    contactFormContent.formFields.email
-                                }
+                                placeholder={email}
                                 name="email"
                                 error={errorFields.email}
                                 autoComplete="on"
@@ -157,9 +163,7 @@ const ContactForm = ({ onSuccess, onError }) => {
                         <div className="form-group">
                             <Field
                                 id="subject"
-                                placeholder={
-                                    contactFormContent.formFields.subject
-                                }
+                                placeholder={subject}
                                 name="subject"
                                 error={errorFields.subject}
                             />
@@ -177,9 +181,7 @@ const ContactForm = ({ onSuccess, onError }) => {
                             <Field
                                 id="message"
                                 name="message"
-                                placeholder={
-                                    contactFormContent.formFields.message
-                                }
+                                placeholder={message}
                                 type={FIELD_TYPES.TEXTAREA}
                                 error={errorFields.message}
                             />
@@ -195,13 +197,11 @@ const ContactForm = ({ onSuccess, onError }) => {
                     <div className="form-item col-12">
                         <Button
                             type={BUTTON_TYPES.SUBMIT}
-                            className="btn"
-                            children={contactFormContent.buttonText.send}
+                            className=""
+                            children={send}
                             disabled={sending || state.submitting}
                         >
-                            {sending
-                                ? contactFormContent.buttonText.sending
-                                : contactFormContent.buttonText.send}
+                            {sending ? isSending : send}
                         </Button>
                     </div>
                 </div>
@@ -212,15 +212,9 @@ const ContactForm = ({ onSuccess, onError }) => {
                     Content={
                         <>
                             <ModalForm
-                                title={contactFormContent.successMessage.title}
-                                description={
-                                    contactFormContent.successMessage
-                                        .description
-                                }
-                                description2={
-                                    contactFormContent.successMessage
-                                        .description2
-                                }
+                                title={title}
+                                description={description}
+                                description2={description2}
                             />
                             <button type="button" onClick={closeModal}>
                                 <CloseIcon name="close" />
@@ -236,6 +230,15 @@ const ContactForm = ({ onSuccess, onError }) => {
 ContactForm.propTypes = {
     onError: PropTypes.func,
     onSuccess: PropTypes.func,
+    lastName: PropTypes.string,
+    email: PropTypes.string,
+    subject: PropTypes.string,
+    message: PropTypes.string,
+    send: PropTypes.string,
+    isSending: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    description2: PropTypes.string,
 };
 
 ContactForm.defaultProps = {

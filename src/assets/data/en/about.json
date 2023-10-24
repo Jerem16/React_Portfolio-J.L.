@@ -62,6 +62,7 @@
                     "id": "aEd3",
                     "size": 25,
                     "index": "random-index-4",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Micro-Service.online",
                     "technologies": {
                         "HTML": true,
@@ -78,6 +79,7 @@
                 {
                     "index": "random-index-5",
                     "id": "aEd4",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Curriculum Vitae",
                     "technologies": {
                         "HTML": true,
@@ -103,6 +105,7 @@
                     "size": 25,
                     "id": "aEd5",
                     "index": "random-index-6",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Riding Cities",
                     "technologies": {
                         "HTML": true,
@@ -118,6 +121,7 @@
                     "size": 25,
                     "id": "aEd6",
                     "index": "random-index-7",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Booki",
                     "technologies": {
                         "HTML": true,
@@ -136,6 +140,7 @@
                     "size": 25,
                     "id": "aEd7",
                     "index": "random-index-8",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "OhMyFood",
                     "technologies": {
                         "HTML": true,
@@ -156,6 +161,7 @@
                     "size": 25,
                     "id": "aEd68",
                     "index": "random-index-9",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Print-It",
                     "technologies": {
                         "HTML": true,
@@ -175,6 +181,7 @@
                     "size": 25,
                     "id": "aEd12",
                     "index": "random-index-10",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Portfolio - Sophie Bluel",
                     "technologies": {
                         "HTML": true,
@@ -195,6 +202,7 @@
                     "id": "aEd12g",
                     "size": 25,
                     "index": "random-index-11",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Menu Maker by Qwenta",
                     "technologies": {
                         "Agile": true,
@@ -216,6 +224,7 @@
                     "id": "aEd12s",
                     "size": 25,
                     "index": "random-index-12",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Kasa",
                     "technologies": {
                         "HTML": true,
@@ -241,6 +250,7 @@
                     "id": "aEd1x",
                     "size": 25,
                     "index": "random-index-13",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "Nina Carducci",
                     "technologies": {
                         "SEO": true,
@@ -265,6 +275,7 @@
                     "id": "aEd1x0",
                     "size": 25,
                     "index": "random-index-14",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "77events",
                     "technologies": {
                         "React": true,
@@ -286,6 +297,7 @@
                 {
                     "id": "aEd1x9",
                     "index": "random-index-15",
+                    "addClass": "timeline-text_add ",
                     "jobTitle": "ArgentBank",
                     "technologies": {
                         "React": true,
@@ -309,14 +321,14 @@
     ],
     "profile": {
         "section": "About Me",
-        "presentation": "My name is Jérémy, and I work as ",
+        "presentation": "My name is Jérémy, and I am a ",
         "jobTitle": "Web Developer",
         "description": "Front-end web developer and integrator, I am passionate about web design and development. My expertise ranges from graphic design to front-end programming. I create interactive websites optimized for performance and SEO. Always staying up-to-date with the latest technological trends, my goal is to provide high-quality web solutions.",
         "personalInfo": {
-            "Birthday": "27 jun 1977",
+            "Birthday": "27 Jun 1977",
             "Age": 45,
             "Website": "www.domain.com",
-            "Email": "info@gmail.com",
+            "Email": "web.my.dev@gmail.com",
             "degree": "Web Integrator",
             "Phone": "+33 6 35 02 06 41",
             "City": "Le Havre",

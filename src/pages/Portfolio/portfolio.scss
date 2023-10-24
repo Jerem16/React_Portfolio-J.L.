@@ -11,18 +11,15 @@
 .portfolio .portfolio-heading h3 {
     @include h3;
     font-weight: 500;
-    text-align: right;
+    text-align: left;
 }
 .portfolio .portfolio-item-inner {
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
-    -webkit-animation: startAndStop 0.3s ease-in-out;
-    animation: startAndStop 0.3s ease-out;
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
     transition: all 0.3s ease;
-
     &:hover {
         &::after {
             @include after_Before;
@@ -47,15 +44,6 @@
     max-height: 28px;
 }
 
-@keyframes startAndStop {
-    0% {
-        border: 0px solid var(--bg-black-100);
-    }
-    100% {
-        border: 6px solid var(--bg-black-100);
-    }
-}
-
 #modalPortfolio {
     overflow: hidden;
     width: 62.5%;
@@ -67,8 +55,6 @@
     border: 1px solid var(--bg-black-50);
     background-color: rgba-color($bg-black-900-light, 0.3);
     border-radius: 16px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(3px);
     .portfolio-item-inner {
         box-shadow: 0 0 20px rgba(48, 46, 77, 0);
         border: 6px solid transparent;

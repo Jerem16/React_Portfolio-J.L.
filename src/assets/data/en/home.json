@@ -8,10 +8,5 @@
         "imageSrc": "profile0.png",
         "hireButtonText": "Hire Me",
         "typedStrings": ["", "Web Integrator", "Web Designer", "Web Developer"]
-    },
-    "contact": {
-        "email": "info@gmail.com",
-        "phone": "+33 6 35 02 06 41",
-        "city": "Le Havre"
     }
 }

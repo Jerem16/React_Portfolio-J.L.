@@ -1,21 +1,21 @@
 {
     "logoTitle": "P",
     "logoSpanTitle": "ortfolio",
-    "language": "Language",
+    "language": "Sprache",
     "navLinks": [
         {
             "to": "/",
-            "text": "Home",
+            "text": "Startseite",
             "icon": "fa fa-home"
         },
         {
             "to": "/about",
-            "text": "About",
+            "text": "Um",
             "icon": "fa fa-user"
         },
         {
             "to": "/services",
-            "text": "Services",
+            "text": "Dienst",
             "icon": "fa fa-list"
         },
         {
@@ -25,7 +25,7 @@
         },
         {
             "to": "/contact",
-            "text": "Contact",
+            "text": "Kontakt",
             "icon": "fa fa-comments"
         }
     ]

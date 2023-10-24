@@ -4,10 +4,7 @@ function HomeInfo({
     welcome,
     name,
     presentation,
-    profession,
     description,
-    question,
-    answer,
     hireButtonText,
 }) {
     const buttons = {
@@ -31,7 +28,7 @@ function HomeInfo({
                 <Button
                     btnName={hireButtonText}
                     children={hireButtonText}
-                    href={buttons.href}
+                    to={buttons.href}
                     className={buttons.class}
                 />
             </div>

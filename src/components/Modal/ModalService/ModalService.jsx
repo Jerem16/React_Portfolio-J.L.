@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
-
-import "./modalService.scss";
+import shortid from "shortid";
 
 const ModalService = ({ service, iconClass }) => (
     <div className="service-item " id="modalService">
@@ -12,7 +11,7 @@ const ModalService = ({ service, iconClass }) => (
             <p>{service.modalDescription}</p>
             <ul>
                 {service.details.map((detail, detailIndex) => (
-                    <li key={detailIndex}>
+                    <li key={shortid.generate()}>
                         <i className="fas fa-check"></i>
                         {detail}
                     </li>
