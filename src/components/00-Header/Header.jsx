@@ -4,26 +4,27 @@ import shortid from "shortid";
 import ThemeSelector from "../ThemeSelector/ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
 import HeaderDataLoader from "./HeaderDataLoader";
+import NavToggler from "./NavToggler";
+import { useSelector } from "react-redux";
 
 import "./header.scss";
 
 function Header() {
     const location = useLocation();
+    const asideClass = useSelector((state) => state.classes.addClass);
+
     return (
         <HeaderDataLoader>
             {(headerData) => (
                 <header>
-                    <div className="aside">
+                    <div className={`aside`}>
                         <div className="logo">
                             <Link to={headerData.navLinks[0].to}>
                                 <span>{headerData.logoTitle}</span>
                                 {headerData.logoSpanTitle}
                             </Link>
                         </div>
-
-                        <div className="nav-toggler">
-                            <span></span>
-                        </div>
+                        {/* <NavToggler /> */}
                         <ul className="nav">
                             {headerData.navLinks.map((link, index) => (
                                 <li key={shortid.generate()}>

@@ -44,29 +44,26 @@ function Profile() {
                                     <PersonalInfo
                                         info={profileData.profile.personalInfo}
                                     />
-
-                                    <div className="buttons">
-                                        <Button
-                                            children={
-                                                profileData.profile.buttons
-                                                    .btnName1
-                                            }
-                                            href={CV}
-                                            target="_blank"
-                                            type={BUTTON_TYPES.DOWNLOAD}
-                                            className={button1.class}
-                                        />
-                                        <Button
-                                            children={
-                                                profileData.profile.buttons
-                                                    .btnName2
-                                            }
-                                            to={button2.to}
-                                            className={button2.class}
-                                        />
-                                    </div>
                                 </div>
                                 <Skills skills={profileData.profile.skills} />
+                                <div className="buttons">
+                                    <Button
+                                        children={
+                                            profileData.profile.buttons.btnName1
+                                        }
+                                        href={CV}
+                                        target="_blank"
+                                        type={BUTTON_TYPES.DOWNLOAD}
+                                        className={button1.class}
+                                    />
+                                    <Button
+                                        children={
+                                            profileData.profile.buttons.btnName2
+                                        }
+                                        to={button2.to}
+                                        className={button2.class}
+                                    />
+                                </div>
                             </div>
                             <div className="height_val"></div>
 

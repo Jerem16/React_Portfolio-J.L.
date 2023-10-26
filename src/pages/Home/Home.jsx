@@ -35,7 +35,7 @@ function Home() {
             }
         };
     }, [data]);
-    
+
     return (
         <HomeDataLoader>
             {(homeData) => (
@@ -47,13 +47,19 @@ function Home() {
                         </div>
                         <div className="row_center">
                             <div className="row">
+                                <div className="border-design"></div>
                                 <HomeInfo
                                     welcome={homeData.home.welcome}
                                     name={homeData.home.name}
                                     presentation={homeData.home.presentation}
+                                    titleDescription={
+                                        homeData.home.titleDescription
+                                    }
                                     description={homeData.home.description}
-                                    question={homeData.home.question}
-                                    answer={homeData.home.answer}
+                                    additionalDescription={
+                                        homeData.home.additionalDescription
+                                    }
+                                    quote={homeData.home.quote}
                                     hireButtonText={
                                         homeData.home.hireButtonText
                                     }

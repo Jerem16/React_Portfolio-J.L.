@@ -1,82 +1,154 @@
 /* Home */
 @import "../../assets//styles/00_utils/3_mixins";
-
+@import "../../assets//styles/00_utils/4_fonts";
 .home {
     .row {
         justify-content: stretch;
-        gap: 1.607084289931125%;
-        .blockInfo {
-            display: flex;
-            justify-content: center;
-            flex: 5;
-            background-color: var(--bg-black-900);
-            .home-info {
-                align-items: flex-start;
-                width: 100%;
-                height: 400px;
-                max-height: 400px;
+        align-items: center;
+        gap: 7.2%;
+        height: auto;
+        left: -2em;
+        max-width: 66vw;
+        padding: 0 0 0 2em;
 
+        // border: 1px solid var(--bg-black-50);
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        // background: var(--bg-black-100);
+        .border-design {
+            position: absolute;
+            width: calc(100% + 3em);
+            height: calc(100% - 1em);
+            left: 0;
+            bottom: 0;
+            padding: 0 0 0 2em;
+            border: 1px solid var(--bg-black-50);
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            @include drop-shadow(2px 3px 10px var(--text-black-900));
+        }
+
+        .home-info {
+            flex: 5;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+
+            .home-title {
+                font-size: 1.75em;
+                margin: 1em 0 0 0;
+                span.name {
+                    font-family: "Clicker Script", cursive;
+                    font-size: 1.5em;
+                    font-weight: 700;
+                    color: var(--skin-color);
+                }
+            }
+
+            .home-card {
+                align-self: flex-start;
                 display: flex;
                 flex-flow: column nowrap;
+                align-items: flex-end;
                 justify-content: space-between;
+                margin: 0;
 
-                h3.hello {
-                    font-size: 1.75em;
-                    margin: 0.625em 0 0 0;
-
-                    span {
-                        font-family: "Clicker Script", cursive;
-                        font-size: 32px;
-                        font-size: 1.15em;
-                        font-weight: 700;
+                &_group {
+                    margin: 1.25em 0;
+                    width: 100%;
+                    .presentation_title,
+                    .presentation_typing {
+                        font-size: 1.875em;
+                        display: inline;
+                    }
+                    .typing {
+                        display: inline;
                         color: var(--skin-color);
                     }
                 }
 
-                h3.my-profession {
-                    font-size: 1.875em;
-                }
-
-                .typing {
-                    color: var(--skin-color);
-                }
-
-                p {
+                .home-card-content {
                     font-size: 1.25em;
                     color: var(--text-black-700);
                     overflow-wrap: break-word;
+                    margin: 0 0 0 1em;
+                    // border: 1px solid #000;
+
+                    &_description {
+                        position: relative;
+                        .home-quote {
+                            position: absolute;
+                            display: inline-block;
+                            width: 100%;
+                            margin: 0.75em 0 0.675em;
+                            .reverse {
+                                transform: scaleX(-1) scaleY(1);
+                                display: inline-block;
+                                position: relative;
+                                top: -0.52em;
+                            }
+                        }
+                        .quote-description {
+                            display: inline-block;
+
+                            margin-top: 1em;
+                        }
+                    }
+                    .content-inner {
+                        padding: 1em;
+                        &_description {
+                            font-style: italic;
+                        }
+                        &_quote {
+                            color: var(--text-black-700);
+                            overflow-wrap: break-word;
+                            font-style: italic;
+                            // border-left: 2px solid #333;
+                            padding: 10px;
+                            padding-left: 20px;
+                            // text-align: right;
+                        }
+                    }
                 }
+            }
+
+            .hire-me {
+                bottom: -25.5px;
+                margin: 0;
+                padding: 12.5px 35px;
             }
         }
 
         .blockImg {
+            align-items: center;
             display: flex;
             flex-flow: row;
             justify-content: center;
             flex: 3;
             position: relative;
-
+            max-width: 752px;
+            height: 100%;
             .home-img {
                 width: 100%;
-                max-width: 473px;
-                max-height: 400px;
+
                 z-index: 1;
                 display: flex;
                 flex-flow: row;
                 justify-content: space-between;
                 align-items: center;
-                background: content-box
-                    linear-gradient(
-                        to right,
-                        rgba(0, 0, 0, 0) 0%,
-                        var(--bg-black-900) 22.5%,
-                        var(--bg-black-900) 77.5%,
-                        rgba(0, 0, 0, 0)
-                    );
+
+                border-top-right-radius: 20px;
 
                 &::after {
                     @include after_Before;
-                    top: -5px;
+                    top: -10px;
+                    left: -10px;
 
                     width: 139.26px;
                     height: 86.13px;
@@ -87,22 +159,34 @@
                     content: "";
                     position: absolute;
                     bottom: -10px;
-                    right: 0px;
+                    right: -10px;
 
                     width: 86.13px;
                     height: 139.26px;
                     border-bottom: 10px solid var(--skin-color);
                     border-right: 10px solid var(--skin-color);
                 }
+                .leftNB,
+                .rightNB {
+                    flex: 1;
+                    width: 100%;
+                }
                 .centerNB {
+                    align-self: center;
+                    flex: 5;
                     min-width: 247.49px;
                     height: 400px;
                     display: flex;
+                    max-width: 314px;
                 }
                 img {
+                    margin: auto;
+                    position: relative;
                     align-self: center;
-                    max-height: 360px;
-                    border-radius: 5px;
+                    height: auto;
+                    width: 100%;
+                    top: 5px;
+                    border-radius: 6px;
                 }
             }
         }

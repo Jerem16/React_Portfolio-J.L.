@@ -65,7 +65,7 @@ const LayoutContact = () => {
                         </div>
                     </div>
 
-                    <div className="col_end"></div>
+                    <div className="col_End"></div>
                 </>
             )}
         </ContactDataLoader>

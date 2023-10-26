@@ -1,0 +1,345 @@
+@media screen and (max-width: 1660px) {
+    .home {
+        .row {
+            .home-info {
+                justify-content: flex-start;
+                align-items: flex-start;
+                .home-title {
+                    @include h3;
+                    span.name {
+                        margin: 0 10px 0 0;
+                        font-size: 32px;
+                    }
+                }
+
+                .home-card {
+                    &_group {
+                        margin: 0.65em 0 1em 0;
+                        .presentation_title,
+                        .presentation_typing {
+                            font-size: 1.75em;
+                        }
+                    }
+
+                    .home-card-content {
+                        font-size: 1.15em;
+                        margin: 0;
+                    }
+                }
+
+                .hire-me {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .home {
+        .row {
+            justify-content: space-between;
+            gap: 7.2%;
+            padding: 2em 0 0 0;
+            border-bottom-left-radius: 0px;
+            top: 1em;
+            left: 0;
+            border: 1px solid var(--bg-black-50);
+            .border-design {
+                display: none;
+            }
+            .home-info {
+                order: 2;
+                .hire-me {
+                    align-self: flex-start;
+                    width: auto;
+                    left: calc(50% - 88px);
+                }
+                .home-card {
+                    .home-card-content {
+                        margin: 0em 1em 0 0;
+                    }
+                }
+            }
+
+            .blockImg {
+                order: 0;
+                display: block;
+                flex: 2;
+                position: relative;
+                .home-img {
+                    &::after {
+                        top: 82px;
+                        left: 0px;
+                        z-index: 0;
+                        width: 90.13px;
+                    }
+                    &::before {
+                        bottom: -10px;
+                        right: -8px;
+                        z-index: 10;
+                    }
+                    .centerNB {
+                        position: relative;
+                        z-index: 10;
+                        background-image: url(../../img/a.png);
+                        // background-image: url(${require(`../../assets/img/a.png`)});i
+
+                        background-repeat: no-repeat;
+                        background-position: top;
+                        background-size: cover;
+                    }
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .bgDraw {
+            .tsparticles {
+                top: -40px !important;
+                right: -333px !important;
+            }
+        }
+        .bgDraw2 {
+            bottom: 4.2%;
+        }
+    }
+}
+@media screen and (max-width: 1320px) {
+    .home {
+        .row {
+            .home-info {
+                .home-card {
+                    .home-card-content {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .about {
+        &-content {
+            .row {
+                .personal-info {
+                    flex: 0 0 48.19645785503444%;
+                    margin: 2em 0 4em 0;
+                    .info-item {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+                .skills {
+                    flex: 0 0 48.19645785503444%;
+                    max-width: 48.19645785503444%;
+                    margin-top: 3.4em;
+                    & .skill-item {
+                        // @include flex_100;
+                        // margin-bottom: 1.5625em;
+                        & h4 {
+                            @include h5;
+                            line-height: 1.71em;
+                        }
+                    }
+                }
+                .buttons {
+                    position: absolute;
+                    bottom: 9.37em;
+                    left: 51.803542144965565%;
+                    width: 0%;
+                    & .btn_right {
+                        margin: 0;
+                    }
+                    .btn_left {
+                        margin: 0 0.937em 2.25em 0;
+                    }
+                }
+            }
+        }
+    }
+    .service_container {
+        .service-item {
+            .service-item-inner {
+                .icon {
+                    margin: 0 auto 2.3vw;
+                }
+                h3 {
+                    font-size: 1em;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+
+    .contact {
+        &-info-item {
+            flex: 1;
+            min-width: 230px;
+        }
+    }
+}
+@media screen and (max-width: 1280px) {
+    .home {
+        .row {
+            .home-info {
+                justify-content: center;
+                .home-title {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    margin: 0;
+                    width: 100%;
+                    text-align: right;
+                    padding: 12px 1em;
+                    span.name {
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+
+                .home-card {
+                    align-items: center;
+                    &_group {
+                        margin: 1.25em 0;
+                        .presentation_title,
+                        .presentation_typing {
+                            text-align: center;
+                            align-items: center;
+                            font-size: 1.5em;
+                        }
+
+                        .typing {
+                            width: 100%;
+                            align-items: center;
+                        }
+                    }
+
+                    .home-card-content {
+                        margin: 1em 1em 0 1em;
+
+                        &_description {
+                            .home-quote {
+                                text-align: center;
+                                width: 100%;
+                                display: block;
+
+                                margin: 0 auto;
+                                padding: 0;
+                            }
+                        }
+                        .content-inner {
+                            padding: 1em 0em;
+                            &_description {
+                                font-style: italic;
+                            }
+                            &_quote {
+                                padding-left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1080px) {
+    .home {
+        .row {
+            flex-flow: column nowrap;
+            border: 1px solid var(--bg-black-50);
+            top: 0;
+            padding: 0 0.5em 50px 0.5em;
+            min-height: 75vh;
+            .home-info {
+                position: static;
+                .home-title {
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    width: 100%;
+
+                    span.name {
+                        display: block;
+                    }
+                }
+                .home-card {
+                    justify-content: flex-start;
+                    margin: 0;
+                    &_group {
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                        .presentation_title {
+                            display: none;
+                        }
+                        .presentation_typing {
+                            font-size: 1.875em;
+                        }
+                    }
+                    .home-card-content {
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        font-size: 1.115em;
+                        margin: 0.75em 0.5em 0 0.5em;
+                        &_description {
+                            text-align: center;
+                            .home-quote {
+                                position: static;
+                                margin: 0 auto 0.675em;
+                                padding: 0;
+                                display: inline-block;
+                            }
+                            .quote-description {
+                                // margin: 0 1em;
+                            }
+                        }
+                        .content-inner {
+                            align-self: center;
+                            margin: 0 0.65em 0;
+                            max-width: 391px;
+                        }
+                    }
+                }
+            }
+            .blockImg {
+                margin-top: 100px;
+                height: 333px;
+                .home-img {
+                    &::after {
+                        top: 90px;
+                        left: 0px;
+                        // z-index: 0;
+                        width: 100.13px;
+                        height: 160px;
+                    }
+                    &::before {
+                        bottom: -37px;
+                        right: -8px;
+                    }
+                    .centerNB {
+                        height: 360px;
+                    }
+                }
+            }
+        }
+        .bgDraw {
+            .tsparticles {
+                top: -180px !important;
+                right: -300px !important;
+                // transform: rotate(22.5deg);
+            }
+        }
+        .bgDraw2 {
+            bottom: 3.2%;
+            height: 10vh;
+        }
+    }
+}

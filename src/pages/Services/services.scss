@@ -8,12 +8,13 @@
     flex-flow: wrap;
     gap: 3.607084289931125%;
     height: 100%;
+    justify-content: space-between;
+
     .service-item {
         flex: 1;
         flex: 0 0 30.59527714004592%;
         max-width: 30.59527714004592%;
         margin: 0 0 3.607084289931125% 0;
-
         .service-item-inner {
             height: 100%;
             padding: 30px 15px;

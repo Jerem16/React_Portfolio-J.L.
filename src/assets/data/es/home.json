@@ -3,22 +3,17 @@
         "welcome": "Hola, mi nombre es ",
         "name": "‘‘Jérémy Lemaignent’’",
         "presentation": "Soy un ",
-        "description": "‘’Apasionado desarrollador’’ con más de 2 años de experiencia, especializado en el diseño de sitios web. Combino rendimiento y diseño gráfico; mi experiencia abarca desde el diseño de sitios web hasta la programación Front-End.",
-        "question": "",
-        "answer": "Únete a mí.",
-        "imageSrc": "profilePortfolio.jpg",
-        "hireButtonText": "Contáctame",
+        "titleDescription": "Apasionado desarrollador con más de 2 años’’.",
+        "description": "Me especializo en desarrollo y diseño de sitios web.",
+        "additionalDescription": "Combinando rendimiento y diseño gráfico.",
+        "quote": "Mis habilidades abarcan desde el diseño de sitios web hasta la programación Front-End.",
+        "imageSrc": "profile2.png",
+        "hireButtonText": "Contrátame",
         "typedStrings": [
             "",
-            "Diseñador Web",
             "Integrador Web",
-            "Desarrollador Web",
-            "Diseñador Gráfico"
+            "Diseñador Web",
+            "Desarrollador Web"
         ]
-    },
-    "contact": {
-        "email": "info@gmail.com",
-        "phone": "+33 6 35 02 06 41",
-        "city": "Le Havre"
     }
 }

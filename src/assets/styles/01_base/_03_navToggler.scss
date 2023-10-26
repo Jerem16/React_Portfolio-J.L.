@@ -1,0 +1,53 @@
+.aside {
+    width: 270px;
+    @include transition(all, 0.5s, ease);
+}
+.main-content {
+    padding-left: 270px;
+    @include transition(all, 0.5s, ease);
+}
+.modal {
+    width: calc(100% - 270px);
+    left: 270px;
+    @include transition(all, 0.5s, ease);
+}
+
+.open {
+    .aside {
+        @include transform(translateX(-270px));
+    }
+    .main-content {
+        width: calc(100% + 270px);
+        @include transform(translateX(-270px));
+        animation: slide 0.4s ease;
+    }
+    .modal {
+        width: calc(100vw + 0px);
+        left: 270px;
+    }
+}
+.close {
+    .aside {
+    }
+    .main-content {
+        width: calc(100% + 0px);
+        @include transform(translateX(0));
+        animation: slide 0.4s ease reverse;
+    }
+    .modal {
+        width: calc(100vw - 270px);
+    }
+}
+
+@keyframes slide {
+    0% {
+        width: calc(100% + 0px);
+        // @include transform(translateX(0) scaleX(0));
+        @include transform(translateX(0));
+    }
+    100% {
+        width: calc(100% + 270px);
+        // @include transform(translateX(-270px) scaleX(270));
+        @include transform(translateX(-270px));
+    }
+}
