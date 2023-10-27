@@ -48,6 +48,7 @@ function Home() {
                         <div className="row_center">
                             <div className="row">
                                 <div className="border-design"></div>
+                                <div className="border-design2"></div>
                                 <HomeInfo
                                     welcome={homeData.home.welcome}
                                     name={homeData.home.name}

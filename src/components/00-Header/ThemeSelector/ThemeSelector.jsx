@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
-import { changeTheme } from "../../redux/reducers/themeSlice";
+import { changeTheme } from "../../../redux/reducers/themeSlice";
 
 function ThemeSelector() {
     const dispatch = useDispatch();

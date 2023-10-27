@@ -27,8 +27,6 @@
     }
 }
 .close {
-    .aside {
-    }
     .main-content {
         width: calc(100% + 0px);
         @include transform(translateX(0));
@@ -42,12 +40,10 @@
 @keyframes slide {
     0% {
         width: calc(100% + 0px);
-        // @include transform(translateX(0) scaleX(0));
         @include transform(translateX(0));
     }
     100% {
         width: calc(100% + 270px);
-        // @include transform(translateX(-270px) scaleX(270));
         @include transform(translateX(-270px));
     }
 }

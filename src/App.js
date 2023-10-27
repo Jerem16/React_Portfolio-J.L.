@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./components/00-Header/Header";
+import Header from "./components/00-Header/00-Header";
 import NavToggler from "./components/00-Header/NavToggler";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -23,19 +23,19 @@ function App() {
                 <Header />
                 <main className="main-content">
 
-                    <Home />
+                    {/* <Home />
                     <About />
                     <Services />
                     <Portfolio />
-                    <Contact />
+                    <Contact /> */}
 
                     <Routes>
                         <>
-                            {/* <Route path="/" element={<Home />} />
+                            <Route path="/" element={<Home />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/services" element={<Services />} />
                             <Route path="/portfolio" element={<Portfolio />} />
-                            <Route path="/contact" element={<Contact />} /> */}
+                            <Route path="/contact" element={<Contact />} />
                             
                         </>
 

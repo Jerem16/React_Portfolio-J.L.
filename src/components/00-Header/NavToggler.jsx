@@ -19,7 +19,7 @@ function NavToggler() {
 
     return (
         // <div className={`nav-toggler ${addClass}`} onClick={toggleClick}>
-        <div className={`nav-toggler`} onClick={toggleClick}>
+        <div className={`nav-toggler`} id="nav-toggler" onClick={toggleClick}>
             <span></span>
         </div>
     );

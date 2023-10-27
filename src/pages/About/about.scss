@@ -102,6 +102,9 @@
     .row_timeLine {
         @include row_R;
         justify-content: center;
+
+
+        // flex-flow: column;
         & .experience {
             flex: 0 0 48.19645785503444%;
             max-width: 48.19645785503444%;

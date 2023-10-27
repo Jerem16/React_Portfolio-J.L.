@@ -2,15 +2,36 @@
 @import "../../assets/styles/00_utils/3_mixins";
 
 .aside {
-    height: 100%;
-    padding: 45px 22.5px 22.5px 22.5px;
+    &_bg {
+        width: 0;
+        height: 0;
+        display: none;
+        &_top {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &_center {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &_bottom {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+    }
+
+    height: 100vh;
+    padding: 22.5px 22.5px;
     border-right: 1px solid var(--bg-black-50);
     background: var(--bg-black-100);
     max-height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 
     display: flex;
     flex-flow: column;
@@ -61,8 +82,6 @@
             }
         }
     }
-
-
 
     .nav {
         width: 157.5px;
@@ -139,18 +158,18 @@
             background-color: var(--bg-black-100);
 
             text-align: center;
-            position: relative;
-            left: -5.675px;
+            position: absolute;
+            left: -0px;
 
             cursor: pointer;
             transition: all 0.3s ease;
 
             &.style-switcher-toggler {
-                top: -2.5px;
+                top: 11.25px;
             }
 
             &.day-night {
-                top: -9.125px;
+                top: 50px;
             }
         }
     }
@@ -161,6 +180,7 @@
         flex-flow: row nowrap;
         height: 100px;
         width: calc(100% + 0px);
+        max-width: 300px;
 
         .style-switcher {
             display: flex;
@@ -168,17 +188,19 @@
             justify-content: space-around;
             align-items: stretch;
 
-            min-width: calc(100% - 44.25px);
+            // width: calc(100% - 44.25px);
+            min-width: 180px;
             height: 100px;
             top: 3px;
+            left: 44.25px;
             padding: 11.25px;
             padding-right: 22.5px;
             border: 1px solid transparent;
             border-radius: 5px;
             border-bottom-left-radius: 0px;
             background-color: var(--bg-black-900);
-            position: relative;
-            left: -9px;
+            position: absolute;
+            // left: -9px;
             bottom: 0px;
             z-index: 101;
             transition: all 0.3s ease;
@@ -194,6 +216,8 @@
                 font-size: 1em;
                 font-weight: 600;
                 text-transform: capitalize;
+                position: relative;
+                left: 5px;
             }
 
             .colors {
@@ -207,6 +231,8 @@
                     border: 1px solid var(--bg-black-50);
                     border-radius: 50%;
                     cursor: pointer;
+                    position: relative;
+                    left: 5px;
                 }
 
                 .color-1 {

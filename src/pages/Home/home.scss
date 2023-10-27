@@ -1,6 +1,27 @@
 /* Home */
 @import "../../assets//styles/00_utils/3_mixins";
 @import "../../assets//styles/00_utils/4_fonts";
+.border-design,
+.border-design2 {
+    position: absolute;
+    width: calc(100% + 3em);
+    height: calc(100% - 1em);
+    left: 0;
+    bottom: 0;
+    padding: 0 0 0 2em;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.border-design {
+    @include drop-shadow(2px 3px 10px var(--text-black-900));
+    border: 1px solid var(--bg-black-50);
+    z-index: 1;
+}
+.border-design2 {
+    z-index: 2;
+    background-color: var(--bg-black-900);
+}
 .home {
     .row {
         justify-content: stretch;
@@ -17,21 +38,9 @@
         border-top-right-radius: 20px;
 
         // background: var(--bg-black-100);
-        .border-design {
-            position: absolute;
-            width: calc(100% + 3em);
-            height: calc(100% - 1em);
-            left: 0;
-            bottom: 0;
-            padding: 0 0 0 2em;
-            border: 1px solid var(--bg-black-50);
-            border-bottom-left-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            @include drop-shadow(2px 3px 10px var(--text-black-900));
-        }
 
         .home-info {
+            z-index: 3;
             flex: 5;
             display: flex;
             flex-flow: column nowrap;
@@ -126,6 +135,7 @@
         }
 
         .blockImg {
+            z-index: 3;
             align-items: center;
             display: flex;
             flex-flow: row;
@@ -158,7 +168,7 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    bottom: -10px;
+                    bottom: -5px;
                     right: -10px;
 
                     width: 86.13px;
@@ -226,7 +236,7 @@
     width: calc(100% - 10px);
     height: 16.1vh;
     bottom: 6.14%;
-    @include drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.15));
+    // @include drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.15));
     .tsparticles2,
     #tsparticles2 {
         width: 100% !important;

@@ -1,0 +1,74 @@
+@media screen and (max-width: 992px) {
+    #tablet {
+        display: flex;
+    }
+    #desktop {
+        display: none;
+    }
+    .home,
+    .about,
+    .service,
+    .portfolio,
+    .contact {
+        .container {
+            flex: 0 0 calc(100% - 137.5px);
+            max-width: calc(100% - 137.5px);
+        }
+    }
+    body.dark {
+        .aside {
+            background-color: rgba-color($bg-black-900-dark, 0.75);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+        }
+        .nav {
+            background-color: rgba-color($bg-black-900-dark, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+        }
+    }
+    .main-content {
+        min-width: 100%;
+        padding-left: 0;
+    }
+    .modal {
+        width: calc(100% - 100vw);
+        left: 100vw;
+        @include transition(all, 0.5s, ease);
+    }
+    .open {
+        .aside {
+            @include transform(translateX(-100vw));
+        }
+        .main-content {
+            width: 100%;
+            @include transform(translateX(0vw));
+            animation: slide 0.4s ease;
+            opacity: 1;
+        }
+        .modal {
+            width: calc(100vw + 0px);
+            left: 100vw;
+        }
+    }
+    .close {
+        .main-content {
+            width: 100%;
+            @include transform(translateX(0));
+            animation: slide 0.4s ease reverse;
+        }
+        .modal {
+            width: calc(100vw - 100vw);
+        }
+    }
+    @keyframes slide {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
