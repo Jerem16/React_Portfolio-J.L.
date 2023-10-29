@@ -1,12 +1,14 @@
 import React from "react";
 import portfolio_img from "../../assets/data/portfolio_img.json";
-import shortid from "shortid";
+// import shortid from "shortid";
+import { nanoid } from "nanoid";
+
 
 const renderPortfolioItems = (openModal) => {
     return portfolio_img.map((item) => (
         <div
             className="service-item"
-            key={shortid.generate()}
+            key={nanoid()}
             onClick={() => openModal(item)}
         >
             <div className="portfolio-item-inner shadow-dark">

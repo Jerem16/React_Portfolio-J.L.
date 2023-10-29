@@ -9,6 +9,7 @@ import Error404 from "./pages/Error404/Error404";
 import GlobalStyle from "./utils/style/GlobalStyle";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
+// import ScrollToTop from "./components/00-Header/ScrollToTop/ScrollToTop";
 import { useSelector } from "react-redux";
 
 // import "./main.scss";
@@ -22,12 +23,13 @@ function App() {
                 <NavToggler />
                 <Header />
                 <main className="main-content">
+                    {/* <ScrollToTop /> */}
 
-                    {/* <Home />
+                    <Home />
                     <About />
                     <Services />
                     <Portfolio />
-                    <Contact /> */}
+                    <Contact />
 
                     <Routes>
                         <>
@@ -36,7 +38,6 @@ function App() {
                             <Route path="/services" element={<Services />} />
                             <Route path="/portfolio" element={<Portfolio />} />
                             <Route path="/contact" element={<Contact />} />
-                            
                         </>
 
                         <Route path="*" element={<Error404 />} />

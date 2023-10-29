@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import shortid from "shortid";
+import { NavLink, useLocation } from "react-router-dom";
+// import shortid from "shortid";
+import { nanoid } from "nanoid";
 import LanguageSelector from "./01-LanguageSelector";
 import ThemeSelector from "./ThemeSelector/ThemeSelector";
 
@@ -10,30 +11,25 @@ function NavMenu({ navLinks, handleClick, language, id }) {
     return (
         <ul className="nav" id={id}>
             {navLinks.map((link) => (
-                <li
-                    onClick={handleClick}
-                    className="head-btn"
-                    key={shortid.generate()}
-                >
+                <li onClick={handleClick} className="head-btn" key={nanoid()}>
                     <i
                         className={`${
                             location.pathname === link.to ? "active-link " : ""
                         }${link.icon}`}
                     ></i>
-                    <Link
+                    <NavLink
                         to={link.to}
                         className={
                             location.pathname === link.to ? "active-link" : ""
                         }
                     >
                         {link.text}
-                    </Link>
+                    </NavLink>
                 </li>
             ))}
             <LanguageSelector text={language} />
         </ul>
     );
 }
-
 
 export default NavMenu;

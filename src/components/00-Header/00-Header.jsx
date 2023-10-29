@@ -65,7 +65,7 @@ function Header() {
                             <NavMenu
                                 id="desktop"
                                 navLinks={headerData.navLinks}
-                                handleClick={handleClick}
+                                // handleClick={handleClick}
                                 language={headerData.language}
                             />
                         )}

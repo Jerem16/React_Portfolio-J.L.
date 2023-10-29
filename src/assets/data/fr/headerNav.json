@@ -5,31 +5,30 @@
     "navLinks": [
         {
             "to": "/",
-            "tab": "/",
             "text": "Accueil",
             "icon": "fa fa-home"
         },
         {
             "to": "/about",
-            "tab": "#about",
+
             "text": "À propos",
             "icon": "fa fa-user"
         },
         {
             "to": "/services",
-            "tab": "#services",
+
             "text": "Services",
             "icon": "fa fa-list"
         },
         {
             "to": "/portfolio",
-            "tab": "#portfolio",
+
             "text": "Portfolio",
             "icon": "fa fa-briefcase"
         },
         {
             "to": "/contact",
-            "tab": "#contact",
+
             "text": "Contact",
             "icon": "fa fa-comments"
         }

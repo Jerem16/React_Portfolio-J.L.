@@ -4,7 +4,7 @@ import "./services.scss";
 
 function Services() {
     return (
-        <section className="service section" id="service">
+        <section className="service section" id="services">
             <div className="container">
                 <ServicesComponent />
             </div>

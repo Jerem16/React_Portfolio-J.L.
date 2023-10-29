@@ -1,6 +1,6 @@
 import React from "react";
 import Button, { BUTTON_TYPES } from "../Button/Button";
-import shortid from "shortid";
+// import shortid from "shortid";
 
 import Timeline from "./02-TimeLine";
 import Skills from "./PersonalSkills";

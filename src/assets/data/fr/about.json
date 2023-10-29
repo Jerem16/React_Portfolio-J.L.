@@ -19,7 +19,7 @@
         {
             "sectionId": "Ed2",
             "year": "2021 - 2022",
-            "title": "Autodidact",
+            "title": "Autodidacte",
             "entries": [
                 {
                     "index": "index-aléatoire-2",
@@ -235,7 +235,7 @@
                             "Développement de l'application React d’après maquettes.",
                             "Respect des contraintes techniques et fonctionnelles.",
                             "Utilisation de données (fichier JSON).",
-                            "Devellopement de composants React.",
+                            "Développement de composants React.",
                             "Création de routes avec React Router.",
                             "Respect des guidelines de codage de Kasa"
                         ]
