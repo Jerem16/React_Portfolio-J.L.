@@ -102,8 +102,9 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                                                 <img
                                                     src={require(`../../../assets/img/skillsIcons/${tech.technologyImages[technology]}`)}
                                                     alt={technology}
-                                                    width={30}
+                                                    width={27}
                                                     height={20}
+                                                    loading="lazy"
                                                 />
                                             )}
                                     </abbr>

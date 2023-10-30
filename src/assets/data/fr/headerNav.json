@@ -5,30 +5,31 @@
     "navLinks": [
         {
             "to": "home",
+            "offset": 0,
             "text": "Accueil",
             "icon": "fa fa-home"
         },
         {
             "to": "about",
-
+            "offset": -30,
             "text": "À propos",
             "icon": "fa fa-user"
         },
         {
             "to": "services",
-
+            "offset": -30,
             "text": "Services",
             "icon": "fa fa-list"
         },
         {
             "to": "portfolio",
-
+            "offset": 30,
             "text": "Portfolio",
             "icon": "fa fa-briefcase"
         },
         {
             "to": "contact",
-
+            "offset": -30,
             "text": "Contact",
             "icon": "fa fa-comments"
         }

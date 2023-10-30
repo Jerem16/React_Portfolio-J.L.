@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
+// import { Link } from "react-router-dom";
 import ThemeSelector from "./ThemeSelector/ThemeSelector";
 import HeaderDataLoader from "./HeaderDataLoader";
-import navLink from "../../assets/data/link.json" 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleClasses } from "../../redux/reducers/classesSlice";
 import NavMenu from "./NavMenu";
 
 import "./header.scss";
 
 function Header() {
-    const location = useLocation();
     const dispatch = useDispatch();
+
     const handleClick = () => {
-        // Dispatch l'action pour changer la classe lorsque l'élément est cliqué
-        dispatch(toggleClasses("open")); // Remplacez "open" par la classe que vous souhaitez utiliser
+        setTimeout(() => {
+            dispatch(toggleClasses("open"));
+        }, 500);
     };
 
     const [isMobile, setIsMobile] = useState(
@@ -27,10 +28,8 @@ function Header() {
             setIsMobile(event.matches);
         };
 
-        // Ajoutez un écouteur pour suivre les changements d'état de la Media Query
         mediaQuery.addListener(updateIsMobile);
 
-        // Nettoyage de l'écouteur lorsque le composant est démonté
         return () => {
             mediaQuery.removeListener(updateIsMobile);
         };
@@ -48,9 +47,21 @@ function Header() {
                         </div>
 
                         <div className="logo">
-                            <Link to={headerData.navLinks[0].to}>
-                                <span>{headerData.logoTitle}</span>
-                                {headerData.logoSpanTitle}
+                            <Link
+                                rel="nofollow"
+                                href="#home"
+                                to="home"
+                                spy={true}
+                                smooth={true}
+                                // offset={-60}
+                                duration={500}
+                            >
+                                <div 
+                                // onClick={handleClick}
+                                >
+                                    <span>{headerData.logoTitle}</span>
+                                    {headerData.logoSpanTitle}
+                                </div>
                             </Link>
                         </div>
 
@@ -65,7 +76,6 @@ function Header() {
                             <NavMenu
                                 id="desktop"
                                 navLinks={headerData.navLinks}
-                                // handleClick={handleClick}
                                 language={headerData.language}
                             />
                         )}
