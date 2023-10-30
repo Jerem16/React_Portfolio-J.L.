@@ -40,6 +40,9 @@ body.light {
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
     --text-black-500: #706e93;
+    .icon {
+        color: #fff;
+    }
 }
 body.dark {
     --bg-black-900: #151515;

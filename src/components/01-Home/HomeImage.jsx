@@ -1,5 +1,5 @@
 import React from "react";
-
+import profileWebp from "../../assets/img/Profile-2.webp";
 
 function HomeImage({ imageSrc }) {
     return (
@@ -9,14 +9,16 @@ function HomeImage({ imageSrc }) {
                     <div className="leftNB"></div>
                     <div className="centerNB">
                         <img
-                            src={require(`../../assets/img/${imageSrc}`)}
+                            src={profileWebp}
                             alt="profile_image"
+                            width={264}
+                            height={275}
+                            // loading="lazy"
                         />
                     </div>
                     <div className="rightNB"></div>
                 </div>
             </div>
-
         </>
     );
 }

@@ -71,6 +71,62 @@ body.dark {
         }
     }
 }
+body.dark {
+    .about {
+        & .timeline {
+            & .timeline-item {
+                & .timeline-text {
+                    &:hover {
+                        .bd_Bottom {
+                            border-bottom: 1px solid
+                                color-mix(
+                                    in srgb,
+                                    var(--skin-color) 45%,
+                                    var(--bg-black-50)
+                                );
+
+                            .fa-Circle {
+                                background: color-mix(
+                                    in srgb,
+                                    var(--skin-color) 65%,
+                                    var(--bg-black-900)
+                                );
+                            }
+                        }
+                    }
+                    &_add {
+                        .bd_Bottom {
+                            border-bottom: 1px solid
+                                color-mix(
+                                    in srgb,
+                                    var(--skin-color) 15%,
+                                    var(--bg-black-50)
+                                );
+                            .fa-Circle {
+                                background: color-mix(
+                                    in srgb,
+                                    var(--skin-color) 35%,
+                                    var(--bg-black-50)
+                                );
+                                .icon {
+                                    color: var(--bg-black-100);
+                                }
+                            }
+                        }
+                    }
+                    .bd_Last {
+                        border-bottom: 1px solid
+                            color-mix(
+                                in srgb,
+                                var(--skin-color) 15%,
+                                var(--bg-black-50)
+                            );
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 992px) {
     body.dark {
         .aside {

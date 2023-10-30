@@ -84,7 +84,7 @@ const StyledGlobalStyle = createGlobalStyle`
     //                     width: calc(100% + 10px);
     //                 }
     //                 .centerNB {
-    //                     background-image: url(${require(`../../assets/img/a.png`)});i
+    //                     background-image: url(${require(`../../assets/img/profileBG.webp`)});i
     //                     background-repeat: no-repeat;
     //                     background-position: top;
     //                     background-size: cover;
@@ -116,6 +116,3 @@ function GlobalStyle() {
 }
 
 export default GlobalStyle;
-
-
-

@@ -1,20 +1,5 @@
 @import "../../assets/styles/00_utils/3_mixins";
 
-.lang-icon {
-    max-width: 59.0625px;
-    color: var(--text-black-900);
-    &:hover {
-        fill: var(--skin-color);
-    }
-}
-.lang {
-    flex: 2;
-    min-width: 90px;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text-black-900);
-    margin: 0;
-}
 .flag {
     display: flex;
     align-items: center;
@@ -35,6 +20,8 @@
     display: flex;
     position: absolute;
     top: 57px;
+    width: 157.5px;
+
     @include transform(translateX(-200px) scaleY(0));
     opacity: 0;
     // border-radius: 4px;
@@ -42,7 +29,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 1;
     transition: all 0.3s ease-in-out;
-
 }
 
 .flagLogo {

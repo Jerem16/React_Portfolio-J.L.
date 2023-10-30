@@ -13,9 +13,11 @@ function NavMenu({ navLinks, handleClick, language, id }) {
             {navLinks.map((link) => (
                 <li onClick={handleClick} className="head-btn" key={nanoid()}>
                     <i
-                        className={`${
+                        className={`icon ${ 
                             location.pathname === link.to ? "active-link " : ""
-                        }${link.icon}`}
+                        }
+                        
+                        ${link.icon}`}
                     ></i>
                     <NavLink
                         to={link.to}

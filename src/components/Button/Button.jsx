@@ -14,7 +14,7 @@ const Button = ({
     className,
     href,
     target,
-    children,
+    children, // Use children for the content
     title,
     onClick,
     disabled,
@@ -22,7 +22,7 @@ const Button = ({
     switch (type) {
         case BUTTON_TYPES.DEFAULT:
             return (
-                <Link to={to} className={`btn ${className}`}>
+                <Link href={to} className={`btn ${className}`}>
                     {children}
                 </Link>
             );
@@ -45,7 +45,7 @@ const Button = ({
             );
         default:
             return (
-                <Link to={to} className={`btn ${className}`}>
+                <Link href={to} className={`btn ${className}`}>
                     {children}
                 </Link>
             );

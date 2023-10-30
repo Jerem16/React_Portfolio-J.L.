@@ -7,8 +7,6 @@
 a.btn_a {
     border: none;
     display: inline-flex;
-    // align-items: center;
-    // justify-content: center;
     white-space: nowrap;
     text-decoration: none;
     @include p;
@@ -43,13 +41,11 @@ a.btn_a {
             opacity: 1;
             background-color: white;
             padding: 15px 35px 15px 35px;
-            // transition: all 300ms;
             transition: all 450ms;
-            // -webkit-font-smoothing: antialiased;
         }
     }
     &:visited {
-        color: $color-white;
+        color: #fff;
     }
 
     &::after {
@@ -81,7 +77,6 @@ a.btn_a {
         transition: all 450ms;
     }
 }
-
 
 .btn_left {
     margin: 3em 0.937em 0 0;

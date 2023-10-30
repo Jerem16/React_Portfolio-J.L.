@@ -91,7 +91,7 @@
         justify-content: center;
         &:hover {
             a.active-link,
-            i.active-link {
+            .icon.active-link {
                 color: var(--text-black-900);
             }
         }
@@ -106,7 +106,8 @@
             width: 100%;
 
             border-bottom: 1px solid var(--bg-black-50);
-            a {
+            a,
+            .lang {
                 flex: 2;
                 min-width: 90px;
                 font-size: 16px;
@@ -115,10 +116,11 @@
                 padding: 16.625px 0px;
             }
             a.active-link,
-            i.active-link {
+            .icon.active-link {
                 color: var(--skin-color);
             }
-            i {
+            .icon,
+            .lang-icon {
                 flex: 1;
                 max-width: 59.0625px;
                 margin-right: 15px;
@@ -129,11 +131,11 @@
                 a {
                     color: var(--skin-color);
                 }
-                i {
+                .icon {
                     color: var(--skin-color);
                 }
                 a.active-link,
-                i.active-link {
+                .icon.active-link {
                     color: var(--skin-color);
                 }
             }

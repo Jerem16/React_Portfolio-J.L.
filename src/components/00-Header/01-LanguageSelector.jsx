@@ -67,6 +67,8 @@ const LanguageSelector = ({ text }) => {
                                 onClick={() => changeLanguage("en")}
                                 src={en}
                                 alt="flag-en"
+                                width={30}
+                                height={30}
                             />
                             <img
                                 className={`flagLogo ${
@@ -75,6 +77,8 @@ const LanguageSelector = ({ text }) => {
                                 onClick={() => changeLanguage("fr")}
                                 src={fr}
                                 alt="flag-fr"
+                                width={30}
+                                height={30}
                             />
                             <img
                                 className={`flagLogo ${
@@ -83,6 +87,8 @@ const LanguageSelector = ({ text }) => {
                                 onClick={() => changeLanguage("de")}
                                 src={de}
                                 alt="flag-de"
+                                width={30}
+                                height={30}
                             />
                             <img
                                 className={`flagLogo ${
@@ -91,6 +97,8 @@ const LanguageSelector = ({ text }) => {
                                 onClick={() => changeLanguage("it")}
                                 src={it}
                                 alt="flag-it"
+                                width={30}
+                                height={30}
                             />
                             <img
                                 className={`flagLogo ${
@@ -99,12 +107,13 @@ const LanguageSelector = ({ text }) => {
                                 onClick={() => changeLanguage("es")}
                                 src={es}
                                 alt="flag-es"
+                                width={30}
+                                height={30}
                             />
                         </>
                     )}
                 </span>
             </li>
-            {/* <li id="nav-language"></li> */}
         </>
     );
 };

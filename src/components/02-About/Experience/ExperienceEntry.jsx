@@ -1,11 +1,14 @@
 import React from "react";
 import tech from "../../../assets/data/technologie.json";
-import shortid from "shortid";
+import { nanoid } from "nanoid";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
     return (
         <article
             className={`timeline-text ${entry.addClass}`}
-            key={entry.index}
+            key={entry.id}
             onClick={() => toggleArticle(entry.id)}
             style={{ marginBottom: `${entry.size}px` }}
         >
@@ -19,8 +22,9 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                 {entry.jobTitle}
                 <div className="bd_Bottom">
                     <div className="fa-Circle">
-                        <i
-                            className={`fa fa-chevron-up`}
+                        <FontAwesomeIcon
+                            icon={faChevronUp}
+                            className="icon"
                             style={{
                                 display: `${entry.display}`,
                                 transformOrigin: "center",
@@ -32,7 +36,7 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                                 transition: "transform 0.3s ease-in-out",
                             }}
                             id="darkArrow"
-                        ></i>
+                        />
                     </div>
                 </div>
             </h4>
@@ -45,7 +49,7 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                 }}
             >
                 <p
-                    className={`timeline-anime ${entry.description.class} ${
+                    className={`timeline-anime ${
                         openArticleStates[entry.id] ? "open" : "close"
                     }`}
                 >
@@ -65,7 +69,7 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                                             ? "open"
                                             : "close"
                                     }`}
-                                    key={shortid.generate()}
+                                    key={nanoid()}
                                     style={{
                                         transitionDelay: `${itemIndex * 0.1}s`,
                                     }}
@@ -81,7 +85,7 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                         (technology, index) =>
                             entry.technologies &&
                             entry.technologies[technology] === true && (
-                                <div key={shortid.generate()}>
+                                <div key={nanoid()}>
                                     <abbr
                                         title={
                                             tech.technologySymbols[technology]
@@ -98,6 +102,8 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                                                 <img
                                                     src={require(`../../../assets/img/skillsIcons/${tech.technologyImages[technology]}`)}
                                                     alt={technology}
+                                                    width={30}
+                                                    height={20}
                                                 />
                                             )}
                                     </abbr>
