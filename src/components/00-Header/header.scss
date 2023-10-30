@@ -91,7 +91,7 @@
         justify-content: center;
         &:hover {
             a.active-link,
-            .icon.active-link {
+            a.active-link .icon {
                 color: var(--text-black-900);
             }
         }
@@ -104,7 +104,7 @@
 
             height: 56.25px;
             width: 100%;
-
+            cursor: pointer;
             border-bottom: 1px solid var(--bg-black-50);
             a,
             .lang {
@@ -116,8 +116,12 @@
                 padding: 16.625px 0px;
             }
             a.active-link,
-            .icon.active-link {
+            a.active-link .icon {
                 color: var(--skin-color);
+            }
+            a .icon {
+                margin-left: 15px;
+                color: var(--text-black-900);
             }
             .icon,
             .lang-icon {
@@ -134,9 +138,11 @@
                 .icon {
                     color: var(--skin-color);
                 }
-                a.active-link,
-                .icon.active-link {
+                a.active-link {
                     color: var(--skin-color);
+                    .icon {
+                        color: var(--skin-color);
+                    }
                 }
             }
         }

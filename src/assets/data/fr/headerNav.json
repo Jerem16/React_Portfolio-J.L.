@@ -4,30 +4,30 @@
     "language": "Langue",
     "navLinks": [
         {
-            "to": "/",
+            "to": "home",
             "text": "Accueil",
             "icon": "fa fa-home"
         },
         {
-            "to": "/about",
+            "to": "about",
 
             "text": "À propos",
             "icon": "fa fa-user"
         },
         {
-            "to": "/services",
+            "to": "services",
 
             "text": "Services",
             "icon": "fa fa-list"
         },
         {
-            "to": "/portfolio",
+            "to": "portfolio",
 
             "text": "Portfolio",
             "icon": "fa fa-briefcase"
         },
         {
-            "to": "/contact",
+            "to": "contact",
 
             "text": "Contact",
             "icon": "fa fa-comments"
