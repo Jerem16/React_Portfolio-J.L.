@@ -4,12 +4,6 @@
     "language": "Langue",
     "navLinks": [
         {
-            "to": "home",
-            "offset": -30,
-            "text": "Accueil",
-            "icon": "fa fa-home"
-        },
-        {
             "to": "about",
             "offset": -30,
             "text": "À propos",
@@ -32,6 +26,15 @@
             "offset": -30,
             "text": "Contact",
             "icon": "fa fa-comments"
+        }
+    ],
+    "startLinks": [
+        {
+            "to": "home",
+            "offset": -30,
+            "text": "Accueil",
+            "icon": "fa fa-home",
+            "class": "active-link"
         }
     ]
 }

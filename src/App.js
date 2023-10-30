@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
 import Error404 from "./pages/Error404/Error404";
 import GlobalStyle from "./utils/style/GlobalStyle";
+import HomeLoading from "./pages/HomeLoading/HomeLoading";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
 // import ScrollToTop from "./components/00-Header/ScrollToTop/ScrollToTop";
@@ -27,7 +28,7 @@ function App() {
                     <Routes>
                         <>
                             <Route path="/home" element={<Test />} />
-                            {/* <Route path="*" element={<Error404 />} /> */}
+                            <Route path="/" element={<HomeLoading />} />
                         </>
                     </Routes>
                 </main>

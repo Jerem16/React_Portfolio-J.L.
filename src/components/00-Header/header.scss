@@ -94,6 +94,14 @@
             a.active-link .icon {
                 color: var(--text-black-900);
             }
+            .activeStart {
+                span {
+                    color: var(--text-black-900);
+                }
+                .icon {
+                    color: var(--text-black-900);
+                }
+            }
         }
         li {
             @include row_R;
@@ -143,6 +151,14 @@
                     .icon {
                         color: var(--skin-color);
                     }
+                }
+            }
+            .activeStart {
+                span {
+                    color: var(--skin-color);
+                }
+                .icon {
+                    color: var(--skin-color);
                 }
             }
         }

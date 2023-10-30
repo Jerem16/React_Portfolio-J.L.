@@ -14,6 +14,7 @@ function ThemeSelector() {
 
     const changeToTheme = (themeColor) => {
         dispatch(changeTheme(themeColor));
+        setIsSelectorOpen(!isSelectorOpen);
     };
 
     const toggleDarkMode = useCallback(() => {
@@ -38,6 +39,7 @@ function ThemeSelector() {
         if (!document.body.classList.contains("dark")) {
             toggleDarkMode();
         }
+        // eslint-disable-next-line
     }, []);
 
     return (

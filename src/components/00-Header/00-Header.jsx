@@ -4,9 +4,8 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import ThemeSelector from "./ThemeSelector/ThemeSelector";
 import HeaderDataLoader from "./HeaderDataLoader";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleClasses } from "../../redux/reducers/classesSlice";
+import { toggleClasses, setClasse } from "../../redux/reducers/classesSlice";
 import NavMenu from "./NavMenu";
-
 import "./header.scss";
 
 function Header() {
@@ -56,7 +55,7 @@ function Header() {
                                 // offset={-60}
                                 duration={500}
                             >
-                                <div 
+                                <div
                                 // onClick={handleClick}
                                 >
                                     <span>{headerData.logoTitle}</span>
@@ -71,12 +70,14 @@ function Header() {
                                 navLinks={headerData.navLinks}
                                 handleClick={handleClick}
                                 language={headerData.language}
+                                startLinks={headerData.startLinks}
                             />
                         ) : (
                             <NavMenu
                                 id="desktop"
                                 navLinks={headerData.navLinks}
                                 language={headerData.language}
+                                startLinks={headerData.startLinks}
                             />
                         )}
 

@@ -1,0 +1,43 @@
+.error-404 {
+    flex: 1;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: var(--bg-black-900);
+    text-align: center;
+
+    .borderError {
+        min-width: 50%;
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        .error-404_h1 {
+            font-size: 25vw;
+            color: var(--skin-color);
+            border: 1px solid #fff;
+            padding: 0 20px;
+            margin: 20px;
+        }
+
+        .error-404_p {
+            font-size: 1.4rem;
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .error-404_a {
+            text-decoration: underline;
+            color: var(--skin-color);
+            display: block;
+            margin-top: 15px;
+            font-size: 1.4rem;
+        }
+    }
+}
