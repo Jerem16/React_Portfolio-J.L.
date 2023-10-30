@@ -11,29 +11,19 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
 // import ScrollToTop from "./components/00-Header/ScrollToTop/ScrollToTop";
 import { useSelector } from "react-redux";
-import Test from "./App copy";
 
 // import "./main.scss";
 
-function App() {
-    const navToggler = useSelector((state) => state.classes.addClass);
+function Test() {
     return (
-        <BrowserRouter>
-            <div className={`${navToggler}`}>
-                <GlobalStyle />
-                <NavToggler />
-                <Header />
-                <main className="main-content">
-                    <Routes>
-                        <>
-                            <Route path="/home" element={<Test />} />
-                            {/* <Route path="*" element={<Error404 />} /> */}
-                        </>
-                    </Routes>
-                </main>
-            </div>
-        </BrowserRouter>
+        <>
+            <Home />
+            <About />
+            <Services />
+            <Portfolio />
+            <Contact />
+        </>
     );
 }
 
-export default App;
+export default Test;

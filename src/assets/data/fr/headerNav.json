@@ -5,7 +5,7 @@
     "navLinks": [
         {
             "to": "home",
-            "offset": 0,
+            "offset": -30,
             "text": "Accueil",
             "icon": "fa fa-home"
         },
@@ -23,7 +23,7 @@
         },
         {
             "to": "portfolio",
-            "offset": 30,
+            "offset": -30,
             "text": "Portfolio",
             "icon": "fa fa-briefcase"
         },
