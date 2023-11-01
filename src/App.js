@@ -13,7 +13,7 @@ function App() {
     return (
         <BrowserRouter>
             <ScrollToTop>
-                <div className={`${navToggler}`}>
+                <div className={`${navToggler}`} id="top">
                     <GlobalStyle />
                     <NavToggler />
                     <Routes>

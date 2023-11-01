@@ -7,25 +7,17 @@ import data from "../../assets/data/header.json";
 function NavItem({ handleClick, startLinks }) {
     const dispatch = useDispatch();
     const initClass = useSelector((state) => state.classes.menuSwitcher);
-    const handleSetActive = (to) => {
-        if (to === "home") {
-            console.log(`Link with target ${to} is now active.`);
-            // Ajoutez votre logique pour mettre en surbrillance le lien actif vers "home".
-        }
-    };
 
-    const checkIfNoActiveLinks = () => {
-        // dispatch(setClass("active-link"));
-    };
     useEffect(() => {
-        window.scrollTo(0, 0);
         const activeStartElements = document.querySelectorAll(
             ".aside .nav li a.active-link"
         );
 
-        if (activeStartElements.length <= 0) {
-            dispatch(setClass("active-link"));
+        if (activeStartElements.length === 0) {
+            // Dispatch the setClass action with a string as the payload
+            dispatch(setClass("home"));
         } else {
+            // Dispatch the setClass action with an empty string as the payload
             dispatch(setClass(""));
         }
     }, [dispatch]);
@@ -34,16 +26,13 @@ function NavItem({ handleClick, startLinks }) {
         <li className={`head-btn`}>
             <Link
                 rel="nofollow"
-                href={`#${data.startLinks[0].to}`}
+                href={`#${initClass}`}
                 activeClass="active-link"
                 spy={true}
                 smooth={true}
                 offset={0}
                 duration={500}
-                to={data.startLinks[0].to}
-                // className={initClass}
-                onClick={checkIfNoActiveLinks}
-                onSetActive={handleSetActive}
+                to={initClass}
             >
                 <i className={`icon ${data.startLinks[0].icon}`}></i>
                 <span onClick={handleClick}>{startLinks[0].text}</span>
