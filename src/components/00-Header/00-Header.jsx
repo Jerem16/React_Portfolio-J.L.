@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
-// import { Link } from "react-router-dom";
 import ThemeSelector from "./ThemeSelector/ThemeSelector";
 import HeaderDataLoader from "./HeaderDataLoader";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleClasses, setClasse } from "../../redux/reducers/classesSlice";
+import { useDispatch } from "react-redux";
+import { toggleClasses } from "../../redux/reducers/classesSlice";
 import NavMenu from "./NavMenu";
+import dataBase from "../../assets/data/header.json";
 import "./header.scss";
 
 function Header() {
+    const data = dataBase;
     const dispatch = useDispatch();
 
     const handleClick = () => {
@@ -58,8 +59,8 @@ function Header() {
                                 <div
                                 // onClick={handleClick}
                                 >
-                                    <span>{headerData.logoTitle}</span>
-                                    {headerData.logoSpanTitle}
+                                    <span>{data.logoTitle}</span>
+                                    {data.logoSpanTitle}
                                 </div>
                             </Link>
                         </div>
@@ -89,4 +90,4 @@ function Header() {
     );
 }
 
-export default React.memo(Header);
+export default Header;

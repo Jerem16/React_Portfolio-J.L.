@@ -1,9 +1,9 @@
 import React from "react";
-import PortfolioComp from "../../components/04-portfolio/00-LayoutPortfolio";
-import "../Services/services.scss";
+import PortfolioComp from "../../../components/04-portfolio/00-LayoutPortfolio";
+import "../section_services/services.scss";
 import "./portfolio.scss";
 
-function Portfolio() {
+function SectionPortfolio () {
     return (
         <section className="portfolio section" id="portfolio">
             <div className="container">
@@ -13,4 +13,4 @@ function Portfolio() {
     );
 }
 
-export default Portfolio;
+export default SectionPortfolio ;

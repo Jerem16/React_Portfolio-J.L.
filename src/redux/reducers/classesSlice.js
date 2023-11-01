@@ -5,7 +5,7 @@ const initialState = {
     asideWidth: "270",
     desktop1280: "1280",
     tab1080: "1080",
-    menuSwitcher: "",
+    menuSwitcher: null,
 };
 
 const classesSlice = createSlice({

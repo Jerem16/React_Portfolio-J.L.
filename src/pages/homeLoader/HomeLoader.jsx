@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./error.scss";
 
-function HomeLoading() {
+function HomeLoader() {
     const navigate = useNavigate();
 
     const [countdown, setCountdown] = useState(4);
@@ -48,4 +48,4 @@ function HomeLoading() {
     );
 }
 
-export default HomeLoading;
+export default HomeLoader;

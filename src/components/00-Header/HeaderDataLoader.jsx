@@ -11,4 +11,4 @@ const HeaderDataLoader = ({ children }) => {
     return children(headerData);
 };
 
-export default HeaderDataLoader;
+export default React.memo(HeaderDataLoader);

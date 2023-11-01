@@ -1,40 +1,22 @@
 {
-    "logoTitle": "P",
-    "logoSpanTitle": "ortfolio",
     "language": "Langue",
     "navLinks": [
         {
-            "to": "about",
-            "offset": -30,
-            "text": "À propos",
-            "icon": "fa fa-user"
+            "text": "À propos"
         },
         {
-            "to": "services",
-            "offset": -30,
-            "text": "Services",
-            "icon": "fa fa-list"
+            "text": "Services"
         },
         {
-            "to": "portfolio",
-            "offset": -30,
-            "text": "Portfolio",
-            "icon": "fa fa-briefcase"
+            "text": "Portfolio"
         },
         {
-            "to": "contact",
-            "offset": -30,
-            "text": "Contact",
-            "icon": "fa fa-comments"
+            "text": "Contact"
         }
     ],
     "startLinks": [
         {
-            "to": "home",
-            "offset": -30,
-            "text": "Accueil",
-            "icon": "fa fa-home",
-            "class": "active-link"
+            "text": "Accueil"
         }
     ]
 }

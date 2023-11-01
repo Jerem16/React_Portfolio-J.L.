@@ -1,0 +1,33 @@
+{
+    "logoTitle": "P",
+    "logoSpanTitle": "ortfolio",
+    "navLinks": [
+        {
+            "to": "about",
+            "offset": -0,
+            "icon": "fa fa-user"
+        },
+        {
+            "to": "services",
+            "offset": -0,
+            "icon": "fa fa-list"
+        },
+        {
+            "to": "portfolio",
+            "offset": -0,
+            "icon": "fa fa-briefcase"
+        },
+        {
+            "to": "contact",
+            "offset": -0,
+            "icon": "fa fa-comments"
+        }
+    ],
+    "startLinks": [
+        {
+            "to": "home",
+            "offset": -30,
+            "icon": "fa fa-home"
+        }
+    ]
+}
