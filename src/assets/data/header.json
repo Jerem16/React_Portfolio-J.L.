@@ -25,7 +25,6 @@
     ],
     "startLinks": [
         {
-            "to": "home",
             "offset": -30,
             "icon": "fa fa-home"
         }

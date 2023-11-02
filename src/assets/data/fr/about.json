@@ -2,6 +2,7 @@
     "education": [
         {
             "sectionTitle": "Éducation",
+            "classTitle": "",
             "sectionId": "Ed1",
             "year": "1993 - 1995",
             "title": "Géomètre-Topographe",
@@ -52,6 +53,7 @@
     "experience": [
         {
             "sectionTitle": "Expérience",
+            "classTitle": "experience",
             "sectionId": "Exp1",
             "year": "2021 - 2022",
             "title": "Développeur Web",

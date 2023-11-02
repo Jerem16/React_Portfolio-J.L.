@@ -11,7 +11,6 @@ const ModalForm = ({ title, description, description2 }) => (
                     <br />
                     {description2}
                 </p>
-                {/* <p>{description2}</p> */}
             </div>
         </div>
     </div>

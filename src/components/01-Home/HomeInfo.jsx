@@ -1,4 +1,4 @@
-import Button from "../Button/Button";
+import Button, { BUTTON_TYPES } from "../Button/Button";
 
 function HomeInfo({
     welcome,
@@ -52,11 +52,14 @@ function HomeInfo({
                 </div>
             </article>
             <Button
+                href="#contact"
+                type={BUTTON_TYPES.DOWNLOAD}
                 btnName={hireButtonText}
-                children={hireButtonText}
                 to={buttons.href}
                 className={buttons.class}
-            />
+            >
+                {hireButtonText}
+            </Button>
         </div>
     );
 }

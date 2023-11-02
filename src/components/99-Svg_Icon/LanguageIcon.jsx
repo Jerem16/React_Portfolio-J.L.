@@ -1,11 +1,8 @@
 import React from "react";
 import "./languageIcon.scss";
-import { Link } from "react-router-dom";
+
 
 const LanguageIcon = ({ addClass }) => {
-    /*
-        <LanguageIcon addClass="myClass" />
-    */
     return (
         <span className={`form_lang-icon ${addClass}`}>
             <svg

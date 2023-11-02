@@ -10,7 +10,7 @@ const ModalService = ({ service, iconClass }) => (
             <h4>{service.title}</h4>
             <p>{service.modalDescription}</p>
             <ul>
-                {service.details.map((detail, detailIndex) => (
+                {service.details.map((detail) => (
                     <li key={nanoid()}>
                         <i className="fas fa-check"></i>
                         {detail}

@@ -1,11 +1,7 @@
 import React from "react";
 import "./closeIcon.scss";
-import { Link } from "react-router-dom";
 
 const CloseIcon = ({ addClass }) => {
-    /*
-        <LanguageIcon addClass="myClass" />
-    */
     return (
         <span className={`${addClass}`}>
             <svg

@@ -1,23 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
+// eslint-disable-next-line
+// sonarlint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
 import { nanoid } from "nanoid";
 import LanguageSelector from "./01-LanguageSelector";
-import { useDispatch, useSelector } from "react-redux";
-import { setClass } from "../../redux/reducers/classesSlice";
 import data from "../../assets/data/header.json";
 import NavItem from "./NavItem";
-
+import { useSelector } from "react-redux";
 function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
-    const dispatch = useDispatch();
-    const initClass = useSelector((state) => state.classes.menuSwitcher);
-
-    const checkIfNoActiveLinks = () => {
-        dispatch(setClass(""));
-    };
-
+    const langAddClass = useSelector((state) => state.classes.menuSwitcher);
     return (
         <div>
-            <ul className="nav" id={id}>
+            <ul className={`nav ${langAddClass}`} id={id}>
                 <NavItem startLinks={startLinks} handleClick={handleClick} />
                 {navLinks.map((link, index) => (
                     <li className="head-btn" key={nanoid()}>
@@ -30,7 +24,6 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
                             offset={data.navLinks[index].offset}
                             duration={500}
                             to={data.navLinks[index].to}
-                            onClick={checkIfNoActiveLinks}
                         >
                             <i
                                 className={`icon ${data.navLinks[index].icon}`}

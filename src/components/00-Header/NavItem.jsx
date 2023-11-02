@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
+// eslint-disable-next-line
+// sonarlint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
-import { setClass } from "../../redux/reducers/classesSlice";
+import { setNavScroll } from "../../redux/reducers/classesSlice";
 import data from "../../assets/data/header.json";
 
 function NavItem({ handleClick, startLinks }) {
     const dispatch = useDispatch();
-    const initClass = useSelector((state) => state.classes.menuSwitcher);
+    const initClass = useSelector((state) => state.classes.navScroll);
 
     useEffect(() => {
         const activeStartElements = document.querySelectorAll(
@@ -14,11 +16,9 @@ function NavItem({ handleClick, startLinks }) {
         );
 
         if (activeStartElements.length === 0) {
-            // Dispatch the setClass action with a string as the payload
-            dispatch(setClass("home"));
+            dispatch(setNavScroll("home"));
         } else {
-            // Dispatch the setClass action with an empty string as the payload
-            dispatch(setClass(""));
+            dispatch(setNavScroll(""));
         }
     }, [dispatch]);
 

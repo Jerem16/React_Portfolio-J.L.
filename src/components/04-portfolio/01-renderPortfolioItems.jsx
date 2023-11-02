@@ -1,6 +1,5 @@
 import React from "react";
 import portfolio_img from "../../assets/data/portfolio_img.json";
-// import shortid from "shortid";
 import { nanoid } from "nanoid";
 
 

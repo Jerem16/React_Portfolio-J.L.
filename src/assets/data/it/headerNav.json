@@ -1,32 +1,22 @@
 {
-    "logoTitle": "P",
-    "logoSpanTitle": "ortfolio",
     "language": "Lingua",
     "navLinks": [
         {
-            "to": "/",
-            "text": "Homepage",
-            "icon": "fa fa-home"
+            "text": "Chi siamo"
         },
         {
-            "to": "/about",
-            "text": "Chi siamo",
-            "icon": "fa fa-user"
+            "text": "Servizi"
         },
         {
-            "to": "/services",
-            "text": "Servizi",
-            "icon": "fa fa-list"
+            "text": "Portafoglio"
         },
         {
-            "to": "/portfolio",
-            "text": "Portafoglio",
-            "icon": "fa fa-briefcase"
-        },
+            "text": "Contatto"
+        }
+    ],
+    "startLinks": [
         {
-            "to": "/contact",
-            "text": "Contatto",
-            "icon": "fa fa-comments"
+            "text": "Homepage"
         }
     ]
 }

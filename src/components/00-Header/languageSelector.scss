@@ -6,56 +6,52 @@
     justify-content: center;
     position: relative;
     cursor: pointer;
+    border-bottom: 1px solid var(--bg-black-50);
     &:hover {
-        .lang {
+        #lang {
             color: var(--skin-color);
         }
         .color-icon {
             fill: var(--skin-color);
         }
     }
-}
-
-.language-menu {
-    display: flex;
-    position: absolute;
-    top: 57px;
-    width: 157.5px;
-
-    @include transform(translateX(-200px) scaleY(0));
-    opacity: 0;
-    // border-radius: 4px;
-    padding: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    transition: all 0.3s ease-in-out;
-}
-
-.flagLogo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    cursor: pointer;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-
-    &:hover,
-    &.active {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
+    .language-menu {
+        display: flex;
+        position: absolute;
+        top: 57px;
+        width: 157.5px;
+        height: 56.25px;
+        @include transform(translateX(-200px) scaleY(0));
+        opacity: 0;
+        padding: 15px 15px;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
     }
-}
+    .flagLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 19px;
+        height: 19px;
+        margin: auto;
+        cursor: pointer;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
 
-.flag.open .language-menu {
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-    @include transform(translateX(0px) scaleY(1));
-}
-.flag.close .language-menu {
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-    @include transform(translateX(-200px) scaleY(0));
+        &:hover,
+        &.active {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+    }
+    &.open .language-menu {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        @include transform(translateX(0px) scaleY(1));
+    }
+    &.close .language-menu {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        @include transform(translateX(-200px) scaleY(0));
+    }
 }

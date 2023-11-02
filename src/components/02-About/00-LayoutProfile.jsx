@@ -1,7 +1,5 @@
 import React from "react";
 import Button, { BUTTON_TYPES } from "../Button/Button";
-// import shortid from "shortid";
-
 import Timeline from "./02-TimeLine";
 import Skills from "./PersonalSkills";
 import PersonalInfo from "./PersonalInfo";
@@ -13,7 +11,7 @@ function Profile() {
         class: "btn_left",
     };
     const button2 = {
-        to: "/contact",
+        to: "#contact",
         class: "btn_right ",
     };
 
@@ -48,21 +46,20 @@ function Profile() {
                                 <Skills skills={profileData.profile.skills} />
                                 <div className="buttons">
                                     <Button
-                                        children={
-                                            profileData.profile.buttons.btnName1
-                                        }
                                         href={CV}
                                         target="_blank"
                                         type={BUTTON_TYPES.DOWNLOAD}
                                         className={button1.class}
-                                    />
+                                    >
+                                        {profileData.profile.buttons.btnName1}
+                                    </Button>
                                     <Button
-                                        children={
-                                            profileData.profile.buttons.btnName2
-                                        }
-                                        to={button2.to}
+                                        href="#contact"
+                                        type={BUTTON_TYPES.DOWNLOAD}
                                         className={button2.class}
-                                    />
+                                    >
+                                        {profileData.profile.buttons.btnName2}
+                                    </Button>
                                 </div>
                             </div>
                             <div className="height_val"></div>

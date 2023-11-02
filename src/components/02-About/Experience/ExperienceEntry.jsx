@@ -1,5 +1,5 @@
 import React from "react";
-import tech from "../../../assets/data/technologie.json";
+import tech from "../../../assets/data/technology.json";
 import { nanoid } from "nanoid";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

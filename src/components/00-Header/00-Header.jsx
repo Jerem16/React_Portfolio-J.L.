@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import ThemeSelector from "./ThemeSelector/ThemeSelector";
 import HeaderDataLoader from "./HeaderDataLoader";

@@ -39,48 +39,42 @@ function SectionHome() {
     return (
         <HomeDataLoader>
             {(homeData) => (
-                <>
-                    <section className="home section" id="home">
-                        <div id="top"></div>
-                        <div className="container">
-                            <div className="row_top"></div>
-                            <div className="bgDraw">
-                                <CanvasBackground />
-                            </div>
-                            <div className="row_center">
-                                <div className="row">
-                                    <div className="border-design"></div>
-                                    <div className="border-design2"></div>
-                                    <HomeInfo
-                                        welcome={homeData.home.welcome}
-                                        name={homeData.home.name}
-                                        presentation={
-                                            homeData.home.presentation
-                                        }
-                                        titleDescription={
-                                            homeData.home.titleDescription
-                                        }
-                                        description={homeData.home.description}
-                                        additionalDescription={
-                                            homeData.home.additionalDescription
-                                        }
-                                        quote={homeData.home.quote}
-                                        hireButtonText={
-                                            homeData.home.hireButtonText
-                                        }
-                                    />
-                                    <HomeImage
-                                        imageSrc={homeData.home.imageSrc}
-                                    />
-                                </div>
-                            </div>
-                            <div className="bgDraw2">
-                                <CanvasBackground2 />
-                            </div>
-                            <div className="col_end"></div>
+                <section className="home section" id="home">
+                    <div id="top"></div>
+                    <div className="container">
+                        <div className="row_top"></div>
+                        <div className="bgDraw">
+                            <CanvasBackground />
                         </div>
-                    </section>
-                </>
+                        <div className="row_center">
+                            <div className="row">
+                                <div className="border-design"></div>
+                                <div className="border-design2"></div>
+                                <HomeInfo
+                                    welcome={homeData.home.welcome}
+                                    name={homeData.home.name}
+                                    presentation={homeData.home.presentation}
+                                    titleDescription={
+                                        homeData.home.titleDescription
+                                    }
+                                    description={homeData.home.description}
+                                    additionalDescription={
+                                        homeData.home.additionalDescription
+                                    }
+                                    quote={homeData.home.quote}
+                                    hireButtonText={
+                                        homeData.home.hireButtonText
+                                    }
+                                />
+                                <HomeImage imageSrc={homeData.home.imageSrc} />
+                            </div>
+                        </div>
+                        <div className="bgDraw2">
+                            <CanvasBackground2 />
+                        </div>
+                        <div className="col_end"></div>
+                    </div>
+                </section>
             )}
         </HomeDataLoader>
     );

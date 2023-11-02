@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import PropTypes from "prop-types";
 
 const Modal = ({ opened, Content, closeIcon }) => {
-    const modalClass = useSelector((state) => state.classes.addClass);
     const [isOpened, setIsOpened] = useState(opened);
 
     return (

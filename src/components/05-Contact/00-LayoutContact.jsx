@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import { loadLanguageData } from "../../utils/loadLanguageData";
+import React from "react";
 import ContactForm from "./02-ContactForm";
 import ContactInfoItem from "./01-ContactInfoItem";
 import ContactDataLoader from "./ContactDataLoader";

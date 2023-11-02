@@ -5,7 +5,8 @@ const initialState = {
     asideWidth: "270",
     desktop1280: "1280",
     tab1080: "1080",
-    menuSwitcher: "top",
+    menuSwitcher: "langClose",
+    navScroll: "top",
 };
 
 const classesSlice = createSlice({
@@ -28,9 +29,13 @@ const classesSlice = createSlice({
         setClass: (state, action) => {
             state.menuSwitcher = action.payload;
         },
+        setNavScroll: (state, action) => {
+            state.navScroll = action.payload;
+        },
     },
 });
 
-export const { setAsideWidth, toggleClasses, setClass } = classesSlice.actions;
+export const { setAsideWidth, toggleClasses, setClass, setNavScroll } =
+    classesSlice.actions;
 
 export default classesSlice.reducer;

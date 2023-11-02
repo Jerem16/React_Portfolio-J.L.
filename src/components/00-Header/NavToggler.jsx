@@ -12,9 +12,9 @@ function NavToggler() {
 
     const toggleClick = () => {
         const newClass = addClass === "open" ? "close" : "open";
-        const newWidht = addWidth === "0" ? "270" : "0";
+        const newWidth = addWidth === "0" ? "270" : "0";
         dispatch(toggleClasses(newClass));
-        dispatch(setAsideWidth(newWidht));
+        dispatch(setAsideWidth(newWidth));
     };
 
     return (
