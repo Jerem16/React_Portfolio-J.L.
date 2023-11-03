@@ -170,7 +170,7 @@ body.dark {
     }
     body.light {
         .aside {
-            @include drop-shadow(0 4px 30px rgba(48, 46, 77, 0.1));
+            @include drop-shadow(0 4px 15px rgba(48, 46, 77, 0.1));
             background-color: rgba-color($bg-black-900-light, 0.5);
             -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
@@ -183,7 +183,7 @@ body.dark {
             }
             .logo {
                 background-color: rgba-color($bg-black-900-light, 0.5);
-                box-shadow: 0 4px 30px rgba(48, 46, 77, 0.1);
+                box-shadow: 0 4px 7.5px rgba(48, 46, 77, 0.1);
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
             }
@@ -199,7 +199,7 @@ body.dark {
             .switcher-container {
                 .style-switcher {
                     background-color: rgba-color($bg-black-900-light, 0.05);
-                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
                     -webkit-backdrop-filter: blur(5px);
                     backdrop-filter: blur(5px);
                     border: none;

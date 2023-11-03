@@ -7,6 +7,7 @@ import HomeImage from "../../../components/01-Home/HomeImage";
 import useLangData from "../../../utils/useLangData";
 import HomeDataLoader from "../../../components/01-Home/HomeDataLoader";
 import "./home.scss";
+import BackgroundTest from "../../../components/99-Svg_Icon/BackgroundTest";
 
 function SectionHome() {
     const data = useLangData("home.json");
@@ -40,16 +41,19 @@ function SectionHome() {
         <HomeDataLoader>
             {(homeData) => (
                 <section className="home section" id="home">
+                    <BackgroundTest />
                     <div id="top"></div>
                     <div className="container">
                         <div className="row_top"></div>
                         <div className="bgDraw">
                             <CanvasBackground />
                         </div>
+
                         <div className="row_center">
                             <div className="row">
                                 <div className="border-design"></div>
                                 <div className="border-design2"></div>
+
                                 <HomeInfo
                                     welcome={homeData.home.welcome}
                                     name={homeData.home.name}

@@ -15,7 +15,7 @@ const LayoutContact = () => {
                         </div>
                     </div>
                     <div className="row_center">
-                        <div className="about-content ">
+                        <div className="contact-content ">
                             <h3 className="contact-title">
                                 {data.contact["contact-title"]}
                             </h3>
@@ -23,6 +23,8 @@ const LayoutContact = () => {
                                 {data.contact["contact-sub-title"]}
                             </h4>
                         </div>
+                    </div>
+                    <div className="row_center">
                         <div className="row-col">
                             {contactIcon.contactInfoItem.map((item, index) => (
                                 <ContactInfoItem
@@ -35,15 +37,19 @@ const LayoutContact = () => {
                                 />
                             ))}
                         </div>
-                        <div className="about-content">
+                    </div>
+                    <div className="row_center">
+                        <div className="contact-content">
                             <h3 className="contact-title">
                                 {data.contact["send-email-title"]}
                             </h3>
                             <h4 className="contact-sub-title">
                                 {data.contact["send-email-sub-title"]}
                             </h4>
-                        </div>{" "}
-                        <div className="about-content">
+                        </div>
+                    </div>
+                    <div className="row_center">
+                        <div className="contact-content">
                             <ContactForm
                                 lastName={data.contact.formFields.lastName}
                                 email={data.contact.formFields.email}

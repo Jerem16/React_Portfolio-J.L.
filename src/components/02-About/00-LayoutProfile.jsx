@@ -37,7 +37,7 @@ function Profile() {
                                     <p>{profileData.profile.description}</p>
                                 </div>
                             </div>
-                            <div className="row">
+                            <div className="row row-skills">
                                 <div className="personal-info">
                                     <PersonalInfo
                                         info={profileData.profile.personalInfo}

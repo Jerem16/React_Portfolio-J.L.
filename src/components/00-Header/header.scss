@@ -84,11 +84,14 @@
     }
 
     .nav {
+        // align-self: flex-start;
         width: 157.5px;
         height: 337.5px;
         display: flex;
         flex-flow: column nowrap;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+
         &:hover {
             a.active-link,
             a.active-link .icon {
@@ -104,6 +107,7 @@
             }
         }
         li {
+            align-self: flex-start;
             @include row_R;
             flex-flow: row nowrap;
             align-items: center;
@@ -164,6 +168,9 @@
                     color: var(--skin-color);
                 }
             }
+        }
+        &.langOpen {
+            height: 393.75px;
         }
     }
     .switcher-block {

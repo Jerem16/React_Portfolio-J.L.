@@ -1,5 +1,6 @@
 /* contact */
 @import "../../../assets/styles/00_utils/4_fonts";
+@import "../../../assets/styles/00_utils/3_mixins";
 
 .contact-title {
     color: var(--skin-color);
@@ -21,7 +22,16 @@
     justify-content: space-between;
     gap: 3.607084289931125%;
 }
+
 .contact {
+    &-content {
+        width: 100%;
+        gap: 30px;
+        .row {
+            @include row_R;
+            justify-content: flex-start;
+        }
+    }
     &-info-item {
         flex: 0 0 21.37%;
         text-align: center;

@@ -22,6 +22,7 @@
         .row {
             @include row_R;
             justify-content: flex-start;
+            
 
             .personal-info {
                 @include row_R;

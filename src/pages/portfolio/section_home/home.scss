@@ -13,8 +13,16 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+.backgroundTest {
+    align-self: center;
+    display: block;
+    width: 100%;
+    height: 38.52vw;
+    position: absolute;
+    top: calc(50vh - 15.85vw);
+}
 .border-design {
-    @include drop-shadow(2px 3px 10px var(--text-black-900));
+    @include drop-shadow(2px 3px 10px var(--skin-color));
     border: 1px solid var(--bg-black-50);
     z-index: 1;
 }
@@ -236,12 +244,11 @@
     width: calc(100% - 10px);
     height: 16.1vh;
     bottom: 6.14%;
-    // @include drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.15));
     .tsparticles2,
     #tsparticles2 {
         width: 100% !important;
         height: 100% !important;
-        bottom: 0 !important; /* Annulez la valeur de top */
-        left: 0 !important; /* Annulez la valeur de left */
+        bottom: 0 !important;
+        left: 0 !important;
     }
 }

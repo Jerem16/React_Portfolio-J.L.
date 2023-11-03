@@ -22,8 +22,6 @@
         var(--skin-color) 31%,
         var(--bg-black-900)
     );
-
-    // --desktop-large: 1440px;
 }
 body {
     line-height: 1.5;
@@ -32,6 +30,7 @@ body {
     overflow-x: hidden !important;
     background: var(--bg-black-900);
 }
+
 body.light {
     --bg-black-900: #f2f2fc;
     --bg-black-100: #fdf9ff;
