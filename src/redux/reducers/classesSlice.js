@@ -16,7 +16,7 @@ const classesSlice = createSlice({
         setAsideWidth: (state, action) => {
             state.asideWidth = action.payload;
             state.desktop1280 = 1010 + parseInt(action.payload, 10);
-            state.tab1080 = 840 + parseInt(action.payload, 10);
+            state.tab1080 = 740 + parseInt(action.payload, 10);
         },
 
         toggleClasses: (state, action) => {

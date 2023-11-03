@@ -13,13 +13,19 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-.backgroundTest {
-    align-self: center;
-    display: block;
+.cont {
+    height: 100vh;
     width: 100%;
-    height: 38.52vw;
     position: absolute;
-    top: calc(50vh - 15.85vw);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    top: 0;
+}
+.backgroundTest {
+    display: block;
+    // width: 200%;
+    height: auto;
 }
 .border-design {
     @include drop-shadow(2px 3px 10px var(--skin-color));
@@ -58,8 +64,9 @@
             height: 100%;
 
             .home-title {
-                font-size: 1.75em;
-                margin: 1em 0 0 0;
+                @include h3;
+
+                margin: 2em 0 0 0;
                 span.name {
                     font-family: "Clicker Script", cursive;
                     font-size: 1.5em;
@@ -75,13 +82,15 @@
                 align-items: flex-end;
                 justify-content: space-between;
                 margin: 0;
+                position: relative;
+                top: -0.75em;
 
                 &_group {
                     margin: 1.25em 0;
                     width: 100%;
                     .presentation_title,
                     .presentation_typing {
-                        font-size: 1.875em;
+                        @include h3;
                         display: inline;
                     }
                     .typing {
@@ -91,11 +100,8 @@
                 }
 
                 .home-card-content {
-                    font-size: 1.25em;
                     color: var(--text-black-700);
                     overflow-wrap: break-word;
-                    margin: 0 0 0 1em;
-                    // border: 1px solid #000;
 
                     &_description {
                         position: relative;
@@ -103,7 +109,6 @@
                             position: absolute;
                             display: inline-block;
                             width: 100%;
-                            margin: 0.75em 0 0.675em;
                             .reverse {
                                 transform: scaleX(-1) scaleY(1);
                                 display: inline-block;
@@ -113,23 +118,21 @@
                         }
                         .quote-description {
                             display: inline-block;
-
-                            margin-top: 1em;
+                            margin: 1em 0 0 7px;
                         }
                     }
                     .content-inner {
-                        padding: 1em;
+                        padding: 1em 0 0 7px;
                         &_description {
                             font-style: italic;
                         }
                         &_quote {
-                            color: var(--text-black-700);
+                            color: var(--text-black-500);
                             overflow-wrap: break-word;
                             font-style: italic;
                             // border-left: 2px solid #333;
                             padding: 10px;
                             padding-left: 20px;
-                            // text-align: right;
                         }
                     }
                 }

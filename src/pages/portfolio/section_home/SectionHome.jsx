@@ -41,7 +41,9 @@ function SectionHome() {
         <HomeDataLoader>
             {(homeData) => (
                 <section className="home section" id="home">
-                    <BackgroundTest />
+                    <div className="cont">
+                        <BackgroundTest />
+                    </div>
                     <div id="top"></div>
                     <div className="container">
                         <div className="row_top"></div>
