@@ -6,8 +6,8 @@ const LanguageIcon = ({ addClass }) => {
     return (
         <span className={`form_lang-icon ${addClass}`}>
             <svg
-                width="18px"
-                height="23px"
+                width="1em"
+                height="1em"
                 viewBox="0 0 593 593"
                 enableBackground="new 0 0 512 512"
                 xmlSpace="preserve"

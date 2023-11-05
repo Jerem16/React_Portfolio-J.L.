@@ -1,0 +1,34 @@
+@media screen and (max-width: 620px) {
+    body {
+        font-size: 15px;
+    }
+    .home {
+        .row {
+            min-width: calc(100% - 40px);
+            .home-info {
+                .home-card {
+                    .home-card-content {
+                        font-size: 1em;
+                        &_description {
+                            .quote-description {
+                                margin: 0;
+                            }
+                            .home-quote {
+                            }
+                        }
+                        .content-inner {
+                            padding: 1em 0em;
+                            text-align: center;
+                            &_description {
+                                font-style: normal;
+                            }
+                            &_quote {
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

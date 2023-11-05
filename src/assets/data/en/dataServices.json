@@ -15,7 +15,7 @@
             ],
             "link": {
                 "title": "Learn More",
-                "url": "contact_link"
+                "url": "#contact"
             }
         },
         {
@@ -33,7 +33,7 @@
             ],
             "link": {
                 "title": "Discuss Your Projects",
-                "url": "contact_link"
+                "url": "#contact"
             }
         },
         {
@@ -51,7 +51,7 @@
             ],
             "link": {
                 "title": "Contact Us",
-                "url": "contact_link"
+                "url": "#contact"
             }
         },
         {
@@ -69,7 +69,7 @@
             ],
             "link": {
                 "title": "Learn More",
-                "url": "contact_link"
+                "url": "#contact"
             }
         },
         {
@@ -89,7 +89,7 @@
             ],
             "link": {
                 "title": "Enhance Your Online Presence",
-                "url": "contact_link"
+                "url": "#contact"
             }
         },
         {
@@ -106,7 +106,7 @@
             ],
             "link": {
                 "title": "Guide Us to Success",
-                "url": "contact_link"
+                "url": "#contact"
             }
         }
     ],

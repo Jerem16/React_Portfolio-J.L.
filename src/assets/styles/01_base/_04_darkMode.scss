@@ -14,14 +14,13 @@ body.dark {
         &:hover {
             border-right-color: #292929;
             border-bottom-color: #292929;
-            box-shadow: 0 0 20px invert-rgba($shadow-rgba);
+            box-shadow: 0 0 1.25em invert-rgba($shadow-rgba);
         }
     }
     .about-content .timeline {
-        // border: 0.0625em solid #292929;
         box-shadow: 0 0 0px invert-rgba($shadow-rgba);
         &:hover {
-            box-shadow: 0 0 20px invert-rgba($shadow-rgba);
+            box-shadow: 0 0 1.25em invert-rgba($shadow-rgba);
         }
     }
     .about-content
@@ -30,13 +29,13 @@ body.dark {
         .timeline-text
         div.div-anime
         .technologies {
-        @include drop-shadow(var(--skin-color-darked) 0px 0px 10px);
+        @include drop-shadow(var(--skin-color-darked) 0px 0px 0.625em);
     }
     .btn,
     .btn_a {
-        box-shadow: 2.5px 5px 15px rgba-color(black, 0.25);
+        box-shadow: 0.15625em 0.3125em 0.9375em rgba-color(black, 0.25);
         &::after {
-            box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.65);
+            box-shadow: 0.125em 0.25em 1.875em rgba(0, 0, 0, 0.65);
         }
     }
     & .timeline-date {
@@ -50,18 +49,18 @@ body.dark {
 
         .content {
             @include drop-shadow(0 0 0px rgba(0, 0, 0, 0));
-            box-shadow: 0 0 20px invert-rgba($shadow-rgba);
+            box-shadow: 0 0 1.25em invert-rgba($shadow-rgba);
             #modalEvent,
             #modalPortfolio,
             #modalContact {
                 background-color: var(--bg-black-100);
                 border: 1px solid var(--bg-black-50);
-                border-radius: 10px;
+                border-radius: 0.625em;
                 .portfolio-item-inner {
                     &:hover {
-                        box-shadow: 0 0 20px rgba(48, 46, 77, 0);
+                        box-shadow: 0 0 1.25em rgba(48, 46, 77, 0);
                         .icon {
-                            font-size: 25px;
+                            font-size: 1.5625em;
                             color: var(--bg-black-100);
                             background-color: var(--skin-color);
                         }
@@ -78,12 +77,11 @@ body.dark {
                 & .timeline-text {
                     &:hover {
                         .bd_Bottom {
-                            border-bottom: 1px solid
-                                color-mix(
-                                    in srgb,
-                                    var(--skin-color) 45%,
-                                    var(--bg-black-50)
-                                );
+                            border-bottom: 0.0625em solid color-mix(
+                                in srgb,
+                                var(--skin-color) 45%,
+                                var(--bg-black-50)
+                            );
 
                             .fa-Circle {
                                 background: color-mix(
@@ -96,12 +94,11 @@ body.dark {
                     }
                     &_add {
                         .bd_Bottom {
-                            border-bottom: 1px solid
-                                color-mix(
-                                    in srgb,
-                                    var(--skin-color) 15%,
-                                    var(--bg-black-50)
-                                );
+                            border-bottom: 0.0625em solid color-mix(
+                                in srgb,
+                                var(--skin-color) 15%,
+                                var(--bg-black-50)
+                            );
                             .fa-Circle {
                                 background: color-mix(
                                     in srgb,
@@ -115,23 +112,23 @@ body.dark {
                         }
                     }
                     .bd_Last {
-                        border-bottom: 1px solid
-                            color-mix(
-                                in srgb,
-                                var(--skin-color) 15%,
-                                var(--bg-black-50)
-                            );
+                        border-bottom: 0.0625em solid color-mix(
+                            in srgb,
+                            var(--skin-color) 15%,
+                            var(--bg-black-50)
+                        );
                     }
                 }
             }
         }
     }
 }
+
 @media screen and (max-width: 992px) {
     body.dark {
         .aside {
             background-color: rgba-color($bg-black-900-dark, 0.5);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.25em 1.875em rgba(0, 0, 0, 0.1);
             -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
 

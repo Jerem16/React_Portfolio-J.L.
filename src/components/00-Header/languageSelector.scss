@@ -6,7 +6,7 @@
     justify-content: center;
     position: relative;
     cursor: pointer;
-    border-bottom: 1px solid var(--bg-black-50);
+    border-bottom: 0.0625em solid var(--bg-black-50);
     &:hover {
         #lang {
             color: var(--skin-color);
@@ -18,12 +18,12 @@
     .language-menu {
         display: flex;
         position: absolute;
-        top: 57px;
-        width: 157.5px;
-        height: 56.25px;
-        @include transform(translateX(-200px) scaleY(0));
+        top: 0.703125em;
+        width: 9.84375em;
+        height: 3.515625em;
+        @include transform(translateX(-12.5em) scaleY(0));
         opacity: 0;
-        padding: 15px 15px;
+        padding: 1.40625em 1.40625em;
         z-index: 1;
         transition: all 0.3s ease-in-out;
     }
@@ -31,8 +31,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 19px;
-        height: 19px;
+        width: 1.171875em;
+        height: 1.171875em;
         margin: auto;
         cursor: pointer;
         -webkit-filter: grayscale(100%);
@@ -52,6 +52,6 @@
     &.close .language-menu {
         opacity: 1;
         transition: all 0.3s ease-in-out;
-        @include transform(translateX(-200px) scaleY(0));
+        @include transform(translateX(-12.5em) scaleY(0));
     }
 }

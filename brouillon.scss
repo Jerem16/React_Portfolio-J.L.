@@ -9,8 +9,7 @@
     gap: 3.607084289931125%;
     height: 100%;
     justify-content: space-between;
-    max-width: calc(100% - 7.2%);
-    margin: auto;
+
     .service-item {
         flex: 1;
         flex: 0 0 30.59527714004592%;
@@ -18,49 +17,46 @@
         margin: 0 0 3.607084289931125% 0;
         .service-item-inner {
             height: 100%;
-            padding: 1.875em 0.9375em;
+            padding: 30px 15px;
             text-align: center;
             background-color: var(--bg-black-100);
             border: 1px solid var(--bg-black-75);
             border-right-color: var(--bg-black-50);
             border-bottom-color: var(--bg-black-50);
-            border-radius: 0.625em;
+
+            border-radius: 10px;
             transition: all 0.3s ease;
             cursor: pointer;
             .icon {
                 display: block;
-                // width: 3.75em;
-                // height: 3.75em;
-                margin: 0 auto;
-                border-radius: 50%;
-                font-size: 2.5em;
-                // line-height: 3.75em;
-                text-align: center;
-                color: var(--skin-color);
-                transition: all 0.3s ease;
-
                 width: 60px;
                 height: 60px;
+                margin: 0 auto 30px;
                 border-radius: 50%;
                 font-size: 40px;
                 line-height: 60px;
+                text-align: center;
+                color: var(--skin-color);
+                transition: all 0.3s ease;
             }
             &:hover {
                 &::after {
                     @include after_Before;
                 }
                 transform: scale(1.05);
-                box-shadow: 0 0 1.25em rgba(48, 46, 77, 0.15);
+                box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
                 .icon {
-                    font-size: 1.5625em;
+                    font-size: 25px;
                     color: var(--bg-black-100);
                     background-color: var(--skin-color);
                 }
             }
+
             h3 {
                 @include h4;
-                margin: 0.9375em 0;
+                margin-bottom: 15px;
             }
+
             p {
                 @include p;
             }
@@ -73,43 +69,46 @@
     width: 100%;
     position: relative;
     height: 100%;
-    padding: 1.875em 0.9375em;
+    padding: 30px 15px;
     text-align: center;
     background-color: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
-    border-radius: 0.625em;
+    border-radius: 10px;
     transition: all 0.3s ease;
     .icon {
         display: block;
-        width: 3.75em;
-        height: 3.75em;
-        margin: 0 auto 1.875em;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 30px;
         border-radius: 50%;
-        line-height: 3.75em;
+        line-height: 60px;
         text-align: center;
         transition: all 0.3s ease;
-        font-size: 1.5625em;
+        font-size: 25px;
         color: var(--bg-black-100);
         background-color: var(--skin-color);
     }
+
     h4 {
         @include h4;
-        margin-bottom: 1.875em;
+        margin-bottom: 30px;
     }
+
     p {
         @include p;
         color: var(--text-black-900);
-        margin: 0.9375em 1.875em;
-        // margin-bottom: 0.9375em;
+        margin: 15px 30px;
+        // margin-bottom: 15px;
         text-align: left;
     }
     blockquote {
         @include p;
         color: var(--text-black-900);
-        margin: 0 1.875em 1.875em 1.875em;
-        // padding-left: 0.9375em;
+        margin: 0 30px 30px 30px;
+        // padding-left: 15px;
         text-align: left;
     }
+
     ul {
         li {
             transition: transform 0.2s ease-in-out;
@@ -118,12 +117,13 @@
             line-height: 1.5625em;
             color: var(--text-black-700);
             text-align: left;
-            margin: 0 1.875em 0.625em 1.875em;
+            margin: 0 30px 10px 30px;
+
             i {
                 color: var(--text-black-500);
                 color: var(--skin-color);
-                margin-right: 0.03125em;
-                // margin-left: 1.875em;
+                margin-right: 0.5em;
+                // margin-left: 30px;
             }
             &::before {
                 font-family: "Font Awesome", sans-serif;

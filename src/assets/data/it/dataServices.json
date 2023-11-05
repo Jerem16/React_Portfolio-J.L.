@@ -15,7 +15,7 @@
             ],
             "link": {
                 "title": "Per saperne di più",
-                "url": "link_di_contatto"
+                "url": "#contact"
             }
         },
         {
@@ -33,7 +33,7 @@
             ],
             "link": {
                 "title": "Discuti dei tuoi progetti",
-                "url": "link_di_contatto"
+                "url": "#contact"
             }
         },
         {
@@ -51,7 +51,7 @@
             ],
             "link": {
                 "title": "Contattaci",
-                "url": "link_di_contatto"
+                "url": "#contact"
             }
         },
         {
@@ -68,7 +68,7 @@
             ],
             "link": {
                 "title": "Per saperne di più",
-                "url": "link_di_contatto"
+                "url": "#contact"
             }
         },
         {
@@ -88,7 +88,7 @@
             ],
             "link": {
                 "title": "Migliora la tua presenza online",
-                "url": "link_di_contatto"
+                "url": "#contact"
             }
         },
         {
@@ -105,7 +105,7 @@
             ],
             "link": {
                 "title": "Guidarci verso il successo",
-                "url": "link_di_contatto"
+                "url": "#contact"
             }
         }
     ],

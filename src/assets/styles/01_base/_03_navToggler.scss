@@ -1,11 +1,13 @@
 .aside {
-    width: 270px;
+    width: 16.875em;
     @include transition(all, 0.5s, ease);
 }
+
 .main-content {
-    padding-left: 270px;
+    padding-left: 16.875em;
     @include transition(all, 0.5s, ease);
 }
+
 .modal {
     width: 100%;
     @include transition(all, 0.5s, ease);
@@ -13,17 +15,18 @@
 
 .open {
     .aside {
-        @include transform(translateX(-270px));
+        @include transform(translateX(-16.875em));
     }
     .main-content {
-        width: calc(100% + 270px);
-        @include transform(translateX(-270px));
+        width: calc(100% + 16.875em);
+        @include transform(translateX(-16.875em));
         animation: slide 0.4s ease;
     }
 }
+
 .close {
     .main-content {
-        width: calc(100% + 0px);
+        width: calc(100% + 0em);
         @include transform(translateX(0));
         animation: slide 0.4s ease reverse;
     }
@@ -34,11 +37,11 @@
 
 @keyframes slide {
     0% {
-        width: calc(100% + 0px);
+        width: calc(100% + 0em);
         @include transform(translateX(0));
     }
     100% {
-        width: calc(100% + 270px);
-        @include transform(translateX(-270px));
+        width: calc(100% + 16.875em);
+        @include transform(translateX(-16.875em));
     }
 }

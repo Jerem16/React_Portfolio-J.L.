@@ -17,7 +17,7 @@
                 .home-title {
                     margin: 1.5em 0 0 0;
                     span.name {
-                        margin: 0 10px 0 0;
+                        margin: 0 0.625em 0 0;
                         font-size: 32px;
                     }
                 }
@@ -42,7 +42,113 @@
         }
     }
 }
+@media screen and (max-width: 1600px) {
+    body {
+        font-size: 16px;
+    }
+    .home,
+    .about,
+    .service,
+    .portfolio,
+    .contact {
+        .container {
+            .row_top {
+                .section-title {
+                    margin: 0 0 60px 0;
 
+                    h2 {
+                        &::before,
+                        &::after {
+                            width: 50px;
+                            height: 4px;
+                        }
+
+                        &::after {
+                            margin-top: 8px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+            .col_end {
+                height: 60px;
+            }
+        }
+    }
+
+    .home {
+        .row {
+            position: relative;
+            margin: 0;
+            top: 3px;
+            .home-info {
+                .home-title {
+                    position: static;
+                    span.name {
+                        position: static;
+                        top: 0;
+                        display: inline;
+                    }
+                }
+
+                .home-card {
+                    .home-card-content {
+                        &_description {
+                            .quote-description {
+                                margin: 1em 0 0 7px;
+                            }
+                        }
+                        .content-inner {
+                            padding: 1em 0 0 7px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .blockImg {
+                max-height: 400px;
+            }
+        }
+    }
+    .bgDraw2 {
+        width: calc(100% - 0.625em);
+        height: 16.1vh;
+        bottom: 6.14%;
+        .tsparticles2,
+        #tsparticles2 {
+            width: 100% !important;
+            height: 100% !important;
+            bottom: 0 !important;
+            left: 0 !important;
+        }
+    }
+    .aside {
+        .logo {
+            a {
+                font-size: 30px;
+                letter-spacing: 5px;
+                span {
+                    font-size: 40px;
+                }
+
+                &::before {
+                    width: 22.5px;
+                    height: 22.5px;
+                    border-bottom: 5px solid var(--skin-color);
+                    border-left: 5px solid var(--skin-color);
+                }
+
+                &::after {
+                    width: 22.5px;
+                    height: 22.5px;
+                    border-top: 5px solid var(--skin-color);
+                    border-right: 5px solid var(--skin-color);
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 1440px) {
     .border-design,
     .border-design2 {
@@ -213,7 +319,6 @@
 //                     width: 100%;
 //                     padding: 12px 1em;
 
-
 //                     text-align: center;
 //                     top: 0.75em;
 //                     span.name {
@@ -221,11 +326,9 @@
 //                         width: 100%;
 //                     }
 //                 }
-  
+
 //                 .home-card {
 //                     align-items: center;
-                    
-
 
 //                     position: relative;
 //                     top: 0.7em;
@@ -235,24 +338,24 @@
 //                         .presentation_typing {
 //                             text-align: center;
 //                             align-items: center;
-                          
+
 //                         }
-  
+
 //                         .typing {
 //                             width: 100%;
 //                             align-items: center;
 //                         }
 //                     }
-  
+
 //                     .home-card-content {
 //                         margin: 1em 1em 0 1em;
-  
+
 //                         &_description {
 //                             .home-quote {
 //                               //   text-align: center;
 //                                 width: 100%;
 //                                 display: block;
-  
+
 //                                 margin: 0 auto;
 //                                 padding: 0;
 //                             }
@@ -374,13 +477,13 @@
 //     }
 //     @media screen and (max-height: 1180px) {
 //         .bgDraw2 {
-//             bottom: 0px !important; 
+//             bottom: 0px !important;
 //             .tsparticles2,
 //             #tsparticles2 {
 //                 width: 100% !important;
 //                 height: calc(50vh - 404px) !important;
-//                 bottom: 0px !important; 
-//                 left: 0 !important; 
+//                 bottom: 0px !important;
+//                 left: 0 !important;
 //             }
 //         }
 
@@ -391,8 +494,8 @@
 //             #tsparticles2 {
 //                 width: 100% !important;
 //                 height: calc(50vh - 470px) !important;
-//                 bottom: 0px !important; 
-//                 left: 0 !important; 
+//                 bottom: 0px !important;
+//                 left: 0 !important;
 //             }
 //         }
 //     }

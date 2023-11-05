@@ -1,17 +1,20 @@
 /* Home */
 @import "../../../assets//styles/00_utils/3_mixins";
 @import "../../../assets//styles/00_utils/4_fonts";
+
 .border-design,
 .border-design2 {
     position: absolute;
     width: calc(100% + 3em);
     height: calc(100% - 1em);
+    width: calc(100% + 0em);
+    height: calc(100% - 0em);
     left: 0;
     bottom: 0;
-    padding: 0 0 0 2em;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    padding: 0 0 0 0.125em;
+    border-bottom-left-radius: 1.25em;
+    border-top-left-radius: 1.25em;
+    border-top-right-radius: 1.25em;
 }
 .cont {
     height: 100vh;
@@ -24,11 +27,11 @@
 }
 .backgroundTest {
     display: block;
-    // width: 200%;
+    // width: 12.5em;
     height: auto;
 }
 .border-design {
-    @include drop-shadow(2px 3px 10px var(--skin-color));
+    @include drop-shadow(0.125em 0.1875em 0.625em var(--skin-color));
     border: 1px solid var(--bg-black-50);
     z-index: 1;
 }
@@ -42,14 +45,16 @@
         align-items: center;
         gap: 7.2%;
         height: auto;
-        left: -2em;
+        // left: -2em;
+        // 
+        padding: 1.25em 0 0 2.5em;
+        margin: auto;
+        max-width: 100%;
         max-width: 66vw;
-        padding: 0 0 0 2em;
-
-        // border: 1px solid var(--bg-black-50);
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        // border: 0.0625em solid var(--bg-black-50);
+        border-bottom-left-radius: 1.25em;
+        border-top-left-radius: 1.25em;
+        border-top-right-radius: 1.25em;
 
         // background: var(--bg-black-100);
 
@@ -58,20 +63,27 @@
             flex: 5;
             display: flex;
             flex-flow: column nowrap;
-            justify-content: space-between;
+            justify-content: space between;
             align-items: flex-start;
             width: 100%;
             height: 100%;
-
             .home-title {
                 @include h3;
-
-                margin: 2em 0 0 0;
+                top: 0.275em;
+                position: relative;
+                width: 100%;
+                word-spacing: 0.135em;
+                // margin: 2em 0 0 0;
                 span.name {
+                    display: inline-block;
+                    position: absolute;
+                    top: -0.275em;
                     font-family: "Clicker Script", cursive;
                     font-size: 1.5em;
                     font-weight: 700;
                     color: var(--skin-color);
+                    margin-left: 0.4em;
+                    width: 50%;
                 }
             }
 
@@ -83,7 +95,7 @@
                 justify-content: space-between;
                 margin: 0;
                 position: relative;
-                top: -0.75em;
+                // top: -0.75em;
 
                 &_group {
                     margin: 1.25em 0;
@@ -92,6 +104,7 @@
                     .presentation_typing {
                         @include h3;
                         display: inline;
+                        word-spacing: 0.135em;
                     }
                     .typing {
                         display: inline;
@@ -118,11 +131,11 @@
                         }
                         .quote-description {
                             display: inline-block;
-                            margin: 1em 0 0 7px;
+                            margin: 1em 0 0 1em;
                         }
                     }
                     .content-inner {
-                        padding: 1em 0 0 7px;
+                        margin: 1em 0 0 1em;
                         &_description {
                             font-style: italic;
                         }
@@ -131,17 +144,17 @@
                             overflow-wrap: break-word;
                             font-style: italic;
                             // border-left: 2px solid #333;
-                            padding: 10px;
-                            padding-left: 20px;
+                            padding: 0.625em;
+                            padding-left: 1.25em;
                         }
                     }
                 }
             }
 
             .hire-me {
-                bottom: -25.5px;
+                bottom: -1.59375em;
                 margin: 0;
-                padding: 12.5px 35px;
+                padding: 0.78125em 2.1875em;
             }
         }
 
@@ -153,39 +166,35 @@
             justify-content: center;
             flex: 3;
             position: relative;
-            max-width: 752px;
+            max-width: 47em;
             height: 100%;
+            max-height: 21.125em;
             .home-img {
                 width: 100%;
-
                 z-index: 1;
                 display: flex;
                 flex-flow: row;
                 justify-content: space-between;
                 align-items: center;
-
-                border-top-right-radius: 20px;
-
+                border-top-right-radius: 1.25em;
                 &::after {
                     @include after_Before;
-                    top: -10px;
-                    left: -10px;
-
-                    width: 139.26px;
-                    height: 86.13px;
-                    border-top: 10px solid var(--skin-color);
-                    border-left: 10px solid var(--skin-color);
+                    top: -0.625em;
+                    left: -0.625em;
+                    width: 8.7em;
+                    height: 5.38375em;
+                    border-top: 0.625em solid var(--skin-color);
+                    border-left: 0.625em solid var(--skin-color);
                 }
                 &::before {
                     content: "";
                     position: absolute;
-                    bottom: -5px;
-                    right: -10px;
-
-                    width: 86.13px;
-                    height: 139.26px;
-                    border-bottom: 10px solid var(--skin-color);
-                    border-right: 10px solid var(--skin-color);
+                    bottom: -0.3125em;
+                    right: -0.625em;
+                    width: 5.38375em;
+                    height: 8.7em;
+                    border-bottom: 0.625em solid var(--skin-color);
+                    border-right: 0.625em solid var(--skin-color);
                 }
                 .leftNB,
                 .rightNB {
@@ -195,10 +204,10 @@
                 .centerNB {
                     align-self: center;
                     flex: 5;
-                    min-width: 247.49px;
-                    height: 400px;
+                    min-width: 15.46875em;
+                    height: 25em;
                     display: flex;
-                    max-width: 314px;
+                    max-width: 19.625em;
                 }
                 img {
                     margin: auto;
@@ -206,8 +215,8 @@
                     align-self: center;
                     height: auto;
                     width: 100%;
-                    top: 5px;
-                    border-radius: 6px;
+                    top: 0.3125em;
+                    border-radius: 0.375em;
                 }
             }
         }
@@ -216,7 +225,7 @@
 .bgDraw,
 .bgDraw2 {
     position: absolute;
-    left: 0px;
+    left: 0;
     z-index: 0;
     overflow: hidden;
     .tsparticles,
@@ -228,13 +237,13 @@
 }
 .bgDraw {
     width: calc(100%);
-    height: 360px;
-    top: 0px;
+    height: 22.5em;
+    top: 0;
     .tsparticles {
-        width: 600px !important;
-        height: 300px !important;
-        top: -140px !important;
-        right: -195px !important;
+        width: 37.5em !important;
+        height: 18.75em !important;
+        top: -15.6em !important;
+        right: -11.875em !important;
         clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
@@ -244,8 +253,8 @@
     }
 }
 .bgDraw2 {
-    width: calc(100% - 10px);
-    height: 16.1vh;
+    width: calc(100% - 0em);
+    height: calc(50vh - 19.237vw - 0vw);
     bottom: 6.14%;
     .tsparticles2,
     #tsparticles2 {
