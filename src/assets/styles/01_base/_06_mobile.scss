@@ -1,34 +1,235 @@
 @media screen and (max-width: 620px) {
-    body {
-        font-size: 15px;
-    }
     .home {
         .row {
-            min-width: calc(100% - 40px);
+            min-width: calc(100% - 0px);
+            min-height: 0px !important;
+            padding: 0px 0.5em 1.5em !important;
+            max-height: 762px;
             .home-info {
+                position: relative !important;
+                top: -3em !important;
+                .home-title {
+                    position: static !important;
+                    margin: 0 !important;
+                    padding: 0.5em 0 0 0 !important;
+
+                    span.name {
+                        margin: 0 !important;
+                    }
+                }
                 .home-card {
+                    position: relative;
+                    top: 200px;
+
+                    margin-top: 200px;
+                    &_group {
+                        display: inline;
+                        .presentation_title {
+                            display: inline !important;
+                            font-size: 1.5em !important;
+                            &::first-letter {
+                                text-transform: capitalize;
+                            }
+                        }
+
+                        .presentation_title,
+                        .presentation_typing {
+                        }
+
+                        .typing {
+                            font-size: 0.8em !important;
+                            text-transform: lowercase;
+                        }
+                    }
                     .home-card-content {
-                        font-size: 1em;
+                        // margin: 0.75em 0 0 0 !important; //apres
                         &_description {
                             .quote-description {
-                                margin: 0;
+                                // margin: 0 !important;
                             }
                             .home-quote {
                             }
                         }
                         .content-inner {
-                            padding: 1em 0em;
-                            text-align: center;
+                            margin: 0 !important;
                             &_description {
-                                font-style: normal;
+                                // font-style: normal;
                             }
                             &_quote {
-                                padding-left: 10px;
+                                // padding-left: 10px;
                             }
                         }
                     }
                 }
+                .hire-me {
+                    bottom: -3.1875em;
+                    margin: 0;
+                    padding: 0.78125em 2.1875em;
+                }
+            }
+            .blockImg {
+                // order: 5;
+                height: 200px !important;
+                max-height: 200px;
+                margin: 1.5em 0 0 0 !important;
+                // display: none !important;
+                position: relative !important;
+
+                .home-img {
+                    // max-height: 200px;
+                    // max-width: 200px;
+
+                    &::after {
+                        top: 40px !important;
+                        left: 40px !important;
+                        width: 150px !important;
+                        height: 160px !important;
+                        border-top-left-radius: 20px;
+                        // background-color: #151515;
+                        // border-color: transparent;
+                        border-width: 1px;
+                    }
+                    &::before {
+                        bottom: -0px !important;
+                        right: 41px !important;
+                        height: 160px !important;
+                        width: 150px !important;
+                        // border-color: transparent;
+                        border-width: 1px;
+                    }
+                    .centerNB {
+                        height: 200px !important;
+                        background-size: contain;
+                    }
+                }
             }
         }
+    }
+
+    .about,
+    .service,
+    .portfolio,
+    .contact {
+        .container {
+            margin: auto;
+            padding-top: 15px;
+            .col_end {
+                display: block;
+                height: 0px;
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .bgDraw2 {
+        width: calc(100% - 0em);
+        height: calc(50vh - 293.5px) !important;
+        bottom: 6.14% !important;
+        .tsparticles2,
+        #tsparticles2 {
+            width: 100% !important;
+            height: 100% !important;
+            bottom: 0 !important;
+            left: 0 !important;
+        }
+    }
+    .service_container {
+        .service-item {
+            max-width: calc(50% - 15px);
+
+            .service-item-inner {
+                padding: 0.78125em 0.78125em 0.78125em 0.78125em;
+                .icon {
+                    width: 2.34375em;
+                    height: 2.34375em;
+                    font-size: 1.5625em;
+                    line-height: 2.34375em;
+                    padding: 0;
+                }
+                h3 {
+                    // font-size: 1em;
+                    margin: 0.78125em 0 0.390625em 0;
+                }
+
+                p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .home {
+        .row {
+            .home-info {
+                .home-card {
+                    height: auto;
+                    .home-card-content {
+                        margin: 0.75em 0 0 0 !important; //apres
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        .row_center {
+            .row-col {
+                gap: 15px;
+                flex-flow: row wrap;
+                margin: 0 0 22.5px 0;
+            }
+        }
+        &-info-item {
+            min-width: calc(50% - 15px);
+            text-align: center;
+            margin-bottom: 0;
+            padding: 7.5px;
+            h4 {
+                font-size: 1em;
+            }
+        }
+        .contact-form .form-item,
+        .contact-form .col-12 .form-item {
+            margin-bottom: 22.5px;
+        }
+        .contact-content .row {
+            gap: 16.25px;
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+    .about {
+        &-content {
+            .row {
+                .buttons {
+                    position: static !important;
+                    display: flex !important;
+                    flex-flow: row wrap !important;
+                    & .btn_right {
+                        position: relative !important;
+                        display: block !important;
+                        flex: 1 !important;
+                    }
+                    .btn_left {
+                        position: relative !important;
+                        display: block !important;
+                        flex: 1 !important;
+                        top: -27.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 463px) {
+    .bgDraw2 {
+        height: calc(50vh - 303.5px) !important;
+    }
+}
+@media screen and (max-width: 411px) {
+    .bgDraw2 {
+        height: calc(50vh - 303.5px) !important;
     }
 }

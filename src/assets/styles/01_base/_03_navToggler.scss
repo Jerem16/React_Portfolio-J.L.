@@ -22,6 +22,10 @@
         @include transform(translateX(-16.875em));
         animation: slide 0.4s ease;
     }
+    .bgDraw2 {
+        height: calc(50vh - 19.237vw - 2.2675vw );
+        bottom: 0;
+    }
 }
 
 .close {
@@ -32,6 +36,10 @@
     }
     .modal {
         width: 100%;
+    }
+    .bgDraw2 {
+        height: calc(50vh - 19.237vw - 0vw);
+        bottom: 6.14%;
     }
 }
 

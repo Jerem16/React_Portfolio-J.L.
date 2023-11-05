@@ -30,6 +30,7 @@
         .row {
             @include row_R;
             justify-content: flex-start;
+            column-gap: 1.8%;
         }
     }
     &-info-item {
@@ -62,6 +63,7 @@
             line-height: 25px;
             color: var(--text-black-700);
         }
+
     }
 
     &-form,

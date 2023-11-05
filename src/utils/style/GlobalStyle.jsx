@@ -179,7 +179,7 @@ const StyledGlobalStyle = createGlobalStyle`
             .tsparticles2,
             #tsparticles2 {
                 width: 100% !important;
-                height: calc(50vh - 404px) !important;
+                height: calc(50vh - 404px);
                 bottom: 0px !important; 
                 left: 0 !important; 
             }
