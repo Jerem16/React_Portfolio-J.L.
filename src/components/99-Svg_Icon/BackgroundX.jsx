@@ -2,10 +2,10 @@ import React from "react";
 import "./languageIcon.scss";
 import { useSelector } from "react-redux";
 
-const BackgroundTest = ({ addClass }) => {
+const BackgroundX = ({ addClass }) => {
     const currentTheme = useSelector((state) => state.theme.currentTheme);      // {currentTheme}
     return (
-        <div className="backgroundTest">
+        <div className="backgroundX">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -198,4 +198,4 @@ const BackgroundTest = ({ addClass }) => {
         </div>
     );
 };
-export default BackgroundTest;
+export default BackgroundX;

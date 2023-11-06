@@ -120,6 +120,14 @@
             }
         }
     }
+    .about {
+        .container {
+            .col_end {
+                display: block !important;
+                height: 45px !important;
+            }
+        }
+    }
 
     .bgDraw2 {
         width: calc(100% - 0em);
@@ -174,6 +182,9 @@
         }
     }
     .contact {
+        .contact-title {
+            margin-top: 7.5px;
+        }
         .row_center {
             .row-col {
                 gap: 15px;
@@ -200,6 +211,9 @@
     }
 }
 @media screen and (max-width: 520px) {
+    .portfolio .portfolio-heading h3 {
+        margin-bottom: 15px;
+    }
     .about {
         &-content {
             .row {
@@ -221,6 +235,53 @@
                 }
             }
         }
+        .timeline {
+            padding: 1.875em 0.25em 1.875em 0.937em;
+        }
+        .container .col_end {
+            display: block;
+            height: 45px;
+        }
+    }
+    .service_container {
+        flex-flow: column wrap;
+        .service-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+            .service-item-inner {
+                .icon {
+                    border-radius: 50%;
+                    font-size: 30px;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                }
+                p {
+                    white-space: initial;
+                }
+            }
+            &:last-child {
+                margin-bottom: 45px;
+            }
+        }
+    }
+    .contact {
+        .contact-content {
+            .row {
+                gap: 0px;
+            }
+        }
+        &-form,
+        &-form .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            .col-6 {
+                flex: 1;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
     }
 }
 @media screen and (max-width: 463px) {
@@ -228,8 +289,250 @@
         height: calc(50vh - 303.5px) !important;
     }
 }
-@media screen and (max-width: 411px) {
-    .bgDraw2 {
-        height: calc(50vh - 303.5px) !important;
+@media screen and (max-width: 410px) {
+    .backgroundX {
+        display: none;
+    }
+    .backgroundY {
+        display: block;
+        overflow: hidden;
+        transform: rotate(-180deg);
+        position: relative;
+        min-height: calc(100% + 38.43vw);
+        top: -13.25vw;
+        left: -2px;
+    }
+    .home {
+        .row {
+            max-width: calc(100% - 0px);
+        }
+    }
+
+    #tablet {
+        display: flex;
+    }
+    #desktop {
+        display: none;
+    }
+    .home,
+    .about,
+    .service,
+    .portfolio,
+    .contact {
+        .container {
+            flex: 0 0 calc(100% - 20px);
+            max-width: calc(100% - 30px);
+        }
+    }
+
+    .aside {
+        &_bg {
+            left: 1px;
+            width: calc(100% - 2px);
+
+            &_bottom {
+                width: 100%;
+            }
+        }
+        .logo {
+            width: 80%;
+        }
+        .switcher-block {
+            max-width: 200px;
+            .s-icon {
+                left: -20px;
+                &.style-switcher-toggler {
+                    top: -20px;
+                }
+
+                &.day-night {
+                    top: -17px;
+                }
+            }
+        }
+        .switcher-container {
+            max-width: 300px;
+            .style-switcher {
+                min-width: 240px;
+                left: -30px;
+            }
+            h4 {
+                top: -9px;
+            }
+            .colors {
+                padding: 0 15px;
+                span {
+                    top: -12px;
+                }
+            }
+        }
+    }
+    .about .about-content .about-text {
+        p {
+            max-width: calc(100% - 50px);
+            text-align: justify;
+        }
+        h3 {
+            max-width: calc(100% - 40px);
+        }
+    }
+    .contact .container .row_center .row-col {
+        gap: 10px;
+        flex-flow: column wrap;
+    }
+    .contact-info-item h4 {
+        margin: 7.5px 0 3.25px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .home {
+        .row {
+            max-width: calc(100% - 0px);
+            padding: 0px 0.25em 1.5em !important;
+            .home-info .home-card .home-card-content {
+                margin: 0.75em 0.5em 0 0.5em !important;
+            }
+        }
+    }
+
+    #tablet {
+        display: flex;
+    }
+    #desktop {
+        display: none;
+    }
+    .home,
+    .about,
+    .service,
+    .portfolio,
+    .contact {
+        .container {
+            flex: 0 0 calc(100% - 20px);
+            max-width: calc(100% - 20px);
+            .row_top .section-title h2 {
+                left: 10px;
+            }
+        }
+    }
+    .about {
+        .about-content .about-text {
+            h3,
+            p {
+                max-width: calc(100% - 30px);
+            }
+        }
+        .row_timeLine .experience {
+            h3.title {
+                margin-left: 10px;
+            }
+            .row {
+                max-width: calc(100% - 30px);
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 14.5px;
+    }
+    .home {
+        .row {
+            max-width: calc(100% - 0px);
+            padding: 0px 0.25em 1.5em !important;
+            .home-info .home-card .home-card-content {
+                margin: 0.75em 0.5em 0 0.5em !important;
+            }
+            .blockImg {
+                .home-img {
+                    min-width: 220px;
+                    max-width: 220px;
+                    &::after {
+                        left: 0px !important;
+                        width: 220px !important;
+                    }
+                    &::before {
+                        right: 0px !important;
+
+                        width: 220px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    #tablet {
+        display: flex;
+    }
+    #desktop {
+        display: none;
+    }
+    .home,
+    .about,
+    .service,
+    .portfolio,
+    .contact {
+        .container {
+            flex: 0 0 calc(100% - 15px);
+            max-width: calc(100% - 15px);
+            .row_top .section-title h2 {
+                left: 7.5px;
+            }
+        }
+    }
+    .about {
+        .about-content .row .personal-info {
+            text-align: center;
+        }
+        .row_timeLine .experience {
+            h3.title {
+                margin-left: 10px;
+            }
+            .row {
+                max-width: calc(100% - 30px);
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .contact-sub-title {
+        font-size: 1em;
+    }
+    .contact-title {
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width: 340px) {
+    body {
+        font-size: 14px;
+    }
+    .home {
+        .row {
+            max-width: calc(100% - 0px);
+            padding: 0px 0.25em 1.5em !important;
+
+            .blockImg {
+                .home-img {
+                    min-width: 220px;
+                    max-width: 220px;
+                    &::after {
+                        left: 0px !important;
+                        width: 220px !important;
+                    }
+                    &::before {
+                        right: 0px !important;
+
+                        width: 220px !important;
+                    }
+                }
+            }
+            .home-info {
+                .home-card_group {
+                    display: none;
+                }
+                .home-card .home-card-content {
+                    margin: 0.75em 0.25em 0 0.25em !important;
+                }
+            }
+        }
     }
 }

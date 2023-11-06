@@ -1,4 +1,8 @@
+// @import "../00_utils/3_mixins";
+// @import "../00_utils/1_variables";
+// @import "../00_utils/2_functions";
 /****** [General] ******/
+
 :root {
     --bg-black-900: #151515;
     --bg-black-100: #222222;
@@ -98,15 +102,17 @@ ul {
 }
 
 .modal {
-    position: absolute;
+    position: absolute; // tablette
+    position: fixed;
     height: 100vh;
-    width: 100%;
-    top: 0;
+    // transform: translateY(1000px);
+    //width: 100%;
+    // top: 0 !important;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 1000;
     background-color: rgba-color($bg-black-900-light, 0.5);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(3px);
@@ -118,7 +124,7 @@ ul {
         min-width: 300px;
         min-height: 100px;
         border-radius: 0.4375em;
-        width: 62.5em;
+        width: 62.5%;
         @include drop-shadow(1em 1em 1em rgba(0, 0, 0, 0.15));
         // margin: auto;
         button {
