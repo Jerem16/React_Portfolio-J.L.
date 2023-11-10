@@ -1,0 +1,154 @@
+@media screen and (max-width: 1440px) {
+    .border-design,
+    .border-design2 {
+        // display: none;
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 0px;
+    }
+    .home {
+        .row {
+            min-width: calc(100% - 20px);
+            justify-content: space-between;
+            gap: 7.2%;
+            padding: 2em 0 0 0;
+            border-bottom-left-radius: 0px;
+            // top: 2em;
+            left: 0;
+            border: 1px solid var(--bg-black-50);
+
+            .home-info {
+                order: 2;
+                .hire-me {
+                    align-self: flex-start;
+                    width: auto;
+                    left: calc(50% - 88px);
+                }
+                .home-card {
+                    .home-card-content {
+                        margin: 0em 1em 0 0;
+                    }
+                }
+            }
+
+            .blockImg {
+                order: 0;
+                display: block;
+                flex: 2;
+                position: relative;
+                .home-img {
+                    &::after {
+                        top: 120px;
+                        left: 20px;
+                        z-index: 0;
+                        width: 90.13px;
+                    }
+                    &::before {
+                        bottom: -10px;
+                        right: -0px;
+                        z-index: 10;
+                    }
+                    .centerNB {
+                        position: relative;
+                        z-index: 10;
+                        background-image: url(../../img/profileBG.webp);
+
+                        background-repeat: no-repeat;
+                        background-position: bottom;
+                        background-size: 100%;
+                    }
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .bgDraw {
+            .tsparticles {
+                top: -40px !important;
+                right: -333px !important;
+            }
+        }
+        .bgDraw2 {
+            bottom: 4.2%;
+        }
+    }
+}
+@media screen and (max-width: 1320px) {
+    .home {
+        .row {
+            // min-width: 100%;
+            .home-info {
+                .home-card {
+                    .home-card-content {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .about {
+        &-content {
+            .row {
+                .personal-info {
+                    flex: 0 0 48.19645785503444%;
+                    margin: 2em 0 4em 0;
+                    .info-item {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+                .skills {
+                    flex: 0 0 48.19645785503444%;
+                    max-width: 48.19645785503444%;
+                    margin-top: 3.4em;
+                    & .skill-item {
+                        & h4 {
+                            @include h5;
+                            line-height: 1.71em;
+                        }
+                    }
+                }
+                .buttons {
+                    position: absolute;
+                    bottom: 9.37em;
+                    left: 51.803542144965565%;
+                    width: 0%;
+                    & .btn_right {
+                        margin: 0;
+                    }
+                    .btn_left {
+                        margin: 0 0.937em 2.25em 0;
+                    }
+                }
+            }
+        }
+    }
+    .service_container {
+        .service-item {
+            .service-item-inner {
+                .icon {
+                    margin: 0 auto 2.3vw;
+                }
+                h3 {
+                    font-size: 1em;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+
+    .contact {
+        &-info-item {
+            flex: 1;
+            min-width: 230px;
+        }
+    }
+}

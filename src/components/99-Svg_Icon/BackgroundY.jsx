@@ -185,4 +185,4 @@ const BackgroundY = ({ addClass }) => {
         </div>
     );
 };
-export default BackgroundY;
+export default React.memo(BackgroundY);

@@ -1,32 +1,56 @@
 [
     {
+        "id": "bEd7",
         "title": "Argent Bank",
-        "imagePath": "argentBankModel.jpg",
+        "imagePath": "argentBankModel.webp",
+        "imagePath1": "argentBankModel-1k.webp",
+        "imagePath2": "argentBankModel-2k.webp",
+        "imagePath3": "argentBankModel-4k.webp",
         "logoPath": "argentBankLogo.svg"
     },
     {
+        "id": "bEd7",
         "title": "Argent Bank",
-        "imagePath": "argentBankModel.jpg",
+        "imagePath": "argentBankModel.webp",
+        "imagePath1": "argentBankModel-1k.webp",
+        "imagePath2": "argentBankModel-2k.webp",
+        "imagePath3": "argentBankModel-4k.webp",
         "logoPath": "argentBankLogo.svg"
     },
     {
+        "id": "bEd7",
         "title": "Argent Bank",
-        "imagePath": "argentBankModel.jpg",
+        "imagePath": "argentBankModel.webp",
+        "imagePath1": "argentBankModel-1k.webp",
+        "imagePath2": "argentBankModel-2k.webp",
+        "imagePath3": "argentBankModel-4k.webp",
         "logoPath": "argentBankLogo.svg"
     },
     {
+        "id": "bEd7",
         "title": "Argent Bank",
-        "imagePath": "argentBankModel.jpg",
+        "imagePath": "argentBankModel.webp",
+        "imagePath1": "argentBankModel-1k.webp",
+        "imagePath2": "argentBankModel-2k.webp",
+        "imagePath3": "argentBankModel-4k.webp",
         "logoPath": "argentBankLogo.svg"
     },
     {
+        "id": "bEd7",
         "title": "Argent Bank",
-        "imagePath": "argentBankModel.jpg",
+        "imagePath": "argentBankModel.webp",
+        "imagePath1": "argentBankModel-1k.webp",
+        "imagePath2": "argentBankModel-2k.webp",
+        "imagePath3": "argentBankModel-4k.webp",
         "logoPath": "argentBankLogo.svg"
     },
     {
+        "id": "bEd3",
         "title": "Nina",
-        "imagePath": "ninaModelGold.jpg",
+        "imagePath": "ninaModelGold.webp",
+        "imagePath1": "argentBankModel-1k.webp",
+        "imagePath2": "argentBankModel-2k.webp",
+        "imagePath3": "argentBankModel-4k.webp",
         "logoPath": "argentBankLogo.svg"
     }
 ]

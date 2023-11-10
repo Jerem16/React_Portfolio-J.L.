@@ -98,6 +98,8 @@
             "year": "2022 - 2023",
             "title": "Développeur Web / Intégrateur Web",
             "techTitle": "Technologies ",
+            "siteLink" : "Vers le site web",
+            "githubLink" : "Vers le repositorie",
             "entries": [
                 {
                     "size": 25,
@@ -120,6 +122,8 @@
                     "index": "random-index-7",
                     "jobTitle": "Booki",
                     "addClass": "timeline-text_add ",
+                    "siteLink" : "https://jerem16.github.io/Booki/index.html",
+                    "githubLink" : "https://github.com/Jerem16/Jeremy_L_Projet_03",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
@@ -139,6 +143,8 @@
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
                     "addClass": "timeline-text_add ",
+                    "siteLink" : "https://jerem16.github.io/ohmyfood/loader.html",
+                    "githubLink" : "https://github.com/Jerem16/Jeremy_L_Projet_04",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -160,6 +166,8 @@
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
                     "addClass": "timeline-text_add ",
+                    "siteLink" : "https://jerem16.github.io/print_it/index.html",
+                    "githubLink" : "https://github.com/Jerem16/Projet_05v2",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -223,6 +231,8 @@
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
                     "addClass": "timeline-text_add ",
+                    "siteLink" : "https://jerem16.github.io/react_kasa_page/",
+                    "githubLink" : "https://github.com/Jerem16/React_kasa",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -249,7 +259,8 @@
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
                     "addClass": "timeline-text_add ",
-                    "addClass": "timeline-text_add ",
+                    "siteLink" : "https://jerem16.github.io/nina_carducci/index.html",
+                    "githubLink" : "https://github.com/Jerem16/Nina_Carducci",
                     "technologies": {
                         "SEO": true,
                         "HTML": true,
@@ -297,6 +308,8 @@
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
                     "addClass": "timeline-text_add ",
+                    "siteLink" : "https://jerem16.github.io/argent_bank/",
+                    "githubLink" : "https://github.com/Jerem16/Front_ArgentBank-website",
                     "technologies": {
                         "React": true,
                         "Redux": true,

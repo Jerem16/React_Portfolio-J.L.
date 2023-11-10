@@ -21,4 +21,4 @@ function ExperienceItem({ experience, toggleArticle, openArticleStates }) {
     );
 }
 
-export default ExperienceItem;
+export default React.memo(ExperienceItem);

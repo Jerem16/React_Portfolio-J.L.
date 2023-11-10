@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     currentTheme: "#fa5b0f",
-    // currentTheme: "#3bc4fd",
-    // currentTheme: "#FF4500",
-    // currentTheme: "rgb(250, 91, 15)",
+    lightTheme: "#ed8655",
+    darkTheme: "#aa4311",
+    darkedTheme: "#5c2b13",
 };
 
 const themeSlice = createSlice({
@@ -14,9 +14,18 @@ const themeSlice = createSlice({
         changeTheme: (state, action) => {
             state.currentTheme = action.payload;
         },
+        changeLightTheme: (state, action) => {
+            state.lightTheme = action.payload;
+        },
+        changeDarkTheme: (state, action) => {
+            state.darkTheme = action.payload;
+        },
+        changeDarkedTheme: (state, action) => {
+            state.darkedTheme = action.payload;
+        },
     },
 });
 
-export const { changeTheme } = themeSlice.actions;
+export const { changeTheme, changeLightTheme, changeDarkTheme, changeDarkedTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;

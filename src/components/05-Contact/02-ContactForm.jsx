@@ -10,9 +10,8 @@ import Field, { FIELD_TYPES } from "./Field/Field";
 
 import Button, { BUTTON_TYPES } from "../../components/Button/Button";
 import { useForm, ValidationError } from "@formspree/react";
-import Modal from "../Modal/Modal";
-import ModalForm from "../Modal/ModalForm/ModalForm";
-import CloseIcon from "../99-Svg_Icon/CloseIcon";
+import { useDispatch } from "react-redux";
+import { setModalContact } from "../../redux/reducers/classesSlice";
 
 const ContactForm = ({
     onSuccess,
@@ -23,16 +22,9 @@ const ContactForm = ({
     message,
     send,
     isSending,
-    title,
-    description,
-    description2,
     formErrors,
 }) => {
-    const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
-
-    const closeModal = () => {
-        setIsSuccessModalOpen(false);
-    };
+    const dispatch = useDispatch();
 
     const [sending, setSending] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -96,13 +88,21 @@ const ContactForm = ({
                 setSending(false);
                 setFormSubmitted(true);
                 onSuccess();
-                setIsSuccessModalOpen(true);
+                dispatch(setModalContact(true));
             } catch (err) {
                 setSending(false);
                 onError(err);
             }
         },
-        [onSuccess, onError, handleSubmit, emailRegex]
+        [
+            onSuccess,
+            onError,
+            handleSubmit,
+            emailRegex,
+            formErrors.invalidEmail,
+            formErrors.required,
+            dispatch,
+        ]
     );
 
     useEffect(() => {
@@ -122,108 +122,89 @@ const ContactForm = ({
     }, [formSubmitted]);
 
     return (
-        <>
-            <form className="contact-form" ref={formRef} onSubmit={sendContact}>
-                <div className="row">
-                    <div className="form-item col-6">
-                        <div className="form-group">
-                            <Field
-                                id="nom"
-                                placeholder={lastName}
-                                name="nom"
-                                error={errorFields.nom}
-                                autoComplete="family-name"
-                            />
-                            <ValidationError
-                                prefix="Last Name"
-                                field="nom"
-                                errors={state.errors}
-                            />
-                        </div>
-                    </div>
-                    <div className="form-item col-6">
-                        <div className="form-group">
-                            <Field
-                                id="email"
-                                placeholder={email}
-                                name="email"
-                                error={errorFields.email}
-                                autoComplete="on"
-                            />
-                            <ValidationError
-                                prefix="Email"
-                                field="email"
-                                errors={state.errors}
-                            />
-                        </div>
+        <form className="contact-form" ref={formRef} onSubmit={sendContact}>
+            <div className="row">
+                <div className="form-item col-6">
+                    <div className="form-group">
+                        <Field
+                            id="nom"
+                            placeholder={lastName}
+                            name="nom"
+                            error={errorFields.nom}
+                            autoComplete="family-name"
+                        />
+                        <ValidationError
+                            prefix="Last Name"
+                            field="nom"
+                            errors={state.errors}
+                        />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="form-item col-12">
-                        <div className="form-group">
-                            <Field
-                                id="subject"
-                                placeholder={subject}
-                                name="subject"
-                                error={errorFields.subject}
-                            />
-                            <ValidationError
-                                prefix="Subject"
-                                field="subject"
-                                errors={state.errors}
-                            />
-                        </div>
+                <div className="form-item col-6">
+                    <div className="form-group">
+                        <Field
+                            id="email"
+                            placeholder={email}
+                            name="email"
+                            error={errorFields.email}
+                            autoComplete="on"
+                        />
+                        <ValidationError
+                            prefix="Email"
+                            field="email"
+                            errors={state.errors}
+                        />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="form-item col-12">
-                        <div className="form-group">
-                            <Field
-                                id="message"
-                                name="message"
-                                placeholder={message}
-                                type={FIELD_TYPES.TEXTAREA}
-                                error={errorFields.message}
-                            />
-                            <ValidationError
-                                prefix="Message"
-                                field="message"
-                                errors={state.errors}
-                            />
-                        </div>
+            </div>
+            <div className="row">
+                <div className="form-item col-12">
+                    <div className="form-group">
+                        <Field
+                            id="subject"
+                            placeholder={subject}
+                            name="subject"
+                            error={errorFields.subject}
+                        />
+                        <ValidationError
+                            prefix="Subject"
+                            field="subject"
+                            errors={state.errors}
+                        />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="form-item col-12">
-                        <Button
-                            type={BUTTON_TYPES.SUBMIT}
-                            className=""
-                            children={send}
-                            disabled={sending || state.submitting}
-                        >
-                            {sending ? isSending : send}
-                        </Button>
+            </div>
+            <div className="row">
+                <div className="form-item col-12">
+                    <div className="form-group">
+                        <Field
+                            id="message"
+                            name="message"
+                            placeholder={message}
+                            type={FIELD_TYPES.TEXTAREA}
+                            error={errorFields.message}
+                        />
+                        <ValidationError
+                            prefix="Message"
+                            field="message"
+                            errors={state.errors}
+                        />
                     </div>
                 </div>
-            </form>
-            {isSuccessModalOpen && (
-                <Modal
-                    opened={true}
-                    Content={
-                        <>
-                            <ModalForm
-                                title={title}
-                                description={description}
-                                description2={description2}
-                            />
-                            <button type="button" onClick={closeModal}>
-                                <CloseIcon name="close" />
-                            </button>
-                        </>
-                    }
-                />
-            )}
-        </>
+            </div>
+            <div className="row">
+                <div className="form-item col-12">
+                    <Button
+                        type={BUTTON_TYPES.SUBMIT}
+                        className=""
+                        // children={send}
+                        disabled={sending || state.submitting}
+                    >
+                        {sending ? isSending : send}
+                    </Button>
+                </div>
+            </div>
+        </form>
     );
 };
 
@@ -236,9 +217,6 @@ ContactForm.propTypes = {
     message: PropTypes.string,
     send: PropTypes.string,
     isSending: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    description2: PropTypes.string,
 };
 
 ContactForm.defaultProps = {
@@ -246,4 +224,4 @@ ContactForm.defaultProps = {
     onSuccess: () => null,
 };
 
-export default ContactForm;
+export default React.memo(ContactForm);

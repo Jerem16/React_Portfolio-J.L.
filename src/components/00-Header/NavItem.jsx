@@ -41,4 +41,4 @@ function NavItem({ handleClick, startLinks }) {
     );
 }
 
-export default NavItem;
+export default React.memo(NavItem);

@@ -5,6 +5,7 @@ import Skills from "./PersonalSkills";
 import PersonalInfo from "./PersonalInfo";
 import CV from "../../assets/cv/cv2022.pdf";
 import ProfileDataLoader from "./ProfileDataLoader";
+import AboutIntro from "./AboutIntro";
 
 function Profile() {
     const button1 = {
@@ -26,17 +27,7 @@ function Profile() {
                     </div>
                     <div className="row_center">
                         <div className="about-content ">
-                            <div className="row">
-                                <div className="about-text">
-                                    <h3>
-                                        {profileData.profile.presentation}
-                                        <span>
-                                            {profileData.profile.jobTitle}
-                                        </span>
-                                    </h3>
-                                    <p>{profileData.profile.description}</p>
-                                </div>
-                            </div>
+                            <AboutIntro profileData={profileData} />
                             <div className="row row-skills">
                                 <div className="personal-info">
                                     <PersonalInfo
@@ -85,4 +76,4 @@ function Profile() {
     );
 }
 
-export default Profile;
+export default React.memo(Profile);

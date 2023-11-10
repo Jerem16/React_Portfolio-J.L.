@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+    modalContact: false,
     addClass: "",
     asideWidth: "270",
     desktop1280: "1280",
@@ -26,6 +27,9 @@ const classesSlice = createSlice({
                 state.addClass = action.payload;
             }
         },
+        setModalContact: (state, action) => {
+            state.modalContact = action.payload;
+        },
         setClass: (state, action) => {
             state.menuSwitcher = action.payload;
         },
@@ -35,7 +39,12 @@ const classesSlice = createSlice({
     },
 });
 
-export const { setAsideWidth, toggleClasses, setClass, setNavScroll } =
-    classesSlice.actions;
+export const {
+    setAsideWidth,
+    toggleClasses,
+    setClass,
+    setNavScroll,
+    setModalContact,
+} = classesSlice.actions;
 
 export default classesSlice.reducer;

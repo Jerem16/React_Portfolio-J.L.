@@ -5,6 +5,9 @@ import { useSelector } from "react-redux";
 const StyledGlobalStyle = createGlobalStyle`
   :root {
     --skin-color: ${(props) => props.theme.currentTheme}; 
+    --skin-color-light: ${(props) => props.theme.lightTheme}; 
+    --skin-color-dark: ${(props) => props.theme.darkTheme}; 
+    --skin-color-darked ${(props) => props.theme.darkedTheme}; 
   }
 
   @media screen and (max-width: ${(props) => props.desktop1280}px) {
@@ -192,12 +195,16 @@ const StyledGlobalStyle = createGlobalStyle`
 
 function GlobalStyle() {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
+    const lightTheme = useSelector((state) => state.theme.lightTheme);
+    const darkTheme = useSelector((state) => state.theme.darkTheme);
+    const darkedTheme = useSelector((state) => state.theme.darkedTheme);
+
     const desktop1280 = useSelector((state) => state.classes.desktop1280);
     const tab1080 = useSelector((state) => state.classes.tab1080);
 
     return (
         <StyledGlobalStyle
-            theme={{ currentTheme }}
+            theme={{ currentTheme, lightTheme, darkTheme, darkedTheme }}
             desktop1280={desktop1280}
             tab1080={tab1080}
         />

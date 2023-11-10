@@ -15,4 +15,4 @@ function PersonalInfo({ info }) {
     );
 }
 
-export default PersonalInfo;
+export default React.memo(PersonalInfo);

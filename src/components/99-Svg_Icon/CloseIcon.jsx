@@ -18,4 +18,4 @@ const CloseIcon = ({ addClass }) => {
         </span>
     );
 };
-export default CloseIcon;
+export default React.memo(CloseIcon);

@@ -3,27 +3,15 @@ import ContactForm from "./02-ContactForm";
 import ContactInfoItem from "./01-ContactInfoItem";
 import ContactDataLoader from "./ContactDataLoader";
 import contactIcon from "../../assets/data/contactIcon.json";
+import TopContact from "./TopContact";
+import SubContact from "./SubContact";
 
-const LayoutContact = () => {
+const LayoutContact = ({ setIsSuccessModalOpen, isSuccessModalOpen }) => {
     return (
         <ContactDataLoader>
             {(data) => (
                 <>
-                    <div className="row_top">
-                        <div className="section-title">
-                            <h2>{data.contact["section-title"]}</h2>
-                        </div>
-                    </div>
-                    <div className="row_center">
-                        <div className="contact-content ">
-                            <h3 className="contact-title">
-                                {data.contact["contact-title"]}
-                            </h3>
-                            <h4 className="contact-sub-title">
-                                {data.contact["contact-sub-title"]}
-                            </h4>
-                        </div>
-                    </div>
+                    <TopContact data={data} />
                     <div className="row_center">
                         <div className="row-col">
                             {contactIcon.contactInfoItem.map((item, index) => (
@@ -38,16 +26,8 @@ const LayoutContact = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="row_center">
-                        <div className="contact-content">
-                            <h3 className="contact-title">
-                                {data.contact["send-email-title"]}
-                            </h3>
-                            <h4 className="contact-sub-title">
-                                {data.contact["send-email-sub-title"]}
-                            </h4>
-                        </div>
-                    </div>
+
+                    <SubContact data={data} />
                     <div className="row_center">
                         <div className="contact-content">
                             <ContactForm
@@ -65,10 +45,11 @@ const LayoutContact = () => {
                                     data.contact.successMessage.description2
                                 }
                                 formErrors={data.contact.formErrors}
+                                setIsSuccessModalOpen={setIsSuccessModalOpen}
+                                isSuccessModalOpen={isSuccessModalOpen}
                             />
                         </div>
                     </div>
-
                     <div className="col_End"></div>
                 </>
             )}
@@ -76,4 +57,4 @@ const LayoutContact = () => {
     );
 };
 
-export default LayoutContact;
+export default React.memo(LayoutContact);

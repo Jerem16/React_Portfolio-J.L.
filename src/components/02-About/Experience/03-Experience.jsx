@@ -60,4 +60,4 @@ function Experience({ experiences }) {
     );
 }
 
-export default Experience;
+export default React.memo(Experience);

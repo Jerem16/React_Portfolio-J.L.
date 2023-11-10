@@ -102,4 +102,4 @@ const LanguageIcon = ({ addClass }) => {
         </span>
     );
 };
-export default LanguageIcon;
+export default React.memo(LanguageIcon);

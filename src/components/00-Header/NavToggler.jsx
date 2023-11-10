@@ -25,4 +25,4 @@ function NavToggler() {
     );
 }
 
-export default NavToggler;
+export default React.memo(NavToggler);

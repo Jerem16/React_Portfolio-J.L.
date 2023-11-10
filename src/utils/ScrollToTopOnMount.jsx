@@ -1,8 +1,8 @@
 import React, { useLayoutEffect, useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 const ScrollToTop = ({ children }) => {
-    const { pathname } = useLocation();
+    // const { pathname } = useLocation();
     const [scrollValue, setScrollValue] = useState(0);
 
     const handleMouseWheel = (e) => {
@@ -12,7 +12,7 @@ const ScrollToTop = ({ children }) => {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
         document.getElementById("home")?.scrollTo(0, 0);
-    }, [pathname]);
+    }, []);
 
     useEffect(() => {
         window.onload = () => {

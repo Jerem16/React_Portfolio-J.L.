@@ -1,20 +1,8 @@
-import React, { useState } from "react";
-import Modal from "../Modal/Modal";
+import React from "react";
 import PortfolioDataLoader from "./PortfolioDataLoader";
-import renderModalContent from "./01-renderModalContent";
-import renderPortfolioItems from "./01-renderPortfolioItems";
+import PortfolioItems from "./PortfolioItems";
 
-function PortfolioComp() {
-    const [selectedService, setSelectedService] = useState(null);
-
-    const openModal = (data) => {
-        setSelectedService(data);
-    };
-
-    const closeModal = () => {
-        setSelectedService(null);
-    };
-
+function PortfolioComp({ openModalPortfolio }) {
     return (
         <PortfolioDataLoader>
             {(portfolioData) => (
@@ -29,19 +17,10 @@ function PortfolioComp() {
                     </div>
                     <div className="row-center">
                         <div className="service_container">
-                            {renderPortfolioItems(openModal)}
+                            <PortfolioItems openModal={openModalPortfolio} />
                         </div>
                     </div>
                     <div className="col_end"></div>
-                    {selectedService && (
-                        <Modal
-                            opened={true}
-                            Content={renderModalContent(
-                                selectedService,
-                                closeModal
-                            )}
-                        />
-                    )}
                 </>
             )}
         </PortfolioDataLoader>

@@ -28,4 +28,4 @@ function CanvasBackground() {
     );
 }
 
-export default CanvasBackground;
+export default React.memo(CanvasBackground);

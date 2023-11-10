@@ -1,6 +1,8 @@
+import React from "react";
 import Button, { BUTTON_TYPES } from "../Button/Button";
+import HomeTitle from "./HomeTitle";
 
-function HomeInfo({
+const HomeInfo = ({
     welcome,
     name,
     presentation,
@@ -9,18 +11,14 @@ function HomeInfo({
     additionalDescription,
     quote,
     hireButtonText,
-}) {
+}) => {
     const buttons = {
         href: "/contact",
         class: "hire-me",
     };
-
     return (
         <div className="home-info">
-            <h3 className="home-title">
-                {welcome}
-                <span className="name">{name}</span>
-            </h3>
+            <HomeTitle welcome={welcome} />
             <article className="home-card">
                 <span className="home-card_group">
                     <h3 className="presentation_title">
@@ -62,6 +60,6 @@ function HomeInfo({
             </Button>
         </div>
     );
-}
+};
 
-export default HomeInfo;
+export default React.memo(HomeInfo);

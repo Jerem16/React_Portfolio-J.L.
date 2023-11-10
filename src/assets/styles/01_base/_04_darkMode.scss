@@ -77,34 +77,17 @@ body.dark {
                 & .timeline-text {
                     &:hover {
                         .bd_Bottom {
-                            border-bottom: 0.0625em solid color-mix(
-                                in srgb,
-                                var(--skin-color) 45%,
-                                var(--bg-black-50)
-                            );
-
+                            border-bottom: 0.0625em solid var(--skin-color-dark);
                             .fa-Circle {
-                                background: color-mix(
-                                    in srgb,
-                                    var(--skin-color) 65%,
-                                    var(--bg-black-900)
-                                );
+                                background: var(--skin-color-dark);
                             }
                         }
                     }
                     &_add {
                         .bd_Bottom {
-                            border-bottom: 0.0625em solid color-mix(
-                                in srgb,
-                                var(--skin-color) 15%,
-                                var(--bg-black-50)
-                            );
+                            border-bottom: 0.0625em solid var(--skin-color-darked);
                             .fa-Circle {
-                                background: color-mix(
-                                    in srgb,
-                                    var(--skin-color) 35%,
-                                    var(--bg-black-50)
-                                );
+                                background: var(--skin-color-darked);
                                 .icon {
                                     color: var(--bg-black-100);
                                 }
@@ -112,11 +95,8 @@ body.dark {
                         }
                     }
                     .bd_Last {
-                        border-bottom: 0.0625em solid color-mix(
-                            in srgb,
-                            var(--skin-color) 15%,
-                            var(--bg-black-50)
-                        );
+                        // border-bottom: 0.0625em solid var(--skin-color-dark);
+                        opacity: 0.5;
                     }
                 }
             }

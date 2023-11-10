@@ -1,10 +1,10 @@
 import React from "react";
-import tech from "../../../assets/data/technology.json";
-import { nanoid } from "nanoid";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ItemLi from "./ItemLi";
+import TechnologyIcons from "./TechnologyIcons";
 
 function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
+    const isOpen = openArticleStates[entry.id];
+
     return (
         <article
             className={`timeline-text ${entry.addClass}`}
@@ -22,100 +22,41 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                 {entry.jobTitle}
                 <div className="bd_Bottom">
                     <div className="fa-Circle">
-                        <FontAwesomeIcon
-                            icon={faChevronUp}
-                            className="icon"
+                        <i
+                            className={`fa fa-chevron-up icon`}
                             style={{
                                 display: `${entry.display}`,
                                 transformOrigin: "center",
                                 transform: `rotate(${
-                                    openArticleStates[entry.id]
-                                        ? "180deg"
-                                        : "270deg"
-                                })`,
+                                    isOpen ? "180deg" : "270deg"
+                                }`,
                                 transition: "transform 0.3s ease-in-out",
                             }}
                             id="darkArrow"
-                        />
+                        ></i>
                     </div>
                 </div>
             </h4>
-            <div
-                className={`div-anime ${
-                    openArticleStates[entry.id] ? "open" : "close"
-                }`}
-                style={{
-                    display: `${entry.display}`,
-                }}
-            >
-                <p
-                    className={`timeline-anime ${
-                        openArticleStates[entry.id] ? "open" : "close"
-                    }`}
+            {isOpen && (
+                <div
+                    className={`div-anime open`}
+                    style={{
+                        display: `${entry.display}`,
+                    }}
                 >
-                    {entry.description.paragraph}
-                </p>
-                {entry.description.itemLi &&
-                    entry.description.itemLi.length > 0 && (
-                        <ul
-                            className={`ul-anime ${
-                                openArticleStates[entry.id] ? "open" : "close"
-                            }`}
-                        >
-                            {entry.description.itemLi.map((item, itemIndex) => (
-                                <li
-                                    className={`ul-anime ${
-                                        openArticleStates[entry.id]
-                                            ? "open"
-                                            : "close"
-                                    }`}
-                                    key={nanoid()}
-                                    style={{
-                                        transitionDelay: `${itemIndex * 0.1}s`,
-                                    }}
-                                >
-                                    <i className="fas fa-check"></i>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                <div className="technologies">
-                    {Object.keys(tech.technologyImages).map(
-                        (technology, index) =>
-                            entry.technologies &&
-                            entry.technologies[technology] === true && (
-                                <div key={nanoid()}>
-                                    <abbr
-                                        title={
-                                            tech.technologySymbols[technology]
-                                                ? tech.technologySymbols[
-                                                      technology
-                                                  ]
-                                                : ""
-                                        }
-                                    >
-                                        {technology &&
-                                            tech.technologyImages[
-                                                technology
-                                            ] && (
-                                                <img
-                                                    src={require(`../../../assets/img/skillsIcons/${tech.technologyImages[technology]}`)}
-                                                    alt={technology}
-                                                    width={27}
-                                                    height={20}
-                                                    loading="lazy"
-                                                />
-                                            )}
-                                    </abbr>
-                                </div>
-                            )
-                    )}
+                    <p className={`timeline-anime open`}>
+                        {entry.description.paragraph}
+                    </p>
+                    {entry.description.itemLi &&
+                    entry.description.itemLi.length > 0 ? (
+                        <ItemLi entry={entry} description={entry.description} />
+                    ) : null}
+                    <TechnologyIcons entry={entry} />
+                    <div className="bd_Last"></div>
                 </div>
-                <div className="bd_Last"></div>
-            </div>
+            )}
         </article>
     );
 }
 
-export default ExperienceEntry;
+export default React.memo(ExperienceEntry);

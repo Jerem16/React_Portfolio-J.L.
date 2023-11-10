@@ -21,7 +21,6 @@
         .row {
             @include row_R;
             justify-content: flex-start;
-            
 
             .personal-info {
                 @include row_R;
@@ -30,7 +29,8 @@
                 flex: 0 0 60.69645785503444%;
                 max-width: 60.69645785503444%;
                 margin: 2em 0 0 0;
-                height: calc(100% - 25px);
+                height: calc(100% - 1.5625em);
+               
                 .info-item {
                     flex: 0 0 50%;
                     max-width: 50%;
@@ -83,17 +83,18 @@
                 }
             }
             .buttons {
-                height: 50px;
+                height: 3.125em;
                 position: relative;
                 bottom: 5.2em;
                 width: 50%;
                 margin: 0;
                 & .btn_right {
-                    padding: 13px 35px;
+                    padding: 0.8125em 2.1875em;
                 }
+
                 .btn_left {
                     margin: 0 0.937em 0 0;
-                    padding: 13px 35px;
+                    padding: 0.8125em 2.1875em;
                 }
             }
         }
@@ -130,7 +131,7 @@
 
         & .timeline-item {
             position: relative;
-            padding: 0 1.1562em 3.125em 2.3125em; // 50px
+            padding: 0 1.1562em 3.125em 2.3125em;
 
             &:last-child {
                 padding-bottom: 0;
@@ -141,14 +142,14 @@
                 width: 1px;
                 height: 100%;
                 background-color: var(--skin-color);
-                left: 0.4375em; // 7px
+                left: 0.4375em;
                 top: 3px;
             }
 
             & .circle-dot {
                 @include after_Before;
-                width: 0.937em; /* 15px / 16px = 0.9375em */
-                height: 0.937em; /* 15px / 16px = 0.9375em */
+                width: 0.937em;
+                height: 0.937em;
                 border-radius: 50%;
                 background-color: var(--skin-color);
                 top: 3px;
@@ -161,7 +162,7 @@
 
             & h4.timeline-title {
                 @include h4;
-                margin-bottom: 0.937em; /* 15px / 16px = 0.9375em */
+                margin-bottom: 0.937em;
             }
 
             & .timeline-text {
@@ -172,19 +173,10 @@
                 cursor: pointer;
                 &:hover {
                     .bd_Bottom {
-                        border-bottom: 1px solid
-                            color-mix(
-                                in srgb,
-                                var(--skin-color) 65%,
-                                var(--bg-black-50)
-                            );
+                        border-bottom: 1px solid var(--skin-color);
 
                         .fa-Circle {
-                            background: color-mix(
-                                in srgb,
-                                var(--skin-color) 85%,
-                                var(--bg-black-900)
-                            );
+                            background: var(--skin-color);
                             i {
                                 color: white;
                             }
@@ -195,13 +187,8 @@
                     .bd_Bottom {
                         @include after_Before;
                         width: 100%;
-                        // border-bottom: 1px solid var(--bg-black-50);
-                        border-bottom: 1px solid
-                            color-mix(
-                                in srgb,
-                                var(--skin-color) 45%,
-                                var(--bg-black-50)
-                            );
+                        border-bottom: 1px solid var(--skin-color-light);
+                        opacity: 0.64;
                         transition: all 0.65s ease-in-out;
 
                         .fa-Circle {
@@ -213,18 +200,14 @@
                             align-items: center;
                             bottom: -0.75em;
                             @include border-radius(50%);
-                            //background: var(--bg-black-50);
-                            background: color-mix(
-                                in srgb,
-                                var(--skin-color) 50%,
-                                var(--bg-black-50)
-                            );
+
+                            background: var(--skin-color-light);
+                            opacity: 1;
                             transition: all 0.35s ease-in-out;
                             i {
                                 display: block;
                                 font-size: 0.78125em;
-                                // color: var(--bg-black-100);
-                                // color: white;
+
                                 color: var(--bg-black-75);
                             }
                         }
@@ -233,12 +216,8 @@
                 .bd_Last {
                     width: 100%;
                     position: relative;
-                    border-bottom: 1px solid
-                        color-mix(
-                            in srgb,
-                            var(--skin-color) 45%,
-                            var(--bg-black-50)
-                        );
+                    border-bottom: 1px solid var(--skin-color-light);
+                    opacity: 0.75;
                     top: 2px;
                 }
                 .close {
@@ -391,4 +370,3 @@
         opacity: 0;
     }
 }
-

@@ -21,4 +21,4 @@ function Skills({ skills }) {
     );
 }
 
-export default Skills;
+export default React.memo(Skills);

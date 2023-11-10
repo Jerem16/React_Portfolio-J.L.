@@ -75,4 +75,4 @@ Field.defaultProps = {
     onChange: () => {},
 };
 
-export default Field;
+export default React.memo(Field);

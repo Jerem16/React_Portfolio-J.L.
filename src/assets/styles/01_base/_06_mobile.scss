@@ -245,9 +245,11 @@
     }
     .service_container {
         flex-flow: column wrap;
+        gap: 30px;
         .service-item {
             flex: 0 0 100%;
             max-width: 100%;
+            gap: 45px;
             .service-item-inner {
                 .icon {
                     border-radius: 50%;
@@ -262,6 +264,14 @@
             }
             &:last-child {
                 margin-bottom: 45px;
+            }
+            .portfolio-item-inner {
+                width: calc(100%);
+                min-height: 100%;
+                img {
+                    width: calc(100vw - 100px);
+                    object-fit: cover;
+                }
             }
         }
     }
@@ -283,10 +293,49 @@
             }
         }
     }
+    .modal {
+        .content {
+            width: calc(100% - 30px);
+            position: relative;
+            top: 25px;
+            #modalPortfolio {
+                max-height: calc(100% - 60px);
+                min-height: calc(100% - 60px);
+                flex-flow: column;
+                padding: 1em;
+                .portfolio-item-inner {
+                    flex: 1;
+                    max-width: inherit;
+                    img {
+                        margin-top: 1.5em;
+                    }
+                }
+                .modalPortfolio-description {
+                    ul {
+                        li.ul-anime {
+                            // overflow: hidden;
+                            // white-space: nowrap;
+                            // text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 463px) {
     .bgDraw2 {
         height: calc(50vh - 303.5px) !important;
+    }
+    .contact .container .row_center .row-col {
+        gap: 10px;
+        flex-flow: column wrap;
+    }
+}
+@media screen and (max-width: 423px) {
+    .contact .container .row_center .row-col {
+        gap: 10px;
+        flex-flow: column wrap;
     }
 }
 @media screen and (max-width: 410px) {
@@ -324,7 +373,16 @@
             max-width: calc(100% - 30px);
         }
     }
-
+    .service_container {
+        .service-item {
+            .portfolio-item-inner {
+                img {
+                    width: calc(100vw - 70px);
+                    object-fit: cover;
+                }
+            }
+        }
+    }
     .aside {
         &_bg {
             left: 1px;
@@ -376,10 +434,7 @@
             max-width: calc(100% - 40px);
         }
     }
-    .contact .container .row_center .row-col {
-        gap: 10px;
-        flex-flow: column wrap;
-    }
+
     .contact-info-item h4 {
         margin: 7.5px 0 3.25px;
     }
@@ -389,8 +444,20 @@
         .row {
             max-width: calc(100% - 0px);
             padding: 0px 0.25em 1.5em !important;
-            .home-info .home-card .home-card-content {
-                margin: 0.75em 0.5em 0 0.5em !important;
+            .home-info .home-card {
+                &-content {
+                    margin: 0.75em 0.5em 0 0.5em !important;
+                }
+                &_group {
+                    .presentation_title {
+                        // display: inline !important;
+                        font-size: 1.25em !important;
+                    }
+                    .presentation_typing {
+                        // display: inline !important;
+                        font-size: 1.55em !important;
+                    }
+                }
             }
         }
     }
@@ -428,6 +495,21 @@
             .row {
                 max-width: calc(100% - 30px);
                 margin-bottom: 30px;
+            }
+        }
+    }
+    .modal {
+        .content {
+            #modalPortfolio {
+                .modalPortfolio-description {
+                    ul {
+                        li.ul-anime {
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
             }
         }
     }
@@ -499,6 +581,15 @@
     }
     .contact-title {
         margin-bottom: 5px;
+    }
+    .service_container {
+        .service-item {
+            .portfolio-item-inner {
+                img {
+                    width: calc(100vw - 60px);
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 340px) {

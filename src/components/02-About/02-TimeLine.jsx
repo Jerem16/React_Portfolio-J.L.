@@ -22,4 +22,4 @@ function Timeline({ experiences, technologySymbols, technologyImages }) {
     );
 }
 
-export default Timeline;
+export default React.memo(Timeline);

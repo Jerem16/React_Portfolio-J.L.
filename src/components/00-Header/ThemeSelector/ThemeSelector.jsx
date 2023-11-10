@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
-import { changeTheme } from "../../../redux/reducers/themeSlice";
+import {
+    changeTheme,
+    changeLightTheme,
+    changeDarkTheme,
+    changeDarkedTheme,
+} from "../../../redux/reducers/themeSlice";
 
 function ThemeSelector() {
     const dispatch = useDispatch();
@@ -12,8 +17,11 @@ function ThemeSelector() {
         setIsSelectorOpen(!isSelectorOpen);
     };
 
-    const changeToTheme = (themeColor) => {
+    const changeToTheme = (themeColor, lightTheme, darkTheme, darkedTheme) => {
         dispatch(changeTheme(themeColor));
+        dispatch(changeLightTheme(lightTheme));
+        dispatch(changeDarkTheme(darkTheme));
+        dispatch(changeDarkedTheme(darkedTheme));
         setIsSelectorOpen(!isSelectorOpen);
     };
 
@@ -62,23 +70,58 @@ function ThemeSelector() {
                 <div className="colors">
                     <span
                         className="color-1"
-                        onClick={() => changeToTheme("#ec1839")}
+                        onClick={() =>
+                            changeToTheme(
+                                "#ec1839",
+                                "#ea5b71",
+                                "#a1172c",
+                                "#581620"
+                            )
+                        }
                     ></span>
                     <span
                         className="color-2"
-                        onClick={() => changeToTheme("#fa5b0f")}
+                        onClick={() =>
+                            changeToTheme(
+                                "#fa5b0f",
+                                "#ed8655",
+                                "#aa4311",
+                                "#5c2b13"
+                            )
+                        }
                     ></span>
                     <span
                         className="color-3"
-                        onClick={() => changeToTheme("#37b182")}
+                        onClick={() =>
+                            changeToTheme(
+                                "#37b182",
+                                "#6fbd9f",
+                                "#2b7a5c",
+                                "#204537"
+                            )
+                        }
                     ></span>
                     <span
                         className="color-4"
-                        onClick={() => changeToTheme("#1854b4")}
+                        onClick={() =>
+                            changeToTheme(
+                                "#1854b4",
+                                "#5b81bf",
+                                "#173e7c",
+                                "#162946"
+                            )
+                        }
                     ></span>
                     <span
                         className="color-5"
-                        onClick={() => changeToTheme("#f021b2")}
+                        onClick={() =>
+                            changeToTheme(
+                                "#f021b2",
+                                "#e760be",
+                                "#a31d7b",
+                                "#591946"
+                            )
+                        }
                     ></span>
                 </div>
             </div>

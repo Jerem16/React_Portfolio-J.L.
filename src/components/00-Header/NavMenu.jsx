@@ -38,4 +38,4 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
     );
 }
 
-export default NavMenu;
+export default React.memo(NavMenu);

@@ -12,4 +12,4 @@ const ContactInfoItem = ({ iconClass, title, content }) => {
     );
 };
 
-export default ContactInfoItem;
+export default React.memo(ContactInfoItem);

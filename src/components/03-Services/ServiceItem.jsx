@@ -12,4 +12,4 @@ const ServiceItem = ({ iconClass, title, description }) => {
     );
 };
 
-export default ServiceItem;
+export default React.memo(ServiceItem);
