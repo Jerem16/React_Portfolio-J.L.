@@ -228,18 +228,21 @@ ul {
     opacity: 1;
     animation: sideAnime 0.5s ease-in-out;
     transition: all 0.5s;
-    transform: translateX(0) scale(1);
+    transform: translateX(0);
     overflow: hidden;
 }
 @keyframes sideAnime {
     0% {
         opacity: 0;
-
-        transform: translateX(120vw) scale(0);
+        transform: translateX(120vw);
+        -webkit-transform: translateX(120vw);
+        -moz-transform: translateX(120vw);
+        -ms-transform: translateX(120vw);
+        -o-transform: translateX(120vw);
     }
     33% {
         opacity: 0.25;
-        transform: translateX(120vw) scale(0.33);
+        transform: translateX(100vw);
     }
     100% {
         opacity: 1;
