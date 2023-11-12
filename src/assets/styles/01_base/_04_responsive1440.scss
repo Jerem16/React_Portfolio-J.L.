@@ -152,3 +152,136 @@
         }
     }
 }
+@media screen and (max-width: 1260px) {
+    .home {
+        .row {
+            .home-info {
+                justify-content: center;
+                .home-title {
+                    position: absolute;
+                    left: 0;
+                    margin: 0;
+                    width: 100%;
+                    padding: 12px 1em;
+
+                    text-align: center;
+                    top: 0.75em;
+                    span.name {
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+
+                .home-card {
+                    align-items: center;
+
+                    position: relative;
+                    top: 0.7em;
+                    &_group {
+                        margin: 1.5em 0;
+                        .presentation_title,
+                        .presentation_typing {
+                            text-align: center;
+                            align-items: center;
+                        }
+
+                        .typing {
+                            width: 100%;
+                            align-items: center;
+                        }
+                    }
+
+                    .home-card-content {
+                        margin: 1em 1em 0 1em;
+
+                        &_description {
+                            .home-quote {
+                                //   text-align: center;
+                                width: 100%;
+                                display: block;
+
+                                margin: 0 auto;
+                                padding: 0;
+                            }
+                        }
+                        .content-inner {
+                            // padding: 1em 0em;
+                            &_description {
+                                // font-style: italic;
+                            }
+                            &_quote {
+                                padding-left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal {
+        min-height: calc(100vh);
+
+        .content {
+            width: calc(100% - 120px);
+            margin: auto;
+            height: inherit;
+            height: auto;
+            max-height: 100%;
+            #modalPortfolio {
+                max-height: calc(100%);
+                justify-items: center;
+                width: 100%;
+                height: 100%;
+                min-height: inherit;
+                flex-flow: column;
+                padding: 1.75em;
+                .portfolio-item-inner {
+                    flex: 1;
+                    max-width: inherit;
+                    img {
+                        object-fit: cover;
+                        object-position: top;
+                        width: 100%;
+                        max-height: 50vh;
+                    }
+                }
+                .modalPortfolio-description {
+                    max-width: 100%;
+                    max-height: inherit;
+                    padding: 0;
+                    padding: 1em 0 0em;
+
+                    h4.jobTitle {
+                        font-size: 16px;
+                        padding: 0 0 1em 0;
+                    }
+                    p.timeline-anime {
+                        font-size: 14px;
+                        margin: 0 0 1em 0;
+                    }
+                    .link {
+                        max-height: 3.5em;
+                        padding: 0 0 0.5em 0;
+                        span.button {
+                            margin: 0 0 0.25em 0;
+                            padding: 0;
+                            a {
+                                font-size: 16px !important;
+                            }
+                        }
+                    }
+                    ul {
+                        padding: 0 0 0.5em 0;
+                        li.ul-anime {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+

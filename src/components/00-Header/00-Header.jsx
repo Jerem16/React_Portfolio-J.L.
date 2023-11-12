@@ -18,11 +18,11 @@ function Header() {
     };
 
     const [isMobile, setIsMobile] = useState(
-        window.matchMedia("(max-width: 992px)").matches
+        window.matchMedia("(max-width: 1024px)").matches
     );
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 992px)");
+        const mediaQuery = window.matchMedia("(max-width: 1024px)");
         const updateIsMobile = (event) => {
             setIsMobile(event.matches);
         };
