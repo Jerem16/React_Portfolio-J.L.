@@ -165,7 +165,8 @@
             position: relative;
             max-width: 47em;
             height: 100%;
-            max-height: 21.125em;
+            // max-height: 21.125em;
+            height: 21.125em;
             .home-img {
                 width: 100%;
                 z-index: 1;
@@ -174,6 +175,8 @@
                 justify-content: space-between;
                 align-items: center;
                 border-top-right-radius: 1.25em;
+                max-width: 15.625vw;
+                height: 17.55vw;
                 &::after {
                     @include after_Before;
                     top: -0.625em;
@@ -202,9 +205,10 @@
                     align-self: center;
                     flex: 5;
                     min-width: 15.46875em;
-                    height: 25em;
+
                     display: flex;
-                    max-width: 19.625em;
+                    height: 12.109vw;
+                    width: 11.614vw;
                 }
                 img {
                     margin: auto;

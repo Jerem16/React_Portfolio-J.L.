@@ -16,8 +16,8 @@ function HomeImage() {
                         ${profileWebp2k}      2560w,
                         ${profileWebp4k}      3840w,`}
                         sizes="(max-width: 1920px) 100vw, (max-width: 2560px) 100vw, 3840px"
-                        width={511}
-                        height={533}
+                        width={446}
+                        height={465}
                     />
                 </div>
                 <div className="rightNB"></div>
