@@ -5,7 +5,8 @@ import CloseIcon from "../99-Svg_Icon/CloseIcon";
 import TechnologyIcons from "../02-About/Experience/TechnologyIcons";
 import GitHub from "../99-Svg_Icon/GitHub";
 import WebSite from "../99-Svg_Icon/WebSite";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+
+
 const PortfolioModalContent = React.memo(
     ({ selectedPortfolio, closeModal }) => (
         <ProfileDataLoader>

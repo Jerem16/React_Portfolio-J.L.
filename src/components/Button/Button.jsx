@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./button.scss";
 
 export const BUTTON_TYPES = {
@@ -20,12 +20,12 @@ const Button = ({
     disabled,
 }) => {
     switch (type) {
-        case BUTTON_TYPES.DEFAULT:
-            return (
-                <Link href={to} className={`btn ${className}`}>
-                    {children}
-                </Link>
-            );
+        // case BUTTON_TYPES.DEFAULT:
+        //     return (
+        //         <Link href={to} className={`btn ${className}`}>
+        //             {children}
+        //         </Link>
+        //     );
         case BUTTON_TYPES.DOWNLOAD:
             return (
                 <a href={href} target={target} className={`btn_a ${className}`}>
@@ -45,9 +45,9 @@ const Button = ({
             );
         default:
             return (
-                <Link href={to} className={`btn ${className}`}>
+                <a href={href} target={target} className={`btn_a ${className}`}>
                     {children}
-                </Link>
+                </a>
             );
     }
 };

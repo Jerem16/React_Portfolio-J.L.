@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+// import { Link, animateScroll as scroll } from "react-scroll";
 import ThemeSelector from "./ThemeSelector/ThemeSelector";
 import HeaderDataLoader from "./HeaderDataLoader";
 import { useDispatch } from "react-redux";
@@ -47,22 +47,17 @@ function Header() {
                         </div>
 
                         <div className="logo">
-                            <Link
+                            <a
                                 rel="nofollow"
                                 href="#home"
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                // offset={-60}
-                                duration={500}
                             >
                                 <div
-                                // onClick={handleClick}
+                                
                                 >
                                     <span>{data.logoTitle}</span>
                                     {data.logoSpanTitle}
                                 </div>
-                            </Link>
+                            </a>
                         </div>
 
                         {isMobile ? (

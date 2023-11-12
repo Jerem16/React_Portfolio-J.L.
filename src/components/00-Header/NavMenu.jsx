@@ -1,6 +1,5 @@
 import React from "react";
 // eslint-disable-next-line
-// sonarlint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
 import { nanoid } from "nanoid";
 import LanguageSelector from "./01-LanguageSelector";

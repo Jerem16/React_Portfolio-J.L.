@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const Modal = ({ opened, Content, closeIcon }) => {
+    // eslint-disable-next-line
     const [isOpened, setIsOpened] = useState(opened);
 
     useEffect(() => {
@@ -9,7 +10,6 @@ const Modal = ({ opened, Content, closeIcon }) => {
             const modal = document.querySelector(".modal");
             if (modal) {
                 const screenHeight = window.innerHeight;
-                // const modalHeight = modal.offsetHeight;
                 const scrollY = window.scrollY || window.pageYOffset;
 
                 const newTop = scrollY / screenHeight;
@@ -20,7 +20,6 @@ const Modal = ({ opened, Content, closeIcon }) => {
         };
 
         if (opened) {
-            // Utilisez le prop opened
             adjustModalPosition();
             window.addEventListener("resize", adjustModalPosition);
             window.addEventListener("scroll", adjustModalPosition);
@@ -34,7 +33,7 @@ const Modal = ({ opened, Content, closeIcon }) => {
 
     return (
         <>
-            {opened && ( 
+            {opened && (
                 <div className={`modal`}>
                     <div className="content lazy">
                         {Content}
