@@ -1,10 +1,7 @@
 import React, { useState, lazy, Suspense } from "react";
+
 import Header from "../../components/00-Header/00-Header";
 import SectionHome from "./section_home/SectionHome";
-// import SectionAbout from "./section_about/SectionAbout";
-// import SectionContact from "./section_contact/SectionContact";
-// import SectionPortfolio from "./section_portfolio/SectionPortfolio";
-// import SectionServices from "./section_services/SectionServices";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setModalContact } from "../../redux/reducers/classesSlice";

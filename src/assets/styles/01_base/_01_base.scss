@@ -203,3 +203,46 @@ ul {
         opacity: 1;
     }
 }
+.col_End {
+    width: 6.25em;
+    height: 0.0625em;
+}
+.lazyImg {
+    transition: all 0.6s;
+    animation: lazyImg 1.5s ease-in-out;
+
+    opacity: 1;
+}
+@keyframes lazyImg {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0.15;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.sideAnime {
+    opacity: 1;
+    animation: sideAnime 0.5s ease-in-out;
+    transition: all 0.5s;
+    transform: translateX(0) scale(1);
+    overflow: hidden;
+}
+@keyframes sideAnime {
+    0% {
+        opacity: 0;
+
+        transform: translateX(120vw) scale(0);
+    }
+    33% {
+        opacity: 0.25;
+        transform: translateX(120vw) scale(0.33);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}

@@ -35,7 +35,7 @@ const Modal = ({ opened, Content, closeIcon }) => {
         <>
             {opened && (
                 <div className={`modal`}>
-                    <div className="content lazy">
+                    <div className="content sideAnime">
                         {Content}
                         <button
                             type="button"

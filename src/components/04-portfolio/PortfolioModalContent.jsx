@@ -28,7 +28,7 @@ const PortfolioModalContent = React.memo(
                                 >
                                     <div className="portfolio-item-inner">
                                         <img
-                                            className="lazy"
+                                            className="lazyImg"
                                             alt={selectedPortfolio.title}
                                             src={require(`../../assets/img/webSite/${selectedPortfolio.imagePath}`)}
                                         />
