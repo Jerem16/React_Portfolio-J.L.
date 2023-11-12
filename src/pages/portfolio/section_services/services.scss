@@ -25,7 +25,6 @@
             border-right-color: var(--bg-black-50);
             border-bottom-color: var(--bg-black-50);
             border-radius: 0.625em;
-            transition: all 0.3s ease;
             cursor: pointer;
             .icon {
                 display: block;
@@ -41,9 +40,6 @@
                 line-height: 60px;
             }
             &:hover {
-                &::after {
-                    @include after_Before;
-                }
                 transform: scale(1.05);
                 box-shadow: 0 0 1.25em rgba(48, 46, 77, 0.15);
                 .icon {

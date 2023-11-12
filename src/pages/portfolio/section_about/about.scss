@@ -30,7 +30,7 @@
                 max-width: 60.69645785503444%;
                 margin: 2em 0 0 0;
                 height: calc(100% - 1.5625em);
-               
+
                 .info-item {
                     flex: 0 0 50%;
                     max-width: 50%;
@@ -189,7 +189,7 @@
                         width: 100%;
                         border-bottom: 1px solid var(--skin-color-light);
                         opacity: 0.64;
-                        transition: all 0.65s ease-in-out;
+                        // transition: all 0.65s ease-in-out;
 
                         .fa-Circle {
                             float: right;
@@ -203,7 +203,7 @@
 
                             background: var(--skin-color-light);
                             opacity: 1;
-                            transition: all 0.35s ease-in-out;
+                            // transition: all 0.35s ease-in-out;
                             i {
                                 display: block;
                                 font-size: 0.78125em;
@@ -272,8 +272,8 @@
 
                         display: block;
 
-                        -webkit-animation: openClose2 0.15s ease-in-out;
-                        animation: openClose2 0.15s ease-in-out;
+                        -webkit-animation: openClose 0.15s ease-in-out;
+                        animation: openClose 0.15s ease-in-out;
                     }
                     p.timeline-anime {
                         @include transition(all, 0.3s, ease);
@@ -292,6 +292,7 @@
                     }
                     p.alone {
                         margin: 1.5625em 0;
+                        animation: openClose 0.5s ease-in-out;
                     }
                     ul {
                         li.ul-anime {
@@ -312,8 +313,8 @@
                                 opacity: 0;
                             }
                             &.open {
-                                -webkit-animation: openClose2 0.2s ease-in-out;
-                                animation: openClose2 0.2s ease-in-out;
+                                -webkit-animation: openClose 0.5s ease-in-out;
+                                animation: openClose 0.5s ease-in-out;
                                 &::before {
                                     font-family: "Font Awesome", sans-serif;
                                 }
