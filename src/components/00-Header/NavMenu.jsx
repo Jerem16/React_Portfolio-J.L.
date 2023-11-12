@@ -1,7 +1,7 @@
 import React from "react";
 // eslint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
-import { nanoid } from "nanoid";
+import shortid from "shortid";
 import LanguageSelector from "./01-LanguageSelector";
 import data from "../../assets/data/header.json";
 import NavItem from "./NavItem";
@@ -13,7 +13,7 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
             <ul className={`nav ${langAddClass}`} id={id}>
                 <NavItem startLinks={startLinks} handleClick={handleClick} />
                 {navLinks.map((link, index) => (
-                    <li className="head-btn" key={nanoid()}>
+                    <li className="head-btn" key={shortid.generate()}>
                         <Link
                             rel="nofollow"
                             href={`#${data.navLinks[index].to}`}

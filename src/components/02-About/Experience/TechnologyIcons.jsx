@@ -1,5 +1,5 @@
 import React from "react";
-import { nanoid } from "nanoid";
+import shortid from "shortid";
 import tech from "../../../assets/data/technology.json";
 
 function TechnologyIcons({ entry }) {
@@ -8,7 +8,7 @@ function TechnologyIcons({ entry }) {
             {Object.keys(tech.technologyImages).map((technology) =>
                 entry.technologies &&
                 entry.technologies[technology] === true ? (
-                    <div key={nanoid()}>
+                    <div key={shortid.generate()}>
                         <abbr
                             title={
                                 tech.technologySymbols[technology]

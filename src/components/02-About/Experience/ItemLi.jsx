@@ -1,5 +1,5 @@
 import React from "react";
-import { nanoid } from "nanoid";
+import shortid from "shortid";
 
 const ItemLi = ({ description, entry }) => {
     return (
@@ -7,7 +7,7 @@ const ItemLi = ({ description, entry }) => {
             {entry.description.itemLi.map((item, itemIndex) => (
                 <li
                     className={`ul-anime open`}
-                    key={nanoid()}
+                    key={shortid.generate()}
                     style={{
                         transitionDelay: `${itemIndex * 0.1}s`,
                     }}

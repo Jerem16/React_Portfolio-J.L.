@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { nanoid } from "nanoid";
+import shortid from "shortid";
 import ServiceDataLoader from "../../03-Services/ServiceDataLoader";
 import CloseIcon from "../../99-Svg_Icon/CloseIcon";
 
@@ -26,7 +26,7 @@ const ModalService = ({ selectedService, closeModal }) => {
                                         <ul>
                                             {serviceItem.details.map(
                                                 (detail) => (
-                                                    <li key={nanoid()}>
+                                                    <li key={shortid.generate()}>
                                                         <i className="fas fa-check"></i>
                                                         {detail}
                                                     </li>

@@ -1,11 +1,11 @@
 import React from "react";
-import { nanoid } from "nanoid";
+import shortid from "shortid";
 
 function PersonalInfo({ info }) {
     return (
         <>
             {Object.entries(info).map(([key, value]) => (
-                <div className="info-item" key={nanoid()}>
+                <div className="info-item" key={shortid.generate()}>
                     <p>
                         {key} : <span>{value}</span>
                     </p>
