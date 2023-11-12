@@ -1,5 +1,6 @@
 import React from "react";
 import portfolio_img from "../../assets/data/portfolio_img.json";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { nanoid } from "nanoid";
 
 const PortfolioItems = React.memo(({ openModal }) => {
@@ -17,7 +18,7 @@ const PortfolioItems = React.memo(({ openModal }) => {
                 onClick={() => openModal(item)}
             >
                 <div className="portfolio-item-inner shadow-dark">
-                    <img
+                    <LazyLoadImage
                         alt={item.title}
                         srcSet={srcSet}
                         sizes="(max-width: 1920px) 100vw, (max-width: 2560px) 100vw, 3840px"

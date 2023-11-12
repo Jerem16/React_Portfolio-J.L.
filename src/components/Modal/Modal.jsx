@@ -34,9 +34,9 @@ const Modal = ({ opened, Content, closeIcon }) => {
 
     return (
         <>
-            {opened && ( // Utilisez le prop opened
+            {opened && ( 
                 <div className={`modal`}>
-                    <div className="content">
+                    <div className="content lazy">
                         {Content}
                         <button
                             type="button"

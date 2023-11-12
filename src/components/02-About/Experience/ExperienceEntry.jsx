@@ -1,6 +1,5 @@
-import React from "react";
-import ItemLi from "./ItemLi";
-import TechnologyIcons from "./TechnologyIcons";
+import React, { lazy, Suspense } from "react";
+const LazyExperienceArticle = lazy(() => import("./ExperienceArticle"));
 
 function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
     const isOpen = openArticleStates[entry.id];
@@ -38,22 +37,9 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                 </div>
             </h4>
             {isOpen && (
-                <div
-                    className={`div-anime open`}
-                    style={{
-                        display: `${entry.display}`,
-                    }}
-                >
-                    <p className={`timeline-anime open`}>
-                        {entry.description.paragraph}
-                    </p>
-                    {entry.description.itemLi &&
-                    entry.description.itemLi.length > 0 ? (
-                        <ItemLi entry={entry} description={entry.description} />
-                    ) : null}
-                    <TechnologyIcons entry={entry} />
-                    <div className="bd_Last"></div>
-                </div>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <LazyExperienceArticle entry={entry} />
+                </Suspense>
             )}
         </article>
     );

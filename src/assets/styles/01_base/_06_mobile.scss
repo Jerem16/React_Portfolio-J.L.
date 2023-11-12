@@ -32,32 +32,9 @@
                             }
                         }
 
-                        .presentation_title,
-                        .presentation_typing {
-                        }
-
                         .typing {
                             font-size: 0.8em !important;
                             text-transform: lowercase;
-                        }
-                    }
-                    .home-card-content {
-                        // margin: 0.75em 0 0 0 !important; //apres
-                        &_description {
-                            .quote-description {
-                                // margin: 0 !important;
-                            }
-                            .home-quote {
-                            }
-                        }
-                        .content-inner {
-                            margin: 0 !important;
-                            &_description {
-                                // font-style: normal;
-                            }
-                            &_quote {
-                                // padding-left: 10px;
-                            }
                         }
                     }
                 }
@@ -68,25 +45,19 @@
                 }
             }
             .blockImg {
-                // order: 5;
                 height: 200px !important;
                 max-height: 200px;
                 margin: 1.5em 0 0 0 !important;
-                // display: none !important;
+
                 position: relative !important;
 
                 .home-img {
-                    // max-height: 200px;
-                    // max-width: 200px;
-
                     &::after {
                         top: 40px !important;
                         left: 40px !important;
                         width: 150px !important;
                         height: 160px !important;
                         border-top-left-radius: 20px;
-                        // background-color: #151515;
-                        // border-color: transparent;
                         border-width: 1px;
                     }
                     &::before {
@@ -94,7 +65,6 @@
                         right: 41px !important;
                         height: 160px !important;
                         width: 150px !important;
-                        // border-color: transparent;
                         border-width: 1px;
                     }
                     .centerNB {
@@ -175,7 +145,7 @@
                 .home-card {
                     height: auto;
                     .home-card-content {
-                        margin: 0.75em 0 0 0 !important; //apres
+                        margin: 0.75em 0 0 0 !important;
                     }
                 }
             }
@@ -310,14 +280,10 @@
                         margin-top: 1.5em;
                     }
                 }
-                .modalPortfolio-description {
-                    ul {
-                        li.ul-anime {
-                            // overflow: hidden;
-                            // white-space: nowrap;
-                            // text-overflow: ellipsis;
-                        }
-                    }
+            }
+            #modalService {
+                .service-item-inner {
+                    width: 100%;
                 }
             }
         }

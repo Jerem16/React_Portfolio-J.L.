@@ -87,14 +87,13 @@ ul {
 
 .modal {
     position: absolute; // tablette
-    // position: fixed;
+
     height: 100vh;
-    max-height: 100vw;
-    // transform: translateY(1000px);
-    //width: 100%;
-    // top: 0 !important;
+    max-height: 100vh;
+    min-height: 100vh;
+
     left: 0;
-    // margin: auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +112,6 @@ ul {
         border-radius: 0.4375em;
         width: 62.5%;
         @include drop-shadow(1em 1em 1em rgba(0, 0, 0, 0.15));
-        // margin: auto;
         button {
             position: absolute;
             top: 1.125em;
@@ -181,4 +179,27 @@ ul {
 .col_End {
     width: 6.25em;
     height: 0.0625em;
+}
+.lazy {
+    transition: all 0.6s;
+    animation: lazy 0.6s ease-in-out;
+    -webkit-animation: lazy 0.6s ease-in-out;
+    &::after {
+        opacity: 0;
+        transform: scale(0);
+    }
+    &::before {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes lazy {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
