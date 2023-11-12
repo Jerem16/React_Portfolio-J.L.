@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 // eslint-disable-next-line
-// sonarlint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
 import { setNavScroll } from "../../redux/reducers/classesSlice";
