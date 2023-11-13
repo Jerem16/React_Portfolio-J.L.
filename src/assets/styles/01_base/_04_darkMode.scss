@@ -33,9 +33,9 @@ body.dark {
     }
     .btn,
     .btn_a {
-        box-shadow: 0.15625em 0.3125em 0.9375em rgba-color(black, 0.25);
+        @include drop-shadow(0.15625em 0.3125em 0.9375em  rgba(0, 0, 0, 0.25));
         &::after {
-            box-shadow: 0.125em 0.25em 1.875em rgba(0, 0, 0, 0.65);
+            @include drop-shadow(0.125em 0.25em 1.875em  rgba(0, 0, 0, 0.65));
         }
     }
     & .timeline-date {
@@ -124,7 +124,6 @@ body.dark {
             }
             .logo {
                 background-color: rgba-color($bg-black-900-dark, 0.5);
-                // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
             }
@@ -166,7 +165,6 @@ body.dark {
             }
             .nav {
                 background-color: rgba-color($bg-black-900-light, 0.75);
-                // box-shadow: 0 4px 30px rgba(48, 46, 77, 0.1);
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
                 li.head-btn {
