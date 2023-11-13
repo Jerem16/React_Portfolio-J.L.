@@ -58,7 +58,6 @@ function MainPortfolio() {
 
     return (
         <>
-            {/* <Loader /> */}
             <Header />
 
             <main className="main-content">

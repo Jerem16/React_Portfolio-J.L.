@@ -6,7 +6,8 @@
     top: 0;
     left: 0;
     height: 100vh;
-    // background-color: red;
+    // background-color: var(--skin-color);
+    // opacity: 0.5;
 
     z-index: 11111111;
 }
@@ -26,7 +27,6 @@
     0% {
         transform-origin: center;
         transform: rotate(0deg);
-
     }
 
     100% {
@@ -40,28 +40,30 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    height: 25vw;
+    top: calc(50vh - 12.5vw);
+    // border: 10px solid var(--bg-black-900);
     width: 25vw;
-    background-color: #004922;
+    height: 25vw;
     animation: rotate 2s infinite linear reverse;
-    background: linear-gradient(
-        to bottom,
-        var(--skin-color-light),
-        var(--skin-color),
-        var(--skin-color-dark)
-    );
+    // background: linear-gradient(
+    //     to bottom,
+    //     var(--skin-color-light),
+    //     var(--skin-color),
+    //     var(--skin-color-dark)
+    // );
     transition: all 2s linear;
+    box-sizing: border-box;
 }
 .loaderCircle {
     position: absolute;
-    top: -1vw;
-    left: -1vw;
-    width: 27vw;
-    height: 27vw;
-    font-size: 25vw;
-    fill: var(--bg-black-900);
-    border: 1vw solid var(--bg-black-900);
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 25vw;
+
+    // fill: var(--bg-black-900);
     border-radius: 50%;
+    // animation: rotate 4s infinite linear;
 }
 /*****************************************************/
 .t {
