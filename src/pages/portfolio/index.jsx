@@ -11,6 +11,7 @@ import PortfolioModalContent from "../../components/04-portfolio/PortfolioModalC
 import ModalService from "../../components/Modal/ModalService/ModalService";
 import ModalForm from "../../components/Modal/ModalForm/ModalForm";
 import Modal from "../../components/Modal/Modal";
+import Loader from "../../components/Loader/Loader";
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
 const LazySectionServices = lazy(() =>
@@ -57,7 +58,9 @@ function MainPortfolio() {
 
     return (
         <>
+            {/* <Loader /> */}
             <Header />
+
             <main className="main-content">
                 <SectionHome />
                 <Suspense fallback={<div>Loading...</div>}>

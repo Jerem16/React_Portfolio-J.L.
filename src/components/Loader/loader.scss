@@ -1,56 +1,67 @@
 .loader-wrapper {
+    position: fixed;
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    // background-color: red;
+
+    z-index: 11111111;
 }
 
 @keyframes rotate {
     0% {
+        transform-origin: center;
         transform: rotate(0deg);
-        border-left-color: $color-primary;
-        border-top-color: $color-primary;
-        border-right-color: $color-primary;
-        border-bottom-color: transparent;
-    }
-    43% {
-        transform: rotate(270deg);
-    }
-    44% {
-        transform: rotateY(0deg);
-        border-left-color: transparent;
-        border-top-color: #005733;
-        border-right-color: #005733;
-        border-bottom-color: #005733;
-    }
-
-    66% {
-        transform: rotateY(180deg);
-        border-left-color: #00bb78;
-        border-top-color: #00bb78;
-        border-right-color: #00bb78;
-        // border-bottom-color: #00bb78;
-    }
-    67% {
-        transform: rotate(-270deg);
     }
 
     100% {
-        transform: rotate(0deg);
-        border-left-color: #005733;
-        border-top-color: #005733;
-        border-right-color: #005733;
+        transform-origin: center;
+        transform: rotate(360deg);
     }
 }
+@keyframes rotate {
+    0% {
+        transform-origin: center;
+        transform: rotate(0deg);
 
+    }
+
+    100% {
+        transform-origin: center;
+        transform: rotate(-360deg);
+    }
+}
 .loading {
-    padding: 10px;
-    border: 6px solid transparent;
-    border-radius: 22px;
-    height: 0;
-    width: 0;
-    -webkit-animation: rotate 2s infinite linear;
-    animation: rotate 2s infinite linear;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 25vw;
+    width: 25vw;
+    background-color: #004922;
+    animation: rotate 2s infinite linear reverse;
+    background: linear-gradient(
+        to bottom,
+        var(--skin-color-light),
+        var(--skin-color),
+        var(--skin-color-dark)
+    );
+    transition: all 2s linear;
+}
+.loaderCircle {
+    position: absolute;
+    top: -1vw;
+    left: -1vw;
+    width: 27vw;
+    height: 27vw;
+    font-size: 25vw;
+    fill: var(--bg-black-900);
+    border: 1vw solid var(--bg-black-900);
+    border-radius: 50%;
 }
 /*****************************************************/
 .t {

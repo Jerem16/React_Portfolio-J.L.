@@ -190,16 +190,17 @@
         &-content {
             .row {
                 .buttons {
-                    position: static;
-                    display: flex;
-                    flex-flow: row wrap;
+                    position: static !important;
+                    display: flex !important;
+                    flex-flow: row wrap !important;
+                    border: 1px solid #000;
                     & .btn_right {
-                        position: relative;
+                        position: relative !important;
                         display: block;
                         flex: 1;
                     }
                     .btn_left {
-                        position: relative;
+                        position: relative !important;;
                         display: block;
                         flex: 1;
                         top: -27.5px;
