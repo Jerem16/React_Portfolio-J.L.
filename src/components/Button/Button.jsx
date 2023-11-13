@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import "./button.scss";
 
 export const BUTTON_TYPES = {
@@ -14,18 +13,12 @@ const Button = ({
     className,
     href,
     target,
-    children, // Use children for the content
+    children, 
     title,
     onClick,
     disabled,
 }) => {
     switch (type) {
-        // case BUTTON_TYPES.DEFAULT:
-        //     return (
-        //         <Link href={to} className={`btn ${className}`}>
-        //             {children}
-        //         </Link>
-        //     );
         case BUTTON_TYPES.DOWNLOAD:
             return (
                 <a href={href} target={target} className={`btn_a ${className}`}>

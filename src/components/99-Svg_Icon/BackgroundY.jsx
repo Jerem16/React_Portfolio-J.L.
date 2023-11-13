@@ -3,7 +3,6 @@ import "./languageIcon.scss";
 import { useSelector } from "react-redux";
 
 const BackgroundY = ({ addClass }) => {
-    const currentTheme = useSelector((state) => state.theme.currentTheme);
     const darkedTheme = useSelector((state) => state.theme.darkedTheme);
     return (
         <div className="backgroundY">

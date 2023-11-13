@@ -1,7 +1,6 @@
 @media screen and (max-width: 1440px) {
     .border-design,
     .border-design2 {
-        // display: none;
         width: 100%;
         height: 100%;
         border-bottom-left-radius: 0px;
@@ -196,7 +195,6 @@
 
                         &_description {
                             .home-quote {
-                                //   text-align: center;
                                 width: 100%;
                                 display: block;
 
@@ -205,10 +203,6 @@
                             }
                         }
                         .content-inner {
-                            // padding: 1em 0em;
-                            &_description {
-                                // font-style: italic;
-                            }
                             &_quote {
                                 padding-left: 20px;
                             }

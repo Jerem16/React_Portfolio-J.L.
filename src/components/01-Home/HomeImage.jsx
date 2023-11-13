@@ -6,7 +6,7 @@ import profileWebp4k from "../../assets/img/profile-4k.webp";
 function HomeImage() {
     return (
         <div className="blockImg">
-            <div className="home-img padd-15px">
+            <div className="home-img">
                 <div className="leftNB"></div>
                 <div className="centerNB">
                     <img

@@ -3,8 +3,7 @@ import "./languageIcon.scss";
 import { useSelector } from "react-redux";
 
 const BackgroundX = ({ addClass }) => {
-    const currentTheme = useSelector((state) => state.theme.currentTheme);
-    const darkedTheme = useSelector((state) => state.theme.darkedTheme); // {currentTheme}
+    const darkedTheme = useSelector((state) => state.theme.darkedTheme); 
     return (
         <div className="backgroundX">
             <svg
